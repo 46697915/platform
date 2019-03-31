@@ -55,7 +55,6 @@
  		var method = __path + '/syInstorageJz/exportExcel?barcode_search='+$('#search_barcode').combobox('getValue')+
  			'&indate_begin='+$('#search_begin').datebox('getValue')+
  			'&indate_end='+$('#search_end').datebox('getValue');
- 		alert(method);
 		document.getElementById('ff').action = method;
 		document.getElementById('ff').submit();
 	}

@@ -27,9 +27,14 @@
 
 
 
-    <select id="selectBy" parameterType="SyInstorageJzVo" resultType="SyInstorageJz">
+    <select id="selectBy" parameterType="SyInstorageJzVo" resultType="SyInstorageJzVo">
         select
-            id, barcode, drugsname, commonname, generatenum, generatedate, validityperiod, shelflife, inquantity, intype, money, indate, inperson, loggingdate, reviewer, reviewdate, remark, signtype, transfer_id AS transferId
+            id, barcode, drugsname, commonname, generatenum, generatedate,
+            validityperiod, shelflife, inquantity, intype, money,
+            indate, inperson, loggingdate, reviewer, reviewdate,
+            remark, signtype,
+            (select barcode2 from sy_drugs a where a.barcode=sy_instorage_jz.barcode) barcode2,
+            transfer_id AS transferId
         from sy_instorage_jz
         <where>
         <if test="id != null and id != ''">
@@ -39,7 +44,7 @@
             and barcode =  #{barcode,jdbcType=VARCHAR}
         </if>
         <if test="drugsname != null and drugsname != ''">
-            and drugsname =  #{drugsname,jdbcType=VARCHAR}
+            and drugsname like concat('%', #{drugsname,jdbcType=VARCHAR},'%')
         </if>
         <if test="commonname != null and commonname != ''">
             and commonname =  #{commonname,jdbcType=VARCHAR}
@@ -65,9 +70,15 @@
         <if test="money != null and money != ''">
             and money =  #{money,jdbcType=VARCHAR}
         </if>
-        <if test="indate != null">
-            and indate =  #{indate,jdbcType=DATE}
-        </if>
+            <if test="indate_begin != null and indate_begin != ''">
+                and indate &gt;= str_to_date(#{indate_begin}, '%Y-%m-%d')
+            </if>
+            <if test="indate_end != null and indate_end != ''">
+                and indate &lt; date_add(str_to_date(#{indate_end}, '%Y-%m-%d'), interval 1 day)
+            </if>
+            <if test="barcode_search != null and barcode_search != ''">
+                and barcode = #{barcode_search}
+            </if>
         <if test="inperson != null and inperson != ''">
             and inperson =  #{inperson,jdbcType=VARCHAR}
         </if>
@@ -89,6 +100,83 @@
         <if test="transferId != null and transferId != ''">
             and transfer_id =  #{transferId,jdbcType=VARCHAR}
         </if>
+        </where>
+    </select>
+    <select id="selectForShow" parameterType="SyInstorageJzVo" resultType="SyInstorageJzVo">
+        select
+        id, barcode, drugsname, commonname, generatenum, generatedate,
+        validityperiod, shelflife, inquantity, intype, money,
+        indate, inperson, loggingdate, reviewer, reviewdate,
+        remark, signtype,
+        (select name from keyvalue  where type='instoretype' and code = sy_instorage_jz.intype) intypename,
+        (select name from keyvalue  where type='signtype' and code = sy_instorage_jz.signtype) signtypename,
+        (select barcode2 from sy_drugs a where a.barcode=sy_instorage_jz.barcode) barcode2,
+        transfer_id AS transferId
+        from sy_instorage_jz
+        <where>
+            <if test="id != null and id != ''">
+                and id =  #{id,jdbcType=VARCHAR}
+            </if>
+            <if test="barcode != null and barcode != ''">
+                and barcode =  #{barcode,jdbcType=VARCHAR}
+            </if>
+            <if test="drugsname != null and drugsname != ''">
+                and drugsname like concat('%', #{drugsname,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="commonname != null and commonname != ''">
+                and commonname =  #{commonname,jdbcType=VARCHAR}
+            </if>
+            <if test="generatenum != null and generatenum != ''">
+                and generatenum =  #{generatenum,jdbcType=VARCHAR}
+            </if>
+            <if test="generatedate != null">
+                and generatedate =  #{generatedate,jdbcType=DATE}
+            </if>
+            <if test="validityperiod != null">
+                and validityperiod =  #{validityperiod,jdbcType=DATE}
+            </if>
+            <if test="shelflife != null and shelflife != ''">
+                and shelflife =  #{shelflife,jdbcType=VARCHAR}
+            </if>
+            <if test="inquantity != null and inquantity != ''">
+                and inquantity =  #{inquantity,jdbcType=VARCHAR}
+            </if>
+            <if test="intype != null and intype != ''">
+                and intype =  #{intype,jdbcType=VARCHAR}
+            </if>
+            <if test="money != null and money != ''">
+                and money =  #{money,jdbcType=VARCHAR}
+            </if>
+            <if test="indate_begin != null and indate_begin != ''">
+                and indate &gt;= str_to_date(#{indate_begin}, '%Y-%m-%d')
+            </if>
+            <if test="indate_end != null and indate_end != ''">
+                and indate &lt; date_add(str_to_date(#{indate_end}, '%Y-%m-%d'), interval 1 day)
+            </if>
+            <if test="barcode_search != null and barcode_search != ''">
+                and barcode = #{barcode_search}
+            </if>
+            <if test="inperson != null and inperson != ''">
+                and inperson =  #{inperson,jdbcType=VARCHAR}
+            </if>
+            <if test="loggingdate != null">
+                and loggingdate =  #{loggingdate,jdbcType=DATE}
+            </if>
+            <if test="reviewer != null and reviewer != ''">
+                and reviewer =  #{reviewer,jdbcType=VARCHAR}
+            </if>
+            <if test="reviewdate != null">
+                and reviewdate =  #{reviewdate,jdbcType=DATE}
+            </if>
+            <if test="remark != null and remark != ''">
+                and remark =  #{remark,jdbcType=VARCHAR}
+            </if>
+            <if test="signtype != null and signtype != ''">
+                and signtype =  #{signtype,jdbcType=VARCHAR}
+            </if>
+            <if test="transferId != null and transferId != ''">
+                and transfer_id =  #{transferId,jdbcType=VARCHAR}
+            </if>
         </where>
     </select>
 

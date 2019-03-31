@@ -14,19 +14,19 @@
 	//页面加载后执行
 	$(function(){
 		$('#signtype_form').combobox({
-			url: path+'/keyvalue/kvByType?type=signtype',
+			url: __path+'/keyvalue/kvByType?type=signtype',
 			panelHeight: 'auto',
 			valueField:'code',
 			textField:'name'
 		});
 		$('#intype_form').combobox({
-			url: path+'/keyvalue/kvByType?type=instoretype',
+			url: __path+'/keyvalue/kvByType?type=instoretype',
 			panelHeight: 'auto',
 			valueField:'code',
 			textField:'name'
 		});
 		$('#barcode_form').combobox({
-			url: path+'/drugs/findBy?type=specifications',
+			url: __path+'/drugs/findBy?type=specifications',
 			panelHeight: '120',
 			valueField:'barcode',
 			textField:'commonname',
@@ -81,7 +81,7 @@
 		}
 		keyDownEventFun();
 		$('#search_barcode').combobox({
-			url: path+'/drugs/findBy?type=specifications',
+			url: __path+'/drugs/findBy?type=specifications',
 			panelHeight: '120',
 			valueField:'barcode',
 			textField:'commonname',
@@ -116,7 +116,7 @@
 // 		str += curr_time.getSeconds();
 		$('#indate_form').datebox('setValue',str);
 
-		url=path+"/instorage/add";
+		url=__path+"/instorage/add";
 		mesTitle = '新增成功';
 		$('#barcode_show').textbox('setValue','') ;
 	}
@@ -128,7 +128,7 @@
 	 		var id = row.id;
 		 	$('#dlg').dialog('open').dialog('setTitle','编辑');
 		 	$('#fm').form('load',row);
-		 	url = path+"/instorage/modify?id="+id;
+		 	url = __path+"/instorage/modify?id="+id;
 		 	mesTitle = '编辑成功';
 		 	$('#barcode_show').textbox('setValue','') ;
 	 	}else{
@@ -143,7 +143,7 @@
 	 		var id = row.id;
 		 	$('#dlg_delete').dialog('open').dialog('setTitle','删除');
 		 	$('#fm').form('load',row);
-		 	url = path+"/instorage/delete?id="+id;
+		 	url = __path+"/instorage/delete?id="+id;
 		 	mesTitle = '删除成功';
 	 	}else{
 	 		$.messager.alert('提示', '请选择要删除的记录！', 'error');
@@ -218,12 +218,15 @@
 	}
 	//快速查询
  	function searchInstorageQ(){
+		// $("#datagrid").datagrid({url: __path+'/syInstorageJz/listForPage'});
+		var options = $('#datagrid').datagrid('options');
+		options.url = __path + '/syInstorageJz/listForPage';
 	 	$("#datagrid").datagrid("load", getParam());
 	}
 	//导出Excel 
  	function exportExcel(){
 		
- 		var method = path + '/instorage/exportInstorageExcel?barcode_search='+$('#search_barcode').combobox('getValue')+
+ 		var method = __path + '/syInstorageJz/exportInstorageExcel?barcode_search='+$('#search_barcode').combobox('getValue')+
  			'&indate_begin='+$('#search_begin').datebox('getValue')+
  			'&indate_end='+$('#search_end').datebox('getValue')
  			'&drugsname='+$('#name_search').val();
@@ -233,7 +236,7 @@
 		MaskUtil.mask();
 		$.ajax({
 			type : "POST",
-			url  : path+'/instorage/exportInstorageExcel',
+			url  : __path+'/instorage/exportInstorageExcel',
 			data : getParam(),
 			success : function(result){
 				MaskUtil.unmask();
@@ -260,7 +263,7 @@
  	function searchInstorage(){
 		$('#dlgsearch').dialog('open').dialog('setTitle','查询');
 		$('#fmsearch').form('clear');
-		url = path+"/user/searchUser";
+		url = __path+"/user/searchUser";
 		mesTitle = '查询成功';
 	}
 	//刷新
@@ -275,7 +278,7 @@
 		<!-- 信息列表 title="管理" -->
 		<table id="datagrid" class="easyui-datagrid" 
 		    fit="true"
-			url="${path}/instorage/datagrid" 
+			url=""
 			toolbar="#toolbar" 
 			pagination="true"
 			fitColumns="false" 
@@ -305,7 +308,7 @@
 					<th field="remark" width="100">备注</th>
 					<th field="signtypename" width="100">标记类型</th>
 					<th field="signtype" width="100">标记类型</th>
-					<th field="barcode2" width="100">药品条码</th>
+					<th field="barcode2" width="100">药品条码2</th>
 
 				</tr>
 			</thead>
@@ -315,8 +318,8 @@
 		<div id="toolbar">
 			<a href="javascript:void(0);" class="easyui-linkbutton"
 				iconCls="icon-reload" plain="true" onclick="reload();">刷新</a>
-			<a href="javascript:void(0);" class="easyui-linkbutton"
-				iconCls="icon-add" plain="true" onclick="addInstorage();">新增</a> 
+			<%--<a href="javascript:void(0);" class="easyui-linkbutton"--%>
+				<%--iconCls="icon-add" plain="true" onclick="addInstorage();">新增</a> --%>
 			<!-- <a href="javascript:void(0);" class="easyui-linkbutton"
 				iconCls="icon-edit" plain="true" onclick="editInstorage();">编辑</a>  -->
 			<a href="javascript:void(0);" class="easyui-linkbutton"

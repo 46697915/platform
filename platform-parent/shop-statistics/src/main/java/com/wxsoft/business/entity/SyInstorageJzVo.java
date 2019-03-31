@@ -1,13 +1,7 @@
 package com.wxsoft.business.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import java.math.BigDecimal;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
-import java.io.Serializable;
 
 /**
  * <p>
@@ -26,6 +20,39 @@ public class SyInstorageJzVo extends SyInstorageJz {
     private String indate_end;
     @TableField(exist=false)
     private String barcode_search;
+
+    @TableField(exist=false)
+    private String barcode2;
+
+    @TableField(exist=false)
+    private String signtypename;
+
+    @TableField(exist=false)
+    private String intypename ;
+
+    public String getSigntypename() {
+        return signtypename;
+    }
+
+    public void setSigntypename(String signtypename) {
+        this.signtypename = signtypename;
+    }
+
+    public String getIntypename() {
+        return intypename;
+    }
+
+    public void setIntypename(String intypename) {
+        this.intypename = intypename;
+    }
+
+    public String getBarcode2() {
+        return barcode2;
+    }
+
+    public void setBarcode2(String barcode2) {
+        this.barcode2 = barcode2;
+    }
 
     public String getIndate_begin() {
         return indate_begin;

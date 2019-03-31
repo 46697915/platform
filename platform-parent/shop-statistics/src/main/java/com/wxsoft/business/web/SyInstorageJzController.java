@@ -6,10 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.wxsoft.business.entity.InstorageSummary;
 import com.wxsoft.business.entity.SyInstorageJzVo;
 import com.wxsoft.business.service.ISyInstorageJzService;
-import com.wxsoft.utils.ExcelUtil;
-import com.wxsoft.utils.PageEasyUI;
-import com.wxsoft.utils.ResponseEasyUI;
-import com.wxsoft.utils.ResponseResult;
+import com.wxsoft.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  * <p>
@@ -34,6 +34,56 @@ public class SyInstorageJzController {
     @Autowired
     private ISyInstorageJzService service;
 
+
+    /**
+     * 入库查询页面 导出
+     * @param request
+     * @param page
+     * @param instorage
+     * @param response
+     * @throws IOException
+     */
+    @RequestMapping("/exportInstorageExcel")
+    public void exportInstorageExcel(HttpServletRequest request,PageHelper page, SyInstorageJzVo instorage,HttpServletResponse response) throws IOException{
+        List<LinkedHashMap<String, String>> listMap = new ArrayList<LinkedHashMap<String, String>>();
+
+        String title="rk";
+        String[] headers = {"药品条码","药品名称","通用名","入库数量","入库类型","入库日期"
+                ,"入库人","入库金额","生产日期","有效期","保质期"
+                ,"生产批号","复核人","复合日期","备注"};
+        List instorageList = service.selectBy(instorage);
+        for(int j=1;j<instorageList.size()+1;j++){
+            SyInstorageJzVo itg= (SyInstorageJzVo) instorageList.get(j-1);
+            LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+            map.put("药品条码",itg.getBarcode());
+            map.put("药品名称",itg.getDrugsname());
+            map.put("通用名",itg.getCommonname());
+            map.put("入库数量",StringUtil.toString(itg.getInquantity()));
+            map.put("入库类型",itg.getIntypename());
+            map.put("入库日期", DateUtil.format(itg.getIndate()));
+            map.put("入库人",itg.getInperson());
+            map.put("入库金额",StringUtil.toString(itg.getMoney()));
+            map.put("生产日期",DateUtil.format(itg.getGeneratedate()));
+            map.put("有效期",DateUtil.format(itg.getValidityperiod()));
+            map.put("保质期",itg.getShelflife());
+            map.put("生产批号",itg.getGeneratenum());
+            map.put("复核人",itg.getReviewer());
+            map.put("复合日期",DateUtil.format(itg.getReviewdate()));
+            map.put("备注",itg.getRemark());
+            listMap.add(map);
+        }
+
+        ExcelUtil.exportExcel(response, title, headers, listMap);
+
+    }
+    /**
+     * 汇总页面导出
+     * @param request
+     * @param pe
+     * @param instorage
+     * @param response
+     * @throws IOException
+     */
     @RequestMapping("/exportExcel")
     public void exportExcel(HttpServletRequest request,PageEasyUI pe,
                             SyInstorageJzVo instorage,HttpServletResponse response) throws IOException{
@@ -74,6 +124,34 @@ public class SyInstorageJzController {
 
         return rr ;
     }
+    /**
+     * 菜单列表分页
+     *
+     * @param
+     * @return
+     */
+    @RequestMapping("/listForPage")
+    public ResponseEasyUI listForPage(PageEasyUI pe, SyInstorageJzVo vo) {
+        PageHelper.startPage(pe.getPage(), pe.getRows());
+        List r = service.selectBy(vo);
+
+        //获取分页信息
+        PageInfo<SyInstorageJzVo> pi = new PageInfo<SyInstorageJzVo>(r);
+
+        ResponseEasyUI rr = ResponseEasyUI.getResponseResult();
+        rr.setTotal( pi.getTotal());
+        rr.setRows(pi.getList());
+        return rr;
+    }
+
+    @RequestMapping("/add")
+    public ResponseResult add(SyInstorageJzVo vo) {
+        boolean r = service.insert(vo);
+        ResponseResult rr = ResponseResult.getResponseResult();
+        rr.setResult(r);
+        return rr;
+    }
+
 
 
     /**
@@ -85,37 +163,6 @@ public class SyInstorageJzController {
     @RequestMapping("/list")
     public ResponseResult list(SyInstorageJzVo vo) {
         List r = service.selectBy(vo);
-        ResponseResult rr = ResponseResult.getResponseResult();
-        rr.setResult(r);
-        return rr;
-    }
-
-    /**
-     * 菜单列表分页
-     *
-     * @param
-     * @return
-     */
-    @RequestMapping("/listForPage")
-    public ResponseResult listForPage(PageEasyUI pe, SyInstorageJzVo vo) {
-        PageHelper.startPage(pe.getPage(), pe.getRows());
-        List r = service.selectBy(vo);
-
-        //获取分页信息
-        PageInfo<SyInstorageJzVo> pi = new PageInfo<SyInstorageJzVo>(r);
-
-        Map<String, Object> rMap = new HashMap<String, Object>();
-        rMap.put("total", pi.getTotal());
-        rMap.put("list", pi.getList());
-
-        ResponseResult rr = ResponseResult.getResponseResult();
-        rr.setResult(rMap);
-        return rr;
-    }
-
-    @RequestMapping("/add")
-    public ResponseResult add(SyInstorageJzVo vo) {
-        boolean r = service.insert(vo);
         ResponseResult rr = ResponseResult.getResponseResult();
         rr.setResult(r);
         return rr;

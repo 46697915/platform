@@ -1,16 +1,15 @@
 package com.wxsoft.business.service.impl;
 
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.wxsoft.business.entity.InstorageSummary;
 import com.wxsoft.business.entity.SyInstorageJz;
 import com.wxsoft.business.entity.SyInstorageJzVo;
 import com.wxsoft.business.mapper.SyInstorageJzMapper;
 import com.wxsoft.business.service.ISyInstorageJzService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
