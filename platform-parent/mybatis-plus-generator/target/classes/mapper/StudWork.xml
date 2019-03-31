@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.business.stud.mapper.StudWorkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.business.stud.entity.StudWork">
+        <id column="id" property="id" />
+        <result column="com_name" property="comName" />
+        <result column="com_address" property="comAddress" />
+        <result column="work_content" property="workContent" />
+        <result column="in_date" property="inDate" />
+        <result column="out_date" property="outDate" />
+        <result column="link_man" property="linkMan" />
+        <result column="com_city" property="comCity" />
+        <result column="work_xz" property="workXz" />
+        <result column="work_sshy" property="workSshy" />
+        <result column="remarks" property="remarks" />
+        <result column="operator" property="operator" />
+        <result column="operatedate" property="operatedate" />
+        <result column="stud_id" property="studId" />
+        <result column="stud_name" property="studName" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="StudWorkVo" resultType="StudWork">
+        select
+            id, com_name AS comName, com_address AS comAddress, work_content AS workContent, in_date AS inDate, out_date AS outDate, link_man AS linkMan, com_city AS comCity, work_xz AS workXz, work_sshy AS workSshy, remarks, operator, operatedate, stud_id AS studId, stud_name AS studName
+        from stud_work
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="comName != null and comName != ''">
+            and com_name =  #{comName,jdbcType=VARCHAR}
+        </if>
+        <if test="comAddress != null and comAddress != ''">
+            and com_address =  #{comAddress,jdbcType=VARCHAR}
+        </if>
+        <if test="workContent != null and workContent != ''">
+            and work_content =  #{workContent,jdbcType=VARCHAR}
+        </if>
+        <if test="inDate != null">
+            and in_date =  #{inDate,jdbcType=DATE}
+        </if>
+        <if test="outDate != null">
+            and out_date =  #{outDate,jdbcType=DATE}
+        </if>
+        <if test="linkMan != null and linkMan != ''">
+            and link_man =  #{linkMan,jdbcType=VARCHAR}
+        </if>
+        <if test="comCity != null and comCity != ''">
+            and com_city =  #{comCity,jdbcType=VARCHAR}
+        </if>
+        <if test="workXz != null and workXz != ''">
+            and work_xz =  #{workXz,jdbcType=VARCHAR}
+        </if>
+        <if test="workSshy != null and workSshy != ''">
+            and work_sshy =  #{workSshy,jdbcType=VARCHAR}
+        </if>
+        <if test="remarks != null and remarks != ''">
+            and remarks =  #{remarks,jdbcType=VARCHAR}
+        </if>
+        <if test="operator != null and operator != ''">
+            and operator =  #{operator,jdbcType=VARCHAR}
+        </if>
+        <if test="operatedate != null">
+            and operatedate =  #{operatedate,jdbcType=DATE}
+        </if>
+        <if test="studId != null and studId != ''">
+            and stud_id =  #{studId,jdbcType=VARCHAR}
+        </if>
+        <if test="studName != null and studName != ''">
+            and stud_name =  #{studName,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+</mapper>

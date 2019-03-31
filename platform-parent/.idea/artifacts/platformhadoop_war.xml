@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platformhadoop:war">
+    <output-path>$PROJECT_DIR$/platform-hadoop/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platformhadoop</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-hadoop.war">
+      <element id="artifact" artifact-name="platformhadoop:war exploded" />
+    </root>
+  </artifact>
+</component>

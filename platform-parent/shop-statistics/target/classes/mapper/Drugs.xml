@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.business.mapper.DrugsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.business.entity.Drugs">
+        <id column="id" property="id" />
+        <result column="barcode" property="barcode" />
+        <result column="drugsname" property="drugsname" />
+        <result column="commonname" property="commonname" />
+        <result column="type1" property="type1" />
+        <result column="type2" property="type2" />
+        <result column="type3" property="type3" />
+        <result column="dosageform" property="dosageform" />
+        <result column="specifications" property="specifications" />
+        <result column="units" property="units" />
+        <result column="manufactor" property="manufactor" />
+        <result column="approvalnum" property="approvalnum" />
+        <result column="drugscode" property="drugscode" />
+        <result column="commonshotspell" property="commonshotspell" />
+        <result column="commonnamespell" property="commonnamespell" />
+        <result column="operator" property="operator" />
+        <result column="operatedate" property="operatedate" />
+        <result column="bxdygx" property="bxdygx" />
+        <result column="barcode2" property="barcode2" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="DrugsVo" resultType="Drugs">
+        select
+            id, barcode, drugsname, commonname, type1, type2, type3, dosageform, specifications, units, manufactor, approvalnum, drugscode, commonshotspell, commonnamespell, operator, operatedate, bxdygx, barcode2
+        from sy_drugs
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="barcode != null and barcode != ''">
+            and barcode =  #{barcode,jdbcType=VARCHAR}
+        </if>
+        <if test="drugsname != null and drugsname != ''">
+            and drugsname =  #{drugsname,jdbcType=VARCHAR}
+        </if>
+        <if test="commonname != null and commonname != ''">
+            and commonname =  #{commonname,jdbcType=VARCHAR}
+        </if>
+        <if test="type1 != null and type1 != ''">
+            and type1 =  #{type1,jdbcType=VARCHAR}
+        </if>
+        <if test="type2 != null and type2 != ''">
+            and type2 =  #{type2,jdbcType=VARCHAR}
+        </if>
+        <if test="type3 != null and type3 != ''">
+            and type3 =  #{type3,jdbcType=VARCHAR}
+        </if>
+        <if test="dosageform != null and dosageform != ''">
+            and dosageform =  #{dosageform,jdbcType=VARCHAR}
+        </if>
+        <if test="specifications != null and specifications != ''">
+            and specifications =  #{specifications,jdbcType=VARCHAR}
+        </if>
+        <if test="units != null and units != ''">
+            and units =  #{units,jdbcType=VARCHAR}
+        </if>
+        <if test="manufactor != null and manufactor != ''">
+            and manufactor =  #{manufactor,jdbcType=VARCHAR}
+        </if>
+        <if test="approvalnum != null and approvalnum != ''">
+            and approvalnum =  #{approvalnum,jdbcType=VARCHAR}
+        </if>
+        <if test="drugscode != null and drugscode != ''">
+            and drugscode =  #{drugscode,jdbcType=VARCHAR}
+        </if>
+        <if test="commonshotspell != null and commonshotspell != ''">
+            and commonshotspell =  #{commonshotspell,jdbcType=VARCHAR}
+        </if>
+        <if test="commonnamespell != null and commonnamespell != ''">
+            and commonnamespell =  #{commonnamespell,jdbcType=VARCHAR}
+        </if>
+        <if test="operator != null and operator != ''">
+            and operator =  #{operator,jdbcType=VARCHAR}
+        </if>
+        <if test="operatedate != null">
+            and operatedate =  #{operatedate,jdbcType=DATE}
+        </if>
+        <if test="bxdygx != null and bxdygx != ''">
+            and bxdygx =  #{bxdygx,jdbcType=VARCHAR}
+        </if>
+        <if test="barcode2 != null and barcode2 != ''">
+            and barcode2 =  #{barcode2,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+</mapper>

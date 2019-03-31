@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.business.mapper.SyInstorageJzMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.business.entity.SyInstorageJz">
+        <id column="id" property="id" />
+        <result column="barcode" property="barcode" />
+        <result column="drugsname" property="drugsname" />
+        <result column="commonname" property="commonname" />
+        <result column="generatenum" property="generatenum" />
+        <result column="generatedate" property="generatedate" />
+        <result column="validityperiod" property="validityperiod" />
+        <result column="shelflife" property="shelflife" />
+        <result column="inquantity" property="inquantity" />
+        <result column="intype" property="intype" />
+        <result column="money" property="money" />
+        <result column="indate" property="indate" />
+        <result column="inperson" property="inperson" />
+        <result column="loggingdate" property="loggingdate" />
+        <result column="reviewer" property="reviewer" />
+        <result column="reviewdate" property="reviewdate" />
+        <result column="remark" property="remark" />
+        <result column="signtype" property="signtype" />
+        <result column="transfer_id" property="transferId" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="SyInstorageJzVo" resultType="SyInstorageJz">
+        select
+            id, barcode, drugsname, commonname, generatenum, generatedate, validityperiod, shelflife, inquantity, intype, money, indate, inperson, loggingdate, reviewer, reviewdate, remark, signtype, transfer_id AS transferId
+        from sy_instorage_jz
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="barcode != null and barcode != ''">
+            and barcode =  #{barcode,jdbcType=VARCHAR}
+        </if>
+        <if test="drugsname != null and drugsname != ''">
+            and drugsname =  #{drugsname,jdbcType=VARCHAR}
+        </if>
+        <if test="commonname != null and commonname != ''">
+            and commonname =  #{commonname,jdbcType=VARCHAR}
+        </if>
+        <if test="generatenum != null and generatenum != ''">
+            and generatenum =  #{generatenum,jdbcType=VARCHAR}
+        </if>
+        <if test="generatedate != null">
+            and generatedate =  #{generatedate,jdbcType=DATE}
+        </if>
+        <if test="validityperiod != null">
+            and validityperiod =  #{validityperiod,jdbcType=DATE}
+        </if>
+        <if test="shelflife != null and shelflife != ''">
+            and shelflife =  #{shelflife,jdbcType=VARCHAR}
+        </if>
+        <if test="inquantity != null and inquantity != ''">
+            and inquantity =  #{inquantity,jdbcType=VARCHAR}
+        </if>
+        <if test="intype != null and intype != ''">
+            and intype =  #{intype,jdbcType=VARCHAR}
+        </if>
+        <if test="money != null and money != ''">
+            and money =  #{money,jdbcType=VARCHAR}
+        </if>
+        <if test="indate != null">
+            and indate =  #{indate,jdbcType=DATE}
+        </if>
+        <if test="inperson != null and inperson != ''">
+            and inperson =  #{inperson,jdbcType=VARCHAR}
+        </if>
+        <if test="loggingdate != null">
+            and loggingdate =  #{loggingdate,jdbcType=DATE}
+        </if>
+        <if test="reviewer != null and reviewer != ''">
+            and reviewer =  #{reviewer,jdbcType=VARCHAR}
+        </if>
+        <if test="reviewdate != null">
+            and reviewdate =  #{reviewdate,jdbcType=DATE}
+        </if>
+        <if test="remark != null and remark != ''">
+            and remark =  #{remark,jdbcType=VARCHAR}
+        </if>
+        <if test="signtype != null and signtype != ''">
+            and signtype =  #{signtype,jdbcType=VARCHAR}
+        </if>
+        <if test="transferId != null and transferId != ''">
+            and transfer_id =  #{transferId,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+
+    <select id="instorageSummaryAll" resultType="InstorageSummary">
+        select barcode,commonname,
+        (select min(units) from sy_drugs a where a.barcode=x.barcode) units,
+        (select name from keyvalue b where type='units' and code = (select min(units) from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+        (select min(specifications) from sy_drugs a where a.barcode=x.barcode) specifications,
+        (select barcode2 from sy_drugs a where a.barcode=x.barcode) barcode2,
+        sum(inquantity) total,sum(money) amount
+        from sy_instorage_jz x
+        where 1=1
+        <if test="instorage.id != null and instorage.id != ''">
+            and id like concat('%',#{instorage.id},'%')
+        </if>
+        <if test="instorage.signtype != null and instorage.signtype != ''">
+            and signtype = #{instorage.signtype}
+        </if>
+        <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+            and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d')
+        </if>
+        <if test="instorage.indate_end != null and instorage.indate_end != ''">
+            and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
+            and barcode = #{instorage.barcode_search}
+        </if>
+        group by barcode,commonname
+    </select>
+
+</mapper>
