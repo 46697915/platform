@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.business.mapper.StorecheckJzMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.business.entity.StorecheckJz">
+        <id column="id" property="id" />
+        <result column="barcode" property="barcode" />
+        <result column="drugsname" property="drugsname" />
+        <result column="commonname" property="commonname" />
+        <result column="bxdygx" property="bxdygx" />
+        <result column="drugscode" property="drugscode" />
+        <result column="initstore" property="initstore" />
+        <result column="initamount" property="initamount" />
+        <result column="instore" property="instore" />
+        <result column="instoreamount" property="instoreamount" />
+        <result column="salecount" property="salecount" />
+        <result column="saleamount" property="saleamount" />
+        <result column="newstore" property="newstore" />
+        <result column="newamount" property="newamount" />
+        <result column="currstore" property="currstore" />
+        <result column="curramount" property="curramount" />
+        <result column="crrcheckdate" property="crrcheckdate" />
+        <result column="lastcheckdate" property="lastcheckdate" />
+        <result column="checker" property="checker" />
+        <result column="checkdate" property="checkdate" />
+        <result column="islastcheck" property="islastcheck" />
+        <result column="lastcheckid" property="lastcheckid" />
+        <result column="transfer_id" property="transferId" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="StorecheckJzVo" resultType="StorecheckJzVo">
+        select
+            id, barcode, drugsname, commonname, bxdygx,
+            drugscode, initstore, initamount, instore, instoreamount,
+            salecount, saleamount, newstore, newamount, currstore,
+            curramount, crrcheckdate, lastcheckdate, checker,
+            checkdate, islastcheck, lastcheckid,
+            (select barcode2 from sy_drugs a where a.barcode=sy_m_storecheck_jz.barcode) barcode2,
+            transfer_id AS transferId
+        from sy_m_storecheck_jz
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+
+        <if test="barcode != null and barcode != ''">
+            and barcode =  #{barcode,jdbcType=VARCHAR}
+        </if>
+        <if test="drugsname != null and drugsname != ''">
+            and drugsname =  #{drugsname,jdbcType=VARCHAR}
+        </if>
+        <if test="commonname != null and commonname != ''">
+            and commonname =  #{commonname,jdbcType=VARCHAR}
+        </if>
+        <if test="bxdygx != null and bxdygx != ''">
+            and bxdygx =  #{bxdygx,jdbcType=VARCHAR}
+        </if>
+        <if test="drugscode != null and drugscode != ''">
+            and drugscode =  #{drugscode,jdbcType=VARCHAR}
+        </if>
+        <if test="initstore != null and initstore != ''">
+            and initstore =  #{initstore,jdbcType=VARCHAR}
+        </if>
+        <if test="initamount != null and initamount != ''">
+            and initamount =  #{initamount,jdbcType=VARCHAR}
+        </if>
+        <if test="instore != null and instore != ''">
+            and instore =  #{instore,jdbcType=VARCHAR}
+        </if>
+        <if test="instoreamount != null and instoreamount != ''">
+            and instoreamount =  #{instoreamount,jdbcType=VARCHAR}
+        </if>
+        <if test="salecount != null and salecount != ''">
+            and salecount =  #{salecount,jdbcType=VARCHAR}
+        </if>
+        <if test="saleamount != null and saleamount != ''">
+            and saleamount =  #{saleamount,jdbcType=VARCHAR}
+        </if>
+        <if test="newstore != null and newstore != ''">
+            and newstore =  #{newstore,jdbcType=VARCHAR}
+        </if>
+        <if test="newamount != null and newamount != ''">
+            and newamount =  #{newamount,jdbcType=VARCHAR}
+        </if>
+        <if test="currstore != null and currstore != ''">
+            and currstore =  #{currstore,jdbcType=VARCHAR}
+        </if>
+        <if test="curramount != null and curramount != ''">
+            and curramount =  #{curramount,jdbcType=VARCHAR}
+        </if>
+        <if test="crrcheckdate != null">
+            and crrcheckdate =  #{crrcheckdate,jdbcType=DATE}
+        </if>
+        <if test="crrcheckdate_begin != null and crrcheckdate_begin != ''">
+            and crrcheckdate &gt;= str_to_date(#{crrcheckdate_begin}, '%Y-%m-%d')
+        </if>
+        <if test="crrcheckdate_end != null and crrcheckdate_end != ''">
+            and crrcheckdate &lt; date_add(str_to_date(#{crrcheckdate_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="lastcheckdate != null">
+            and lastcheckdate =  #{lastcheckdate,jdbcType=DATE}
+        </if>
+        <if test="checker != null and checker != ''">
+            and checker =  #{checker,jdbcType=VARCHAR}
+        </if>
+        <if test="checkdate != null">
+            and checkdate =  #{checkdate,jdbcType=DATE}
+        </if>
+        <if test="islastcheck != null and islastcheck != ''">
+            and islastcheck =  #{islastcheck,jdbcType=VARCHAR}
+        </if>
+        <if test="lastcheckid != null and lastcheckid != ''">
+            and lastcheckid =  #{lastcheckid,jdbcType=VARCHAR}
+        </if>
+        <if test="transferId != null and transferId != ''">
+            and transfer_id =  #{transferId,jdbcType=VARCHAR}
+        </if>
+            <if test="iserrorstore != null and iserrorstore != ''">
+                and newstore &lt;&gt; currstore
+            </if>
+            <if test="newstore_search != null and newstore_search != ''">
+                and newstore &lt; #{newstore_search}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+        insert into sy_m_storecheck_jz
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="barcode != null">barcode,</if>
+            <if test="drugsname != null">drugsname,</if>
+            <if test="commonname != null">commonname,</if>
+            <if test="bxdygx != null">bxdygx,</if>
+            <if test="drugscode != null">drugscode,</if>
+            <if test="initstore != null">initstore,</if>
+            <if test="initamount != null">initamount,</if>
+            <if test="instore != null">instore,</if>
+            <if test="instoreamount != null">instoreamount,</if>
+            <if test="salecount != null">salecount,</if>
+            <if test="saleamount != null">saleamount,</if>
+            <if test="newstore != null">newstore,</if>
+            <if test="newamount != null">newamount,</if>
+            <if test="currstore != null">currstore,</if>
+            <if test="curramount != null">curramount,</if>
+            <if test="crrcheckdate != null">crrcheckdate,</if>
+            <if test="lastcheckdate != null">lastcheckdate,</if>
+            <if test="checker != null">checker,</if>
+            <if test="checkdate != null">checkdate,</if>
+            <if test="islastcheck != null">islastcheck,</if>
+            <if test="lastcheckid != null">lastcheckid,</if>
+            <if test="transferId != null">transfer_id,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="barcode != null">#{barcode},</if>
+            <if test="drugsname != null">#{drugsname},</if>
+            <if test="commonname != null">#{commonname},</if>
+            <if test="bxdygx != null">#{bxdygx},</if>
+            <if test="drugscode != null">#{drugscode},</if>
+            <if test="initstore != null">#{initstore},</if>
+            <if test="initamount != null">#{initamount},</if>
+            <if test="instore != null">#{instore},</if>
+            <if test="instoreamount != null">#{instoreamount},</if>
+            <if test="salecount != null">#{salecount},</if>
+            <if test="saleamount != null">#{saleamount},</if>
+            <if test="newstore != null">#{newstore},</if>
+            <if test="newamount != null">#{newamount},</if>
+            <if test="currstore != null">#{currstore},</if>
+            <if test="curramount != null">#{curramount},</if>
+            <if test="crrcheckdate != null">#{crrcheckdate},</if>
+            <if test="lastcheckdate != null">#{lastcheckdate},</if>
+            <if test="checker != null">#{checker},</if>
+            <if test="checkdate != null">#{checkdate},</if>
+            <if test="islastcheck != null">#{islastcheck},</if>
+            <if test="lastcheckid != null">#{lastcheckid},</if>
+            <if test="transferId != null">#{transferId},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" >
+        update sy_m_storecheck_jz
+        <set>
+            <if test="id != null">id=#{id},</if>
+            <if test="barcode != null">barcode=#{barcode},</if>
+            <if test="drugsname != null">drugsname=#{drugsname},</if>
+            <if test="commonname != null">commonname=#{commonname},</if>
+            <if test="bxdygx != null">bxdygx=#{bxdygx},</if>
+            <if test="drugscode != null">drugscode=#{drugscode},</if>
+            <if test="initstore != null">initstore=#{initstore},</if>
+            <if test="initamount != null">initamount=#{initamount},</if>
+            <if test="instore != null">instore=#{instore},</if>
+            <if test="instoreamount != null">instoreamount=#{instoreamount},</if>
+            <if test="salecount != null">salecount=#{salecount},</if>
+            <if test="saleamount != null">saleamount=#{saleamount},</if>
+            <if test="newstore != null">newstore=#{newstore},</if>
+            <if test="newamount != null">newamount=#{newamount},</if>
+            <if test="currstore != null">currstore=#{currstore},</if>
+            <if test="curramount != null">curramount=#{curramount},</if>
+            <if test="crrcheckdate != null">crrcheckdate=#{crrcheckdate},</if>
+            <if test="lastcheckdate != null">lastcheckdate=#{lastcheckdate},</if>
+            <if test="checker != null">checker=#{checker},</if>
+            <if test="checkdate != null">checkdate=#{checkdate},</if>
+            <if test="islastcheck != null">islastcheck=#{islastcheck},</if>
+            <if test="lastcheckid != null">lastcheckid=#{lastcheckid},</if>
+            <if test="transferId != null">transfer_id=#{transferId},</if>
+        </set>
+        <where>
+            and id = #{id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete from sy_m_storecheck_jz
+        <where>
+                and id = #{id}
+        </where>
+    </delete>
+
+</mapper>

@@ -35,7 +35,7 @@ public class MpGenerator {
     //数据库密码
     private static String password = "root";
     //需要生成的表
-    private static String[] tables = new String[]{"sy_m_storecheck_jz"};
+    private static String[] tables = new String[]{"sy_orderdetail_jz"};
     //自定义模版路径
     private static String templetPath = "/templates/shop";
 

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.business.mapper.SyOrderdetailJzMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.business.entity.SyOrderdetailJz">
+        <id column="id" property="id" />
+        <result column="ordercode" property="ordercode" />
+        <result column="detailcode" property="detailcode" />
+        <result column="goodsid" property="goodsid" />
+        <result column="barcode" property="barcode" />
+        <result column="goodsname" property="goodsname" />
+        <result column="commonname" property="commonname" />
+        <result column="giftcode" property="giftcode" />
+        <result column="price" property="price" />
+        <result column="amount" property="amount" />
+        <result column="money" property="money" />
+        <result column="transportmoney" property="transportmoney" />
+        <result column="iscomment" property="iscomment" />
+        <result column="getmoney" property="getmoney" />
+        <result column="paytype" property="paytype" />
+        <result column="peybank" property="peybank" />
+        <result column="remark" property="remark" />
+        <result column="commentid" property="commentid" />
+        <result column="isenough" property="isenough" />
+        <result column="units" property="units" />
+        <result column="createdate" property="createdate" />
+        <result column="transfer_id" property="transferId" />
+    </resultMap>
+
+
+
+    <select id="selectBy" parameterType="SyOrderdetailJzVo" resultType="SyOrderdetailJz">
+        select
+            id, ordercode, detailcode, goodsid, barcode,
+            goodsname, commonname, giftcode, price, amount,
+            money, transportmoney, iscomment, getmoney, paytype,
+            peybank, remark, commentid, isenough, units,
+            createdate, transfer_id AS transferId
+        from sy_orderdetail_jz
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="ordercode != null and ordercode != ''">
+            and ordercode =  #{ordercode,jdbcType=VARCHAR}
+        </if>
+        <if test="detailcode != null and detailcode != ''">
+            and detailcode =  #{detailcode,jdbcType=VARCHAR}
+        </if>
+        <if test="goodsid != null and goodsid != ''">
+            and goodsid =  #{goodsid,jdbcType=VARCHAR}
+        </if>
+        <if test="barcode != null and barcode != ''">
+            and barcode =  #{barcode,jdbcType=VARCHAR}
+        </if>
+        <if test="goodsname != null and goodsname != ''">
+            and goodsname =  #{goodsname,jdbcType=VARCHAR}
+        </if>
+        <if test="commonname != null and commonname != ''">
+            and commonname =  #{commonname,jdbcType=VARCHAR}
+        </if>
+        <if test="giftcode != null and giftcode != ''">
+            and giftcode =  #{giftcode,jdbcType=VARCHAR}
+        </if>
+        <if test="price != null and price != ''">
+            and price =  #{price,jdbcType=VARCHAR}
+        </if>
+        <if test="amount != null and amount != ''">
+            and amount =  #{amount,jdbcType=VARCHAR}
+        </if>
+        <if test="money != null and money != ''">
+            and money =  #{money,jdbcType=VARCHAR}
+        </if>
+        <if test="transportmoney != null and transportmoney != ''">
+            and transportmoney =  #{transportmoney,jdbcType=VARCHAR}
+        </if>
+        <if test="iscomment != null and iscomment != ''">
+            and iscomment =  #{iscomment,jdbcType=VARCHAR}
+        </if>
+        <if test="getmoney != null and getmoney != ''">
+            and getmoney =  #{getmoney,jdbcType=VARCHAR}
+        </if>
+        <if test="paytype != null and paytype != ''">
+            and paytype =  #{paytype,jdbcType=VARCHAR}
+        </if>
+        <if test="peybank != null and peybank != ''">
+            and peybank =  #{peybank,jdbcType=VARCHAR}
+        </if>
+        <if test="remark != null and remark != ''">
+            and remark =  #{remark,jdbcType=VARCHAR}
+        </if>
+        <if test="commentid != null and commentid != ''">
+            and commentid =  #{commentid,jdbcType=VARCHAR}
+        </if>
+        <if test="isenough != null and isenough != ''">
+            and isenough =  #{isenough,jdbcType=VARCHAR}
+        </if>
+        <if test="units != null and units != ''">
+            and units =  #{units,jdbcType=VARCHAR}
+        </if>
+        <if test="createdate != null">
+            and createdate =  #{createdate,jdbcType=DATE}
+        </if>
+        <if test="transferId != null and transferId != ''">
+            and transfer_id =  #{transferId,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+    <select id="salesSummaryAll" resultType="OrderdetailSummary">
+        select barcode,commonname,
+        (select units from sy_drugs a where a.barcode=x.barcode) units,
+        (select name from keyvalue b where type='units' and code = (select units from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+        (select specifications from sy_drugs a where a.barcode=x.barcode) specifications,
+        sum(amount) total,sum(getmoney) amount
+        from sy_orderdetail_jz x
+        where 1=1
+        <if test="createdate_begin != null and createdate_begin != ''">
+            and createdate &gt;= str_to_date(#{createdate_begin}, '%Y-%m-%d')
+        </if>
+        <if test="createdate_end != null and createdate_end != ''">
+            and createdate &lt;= date_add(str_to_date(#{createdate_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="ordercode != null and ordercode != ''">
+            and ordercode like concat('%',#{ordercode},'%')
+        </if>
+        <if test="id != null and id != ''">
+            and id like concat('%',#{id},'%')
+        </if>
+        <if test="barcode_search != null and barcode_search != ''">
+            and barcode = #{barcode_search}
+        </if>
+        group by barcode,commonname
+    </select>
+    <select id="salesAllSummaryAll" resultType="OrderdetailSummary">
+        select barcode,commonname,units,unitsname,specifications,
+        sum(total) total,sum(amount) amount
+        from (
+        select barcode,commonname,
+        (select units from sy_drugs a where a.barcode=x.barcode) units,
+        (select name from keyvalue b where type='units' and code = (select units from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+        (select specifications from sy_drugs a where a.barcode=x.barcode) specifications,
+        amount total,getmoney amount
+        from sy_orderdetail_jz x
+        where 1=1
+        <if test="createdate_begin != null and createdate_begin != ''">
+            and createdate &gt;= str_to_date(#{createdate_begin}, '%Y-%m-%d')
+        </if>
+        <if test="createdate_end != null and createdate_end != ''">
+            and createdate &lt;= date_add(str_to_date(#{createdate_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="ordercode != null and ordercode != ''">
+            and ordercode like concat('%',#{ordercode},'%')
+        </if>
+        <if test="id != null and id != ''">
+            and id like concat('%',#{id},'%')
+        </if>
+        <if test="barcode_search != null and barcode_search != ''">
+            and barcode = #{barcode_search}
+        </if>
+        union
+        select barcode,
+        yyxmmc commonname,
+        xmdj units,
+        (select name from keyvalue b where type='units' and code = x.xmdj ) unitsname,
+        xmgg specifications,
+        xmsl total,xmje amount
+        from sy_m_ybjsmxxx_jz x
+        where 1=1
+        <if test="createdate_begin != null and createdate_begin != ''">
+            and hjrq &gt;= str_to_date(#{createdate_begin}, '%Y-%m-%d')
+        </if>
+        <if test="createdate_end != null and createdate_end != ''">
+            and hjrq &lt;= date_add(str_to_date(#{createdate_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="barcode_search != null and barcode_search != ''">
+            and barcode= #{barcode_search} )
+        </if>
+        ) a
+        group by barcode,commonname,units,unitsname,specifications
+    </select>
+
+    <insert id="insert">
+        insert into sy_orderdetail_jz
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="ordercode != null">ordercode,</if>
+            <if test="detailcode != null">detailcode,</if>
+            <if test="goodsid != null">goodsid,</if>
+            <if test="barcode != null">barcode,</if>
+            <if test="goodsname != null">goodsname,</if>
+            <if test="commonname != null">commonname,</if>
+            <if test="giftcode != null">giftcode,</if>
+            <if test="price != null">price,</if>
+            <if test="amount != null">amount,</if>
+            <if test="money != null">money,</if>
+            <if test="transportmoney != null">transportmoney,</if>
+            <if test="iscomment != null">iscomment,</if>
+            <if test="getmoney != null">getmoney,</if>
+            <if test="paytype != null">paytype,</if>
+            <if test="peybank != null">peybank,</if>
+            <if test="remark != null">remark,</if>
+            <if test="commentid != null">commentid,</if>
+            <if test="isenough != null">isenough,</if>
+            <if test="units != null">units,</if>
+            <if test="createdate != null">createdate,</if>
+            <if test="transferId != null">transfer_id,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="ordercode != null">#{ordercode},</if>
+            <if test="detailcode != null">#{detailcode},</if>
+            <if test="goodsid != null">#{goodsid},</if>
+            <if test="barcode != null">#{barcode},</if>
+            <if test="goodsname != null">#{goodsname},</if>
+            <if test="commonname != null">#{commonname},</if>
+            <if test="giftcode != null">#{giftcode},</if>
+            <if test="price != null">#{price},</if>
+            <if test="amount != null">#{amount},</if>
+            <if test="money != null">#{money},</if>
+            <if test="transportmoney != null">#{transportmoney},</if>
+            <if test="iscomment != null">#{iscomment},</if>
+            <if test="getmoney != null">#{getmoney},</if>
+            <if test="paytype != null">#{paytype},</if>
+            <if test="peybank != null">#{peybank},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="commentid != null">#{commentid},</if>
+            <if test="isenough != null">#{isenough},</if>
+            <if test="units != null">#{units},</if>
+            <if test="createdate != null">#{createdate},</if>
+            <if test="transferId != null">#{transferId},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" >
+        update sy_orderdetail_jz
+        <set>
+            <if test="id != null">id=#{id},</if>
+            <if test="ordercode != null">ordercode=#{ordercode},</if>
+            <if test="detailcode != null">detailcode=#{detailcode},</if>
+            <if test="goodsid != null">goodsid=#{goodsid},</if>
+            <if test="barcode != null">barcode=#{barcode},</if>
+            <if test="goodsname != null">goodsname=#{goodsname},</if>
+            <if test="commonname != null">commonname=#{commonname},</if>
+            <if test="giftcode != null">giftcode=#{giftcode},</if>
+            <if test="price != null">price=#{price},</if>
+            <if test="amount != null">amount=#{amount},</if>
+            <if test="money != null">money=#{money},</if>
+            <if test="transportmoney != null">transportmoney=#{transportmoney},</if>
+            <if test="iscomment != null">iscomment=#{iscomment},</if>
+            <if test="getmoney != null">getmoney=#{getmoney},</if>
+            <if test="paytype != null">paytype=#{paytype},</if>
+            <if test="peybank != null">peybank=#{peybank},</if>
+            <if test="remark != null">remark=#{remark},</if>
+            <if test="commentid != null">commentid=#{commentid},</if>
+            <if test="isenough != null">isenough=#{isenough},</if>
+            <if test="units != null">units=#{units},</if>
+            <if test="createdate != null">createdate=#{createdate},</if>
+            <if test="transferId != null">transfer_id=#{transferId},</if>
+        </set>
+        <where>
+            and id = #{id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete from sy_orderdetail_jz
+        <where>
+                and id = #{id}
+        </where>
+    </delete>
+
+</mapper>

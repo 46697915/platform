@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.business.mapper.YbjsmxxxJzMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.business.entity.YbjsmxxxJz">
+        <id column="id" property="id" />
+        <result column="ybjsh" property="ybjsh" />
+        <result column="zyh" property="zyh" />
+        <result column="cfh" property="cfh" />
+        <result column="cfnxh" property="cfnxh" />
+        <result column="yyxmbm" property="yyxmbm" />
+        <result column="yyxmmc" property="yyxmmc" />
+        <result column="ybxmbm" property="ybxmbm" />
+        <result column="xmgg" property="xmgg" />
+        <result column="xmdw" property="xmdw" />
+        <result column="xmjx" property="xmjx" />
+        <result column="xmdj" property="xmdj" />
+        <result column="xmsl" property="xmsl" />
+        <result column="xmje" property="xmje" />
+        <result column="hjrq" property="hjrq" />
+        <result column="kdysxm" property="kdysxm" />
+        <result column="zxks" property="zxks" />
+        <result column="sfybxm" property="sfybxm" />
+        <result column="mcyl" property="mcyl" />
+        <result column="sypc" property="sypc" />
+        <result column="yf" property="yf" />
+        <result column="zxts" property="zxts" />
+        <result column="isupdate" property="isupdate" />
+        <result column="barcode" property="barcode" />
+        <result column="transfer_id" property="transferId" />
+    </resultMap>
+
+    <resultMap id="YbjsmxxxSummary" type="com.wxsoft.business.entity.YbjsmxxxSummary" >
+        <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+        <result column="barcode2" property="barcode2" jdbcType="VARCHAR" />
+        <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+        <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+        <result column="total" property="total" jdbcType="VARCHAR" />
+        <result column="amount" property="amount" jdbcType="VARCHAR" />
+        <result column="units" property="units" jdbcType="VARCHAR" />
+        <result column="unitsname" property="unitsname" jdbcType="VARCHAR" />
+        <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="selectBy" parameterType="YbjsmxxxJzVo" resultType="YbjsmxxxJzVo">
+        select
+            id, ybjsh, zyh, cfh, cfnxh,
+            yyxmbm, yyxmmc, ybxmbm, xmgg, xmdw,
+            xmjx, xmdj, xmsl, xmje, hjrq,
+            kdysxm, zxks, sfybxm, mcyl, sypc,
+            yf, zxts, isupdate, barcode,
+            (select barcode2 from sy_drugs a where a.barcode=sy_m_ybjsmxxx_jz.barcode) barcode2,
+            transfer_id AS transferId
+        from sy_m_ybjsmxxx_jz
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="ybjsh != null and ybjsh != ''">
+            and ybjsh =  #{ybjsh,jdbcType=VARCHAR}
+        </if>
+        <if test="zyh != null and zyh != ''">
+            and zyh =  #{zyh,jdbcType=VARCHAR}
+        </if>
+        <if test="cfh != null and cfh != ''">
+            and cfh =  #{cfh,jdbcType=VARCHAR}
+        </if>
+        <if test="cfnxh != null and cfnxh != ''">
+            and cfnxh =  #{cfnxh,jdbcType=VARCHAR}
+        </if>
+        <if test="yyxmbm != null and yyxmbm != ''">
+            and yyxmbm =  #{yyxmbm,jdbcType=VARCHAR}
+        </if>
+            <if test="yyxmmc != null and yyxmmc != ''">
+                and yyxmmc like concat('%',#{yyxmmc},'%')
+            </if>
+        <if test="ybxmbm != null and ybxmbm != ''">
+            and ybxmbm =  #{ybxmbm,jdbcType=VARCHAR}
+        </if>
+        <if test="xmgg != null and xmgg != ''">
+            and xmgg =  #{xmgg,jdbcType=VARCHAR}
+        </if>
+        <if test="xmdw != null and xmdw != ''">
+            and xmdw =  #{xmdw,jdbcType=VARCHAR}
+        </if>
+        <if test="xmjx != null and xmjx != ''">
+            and xmjx =  #{xmjx,jdbcType=VARCHAR}
+        </if>
+        <if test="xmdj != null and xmdj != ''">
+            and xmdj =  #{xmdj,jdbcType=VARCHAR}
+        </if>
+        <if test="xmsl != null and xmsl != ''">
+            and xmsl =  #{xmsl,jdbcType=VARCHAR}
+        </if>
+        <if test="xmje != null and xmje != ''">
+            and xmje =  #{xmje,jdbcType=VARCHAR}
+        </if>
+        <if test="hjrq != null and hjrq != ''">
+            and hjrq =  #{hjrq,jdbcType=VARCHAR}
+        </if>
+            <if test="hjrq_begin != null and hjrq_begin != ''">
+                and hjrq &gt;= str_to_date(#{hjrq_begin}, '%Y-%m-%d')
+            </if>
+            <if test="hjrq_end != null and hjrq_end != ''">
+                and hjrq &lt; date_add(str_to_date(#{hjrq_end}, '%Y-%m-%d'), interval 1 day)
+            </if>
+            <if test="kdysxm != null and kdysxm != ''">
+            and kdysxm =  #{kdysxm,jdbcType=VARCHAR}
+        </if>
+        <if test="zxks != null and zxks != ''">
+            and zxks =  #{zxks,jdbcType=VARCHAR}
+        </if>
+        <if test="sfybxm != null and sfybxm != ''">
+            and sfybxm =  #{sfybxm,jdbcType=VARCHAR}
+        </if>
+        <if test="mcyl != null and mcyl != ''">
+            and mcyl =  #{mcyl,jdbcType=VARCHAR}
+        </if>
+        <if test="sypc != null and sypc != ''">
+            and sypc =  #{sypc,jdbcType=VARCHAR}
+        </if>
+        <if test="yf != null and yf != ''">
+            and yf =  #{yf,jdbcType=VARCHAR}
+        </if>
+        <if test="zxts != null and zxts != ''">
+            and zxts =  #{zxts,jdbcType=VARCHAR}
+        </if>
+        <if test="isupdate != null and isupdate != ''">
+            and isupdate =  #{isupdate,jdbcType=VARCHAR}
+        </if>
+        <if test="barcode != null and barcode != ''">
+            and barcode =  #{barcode,jdbcType=VARCHAR}
+        </if>
+        <if test="transferId != null and transferId != ''">
+            and transfer_id =  #{transferId,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+    <select id="ybSalesSummaryAll" resultMap="YbjsmxxxSummary">
+        select barcode,yyxmbm ,yyxmmc commonname,
+        xmdw units,
+        (select name from keyvalue b where type='units' and code = x.xmdw ) unitsname,
+        xmgg specifications,
+        (select barcode2 from sy_drugs a where a.barcode=x.barcode) barcode2,
+        sum(xmsl) total,sum(xmje) amount
+        from sy_m_ybjsmxxx_jz x
+        <where>
+        <if test="id != null and id != ''">
+            and id like concat('%',#{id},'%')
+        </if>
+        <if test="ybjsh != null and ybjsh != ''">
+            and ybjsh = #{ybjsh}
+        </if>
+        <if test="zyh != null and zyh != ''">
+            and zyh = #{zyh},'%')
+        </if>
+        <if test="cfh != null and cfh != ''">
+            and cfh = #{cfh}
+        </if>
+        <if test="cfnxh != null and cfnxh != ''">
+            and cfnxh = #{cfnxh},'%')
+        </if>
+        <if test="isupdate != null and isupdate != ''">
+            and isupdate = #{isupdate}
+        </if>
+        <if test="hjrq_begin != null and hjrq_begin != ''">
+            and hjrq &gt;= str_to_date(#{hjrq_begin}, '%Y-%m-%d')
+        </if>
+        <if test="hjrq_end != null and hjrq_end != ''">
+            and hjrq &lt; date_add(str_to_date(#{hjrq_end}, '%Y-%m-%d'), interval 1 day)
+        </if>
+        <if test="barcode != null and barcode != ''">
+            and barcode = #{barcode}
+        </if>
+        <if test="yyxmbm != null and yyxmbm != ''">
+            and yyxmbm = #{yyxmbm}
+        </if>
+        </where>
+        group by yyxmbm,yyxmmc,xmdw,xmgg,barcode
+    </select>
+    <insert id="insert">
+        insert into sy_m_ybjsmxxx_jz
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="ybjsh != null">ybjsh,</if>
+            <if test="zyh != null">zyh,</if>
+            <if test="cfh != null">cfh,</if>
+            <if test="cfnxh != null">cfnxh,</if>
+            <if test="yyxmbm != null">yyxmbm,</if>
+            <if test="yyxmmc != null">yyxmmc,</if>
+            <if test="ybxmbm != null">ybxmbm,</if>
+            <if test="xmgg != null">xmgg,</if>
+            <if test="xmdw != null">xmdw,</if>
+            <if test="xmjx != null">xmjx,</if>
+            <if test="xmdj != null">xmdj,</if>
+            <if test="xmsl != null">xmsl,</if>
+            <if test="xmje != null">xmje,</if>
+            <if test="hjrq != null">hjrq,</if>
+            <if test="kdysxm != null">kdysxm,</if>
+            <if test="zxks != null">zxks,</if>
+            <if test="sfybxm != null">sfybxm,</if>
+            <if test="mcyl != null">mcyl,</if>
+            <if test="sypc != null">sypc,</if>
+            <if test="yf != null">yf,</if>
+            <if test="zxts != null">zxts,</if>
+            <if test="isupdate != null">isupdate,</if>
+            <if test="barcode != null">barcode,</if>
+            <if test="transferId != null">transfer_id,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="ybjsh != null">#{ybjsh},</if>
+            <if test="zyh != null">#{zyh},</if>
+            <if test="cfh != null">#{cfh},</if>
+            <if test="cfnxh != null">#{cfnxh},</if>
+            <if test="yyxmbm != null">#{yyxmbm},</if>
+            <if test="yyxmmc != null">#{yyxmmc},</if>
+            <if test="ybxmbm != null">#{ybxmbm},</if>
+            <if test="xmgg != null">#{xmgg},</if>
+            <if test="xmdw != null">#{xmdw},</if>
+            <if test="xmjx != null">#{xmjx},</if>
+            <if test="xmdj != null">#{xmdj},</if>
+            <if test="xmsl != null">#{xmsl},</if>
+            <if test="xmje != null">#{xmje},</if>
+            <if test="hjrq != null">#{hjrq},</if>
+            <if test="kdysxm != null">#{kdysxm},</if>
+            <if test="zxks != null">#{zxks},</if>
+            <if test="sfybxm != null">#{sfybxm},</if>
+            <if test="mcyl != null">#{mcyl},</if>
+            <if test="sypc != null">#{sypc},</if>
+            <if test="yf != null">#{yf},</if>
+            <if test="zxts != null">#{zxts},</if>
+            <if test="isupdate != null">#{isupdate},</if>
+            <if test="barcode != null">#{barcode},</if>
+            <if test="transferId != null">#{transferId},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" >
+        update sy_m_ybjsmxxx_jz
+        <set>
+            <if test="id != null">id=#{id},</if>
+            <if test="ybjsh != null">ybjsh=#{ybjsh},</if>
+            <if test="zyh != null">zyh=#{zyh},</if>
+            <if test="cfh != null">cfh=#{cfh},</if>
+            <if test="cfnxh != null">cfnxh=#{cfnxh},</if>
+            <if test="yyxmbm != null">yyxmbm=#{yyxmbm},</if>
+            <if test="yyxmmc != null">yyxmmc=#{yyxmmc},</if>
+            <if test="ybxmbm != null">ybxmbm=#{ybxmbm},</if>
+            <if test="xmgg != null">xmgg=#{xmgg},</if>
+            <if test="xmdw != null">xmdw=#{xmdw},</if>
+            <if test="xmjx != null">xmjx=#{xmjx},</if>
+            <if test="xmdj != null">xmdj=#{xmdj},</if>
+            <if test="xmsl != null">xmsl=#{xmsl},</if>
+            <if test="xmje != null">xmje=#{xmje},</if>
+            <if test="hjrq != null">hjrq=#{hjrq},</if>
+            <if test="kdysxm != null">kdysxm=#{kdysxm},</if>
+            <if test="zxks != null">zxks=#{zxks},</if>
+            <if test="sfybxm != null">sfybxm=#{sfybxm},</if>
+            <if test="mcyl != null">mcyl=#{mcyl},</if>
+            <if test="sypc != null">sypc=#{sypc},</if>
+            <if test="yf != null">yf=#{yf},</if>
+            <if test="zxts != null">zxts=#{zxts},</if>
+            <if test="isupdate != null">isupdate=#{isupdate},</if>
+            <if test="barcode != null">barcode=#{barcode},</if>
+            <if test="transferId != null">transfer_id=#{transferId},</if>
+        </set>
+        <where>
+            and id = #{id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete from sy_m_ybjsmxxx_jz
+        <where>
+                and id = #{id}
+        </where>
+    </delete>
+
+</mapper>

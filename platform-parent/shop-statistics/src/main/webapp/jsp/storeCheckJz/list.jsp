@@ -280,6 +280,7 @@
 			<input id="crrcheckdate_begin" class="easyui-datebox" size=10  >
 			至
 			<input id="crrcheckdate_end" class="easyui-datebox" size=10  >
+			<span>错误库存:</span><input id="iserrorstore_search" type="checkbox" value='1' class="easyui-checkbox" size=10  >
 			<span>最新库存《:</span><input name="newstore_search" id="newstore_search" value="" size=10 />
   			<a href="javascript:searchstorecheckJzQ()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
 			<a href="javascript:exportExcel()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">导出</a> 
