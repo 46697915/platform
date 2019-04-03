@@ -12,4 +12,7 @@ public class StringUtil {
     public static String toString(BigDecimal bd){
         return bd!=null?bd.toString():"";
     }
+    public static String toString(Integer bd){
+        return bd!=null?bd.toString():"";
+    }
 }

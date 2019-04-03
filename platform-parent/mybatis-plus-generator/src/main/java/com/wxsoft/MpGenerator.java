@@ -35,7 +35,7 @@ public class MpGenerator {
     //数据库密码
     private static String password = "root";
     //需要生成的表
-    private static String[] tables = new String[]{"drugs"};
+    private static String[] tables = new String[]{"sy_m_storecheck_jz"};
     //自定义模版路径
     private static String templetPath = "/templates/shop";
 
@@ -83,7 +83,7 @@ public class MpGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
 //         strategy.setCapitalMode(true);// 全局大写命名 ORACLE 注意
-//        strategy.setTablePrefix(new String[] { "user_" });// 此处可以修改为您的表前缀
+        strategy.setTablePrefix(new String[] { "sy_m_" });// 此处可以修改为您的表前缀
 //        strategy.setNaming(NamingStrategy.nochange);// 表名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
 //        strategy.setInclude(new String[] { "sys_menu" }); // 需要生成的表
