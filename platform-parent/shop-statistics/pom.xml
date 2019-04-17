@@ -37,6 +37,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!-- springboot分页插件 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -93,6 +94,8 @@
             <artifactId>tomcat-jsp-api</artifactId>
             <!--<scope>provided</scope>-->
         </dependency>
+
+
 
         <!-- 下面的插件来热部署 -->
         <dependency>

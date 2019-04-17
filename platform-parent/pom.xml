@@ -32,6 +32,10 @@
         <module>shop-statistics</module>
         <module>platform-common</module>
         <module>platform-hadoop</module>
+        <module>platform-axis2</module>
+        <module>platform-axis2</module>
+        <module>platform-cxf</module>
+        <!--<module>platform-test</module>-->
     </modules>
 
     <build>

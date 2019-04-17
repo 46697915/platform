@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://TestService.test.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:impl="http://TestService.test.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://TestService.test.com">
+  <wsdl:message name="invokeResponse">
+    <wsdl:part name="invokeReturn" type="soapenc:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invokeRequest">
+    <wsdl:part name="jsonData" type="soapenc:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TestService">
+    <wsdl:operation name="invoke" parameterOrder="jsonData">
+      <wsdl:input name="invokeRequest" message="impl:invokeRequest">
+    </wsdl:input>
+      <wsdl:output name="invokeResponse" message="impl:invokeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestServiceSoapBinding" type="impl:TestService">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="invoke">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="invokeRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://TestService.test.com"/>
+      </wsdl:input>
+      <wsdl:output name="invokeResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://TestService.test.com"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestService">
+    <wsdl:port name="TestService" binding="impl:TestServiceSoapBinding">
+      <wsdlsoap:address location="http://127.0.0.1:8080/services/TestService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

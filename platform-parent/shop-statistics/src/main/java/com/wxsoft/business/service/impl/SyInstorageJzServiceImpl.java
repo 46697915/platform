@@ -8,6 +8,7 @@ import com.wxsoft.business.mapper.SyInstorageJzMapper;
 import com.wxsoft.business.service.ISyInstorageJzService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class SyInstorageJzServiceImpl extends ServiceImpl<SyInstorageJzMapper, S
     * @param vo
     * @return
     */
+    @Transactional
     public List selectBy(SyInstorageJzVo vo){
         List r = mapper.selectBy(vo);
 

@@ -1,4 +1,4 @@
-package com.wxsoft.config;
+package com.wxsoft.cxf.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/mybatis-generator" />
     <file type="web" url="file://$PROJECT_DIR$/mybatis-plus-generator" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-axis2" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-cxf" />
     <file type="web" url="file://$PROJECT_DIR$/platform-hadoop" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/shop-statistics" />
   </component>
   <component name="MarkdownProjectSettings">
@@ -82,6 +82,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-axis2/pom.xml" />
       </list>
     </option>
   </component>

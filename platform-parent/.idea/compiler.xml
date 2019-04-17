@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis-generator" />
         <module name="mybatis-plus-generator" />
+        <module name="platform-axis2" />
         <module name="platform-common" />
+        <module name="platform-cxf" />
         <module name="platformhadoop" />
         <module name="shop-statistics" />
       </profile>
@@ -16,9 +18,13 @@
     <bytecodeTargetLevel target="1.8">
       <module name="mybatis-generator" target="1.8" />
       <module name="mybatis-plus-generator" target="1.8" />
+      <module name="platform-axis2" target="1.8" />
       <module name="platform-common" target="1.8" />
+      <module name="platform-cxf" target="1.8" />
       <module name="platform-parent" target="1.8" />
+      <module name="platformaxis2" target="1.7" />
       <module name="platformhadoop" target="1.8" />
+      <module name="platformtest" target="1.8" />
       <module name="shop-parent" target="1.8" />
       <module name="shop-statistics" target="1.8" />
     </bytecodeTargetLevel>
