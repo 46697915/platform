@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-baiduAI:war">
+    <output-path>$PROJECT_DIR$/platform-baiduAI/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-baiduAI</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-baiduAI.war">
+      <element id="artifact" artifact-name="platform-baiduAI:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -35,6 +35,10 @@
         <module>platform-axis2</module>
         <module>platform-axis2</module>
         <module>platform-cxf</module>
+        <module>platform-httpclient</module>
+        <!--<module>platform-baiduAI</module>-->
+        <!--<module>platform-drools</module>-->
+        <!--<module>platform-testing</module>-->
         <!--<module>platform-test</module>-->
     </modules>
 

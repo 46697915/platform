@@ -1,13 +1,11 @@
 package com.wxsoft.axis;
 
-import com.wxsoft.axis.core.config.Config;
 import com.wxsoft.axis.core.listener.StartupListener;
 import com.wxsoft.axis.core.util.FileCopyUtils;
 import com.wxsoft.axis.core.util.LogUtil;
 import org.apache.axis2.transport.http.AxisServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,7 +18,7 @@ import java.io.IOException;
 @ComponentScan
 @EnableAutoConfiguration
 @EnableScheduling
-@EnableConfigurationProperties({Config.class})
+//@EnableConfigurationProperties({Config.class})
 public class Application {
 	public static void main(String[] args) throws Exception {
     	SpringApplication springApplication =new SpringApplication(Application.class);

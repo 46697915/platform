@@ -4,9 +4,12 @@
     <file type="web" url="file://$PROJECT_DIR$/mybatis-generator" />
     <file type="web" url="file://$PROJECT_DIR$/mybatis-plus-generator" />
     <file type="web" url="file://$PROJECT_DIR$/platform-axis2" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-baiduAI" />
     <file type="web" url="file://$PROJECT_DIR$/platform-cxf" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-drools" />
     <file type="web" url="file://$PROJECT_DIR$/platform-hadoop" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-testing" />
     <file type="web" url="file://$PROJECT_DIR$/shop-statistics" />
   </component>
   <component name="MarkdownProjectSettings">
@@ -83,6 +86,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/platform-axis2/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-test/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-drools/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-baiduAI/pom.xml" />
       </list>
     </option>
   </component>

@@ -16,12 +16,9 @@ public class TestServiceMessageReceiverInOut extends org.apache.axis2.receivers.
 
     public void invokeBusinessLogic(org.apache.axis2.context.MessageContext msgContext, org.apache.axis2.context.MessageContext newMsgContext)
             throws org.apache.axis2.AxisFault {
-
         try {
-
             // get the implementation class for the Web Service
             Object obj = getTheImplementationObject(msgContext);
-
             TestServiceSkeleton skel = (TestServiceSkeleton) obj;
             //Out Envelop
             org.apache.axiom.soap.SOAPEnvelope envelope = null;
@@ -33,10 +30,7 @@ public class TestServiceMessageReceiverInOut extends org.apache.axis2.receivers.
 
             String methodName;
             if ((op.getName() != null) && ((methodName = org.apache.axis2.util.JavaUtils.xmlNameToJavaIdentifier(op.getName().getLocalPart())) != null)) {
-
-
                 if ("invoke".equals(methodName)) {
-
                     InvokeResponse invokeResponse1 = null;
                     Invoke wrappedParam =
                             (Invoke) fromOM(
@@ -53,7 +47,6 @@ public class TestServiceMessageReceiverInOut extends org.apache.axis2.receivers.
                     throw new RuntimeException("method not found");
                 }
 
-
                 newMsgContext.setEnvelope(envelope);
             }
         } catch (Exception e) {
@@ -64,40 +57,29 @@ public class TestServiceMessageReceiverInOut extends org.apache.axis2.receivers.
     //
     private org.apache.axiom.om.OMElement toOM(Invoke param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
-
-
         try {
             return param.getOMElement(Invoke.MY_QNAME,
                     org.apache.axiom.om.OMAbstractFactory.getOMFactory());
         } catch (org.apache.axis2.databinding.ADBException e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
         }
-
-
     }
 
     private org.apache.axiom.om.OMElement toOM(InvokeResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
-
-
         try {
             return param.getOMElement(InvokeResponse.MY_QNAME,
                     org.apache.axiom.om.OMAbstractFactory.getOMFactory());
         } catch (org.apache.axis2.databinding.ADBException e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
         }
-
-
     }
 
     private org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, InvokeResponse param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
             throws org.apache.axis2.AxisFault {
         try {
             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-
             emptyEnvelope.getBody().addChild(param.getOMElement(InvokeResponse.MY_QNAME, factory));
-
-
             return emptyEnvelope;
         } catch (org.apache.axis2.databinding.ADBException e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -116,29 +98,17 @@ public class TestServiceMessageReceiverInOut extends org.apache.axis2.receivers.
     private org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory) {
         return factory.getDefaultEnvelope();
     }
-
-
     private Object fromOM(
             org.apache.axiom.om.OMElement param,
             Class type,
             java.util.Map extraNamespaces) throws org.apache.axis2.AxisFault {
-
         try {
-
             if (Invoke.class.equals(type)) {
-
                 return Invoke.Factory.parse(param.getXMLStreamReaderWithoutCaching());
-
-
             }
-
             if (InvokeResponse.class.equals(type)) {
-
                 return InvokeResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
-
-
             }
-
         } catch (Exception e) {
             throw org.apache.axis2.AxisFault.makeFault(e);
         }

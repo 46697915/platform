@@ -2,137 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_cxf_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_cxf_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_axis2_axis2_kernel_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_axis2_axis2_transport_http_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_axis2_axis2_transport_local_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_activation_1_1_spec_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_javamail_1_4_spec_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_stax_api_1_0_spec_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_ws_metadata_2_0_spec_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_james_apache_mime4j_core_0_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_woden_woden_api_1_0M9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_woden_woden_impl_commons_1_0M9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_woden_woden_impl_dom_1_0M9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_commons_axiom_axiom_api_1_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_commons_axiom_axiom_impl_1_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_commons_schema_XmlSchema_1_4_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_wstx_asl_3_2_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/receive/ReceiveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/ExtensionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/Invoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/InvokeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceCallbackHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/listener/StartupListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/FileCopyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/GlobalValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/LogUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/Invoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/InvokeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceSkeleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/resources/ServicesPath/services/MyWebService/META-INF/TestService.wsdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/resources/ServicesPath/services/MyWebService/META-INF/services.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/platform-cxf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/CxfApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/client/webserviceclient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/config/WebServiceCxfConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-cxf/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/test/JacksonTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_baiduAI_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_baiduAI_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_drools_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_drools_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_test_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_test_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_testing_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_testing_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baidu_aip_java_sdk_4_11_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_drools_drools_compiler_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_drools_drools_core_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160810.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_kie_api_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_kie_internal_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_commons_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_maven_support_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_project_datamodel_api_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_project_datamodel_commons_7_10_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mvel_mvel2_2_4_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-baiduAI/platform-baiduAI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-baiduAI/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-common/src/main/java/com/wxsoft/utils/RSAUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/platform-drools.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/java/org/drools/examples/helloworld/HelloWorldExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/examples/helloworld/HelloWorld.drl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/test/MyTest1.drl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-test/platform-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-common/platform-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/platform-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-common/target/test-classes/com/wxsoft/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/target/test-classes/com/wxsoft/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-cxf/target/classes/com/wxsoft/cxf/service/wx/WxServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-cxf/target/classes/com/wxsoft/cxf/service/wx/WxServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/service/impl/SyInstorageJzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/service/impl/SyInstorageJzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/config/CrosConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/cxf/config/CrosConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/business/service/impl/SyInstorageJzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/business/service/impl/SyInstorageJzServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,6 +80,9 @@
     <ignored path="$PROJECT_DIR$/platform-test/target/" />
     <ignored path="$PROJECT_DIR$/platform-axis2/target/" />
     <ignored path="$PROJECT_DIR$/platform-cxf/target/" />
+    <ignored path="$PROJECT_DIR$/platform-testing/target/" />
+    <ignored path="$PROJECT_DIR$/platform-drools/target/" />
+    <ignored path="$PROJECT_DIR$/platform-baiduAI/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,98 +108,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-baiduAI/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2250">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state relative-caret-position="675">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceSkeleton.java">
+        <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="2225">
+              <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java">
+        <entry file="file://$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/baidu/aip/java-sdk/4.11.3/java-sdk-4.11.3-sources.jar!/com/baidu/aip/face/AipFace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1550">
+              <caret line="65" column="48" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/receive/ReceiveRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/LogUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-700">
-              <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/logback-spring.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceCallbackHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -280,15 +197,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>instorageSummaryAll</find>
-      <find>instorage.</find>
-      <find>x.barcode</find>
-      <find>barcode</find>
-      <find>exportInstorageExcel</find>
-      <find>exportExcel</find>
-      <find>storeCheck.</find>
-      <find>storeCheck</find>
-      <find>searchstorecheckJzQ</find>
       <find>storecheckJz</find>
       <find>ybjsmxxx</find>
       <find>ybjsmxxx.</find>
@@ -305,11 +213,20 @@
       <find>UserName:</find>
       <find>http://localhost:8080/service/user?wsdl</find>
       <find>TestServiceSkeleton</find>
-      <find>TestServiceMessageReceiverInOut</find>
       <find>你好</find>
       <find>收到消息</find>
       <find>com.test.testservice.</find>
       <find>去掉前面的</find>
+      <find>etOMElement</find>
+      <find>ExtensionMapper</find>
+      <find>Factory</find>
+      <find>TestServiceMessageReceiverInOut</find>
+      <find>TestService</find>
+      <find>JsonGenerator</find>
+      <find>HelloWorldKS</find>
+      <find>　　</find>
+      <find>　　　　　　　　</find>
+      <find>quality</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -328,27 +245,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shop-statistics/src/main/resources/mapper/SyOrderdetailJz.xml" />
-        <option value="$PROJECT_DIR$/shop-statistics/src/main/webapp/jsp/storeCheckJz/list.jsp" />
-        <option value="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/service/impl/SyInstorageJzServiceImpl.java" />
-        <option value="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/test/JacksonTester.java" />
-        <option value="$PROJECT_DIR$/shop-statistics/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-test/src/main/java/test/JacksonTester.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-test/pom.xml" />
-        <option value="$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/App.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/AxisApp.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/config/AxisConfig.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/config/Axis2Config.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/wx/WxServiceImp/WxServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/wx/WxServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/WxServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/resources/META-INF/services.xml" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/UserService.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/WxService.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/WxServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/config/WebServiceConfig.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/pom.xml" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/AxisApp.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/CxfApp.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/config/WebServiceCxfConfig.java" />
@@ -361,14 +263,11 @@
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxService.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/client/webserviceclient.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/LogUtil.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/receive/ReceiveRequest.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/listener/StartupListener.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/InvokeResponse.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/Invoke.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceSkeleton.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/resources/ServicesPath/services/MyWebService/META-INF/services.xml" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestService.java" />
@@ -379,6 +278,24 @@
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/Test.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceStub.java" />
         <option value="$PROJECT_DIR$/platform-axis2/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" />
+        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" />
+        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" />
+        <option value="$PROJECT_DIR$/shop-statistics/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" />
+        <option value="$PROJECT_DIR$/platform-axis2/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-common/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-common/src/main/java/com/wxsoft/utils/TestRSA.java" />
+        <option value="$PROJECT_DIR$/platform-common/src/main/java/com/wxsoft/utils/RSAUtils.java" />
+        <option value="$PROJECT_DIR$/platform-testing/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" />
+        <option value="$PROJECT_DIR$/platform-test/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/platform-drools/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-baiduAI/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java" />
+        <option value="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" />
       </list>
     </option>
   </component>
@@ -400,17 +317,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="platform-cxf Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="platform-drools Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="platform-cxf Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="platform-drools Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="platform-cxf Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -422,7 +334,7 @@
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="3" />
     <option name="width" value="1370" />
     <option name="height" value="735" />
   </component>
@@ -434,6 +346,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -441,215 +355,10 @@
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="axis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="axis" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="axis" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="receive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="axis" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="axis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-axis2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxf" type="462c0819:PsiDirectoryNode" />
-              <item name="wx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -661,10 +370,11 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555503371814" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561366979042" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test-demo/webservicedemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-baiduAI" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -686,11 +396,11 @@
       <recent name="com.wxsoft" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\java" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\business\dao\impl" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\client" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\business" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\service" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -711,7 +421,7 @@
     </option>
     <option name="contentProportion" value="0.18018721" />
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.MyTest1">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -830,13 +540,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.axis.Application" />
-      <module name="platform-axis2" />
+    <configuration name="HelloWorldExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.drools.examples.helloworld.HelloWorldExample" />
+      <module name="platform-drools" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.axis.*" />
+          <option name="PATTERN" value="org.drools.examples.helloworld.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -844,13 +554,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.axis.client.Test" />
-      <module name="platform-axis2" />
+    <configuration name="ImgUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.baiduai.util.ImgUtil" />
+      <module name="platform-baiduAI" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.axis.client.*" />
+          <option name="PATTERN" value="com.wxsoft.baiduai.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.JwtHelper" />
+      <module name="platform-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.drools.test.MyTest1" />
+      <module name="platform-drools" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.drools.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.baiduai.Sample" />
+      <module name="platform-baiduAI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wxsoft.baiduai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -860,20 +612,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="webserviceclient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.cxf.client.webserviceclient" />
-      <module name="platform-cxf" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wxsoft.cxf.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -970,32 +708,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AxisApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="platform-axis2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wxsoft.cxf.service.wx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxsoft.AxisApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CxfApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="platform-cxf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wxsoft.cxf.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxsoft.cxf.CxfApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1024,19 +736,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.AxisApp" />
-      <item itemvalue="Spring Boot.CxfApp" />
-      <item itemvalue="Application.webserviceclient" />
-      <item itemvalue="Application.Application" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.JwtHelper" />
+      <item itemvalue="Application.MyTest1" />
+      <item itemvalue="Application.HelloWorldExample" />
+      <item itemvalue="Application.ImgUtil" />
+      <item itemvalue="Application.Sample" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Application" />
-        <item itemvalue="Application.webserviceclient" />
-        <item itemvalue="Spring Boot.CxfApp" />
-        <item itemvalue="Spring Boot.CxfApp (1)" />
+        <item itemvalue="Application.MyTest1" />
+        <item itemvalue="Application.Sample" />
+        <item itemvalue="Application.ImgUtil" />
+        <item itemvalue="Application.HelloWorldExample" />
+        <item itemvalue="Application.JwtHelper" />
       </list>
     </recent_temporary>
   </component>
@@ -1060,11 +772,26 @@
       <workItem from="1553907061116" duration="33006000" />
       <workItem from="1554971692331" duration="10272000" />
       <workItem from="1555480025651" duration="18753000" />
+      <workItem from="1555545911350" duration="1218000" />
+      <workItem from="1555551074517" duration="15901000" />
+      <workItem from="1555809721785" duration="1313000" />
+      <workItem from="1556157439563" duration="1335000" />
+      <workItem from="1557827800574" duration="814000" />
+      <workItem from="1557882219825" duration="2396000" />
+      <workItem from="1557995432762" duration="670000" />
+      <workItem from="1558055801782" duration="6820000" />
+      <workItem from="1558316776624" duration="2878000" />
+      <workItem from="1558341383865" duration="9079000" />
+      <workItem from="1559543370677" duration="7241000" />
+      <workItem from="1559788511996" duration="6967000" />
+      <workItem from="1561085299899" duration="10638000" />
+      <workItem from="1561177617616" duration="1267000" />
+      <workItem from="1561519757976" duration="1905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124884000" />
+    <option name="totallyTimeSpent" value="195326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1076,9 +803,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <frame x="3" y="0" width="1370" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.2534351" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3129771" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1086,10 +813,9 @@
       <window_info id="Web" order="5" sideWeight="0.508658" side_tool="true" weight="0.30229008" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Run Dashboard" weight="0.42096505" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327787" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37603992" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4309484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39767054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1098,10 +824,49 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32890365" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3294509" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.42096505" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
+      <window_info anchor="right" id="Designer" order="3" />
+      <window_info anchor="right" id="CDI" order="4" />
+      <window_info anchor="right" id="Bean Validation" order="5" weight="0.32977098" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.24961832" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32977098" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.22290076" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3038168" />
+      <window_info id="Structure" order="1" weight="0.24961832" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Web" order="5" sideWeight="0.508658" side_tool="true" weight="0.30229008" />
+      <window_info id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.327787" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30948418" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39767054" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3294509" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.37271214" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3294509" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.42096505" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
@@ -1112,45 +877,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.24961832" />
       <window_info anchor="right" id="Database" order="8" weight="0.32977098" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="10" weight="0.26717559" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3259542" />
-      <window_info id="Structure" order="1" weight="0.24961832" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Web" order="5" sideWeight="0.508658" side_tool="true" weight="0.30229008" />
-      <window_info id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Run Dashboard" order="0" visible="true" weight="0.42096505" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.327787" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.52579033" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39767054" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3294509" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.37271214" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32890365" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
-      <window_info anchor="right" id="Designer" order="3" />
-      <window_info anchor="right" id="CDI" order="4" />
-      <window_info anchor="right" id="Bean Validation" order="5" />
-      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32977098" />
-      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="10" visible="true" weight="0.26717559" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.22290076" />
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout-to-restore>
   </component>
@@ -1165,182 +892,55 @@
       <collection />
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0-sources.jar!/io/jsonwebtoken/impl/DefaultJwtBuilder.java</url>
+          <line>294</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar!/com/fasterxml/jackson/databind/ser/std/MapSerializer.class</url>
+          <line>446</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-test/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE-sources.jar!/org/springframework/util/FileCopyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/web/SyOrderdetailJzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="146" column="78" selection-start-line="146" selection-start-column="78" selection-end-line="146" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/web/DrugsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/wx/META-INF/services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/cxf/config/CrosConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/wx/WxServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/config/Axis2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="74" selection-start-line="74" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/service/wx/WxService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/service/wx/WxServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-core/3.1.12/cxf-core-3.1.12.jar!/org/apache/cxf/bus/spring/SpringBus.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/config/WebServiceCxfConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/axis2/wx/WxServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/config/Axis2Config.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/3.1.12/cxf-rt-frontend-jaxws-3.1.12.jar!/org/apache/cxf/jaxws/EndpointImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#6065#6066#0" expanded="true" />
-            <element signature="e#6117#6118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/AxisApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="10" />
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/config/WebServiceCxfConfig.java">
+    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/client/webserviceclient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state relative-caret-position="400">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1349,237 +949,395 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/CxfApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/platform-testing/pom.xml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/io/IOContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#3417#3418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/client/webserviceclient.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/JsonFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="166">
+          <caret line="1015" selection-start-line="1015" selection-end-line="1015" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="1238" selection-start-line="1238" selection-end-line="1238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/JsonGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="646" column="25" selection-start-line="646" selection-start-column="25" selection-end-line="646" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JacksonTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="36" column="30" selection-end-line="45" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/META-INF/services.xml">
+    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="1075">
+          <caret line="51" column="15" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java">
+    <entry file="file://$PROJECT_DIR$/platform-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9-sources.jar!/com/fasterxml/jackson/databind/ser/std/MapSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4400">
+          <caret line="197" column="43" selection-start-line="197" selection-start-column="43" selection-end-line="197" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0-sources.jar!/io/jsonwebtoken/impl/DefaultJwtBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8100">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar!/com/fasterxml/jackson/databind/ser/std/MapSerializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9800">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/nio/file/Paths.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.10.0.Final/kie-api-7.10.0.Final.jar!/org/kie/api/event/rule/DebugAgendaEventListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#2673#2674#0" expanded="true" />
-            <element signature="e#2741#2742#0" expanded="true" />
+            <element signature="e#0#1587#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/FileCopyUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.10.0.Final/kie-api-7.10.0.Final-sources.jar!/org/kie/api/event/rule/DebugAgendaEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="-225">
+          <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.10.0.Final/kie-api-7.10.0.Final-sources.jar!/org/kie/api/runtime/rule/EntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/java/org/drools/examples/helloworld/HelloWorldExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
           <folding>
+            <element signature="e#0#3908#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/InvokeResponse.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.10.0.Final/kie-api-7.10.0.Final-sources.jar!/org/kie/api/internal/utils/ServiceRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="361" column="56" selection-start-line="361" selection-start-column="56" selection-end-line="361" selection-end-column="56" />
+        <state relative-caret-position="162">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
-            <element signature="e#0#18933#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.10.0.Final/kie-api-7.10.0.Final-sources.jar!/org/kie/api/KieServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/ServicesPath/services/MyWebService/META-INF/TestService.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-742" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/ServicesPath/services/MyWebService/META-INF/services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/listener/StartupListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="103">
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#13387#13388#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/Invoke.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/util/ContextSelectorStaticBinder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4542">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="111">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#2397#2398#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/selector/DefaultContextSelector.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/Invoke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="361" column="29" selection-start-line="361" selection-start-column="29" selection-end-line="361" selection-end-column="29" />
+        <state relative-caret-position="82">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/InvokeResponse.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
+        <state relative-caret-position="82">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
-            <element signature="e#0#18944#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/ExtensionMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/util/LoggerNameUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="107">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
-            <element signature="e#311#352#0" expanded="true" />
+            <element signature="e#1831#1832#0" expanded="true" />
+            <element signature="e#1863#1864#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/Client.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/7.10.0.Final/drools-compiler-7.10.0.Final.jar!/org/drools/compiler/kie/builder/impl/KieServicesImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        <state relative-caret-position="500">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceStub.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/7.10.0.Final/drools-compiler-7.10.0.Final.jar!/org/drools/compiler/kie/builder/impl/KieContainerImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="6375">
+          <caret line="341" column="21" selection-start-line="341" selection-start-column="21" selection-end-line="341" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/Test.java">
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/test/MyTest1.drl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="850">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/client/testservice/TestServiceCallbackHandler.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/7.10.0.Final/drools-compiler-7.10.0.Final.jar!/org/drools/compiler/kproject/models/KieBaseModelImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/core/util/LogUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-700">
-          <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        <state relative-caret-position="2850">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5558#5559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/logback-spring.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/7.10.0.Final/drools-compiler-7.10.0.Final.jar!/org/drools/compiler/kproject/models/KieSessionModelImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="1075">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#2631#2632#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/resources/application.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/7.10.0.Final/drools-compiler-7.10.0.Final.jar!/org/drools/compiler/kie/builder/impl/AbstractKieProject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/resources/META-INF/kmodule.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/receive/ReceiveRequest.java">
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/examples/helloworld/HelloWorld.drl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="625">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceSkeleton.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/LoggerFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="6750">
+          <caret line="289" selection-start-line="289" selection-end-line="289" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/LoggerContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1525">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-statistics/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1352">
+          <caret line="67" column="21" selection-start-line="39" selection-end-line="67" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform-axis2/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2250">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="-1475">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baidu/aip/java-sdk/4.11.3/java-sdk-4.11.3.jar!/com/baidu/aip/face/AipFace.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-baiduAI/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2225">
+          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baidu/aip/java-sdk/4.11.3/java-sdk-4.11.3-sources.jar!/com/baidu/aip/face/AipFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="65" column="48" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -1635,7 +1393,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform-cxf</last-edited>
+          <last-edited>platform-baiduAI</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

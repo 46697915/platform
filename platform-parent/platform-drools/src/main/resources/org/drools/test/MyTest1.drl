@@ -1,0 +1,34 @@
+package org.drools.test;
+dialect  "java"
+import org.drools.test.MyTest1.Person;
+
+rule "test001"
+    no-loop true
+    when
+        $p: Person(name == "张三", age == 30);
+    then
+        $p.setName("李四");
+        update($p);
+        System.out.println("改名后:" + $p.getName());
+end
+
+rule "test002"
+    no-loop true
+    when
+        $p: Person(name == "李师师", age == 30);
+    then
+        $p.setName("李老师");
+        update($p);
+        System.out.println("改名后:" + $p.getName());
+end
+
+rule "test003"
+    no-loop true
+    when
+        $p: Person(name == "小三", age == 18);
+    then
+        $p.setName("李师师");
+        $p.setAge((byte) 30);
+        update($p);
+        System.out.println("改名后:" + $p.getName());
+end

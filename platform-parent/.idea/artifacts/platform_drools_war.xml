@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-drools:war">
+    <output-path>$PROJECT_DIR$/platform-drools/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-drools</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-drools.war">
+      <element id="artifact" artifact-name="platform-drools:war exploded" />
+    </root>
+  </artifact>
+</component>

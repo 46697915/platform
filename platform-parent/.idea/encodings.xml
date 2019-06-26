@@ -5,8 +5,10 @@
     <file url="file://$PROJECT_DIR$/mybatis-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-axis2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-baiduAI" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-cxf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-drools" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-hadoop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-statistics" charset="UTF-8" />
