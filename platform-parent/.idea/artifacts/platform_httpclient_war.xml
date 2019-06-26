@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-httpclient:war">
+    <output-path>$PROJECT_DIR$/platform-httpclient/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-httpclient</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-httpclient.war">
+      <element id="artifact" artifact-name="platform-httpclient:war exploded" />
+    </root>
+  </artifact>
+</component>

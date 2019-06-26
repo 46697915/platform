@@ -13,6 +13,7 @@
         <module name="platform-common" />
         <module name="platform-cxf" />
         <module name="platform-drools" />
+        <module name="platform-httpclient" />
         <module name="platform-test" />
         <module name="platformhadoop" />
         <module name="shop-statistics" />
@@ -26,6 +27,7 @@
       <module name="platform-common" target="1.8" />
       <module name="platform-cxf" target="1.8" />
       <module name="platform-drools" target="1.8" />
+      <module name="platform-httpclient" target="1.8" />
       <module name="platform-parent" target="1.8" />
       <module name="platform-test" target="1.8" />
       <module name="platform-testing" target="1.7" />

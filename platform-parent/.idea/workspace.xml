@@ -2,70 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_baiduAI_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_baiduAI_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_drools_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_drools_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_test_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_test_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_testing_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_testing_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baidu_aip_java_sdk_4_11_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_drools_drools_compiler_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_drools_drools_core_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160810.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_kie_api_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_kie_internal_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_commons_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_maven_support_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_project_datamodel_api_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kie_soup_kie_soup_project_datamodel_commons_7_10_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mvel_mvel2_2_4_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-baiduAI/platform-baiduAI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-baiduAI/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-common/src/main/java/com/wxsoft/utils/RSAUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/platform-drools.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/java/org/drools/examples/helloworld/HelloWorldExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/examples/helloworld/HelloWorld.drl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-drools/src/main/resources/org/drools/test/MyTest1.drl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-test/platform-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/HttpClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/SSLClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/ExtensionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-axis2/target/classes/com/wxsoft/axis/service/TestServiceMessageReceiverInOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-common/platform-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/platform-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-common/target/test-classes/com/wxsoft/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/target/test-classes/com/wxsoft/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-cxf/target/classes/com/wxsoft/cxf/service/wx/WxServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-cxf/target/classes/com/wxsoft/cxf/service/wx/WxServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-httpclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/pom.xml" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,6 +35,7 @@
     <ignored path="$PROJECT_DIR$/platform-testing/target/" />
     <ignored path="$PROJECT_DIR$/platform-drools/target/" />
     <ignored path="$PROJECT_DIR$/platform-baiduAI/target/" />
+    <ignored path="$PROJECT_DIR$/platform-httpclient/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,75 +62,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-baiduAI/pom.xml">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/HttpClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2225">
-              <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+            <state relative-caret-position="-2329">
+              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-drools/src/main/java/org/drools/test/MyTest1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-hadoop/src/main/java/com/wxsoft/hadoop/CalServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/baidu/aip/java-sdk/4.11.3/java-sdk-4.11.3-sources.jar!/com/baidu/aip/face/AipFace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="137">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="65" column="48" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="48" />
+            <state relative-caret-position="226">
+              <caret line="145" column="11" selection-end-line="147" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,8 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>storecheckJz</find>
-      <find>ybjsmxxx</find>
       <find>ybjsmxxx.</find>
       <find>${orderdetail.drugStoreShortName}</find>
       <find>orderdetail</find>
@@ -227,6 +134,8 @@
       <find>　　</find>
       <find>　　　　　　　　</find>
       <find>quality</find>
+      <find>SSLContextBuilder</find>
+      <find>httpcomponents</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -245,17 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis2/WxServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/resources/META-INF/services.xml" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/UserService.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/WxService.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/cxf/wx/WxServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/config/WebServiceConfig.java" />
-        <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/AxisApp.java" />
-        <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/CxfApp.java" />
-        <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/config/WebServiceCxfConfig.java" />
-        <option value="$PROJECT_DIR$/platform-cxf/src/main/java/wxsoft/cxf/wx/WxServiceImpl.java" />
-        <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/wx/WxServiceImpl.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/config/WebServiceCxfConfig.java" />
         <option value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/wx/CxfApp.java" />
         <option value="$PROJECT_DIR$/platform-cxf/pom.xml" />
@@ -296,6 +194,17 @@
         <option value="$PROJECT_DIR$/platform-baiduAI/pom.xml" />
         <option value="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java" />
         <option value="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/SSLClient.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpsTest.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpClientFactory.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpsTest.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpClientFactory.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/SSLContextBuilder.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/MySSLProtocolSocketFactory.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/HttpClientTest.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/pom.xml" />
       </list>
     </option>
   </component>
@@ -355,6 +264,91 @@
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="ignore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="trust" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -370,7 +364,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561366979042" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561554633698" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-baiduAI" />
@@ -382,25 +376,26 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\mybatis-plus-generator\src\main\resources\templates\shop" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\mybatis-plus-generator\src\main\resources\templates" />
-      <recent name="E:\IdeaProjects\shop\shop-parent\mybatis-plus-generator\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\java\com\platform\httpclient\https" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\java" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\business\dao\impl" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.platform.httpclient.https" />
       <recent name="com.wxsoft.cxf.client" />
       <recent name="com.wxsoft.utils" />
       <recent name="com.wxsoft.common" />
       <recent name="com.wxsoft" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-drools\src\main\java" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\business\dao\impl" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis\client" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\java\com\wxsoft\axis" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\mybatis-plus-generator\src\main\resources\templates\shop" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\mybatis-plus-generator\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,7 +416,7 @@
     </option>
     <option name="contentProportion" value="0.18018721" />
   </component>
-  <component name="RunManager" selected="Application.MyTest1">
+  <component name="RunManager" selected="Application.HttpsTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -540,13 +535,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorldExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.drools.examples.helloworld.HelloWorldExample" />
-      <module name="platform-drools" />
+    <configuration name="HttpClent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.https.trust.HttpClent" />
+      <module name="platform-httpclient" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.drools.examples.helloworld.*" />
+          <option name="PATTERN" value="com.platform.httpclient.https.trust.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -554,13 +549,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImgUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.baiduai.util.ImgUtil" />
-      <module name="platform-baiduAI" />
+    <configuration name="HttpsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.https.ignore.HttpsTest" />
+      <module name="platform-httpclient" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.baiduai.util.*" />
+          <option name="PATTERN" value="com.platform.httpclient.https.ignore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -568,41 +563,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JwtHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.JwtHelper" />
-      <module name="platform-test" />
+    <configuration name="MySSLProtocolSocketFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.https.trust.MySSLProtocolSocketFactory" />
+      <module name="platform-httpclient" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.drools.test.MyTest1" />
-      <module name="platform-drools" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.drools.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.baiduai.Sample" />
-      <module name="platform-baiduAI" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wxsoft.baiduai.*" />
+          <option name="PATTERN" value="com.platform.httpclient.https.trust.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -653,6 +620,39 @@
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2" />
+    </configuration>
+    <configuration name="HttpClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="platform-httpclient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.platform.httpclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.platform.httpclient" />
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.HttpClientTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpClientTest.jUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="platform-httpclient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.platform.httpclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.platform.httpclient" />
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.HttpClientTest" />
+      <option name="METHOD_NAME" value="jUnitTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -736,19 +736,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.JwtHelper" />
-      <item itemvalue="Application.MyTest1" />
-      <item itemvalue="Application.HelloWorldExample" />
-      <item itemvalue="Application.ImgUtil" />
-      <item itemvalue="Application.Sample" />
+      <item itemvalue="JUnit.HttpClientTest.jUnitTest" />
+      <item itemvalue="Application.MySSLProtocolSocketFactory" />
+      <item itemvalue="Application.HttpClent" />
+      <item itemvalue="JUnit.HttpClientTest" />
+      <item itemvalue="Application.HttpsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyTest1" />
-        <item itemvalue="Application.Sample" />
-        <item itemvalue="Application.ImgUtil" />
-        <item itemvalue="Application.HelloWorldExample" />
-        <item itemvalue="Application.JwtHelper" />
+        <item itemvalue="Application.HttpsTest" />
+        <item itemvalue="Application.HttpClent" />
+        <item itemvalue="JUnit.HttpClientTest" />
+        <item itemvalue="JUnit.HttpClientTest.jUnitTest" />
+        <item itemvalue="Application.MySSLProtocolSocketFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -786,12 +786,29 @@
       <workItem from="1559788511996" duration="6967000" />
       <workItem from="1561085299899" duration="10638000" />
       <workItem from="1561177617616" duration="1267000" />
-      <workItem from="1561519757976" duration="1905000" />
+      <workItem from="1561519757976" duration="11882000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="HttpClientTest_jUnitTest - 2019.06.26 at 17h 10m 54s.xml">
+      <configuration name="HttpClientTest.jUnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpClientTest - 2019.06.26 at 17h 13m 58s.xml">
+      <configuration name="HttpClientTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpClientTest_jUnitTest - 2019.06.26 at 17h 25m 29s.xml">
+      <configuration name="HttpClientTest.jUnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpClientTest_jUnitTest - 2019.06.26 at 21h 03m 55s.xml">
+      <configuration name="HttpClientTest.jUnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpClientTest_jUnitTest - 2019.06.26 at 21h 05m 19s.xml">
+      <configuration name="HttpClientTest.jUnitTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195326000" />
+    <option name="totallyTimeSpent" value="205303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,6 +821,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1370" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3129771" />
       <window_info id="Structure" order="1" weight="0.24961832" />
@@ -814,7 +832,7 @@
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.327787" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.327787" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4309484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39767054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -843,7 +861,7 @@
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3038168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3129771" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -853,7 +871,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327787" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30948418" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4309484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39767054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -861,7 +879,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.37271214" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3294509" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -872,7 +890,7 @@
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
       <window_info anchor="right" id="Designer" order="3" />
       <window_info anchor="right" id="CDI" order="4" />
-      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="5" weight="0.32977098" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.24961832" />
       <window_info anchor="right" id="Database" order="8" weight="0.32977098" />
@@ -927,130 +945,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/service/wx/WxService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/client/webserviceclient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-cxf/src/main/java/com/wxsoft/cxf/CxfApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-testing/pom.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/io/IOContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="e#3417#3418#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/JsonFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="1015" selection-start-line="1015" selection-end-line="1015" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="1238" selection-start-line="1238" selection-end-line="1238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.5.4/jackson-core-2.5.4-sources.jar!/com/fasterxml/jackson/core/JsonGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="646" column="25" selection-start-line="646" selection-start-column="25" selection-end-line="646" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JacksonTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="36" column="30" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="51" column="15" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-test/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9-sources.jar!/com/fasterxml/jackson/databind/ser/std/MapSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4400">
-          <caret line="197" column="43" selection-start-line="197" selection-start-column="43" selection-end-line="197" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0-sources.jar!/io/jsonwebtoken/impl/DefaultJwtBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8100">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar!/com/fasterxml/jackson/databind/ser/std/MapSerializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9800">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-drools/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform-drools/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1336,8 +1230,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platform-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/SSLClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/security/KeyStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="1444" selection-start-line="1444" selection-end-line="1444" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/SSLContextBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpClientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <folding>
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar!/org/apache/commons/httpclient/methods/EntityEnclosingMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar!/org/apache/commons/httpclient/methods/PostMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2500">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding>
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/org/apache/commons/httpclient/methods/EntityEnclosingMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="222" column="16" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/MySSLProtocolSocketFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="45" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar!/org/apache/http/HttpStatus.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/HttpsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/HttpClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2329">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="145" column="11" selection-end-line="147" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -1393,7 +1426,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform-baiduAI</last-edited>
+          <last-edited>platform-httpclient</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

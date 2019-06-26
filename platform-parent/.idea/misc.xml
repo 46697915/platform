@@ -8,6 +8,7 @@
     <file type="web" url="file://$PROJECT_DIR$/platform-cxf" />
     <file type="web" url="file://$PROJECT_DIR$/platform-drools" />
     <file type="web" url="file://$PROJECT_DIR$/platform-hadoop" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-httpclient" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/platform-testing" />
     <file type="web" url="file://$PROJECT_DIR$/shop-statistics" />
