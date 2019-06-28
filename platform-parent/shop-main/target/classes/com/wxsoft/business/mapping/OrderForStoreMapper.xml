@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderForStoreDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Order" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="associator" property="associator" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="transport" property="transport" jdbcType="VARCHAR" />
+    <result column="discount" property="discount" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="orderstate" property="orderstate" jdbcType="VARCHAR" />
+    <result column="paystate" property="paystate" jdbcType="VARCHAR" />
+    <result column="refundstae" property="refundstae" jdbcType="VARCHAR" />
+    <result column="receiptamount" property="receiptamount" jdbcType="VARCHAR" />
+    <result column="oderamount" property="oderamount" jdbcType="VARCHAR" />
+    <result column="spentscore" property="spentscore" jdbcType="VARCHAR" />
+    <result column="transportamount" property="transportamount" jdbcType="VARCHAR" />
+    <result column="goodsamount" property="goodsamount" jdbcType="VARCHAR" />
+    <result column="goodstotal" property="goodstotal" jdbcType="VARCHAR" />
+    <result column="ismodify" property="ismodify" jdbcType="VARCHAR" />
+    <result column="transporttype" property="transporttype" jdbcType="VARCHAR" />
+    <result column="transporttypename" property="transporttypename" jdbcType="VARCHAR" />
+    <result column="transportno" property="transportno" jdbcType="VARCHAR" />
+    <result column="transportcompany" property="transportcompany" jdbcType="VARCHAR" />
+    <result column="transportremark" property="transportremark" jdbcType="VARCHAR" />
+    <result column="customerremark" property="customerremark" jdbcType="VARCHAR" />
+    <result column="iscomment" property="iscomment" jdbcType="VARCHAR" />
+    <result column="getscore" property="getscore" jdbcType="VARCHAR" />
+	<association  property="paytypename" column="paytype" javaType="string" select="getKeyvalueNameByCode1" />
+	<association  property="transportname" column="transport" javaType="string" select="getKeyvalueNameByCode2" />
+	<association  property="orderstatename" column="orderstate" javaType="string" select="getOrderstateNameByCode" />
+	<association  property="paystatename" column="paystate" javaType="string" select="getPaystateNameByCode" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    associator,
+    paytype,
+    transport,
+    discount,
+    createdate,
+    remark,
+    orderstate,
+    paystate,
+    refundstae,
+    receiptamount,
+    oderamount,
+    spentscore,
+    transportamount,
+    goodsamount,
+    goodstotal,
+    ismodify,
+    transporttype,
+    transporttypename,
+    transportno,
+    transportcompany,
+    transportremark,
+    customerremark,
+    iscomment,
+    getscore
+
+  </sql>
+  <!-- 这种写法执行数据库次数为两次，后期可更换写法 -->
+   <select id="getKeyvalueNameByCode1" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='paytype' and code = #{code}
+  </select>
+   <select id="getKeyvalueNameByCode2" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='transport' and code = #{code}
+  </select>
+   <select id="getOrderstateNameByCode" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='orderstate' and code = #{code}
+  </select>
+   <select id="getPaystateNameByCode" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='paystate' and code = #{code}
+  </select>
+   <select id="getLastId" resultType="java.lang.Integer" >
+  select id from ${order.drugStoreShortName}_drugs order by id desc limit 1
+   </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from ${order.drugStoreShortName}_t_order
+     where 1=1 
+    <if test="order.id != null and order.id != ''">
+        and id like =#{order.id}
+    </if> 
+    <if test="order.createdate_begin != null and order.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{order.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="order.createdate_end != null and order.createdate_end != ''">
+        and createdate &lt;= date_add(str_to_date(#{order.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${order.drugStoreShortName}_t_order 
+    where 1=1 
+    <if test="order.id != null and order.id != ''">
+        and id like concat('%',#{order.id},'%')
+    </if> 
+    <if test="order.createdate_begin != null and order.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{order.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="order.createdate_end != null and order.createdate_end != ''">
+        and createdate &lt;= date_add(str_to_date(#{order.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Order">
+    insert into ${order.drugStoreShortName}_t_order(<trim suffixOverrides=",">
+     <if test="order.id !=null and order.id !=''">id,</if>
+    	<if test="order.ordercode !=null and order.ordercode !=''">ordercode,</if>
+    	<if test="order.associator !=null and order.associator !=''">associator,</if>
+    	<if test="order.paytype !=null and order.paytype !=''">paytype,</if>
+    	<if test="order.transport !=null and order.transport !=''">transport,</if>
+    	<if test="order.discount !=null and order.discount !=''">discount,</if>
+    	<if test="order.createdate !=null and order.createdate !=''">createdate,</if>
+    	<if test="order.remark !=null and order.remark !=''">remark,</if>
+    	<if test="order.orderstate !=null and order.orderstate !=''">orderstate,</if>
+    	<if test="order.paystate !=null and order.paystate !=''">paystate,</if>
+    	<if test="order.refundstae !=null and order.refundstae !=''">refundstae,</if>
+    	<if test="order.receiptamount !=null and order.receiptamount !=''">receiptamount,</if>
+    	<if test="order.oderamount !=null and order.oderamount !=''">oderamount,</if>
+    	<if test="order.spentscore !=null and order.spentscore !=''">spentscore,</if>
+    	<if test="order.transportamount !=null and order.transportamount !=''">transportamount,</if>
+    	<if test="order.goodsamount !=null and order.goodsamount !=''">goodsamount,</if>
+    	<if test="order.goodstotal !=null and order.goodstotal !=''">goodstotal,</if>
+    	<if test="order.ismodify !=null and order.ismodify !=''">ismodify,</if>
+    	<if test="order.transporttype !=null and order.transporttype !=''">transporttype,</if>
+    	<if test="order.transporttypename !=null and order.transporttypename !=''">transporttypename,</if>
+    	<if test="order.transportno !=null and order.transportno !=''">transportno,</if>
+    	<if test="order.transportcompany !=null and order.transportcompany !=''">transportcompany,</if>
+    	<if test="order.transportremark !=null and order.transportremark !=''">transportremark,</if>
+    	<if test="order.customerremark !=null and order.customerremark !=''">customerremark,</if>
+    	<if test="order.iscomment !=null and order.iscomment !=''">iscomment,</if>
+    	<if test="order.getscore !=null and order.getscore !=''">getscore</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    <if test="order.id !=null and order.id !=''">#{order.id},</if>
+    	<if test="order.ordercode !=null and order.ordercode !=''">#{order.ordercode},</if>
+    	<if test="order.associator !=null and order.associator !=''">#{order.associator},</if>
+    	<if test="order.paytype !=null and order.paytype !=''">#{order.paytype},</if>
+    	<if test="order.transport !=null and order.transport !=''">#{order.transport},</if>
+    	<if test="order.discount !=null and order.discount !=''">#{order.discount},</if>
+    	<if test="order.createdate !=null and order.createdate !=''">#{order.createdate},</if>
+    	<if test="order.remark !=null and order.remark !=''">#{order.remark},</if>
+    	<if test="order.orderstate !=null and order.orderstate !=''">#{order.orderstate},</if>
+    	<if test="order.paystate !=null and order.paystate !=''">#{order.paystate},</if>
+    	<if test="order.refundstae !=null and order.refundstae !=''">#{order.refundstae},</if>
+    	<if test="order.receiptamount !=null and order.receiptamount !=''">#{order.receiptamount},</if>
+    	<if test="order.oderamount !=null and order.oderamount !=''">#{order.oderamount},</if>
+    	<if test="order.spentscore !=null and order.spentscore !=''">#{order.spentscore},</if>
+    	<if test="order.transportamount !=null and order.transportamount !=''">#{order.transportamount},</if>
+    	<if test="order.goodsamount !=null and order.goodsamount !=''">#{order.goodsamount},</if>
+    	<if test="order.goodstotal !=null and order.goodstotal !=''">#{order.goodstotal},</if>
+    	<if test="order.ismodify !=null and order.ismodify !=''">#{order.ismodify},</if>
+    	<if test="order.transporttype !=null and order.transporttype !=''">#{order.transporttype},</if>
+    	<if test="order.transporttypename !=null and order.transporttypename !=''">#{order.transporttypename},</if>
+    	<if test="order.transportno !=null and order.transportno !=''">#{order.transportno},</if>
+    	<if test="order.transportcompany !=null and order.transportcompany !=''">#{order.transportcompany},</if>
+    	<if test="order.transportremark !=null and order.transportremark !=''">#{order.transportremark},</if>
+    	<if test="order.customerremark !=null and order.customerremark !=''">#{order.customerremark},</if>
+    	<if test="order.iscomment !=null and order.iscomment !=''">#{order.iscomment},</if>
+    	<if test="order.getscore !=null and order.getscore !=''">#{order.getscore}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ${order.drugStoreShortName}_t_order
+  	<set>
+    	<if test="order.ordercode !=null and order.ordercode !=''">ordercode=#{order.ordercode},</if>
+    	<if test="order.associator !=null and order.associator !=''">associator=#{order.associator},</if>
+    	<if test="order.paytype !=null and order.paytype !=''">paytype=#{order.paytype},</if>
+    	<if test="order.transport !=null and order.transport !=''">transport=#{order.transport},</if>
+    	<if test="order.discount !=null and order.discount !=''">discount=#{order.discount},</if>
+    	<if test="order.createdate !=null and order.createdate !=''">createdate=#{order.createdate},</if>
+    	<if test="order.remark !=null and order.remark !=''">remark=#{order.remark},</if>
+    	<if test="order.orderstate !=null and order.orderstate !=''">orderstate=#{order.orderstate},</if>
+    	<if test="order.paystate !=null and order.paystate !=''">paystate=#{order.paystate},</if>
+    	<if test="order.refundstae !=null and order.refundstae !=''">refundstae=#{order.refundstae},</if>
+    	<if test="order.receiptamount !=null and order.receiptamount !=''">receiptamount=#{order.receiptamount},</if>
+    	<if test="order.oderamount !=null and order.oderamount !=''">oderamount=#{order.oderamount},</if>
+    	<if test="order.spentscore !=null and order.spentscore !=''">spentscore=#{order.spentscore},</if>
+    	<if test="order.transportamount !=null and order.transportamount !=''">transportamount=#{order.transportamount},</if>
+    	<if test="order.goodsamount !=null and order.goodsamount !=''">goodsamount=#{order.goodsamount},</if>
+    	<if test="order.goodstotal !=null and order.goodstotal !=''">goodstotal=#{order.goodstotal},</if>
+    	<if test="order.ismodify !=null and order.ismodify !=''">ismodify=#{order.ismodify},</if>
+    	<if test="order.transporttype !=null and order.transporttype !=''">transporttype=#{order.transporttype},</if>
+    	<if test="order.transporttypename !=null and order.transporttypename !=''">transporttypename=#{order.transporttypename},</if>
+    	<if test="order.transportno !=null and order.transportno !=''">transportno=#{order.transportno},</if>
+    	<if test="order.transportcompany !=null and order.transportcompany !=''">transportcompany=#{order.transportcompany},</if>
+    	<if test="order.transportremark !=null and order.transportremark !=''">transportremark=#{order.transportremark},</if>
+    	<if test="order.customerremark !=null and order.customerremark !=''">customerremark=#{order.customerremark},</if>
+    	<if test="order.iscomment !=null and order.iscomment !=''">iscomment=#{order.iscomment},</if>
+    	<if test="order.getscore !=null and order.getscore !=''">getscore=#{order.getscore}</if>
+
+  	</set>
+  	where id = #{order.id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${order.drugStoreShortName}_t_order where id=#{order.id}
+  </delete>
+</mapper>

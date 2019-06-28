@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderlogJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.OrderlogJz" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <result column="operate" property="operate" jdbcType="VARCHAR" />
+    <result column="operatetype" property="operatetype" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    operator,
+    operatedate,
+    operate,
+    operatetype,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${orderlogJz.drugStoreShortName}orderlog_jz
+    where 1=1 
+    <if test="orderlogJz.id != null and orderlogJz.id != ''">
+        and id like concat('%',#{orderlogJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${orderlogJz.drugStoreShortName}orderlog_jz 
+    where 1=1 
+    <if test="orderlogJz.id != null and orderlogJz.id != ''">
+        and id like concat('%',#{orderlogJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.OrderlogJz">
+    insert into ${orderlogJz.drugStoreShortName}orderlog_jz(<trim suffixOverrides=",">
+    	<if test="orderlogJz.ordercode !=null and orderlogJz.ordercode !=''">ordercode,</if>
+    	<if test="orderlogJz.operator !=null and orderlogJz.operator !=''">operator,</if>
+    	<if test="orderlogJz.operatedate !=null and orderlogJz.operatedate !=''">operatedate,</if>
+    	<if test="orderlogJz.operate !=null and orderlogJz.operate !=''">operate,</if>
+    	<if test="orderlogJz.operatetype !=null and orderlogJz.operatetype !=''">operatetype,</if>
+    	<if test="orderlogJz.transfer_id !=null and orderlogJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="orderlogJz.ordercode !=null and orderlogJz.ordercode !=''">#{orderlogJz.ordercode},</if>
+    	<if test="orderlogJz.operator !=null and orderlogJz.operator !=''">#{orderlogJz.operator},</if>
+    	<if test="orderlogJz.operatedate !=null and orderlogJz.operatedate !=''">#{orderlogJz.operatedate},</if>
+    	<if test="orderlogJz.operate !=null and orderlogJz.operate !=''">#{orderlogJz.operate},</if>
+    	<if test="orderlogJz.operatetype !=null and orderlogJz.operatetype !=''">#{orderlogJz.operatetype},</if>
+    	<if test="orderlogJz.transfer_id !=null and orderlogJz.transfer_id !=''">#{orderlogJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update orderlogJz
+  	<set>
+    	<if test="orderlogJz.ordercode !=null and orderlogJz.ordercode !=''">ordercode=#{orderlogJz.ordercode},</if>
+    	<if test="orderlogJz.operator !=null and orderlogJz.operator !=''">operator=#{orderlogJz.operator},</if>
+    	<if test="orderlogJz.operatedate !=null and orderlogJz.operatedate !=''">operatedate=#{orderlogJz.operatedate},</if>
+    	<if test="orderlogJz.operate !=null and orderlogJz.operate !=''">operate=#{orderlogJz.operate},</if>
+    	<if test="orderlogJz.operatetype !=null and orderlogJz.operatetype !=''">operatetype=#{orderlogJz.operatetype},</if>
+    	<if test="orderlogJz.transfer_id !=null and orderlogJz.transfer_id !=''">transfer_id=#{orderlogJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${orderlogJz.drugStoreShortName}orderlog_jz where id=#{orderlogJz.id}
+  </delete>
+</mapper>

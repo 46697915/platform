@@ -16,7 +16,10 @@
         <module name="platform-httpclient" />
         <module name="platform-test" />
         <module name="platformhadoop" />
+        <module name="shop-authority" />
+        <module name="shop-main" />
         <module name="shop-statistics" />
+        <module name="shop-view" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -30,12 +33,11 @@
       <module name="platform-httpclient" target="1.8" />
       <module name="platform-parent" target="1.8" />
       <module name="platform-test" target="1.8" />
-      <module name="platform-testing" target="1.7" />
-      <module name="platformaxis2" target="1.7" />
       <module name="platformhadoop" target="1.8" />
-      <module name="platformtest" target="1.8" />
-      <module name="shop-parent" target="1.8" />
+      <module name="shop-authority" target="1.8" />
+      <module name="shop-main" target="1.8" />
       <module name="shop-statistics" target="1.8" />
+      <module name="shop-view" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

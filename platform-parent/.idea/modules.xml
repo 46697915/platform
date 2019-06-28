@@ -13,7 +13,10 @@
       <module fileurl="file://$PROJECT_DIR$/platform-parent.iml" filepath="$PROJECT_DIR$/platform-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-test/platform-test.iml" filepath="$PROJECT_DIR$/platform-test/platform-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-hadoop/platformhadoop.iml" filepath="$PROJECT_DIR$/platform-hadoop/platformhadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-authority/shop-authority.iml" filepath="$PROJECT_DIR$/shop-authority/shop-authority.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-main/shop-main.iml" filepath="$PROJECT_DIR$/shop-main/shop-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-statistics/shop-statistics.iml" filepath="$PROJECT_DIR$/shop-statistics/shop-statistics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-view/shop-view.iml" filepath="$PROJECT_DIR$/shop-view/shop-view.iml" />
     </modules>
   </component>
 </project>

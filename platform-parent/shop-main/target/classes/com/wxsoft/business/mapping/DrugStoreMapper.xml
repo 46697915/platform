@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IDrugStoreDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.DrugStore" >
+    <result column="drugstorename" property="drugstorename" jdbcType="VARCHAR" />
+    <result column="shortname" property="shortname" jdbcType="VARCHAR" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="VARCHAR" />
+    <result column="updater" property="updater" jdbcType="VARCHAR" />
+    <result column="updatetime" property="updatetime" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="linkman" property="linkman" jdbcType="VARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="postcode" property="postcode" jdbcType="VARCHAR" />
+    <result column="linkmanqq" property="linkmanqq" jdbcType="VARCHAR" />
+     <result column="storecode" property="storecode" jdbcType="VARCHAR" />
+    <association  property="creatorUser" column="creator" javaType="com.wxsoft.business.pojo.User" select="getUserById" />
+    <association  property="creatorname" column="creator" javaType="string" select="getUserNameById" />
+ 	<association  property="updatername" column="updater" javaType="string" select="getUserNameById" />
+   
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    drugstorename,
+    shortname,
+    creator,
+    createtime,
+    updater,
+    updatetime,
+    status,
+    remark,
+    linkman,
+    telephone,
+    address,
+    postcode,
+    linkmanqq,
+    storecode
+
+  </sql>
+  <select id="getUserById" resultType="com.wxsoft.business.pojo.User" parameterType="java.lang.Integer">
+    select * from user  where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getUserNameById" resultType="string" parameterType="java.lang.Integer">
+    select username from user  where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getDrugStoreById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from drugstore 
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getDrugStoreByShotN" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from drugstore 
+    where shortname = #{shortname,jdbcType=VARCHAR}
+  </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from drugstore
+    where 1=1 
+    <if test="drugStore.id != null and drugStore.id != ''">
+        and id like concat('%',#{drugStore.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from drugstore 
+    where 1=1 
+    <if test="drugStore.id != null and drugStore.id != ''">
+        and id like concat('%',#{drugStore.id},'%')
+    </if> 
+     <if test="drugStore.drugstorename != null and drugStore.drugstorename != ''">
+        and drugstorename like concat('%',#{drugStore.drugstorename},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+   <select id="findBy" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from drugstore 
+    where 1=1 
+    <if test="drugStore.id != null and drugStore.id != ''">
+        and id like concat('%',#{drugStore.id},'%')
+    </if>
+    <if test="drugStore.shortname != null and drugStore.shortname != ''">
+        and shortname  =#{drugStore.shortname}
+    </if>
+     <if test="drugStore.drugstorename != null and drugStore.drugstorename != ''">
+        and drugstorename  =#{drugStore.drugstorename}
+    </if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.DrugStore">
+    insert into drugstore(<trim suffixOverrides=",">
+    	<if test="drugstorename !=null and drugstorename !=''">drugstorename,</if>
+    	<if test="shortname !=null and shortname !=''">shortname,</if>
+    	<if test="creator !=null and creator !=''">creator,</if>
+    	<if test="createtime !=null and createtime !=''">createtime,</if>
+    	<if test="updater !=null and updater !=''">updater,</if>
+    	<if test="updatetime !=null and updatetime !=''">updatetime,</if>
+    	<if test="status !=null and status !=''">status,</if>
+    	<if test="remark !=null and remark !=''">remark,</if>
+    	<if test="linkman !=null and linkman !=''">linkman,</if>
+    	<if test="telephone !=null and telephone !=''">telephone,</if>
+    	<if test="address !=null and address !=''">address,</if>
+    	<if test="postcode !=null and postcode !=''">postcode,</if>
+    	<if test="linkmanqq !=null and linkmanqq !=''">linkmanqq,</if>
+			<if test="storecode !=null and storecode !=''">storecode,</if>
+			
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="drugstorename !=null and drugstorename !=''">#{drugstorename},</if>
+    	<if test="shortname !=null and shortname !=''">#{shortname},</if>
+    	<if test="creator !=null and creator !=''">#{creator},</if>
+    	<if test="createtime !=null and createtime !=''">#{createtime},</if>
+    	<if test="updater !=null and updater !=''">#{updater},</if>
+    	<if test="updatetime !=null and updatetime !=''">#{updatetime},</if>
+    	<if test="status !=null and status !=''">#{status},</if>
+    	<if test="remark !=null and remark !=''">#{remark},</if>
+    	<if test="linkman !=null and linkman !=''">#{linkman},</if>
+    	<if test="telephone !=null and telephone !=''">#{telephone},</if>
+    	<if test="address !=null and address !=''">#{address},</if>
+    	<if test="postcode !=null and postcode !=''">#{postcode},</if>
+    	<if test="linkmanqq !=null and linkmanqq !=''">#{linkmanqq},</if>
+			<if test="storecode !=null and storecode !=''">#{storecode},</if>
+			
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update drugstore
+  	<set>
+    	<if test="drugstorename !=null and drugstorename !=''">drugstorename=#{drugstorename},</if>
+    	<if test="shortname !=null and shortname !=''">shortname=#{shortname},</if>
+    	<if test="creator !=null and creator !=''">creator=#{creator},</if>
+    	<if test="createtime !=null and createtime !=''">createtime=#{createtime},</if>
+    	<if test="updater !=null and updater !=''">updater=#{updater},</if>
+    	<if test="updatetime !=null and updatetime !=''">updatetime=#{updatetime},</if>
+    	<if test="status !=null and status !=''">status=#{status},</if>
+    	<if test="remark !=null and remark !=''">remark=#{remark},</if>
+    	<if test="linkman !=null and linkman !=''">linkman=#{linkman},</if>
+    	<if test="telephone !=null and telephone !=''">telephone=#{telephone},</if>
+    	<if test="address !=null and address !=''">address=#{address},</if>
+    	<if test="postcode !=null and postcode !=''">postcode=#{postcode},</if>
+    	<if test="linkmanqq !=null and linkmanqq !=''">linkmanqq=#{linkmanqq},</if>
+			<if test="storecode !=null and storecode !=''">storecode=#{storecode},</if>
+			
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from drugstore where id=#{id}
+  </delete>
+  <update id="createNewTable" parameterType="java.util.Map" statementType="STATEMENT" >
+   <foreach collection="keys" item="k" index="index" separator=";" close=";"><!-- open="(" separator="," close=");" -->
+  	CREATE TABLE IF NOT EXISTS  ${tablename}_${k}
+	SELECT * FROM ${k} WHERE 1=2 ; 
+	alter table ${tablename}_${k} add primary key(id);
+	alter table ${tablename}_${k} modify column id int auto_increment 
+   </foreach>
+
+</update>
+ <update id="deleteTables"  parameterType="java.util.Map" statementType="STATEMENT" >
+	<foreach collection="keys" item="k" index="index" separator=";" close=";"><!-- open="(" separator="," close=");" -->
+	DROP TABLE IF EXISTS ${tablename}_${k}
+   </foreach>
+  </update>
+
+</mapper>

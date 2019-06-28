@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderlogDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Orderlog" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <result column="operate" property="operate" jdbcType="VARCHAR" />
+    <result column="operatetype" property="operatetype" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    operator,
+    operatedate,
+    operate,
+    operatetype
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${orderlog.drugStoreShortName}orderlog
+    where 1=1 
+    <if test="orderlog.id != null and orderlog.id != ''">
+        and id like concat('%',#{orderlog.id},'%')
+    </if> 
+    <if test="orderlog.ordercode != null and orderlog.ordercode != ''">
+        and ordercode like concat('%',#{orderlog.ordercode} ,'%')
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${orderlog.drugStoreShortName}orderlog 
+    where 1=1 
+    <if test="orderlog.id != null and orderlog.id != ''">
+        and id like concat('%',#{orderlog.id},'%')
+    </if> 
+    <if test="orderlog.ordercode != null and orderlog.ordercode != ''">
+        and ordercode like concat('%',#{orderlog.ordercode} ,'%')
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderlog">
+    insert into ${drugStoreShortName}orderlog(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
+    	<if test="operator !=null and operator !=''">operator,</if>
+    	<if test="operatedate !=null and operatedate !=''">operatedate,</if>
+    	<if test="operate !=null and operate !=''">operate,</if>
+    	<if test="operatetype !=null and operatetype !=''">operatetype</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">#{ordercode},</if>
+    	<if test="operator !=null and operator !=''">#{operator},</if>
+    	<if test="operatedate !=null and operatedate !=''">#{operatedate},</if>
+    	<if test="operate !=null and operate !=''">#{operate},</if>
+    	<if test="operatetype !=null and operatetype !=''">#{operatetype}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ${drugStoreShortName}orderlog
+  	<set>
+    	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
+    	<if test="operator !=null and operator !=''">operator=#{operator},</if>
+    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate},</if>
+    	<if test="operate !=null and operate !=''">operate=#{operate},</if>
+    	<if test="operatetype !=null and operatetype !=''">operatetype=#{operatetype}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${drugStoreShortName}orderlog where id=#{id}
+  </delete>
+</mapper>

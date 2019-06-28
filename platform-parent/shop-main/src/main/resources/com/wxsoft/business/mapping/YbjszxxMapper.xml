@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IYbjszxxDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Ybjszxx" >
+    <result column="tcqh" property="tcqh" jdbcType="VARCHAR" />
+    <result column="yyjgdm" property="yyjgdm" jdbcType="VARCHAR" />
+    <result column="klxbh" property="klxbh" jdbcType="VARCHAR" />
+    <result column="kahao" property="kahao" jdbcType="VARCHAR" />
+    <result column="bxid" property="bxid" jdbcType="VARCHAR" />
+    <result column="xzbh" property="xzbh" jdbcType="VARCHAR" />
+    <result column="xzmc" property="xzmc" jdbcType="VARCHAR" />
+    <result column="blh" property="blh" jdbcType="VARCHAR" />
+    <result column="ptlsh" property="ptlsh" jdbcType="VARCHAR" />
+    <result column="rylb" property="rylb" jdbcType="VARCHAR" />
+    <result column="rylbmc" property="rylbmc" jdbcType="VARCHAR" />
+    <result column="sftsmz" property="sftsmz" jdbcType="VARCHAR" />
+    <result column="tsmzfl" property="tsmzfl" jdbcType="VARCHAR" />
+    <result column="tsmzflmc" property="tsmzflmc" jdbcType="VARCHAR" />
+    <result column="zfy" property="zfy" jdbcType="VARCHAR" />
+    <result column="jbjjzf" property="jbjjzf" jdbcType="VARCHAR" />
+    <result column="dbjjzf" property="dbjjzf" jdbcType="VARCHAR" />
+    <result column="dbeczf" property="dbeczf" jdbcType="VARCHAR" />
+    <result column="bcjjzf" property="bcjjzf" jdbcType="VARCHAR" />
+    <result column="gwyjjzf" property="gwyjjzf" jdbcType="VARCHAR" />
+    <result column="grzhzf" property="grzhzf" jdbcType="VARCHAR" />
+    <result column="xjzh" property="xjzh" jdbcType="VARCHAR" />
+    <result column="grzf" property="grzf" jdbcType="VARCHAR" />
+    <result column="qzzf" property="qzzf" jdbcType="VARCHAR" />
+    <result column="qzqfx" property="qzqfx" jdbcType="VARCHAR" />
+    <result column="ybjsbh" property="ybjsbh" jdbcType="VARCHAR" />
+    <result column="hjrq" property="hjrq" jdbcType="VARCHAR" />
+    <result column="isupdate" property="isupdate" jdbcType="VARCHAR" />
+    <result column="tsbt" property="tsbt" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    tcqh,
+    yyjgdm,
+    klxbh,
+    kahao,
+    bxid,
+    xzbh,
+    xzmc,
+    blh,
+    ptlsh,
+    rylb,
+    rylbmc,
+    sftsmz,
+    tsmzfl,
+    tsmzflmc,
+    zfy,
+    jbjjzf,
+    dbjjzf,
+    dbeczf,
+    bcjjzf,
+    gwyjjzf,
+    grzhzf,
+    xjzh,
+    grzf,
+    qzzf,
+    qzqfx,
+    ybjsbh,
+    hjrq,
+    isupdate,
+    tsbt
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${ybjszxx.drugStoreShortName}m_ybjszxx
+    where 1=1 
+    <if test="ybjszxx.id != null and ybjszxx.id != ''">
+        and id like concat('%',#{ybjszxx.id},'%')
+    </if> 
+    <if test="ybjszxx.ybjsbh != null and ybjszxx.ybjsbh != ''">
+        and ybjsbh = #{ybjszxx.ybjsbh} 
+    </if>
+    <if test="ybjszxx.ybjsrq_begin_search != null and ybjszxx.ybjsrq_begin_search != ''">
+        and ybjsbh &gt;= str_to_date(#{ybjszxx.ybjsrq_begin_search}, '%Y-%m-%d')
+    </if>
+    <if test="ybjszxx.ybjsrq_end_search != null and ybjszxx.ybjsrq_end_search != ''">
+        and ybjsbh &lt;= date_add(str_to_date(#{ybjszxx.ybjsrq_end_search}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="ybjszxx.bxid != null and ybjszxx.bxid != ''">
+        and bxid = #{ybjszxx.bxid} 
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${ybjszxx.drugStoreShortName}m_ybjszxx 
+    where 1=1 
+    <if test="ybjszxx.id != null and ybjszxx.id != ''">
+        and id like concat('%',#{ybjszxx.id},'%')
+    </if> 
+    <if test="ybjszxx.ybjsbh != null and ybjszxx.ybjsbh != ''">
+        and ybjsbh = #{ybjszxx.ybjsbh} 
+    </if>
+    <if test="ybjszxx.ybjsrq_begin_search != null and ybjszxx.ybjsrq_begin_search != ''">
+        and hjrq &gt;= str_to_date(#{ybjszxx.ybjsrq_begin_search}, '%Y-%m-%d')
+    </if>
+    <if test="ybjszxx.ybjsrq_end_search != null and ybjszxx.ybjsrq_end_search != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjszxx.ybjsrq_end_search}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="ybjszxx.bxid != null and ybjszxx.bxid != ''">
+        and bxid = #{ybjszxx.bxid} 
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Ybjszxx">
+    insert into ${drugStoreShortName}m_ybjszxx(<trim suffixOverrides=",">
+    	<if test="tcqh !=null and tcqh !=''">tcqh,</if>
+    	<if test="yyjgdm !=null and yyjgdm !=''">yyjgdm,</if>
+    	<if test="klxbh !=null and klxbh !=''">klxbh,</if>
+    	<if test="kahao !=null and kahao !=''">kahao,</if>
+    	<if test="bxid !=null and bxid !=''">bxid,</if>
+    	<if test="xzbh !=null and xzbh !=''">xzbh,</if>
+    	<if test="xzmc !=null and xzmc !=''">xzmc,</if>
+    	<if test="blh !=null and blh !=''">blh,</if>
+    	<if test="ptlsh !=null and ptlsh !=''">ptlsh,</if>
+    	<if test="rylb !=null and rylb !=''">rylb,</if>
+    	<if test="rylbmc !=null and rylbmc !=''">rylbmc,</if>
+    	<if test="sftsmz !=null and sftsmz !=''">sftsmz,</if>
+    	<if test="tsmzfl !=null and tsmzfl !=''">tsmzfl,</if>
+    	<if test="tsmzflmc !=null and tsmzflmc !=''">tsmzflmc,</if>
+    	<if test="zfy !=null and zfy !=''">zfy,</if>
+    	<if test="jbjjzf !=null and jbjjzf !=''">jbjjzf,</if>
+    	<if test="dbjjzf !=null and dbjjzf !=''">dbjjzf,</if>
+    	<if test="dbeczf !=null and dbeczf !=''">dbeczf,</if>
+    	<if test="bcjjzf !=null and bcjjzf !=''">bcjjzf,</if>
+    	<if test="gwyjjzf !=null and gwyjjzf !=''">gwyjjzf,</if>
+    	<if test="grzhzf !=null and grzhzf !=''">grzhzf,</if>
+    	<if test="xjzh !=null and xjzh !=''">xjzh,</if>
+    	<if test="grzf !=null and grzf !=''">grzf,</if>
+    	<if test="qzzf !=null and qzzf !=''">qzzf,</if>
+    	<if test="qzqfx !=null and qzqfx !=''">qzqfx,</if>
+    	<if test="ybjsbh !=null and ybjsbh !=''">ybjsbh,</if>
+    	<if test="hjrq !=null and hjrq !=''">hjrq,</if>
+    	<if test="isupdate !=null and isupdate !=''">isupdate,</if>
+    	<if test="tsbt !=null and tsbt !=''">tsbt</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="tcqh !=null and tcqh !=''">#{tcqh},</if>
+    	<if test="yyjgdm !=null and yyjgdm !=''">#{yyjgdm},</if>
+    	<if test="klxbh !=null and klxbh !=''">#{klxbh},</if>
+    	<if test="kahao !=null and kahao !=''">#{kahao},</if>
+    	<if test="bxid !=null and bxid !=''">#{bxid},</if>
+    	<if test="xzbh !=null and xzbh !=''">#{xzbh},</if>
+    	<if test="xzmc !=null and xzmc !=''">#{xzmc},</if>
+    	<if test="blh !=null and blh !=''">#{blh},</if>
+    	<if test="ptlsh !=null and ptlsh !=''">#{ptlsh},</if>
+    	<if test="rylb !=null and rylb !=''">#{rylb},</if>
+    	<if test="rylbmc !=null and rylbmc !=''">#{rylbmc},</if>
+    	<if test="sftsmz !=null and sftsmz !=''">#{sftsmz},</if>
+    	<if test="tsmzfl !=null and tsmzfl !=''">#{tsmzfl},</if>
+    	<if test="tsmzflmc !=null and tsmzflmc !=''">#{tsmzflmc},</if>
+    	<if test="zfy !=null and zfy !=''">#{zfy},</if>
+    	<if test="jbjjzf !=null and jbjjzf !=''">#{jbjjzf},</if>
+    	<if test="dbjjzf !=null and dbjjzf !=''">#{dbjjzf},</if>
+    	<if test="dbeczf !=null and dbeczf !=''">#{dbeczf},</if>
+    	<if test="bcjjzf !=null and bcjjzf !=''">#{bcjjzf},</if>
+    	<if test="gwyjjzf !=null and gwyjjzf !=''">#{gwyjjzf},</if>
+    	<if test="grzhzf !=null and grzhzf !=''">#{grzhzf},</if>
+    	<if test="xjzh !=null and xjzh !=''">#{xjzh},</if>
+    	<if test="grzf !=null and grzf !=''">#{grzf},</if>
+    	<if test="qzzf !=null and qzzf !=''">#{qzzf},</if>
+    	<if test="qzqfx !=null and qzqfx !=''">#{qzqfx},</if>
+    	<if test="ybjsbh !=null and ybjsbh !=''">#{ybjsbh},</if>
+    	<if test="hjrq !=null and hjrq !=''">#{hjrq},</if>
+    	<if test="isupdate !=null and isupdate !=''">#{isupdate},</if>
+    	<if test="tsbt !=null and tsbt !=''">#{tsbt}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ${drugStoreShortName}m_ybjszxx
+  	<set>
+    	<if test="tcqh !=null and tcqh !=''">tcqh=#{tcqh},</if>
+    	<if test="yyjgdm !=null and yyjgdm !=''">yyjgdm=#{yyjgdm},</if>
+    	<if test="klxbh !=null and klxbh !=''">klxbh=#{klxbh},</if>
+    	<if test="kahao !=null and kahao !=''">kahao=#{kahao},</if>
+    	<if test="bxid !=null and bxid !=''">bxid=#{bxid},</if>
+    	<if test="xzbh !=null and xzbh !=''">xzbh=#{xzbh},</if>
+    	<if test="xzmc !=null and xzmc !=''">xzmc=#{xzmc},</if>
+    	<if test="blh !=null and blh !=''">blh=#{blh},</if>
+    	<if test="ptlsh !=null and ptlsh !=''">ptlsh=#{ptlsh},</if>
+    	<if test="rylb !=null and rylb !=''">rylb=#{rylb},</if>
+    	<if test="rylbmc !=null and rylbmc !=''">rylbmc=#{rylbmc},</if>
+    	<if test="sftsmz !=null and sftsmz !=''">sftsmz=#{sftsmz},</if>
+    	<if test="tsmzfl !=null and tsmzfl !=''">tsmzfl=#{tsmzfl},</if>
+    	<if test="tsmzflmc !=null and tsmzflmc !=''">tsmzflmc=#{tsmzflmc},</if>
+    	<if test="zfy !=null and zfy !=''">zfy=#{zfy},</if>
+    	<if test="jbjjzf !=null and jbjjzf !=''">jbjjzf=#{jbjjzf},</if>
+    	<if test="dbjjzf !=null and dbjjzf !=''">dbjjzf=#{dbjjzf},</if>
+    	<if test="dbeczf !=null and dbeczf !=''">dbeczf=#{dbeczf},</if>
+    	<if test="bcjjzf !=null and bcjjzf !=''">bcjjzf=#{bcjjzf},</if>
+    	<if test="gwyjjzf !=null and gwyjjzf !=''">gwyjjzf=#{gwyjjzf},</if>
+    	<if test="grzhzf !=null and grzhzf !=''">grzhzf=#{grzhzf},</if>
+    	<if test="xjzh !=null and xjzh !=''">xjzh=#{xjzh},</if>
+    	<if test="grzf !=null and grzf !=''">grzf=#{grzf},</if>
+    	<if test="qzzf !=null and qzzf !=''">qzzf=#{qzzf},</if>
+    	<if test="qzqfx !=null and qzqfx !=''">qzqfx=#{qzqfx},</if>
+    	<if test="ybjsbh !=null and ybjsbh !=''">ybjsbh=#{ybjsbh},</if>
+    	<if test="hjrq !=null and hjrq !=''">hjrq=#{hjrq},</if>
+    	<if test="isupdate !=null and isupdate !=''">isupdate=#{isupdate},</if>
+    	<if test="tsbt !=null and tsbt !=''">tsbt=#{tsbt}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${drugStoreShortName}m_ybjszxx where id=#{id}
+  </delete>
+</mapper>

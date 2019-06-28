@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IPaylogJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.PaylogJz" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="paystate" property="paystate" jdbcType="VARCHAR" />
+    <result column="paymoney" property="paymoney" jdbcType="VARCHAR" />
+    <result column="paydate" property="paydate" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="payee" property="payee" jdbcType="VARCHAR" />
+    <result column="getdate" property="getdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="alipaynum" property="alipaynum" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    paystate,
+    paymoney,
+    paydate,
+    paytype,
+    payee,
+    getdate,
+    remark,
+    alipaynum,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${paylogJz.drugStoreShortName}paylog_jz
+    where 1=1 
+    <if test="paylogJz.id != null and paylogJz.id != ''">
+        and id like concat('%',#{paylogJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${paylogJz.drugStoreShortName}paylog_jz 
+    where 1=1 
+    <if test="paylogJz.id != null and paylogJz.id != ''">
+        and id like concat('%',#{paylogJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.PaylogJz">
+    insert into ${paylogJz.drugStoreShortName}paylog_jz(<trim suffixOverrides=",">
+    	<if test="paylogJz.ordercode !=null and paylogJz.ordercode !=''">ordercode,</if>
+    	<if test="paylogJz.paystate !=null and paylogJz.paystate !=''">paystate,</if>
+    	<if test="paylogJz.paymoney !=null and paylogJz.paymoney !=''">paymoney,</if>
+    	<if test="paylogJz.paydate !=null and paylogJz.paydate !=''">paydate,</if>
+    	<if test="paylogJz.paytype !=null and paylogJz.paytype !=''">paytype,</if>
+    	<if test="paylogJz.payee !=null and paylogJz.payee !=''">payee,</if>
+    	<if test="paylogJz.getdate !=null and paylogJz.getdate !=''">getdate,</if>
+    	<if test="paylogJz.remark !=null and paylogJz.remark !=''">remark,</if>
+    	<if test="paylogJz.alipaynum !=null and paylogJz.alipaynum !=''">alipaynum,</if>
+    	<if test="paylogJz.transfer_id !=null and paylogJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="paylogJz.ordercode !=null and paylogJz.ordercode !=''">#{paylogJz.ordercode},</if>
+    	<if test="paylogJz.paystate !=null and paylogJz.paystate !=''">#{paylogJz.paystate},</if>
+    	<if test="paylogJz.paymoney !=null and paylogJz.paymoney !=''">#{paylogJz.paymoney},</if>
+    	<if test="paylogJz.paydate !=null and paylogJz.paydate !=''">#{paylogJz.paydate},</if>
+    	<if test="paylogJz.paytype !=null and paylogJz.paytype !=''">#{paylogJz.paytype},</if>
+    	<if test="paylogJz.payee !=null and paylogJz.payee !=''">#{paylogJz.payee},</if>
+    	<if test="paylogJz.getdate !=null and paylogJz.getdate !=''">#{paylogJz.getdate},</if>
+    	<if test="paylogJz.remark !=null and paylogJz.remark !=''">#{paylogJz.remark},</if>
+    	<if test="paylogJz.alipaynum !=null and paylogJz.alipaynum !=''">#{paylogJz.alipaynum},</if>
+    	<if test="paylogJz.transfer_id !=null and paylogJz.transfer_id !=''">#{paylogJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update paylogJz
+  	<set>
+    	<if test="paylogJz.ordercode !=null and paylogJz.ordercode !=''">ordercode=#{paylogJz.ordercode},</if>
+    	<if test="paylogJz.paystate !=null and paylogJz.paystate !=''">paystate=#{paylogJz.paystate},</if>
+    	<if test="paylogJz.paymoney !=null and paylogJz.paymoney !=''">paymoney=#{paylogJz.paymoney},</if>
+    	<if test="paylogJz.paydate !=null and paylogJz.paydate !=''">paydate=#{paylogJz.paydate},</if>
+    	<if test="paylogJz.paytype !=null and paylogJz.paytype !=''">paytype=#{paylogJz.paytype},</if>
+    	<if test="paylogJz.payee !=null and paylogJz.payee !=''">payee=#{paylogJz.payee},</if>
+    	<if test="paylogJz.getdate !=null and paylogJz.getdate !=''">getdate=#{paylogJz.getdate},</if>
+    	<if test="paylogJz.remark !=null and paylogJz.remark !=''">remark=#{paylogJz.remark},</if>
+    	<if test="paylogJz.alipaynum !=null and paylogJz.alipaynum !=''">alipaynum=#{paylogJz.alipaynum},</if>
+    	<if test="paylogJz.transfer_id !=null and paylogJz.transfer_id !=''">transfer_id=#{paylogJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${paylogJz.drugStoreShortName}paylog_jz where id=#{paylogJz.id}
+  </delete>
+</mapper>

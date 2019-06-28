@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IDrugsDicDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.DrugsDic" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="type1" property="type1" jdbcType="VARCHAR" />
+    <result column="type2" property="type2" jdbcType="VARCHAR" />
+    <result column="type3" property="type3" jdbcType="VARCHAR" />
+    <result column="dosageform" property="dosageform" jdbcType="VARCHAR" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="manufactor" property="manufactor" jdbcType="VARCHAR" />
+    <result column="approvalnum" property="approvalnum" jdbcType="VARCHAR" />
+    <result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
+    <result column="commonshotspell" property="commonshotspell" jdbcType="VARCHAR" />
+    <result column="commonnamespell" property="commonnamespell" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR" />
+    <result column="barcode2" property="barcode2" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    drugsname,
+    commonname,
+    type1,
+    type2,
+    type3,
+    dosageform,
+    specifications,
+    units,
+    manufactor,
+    approvalnum,
+    drugscode,
+    commonshotspell,
+    commonnamespell,
+    operator,
+    operatedate,
+    bxdygx,
+    barcode2
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from m_drugs_dic
+    where 1=1 
+    <if test="drugsDic.id != null and drugsDic.id != ''">
+        and id like concat('%',#{drugsDic.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_drugs_dic 
+    where 1=1 
+    <if test="drugsDic.id != null and drugsDic.id != ''">
+        and id like concat('%',#{drugsDic.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="findBy" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_drugs_dic 
+    where 1=1 
+    <if test="drugsDic.id != null and drugsDic.id != ''">
+        and id = #{drugsDic.id}
+    </if> 
+    <if test="drugsDic.barcode != null and drugsDic.barcode != ''">
+        and barcode = #{drugsDic.barcode} 
+    </if>
+    <if test="drugsDic.barcode2 != null and drugsDic.barcode2 != ''">
+        and barcode2 = #{drugsDic.barcode2} 
+    </if>
+    <if test="drugsDic.drugscode != null and drugsDic.drugscode != ''">
+        and drugscode = #{drugsDic.drugscode} 
+    </if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.DrugsDic">
+    insert into m_drugs_dic(<trim suffixOverrides=",">
+    	<if test="drugsDic.barcode !=null and drugsDic.barcode !=''">barcode,</if>
+    	<if test="drugsDic.drugsname !=null and drugsDic.drugsname !=''">drugsname,</if>
+    	<if test="drugsDic.commonname !=null and drugsDic.commonname !=''">commonname,</if>
+    	<if test="drugsDic.type1 !=null and drugsDic.type1 !=''">type1,</if>
+    	<if test="drugsDic.type2 !=null and drugsDic.type2 !=''">type2,</if>
+    	<if test="drugsDic.type3 !=null and drugsDic.type3 !=''">type3,</if>
+    	<if test="drugsDic.dosageform !=null and drugsDic.dosageform !=''">dosageform,</if>
+    	<if test="drugsDic.specifications !=null and drugsDic.specifications !=''">specifications,</if>
+    	<if test="drugsDic.units !=null and drugsDic.units !=''">units,</if>
+    	<if test="drugsDic.manufactor !=null and drugsDic.manufactor !=''">manufactor,</if>
+    	<if test="drugsDic.approvalnum !=null and drugsDic.approvalnum !=''">approvalnum,</if>
+    	<if test="drugsDic.drugscode !=null and drugsDic.drugscode !=''">drugscode,</if>
+    	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">commonshotspell,</if>
+    	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">commonnamespell,</if>
+    	<if test="drugsDic.operator !=null and drugsDic.operator !=''">operator,</if>
+    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">operatedate,</if>
+    	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">bxdygx,</if>
+    	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">barcode2,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="drugsDic.barcode !=null and drugsDic.barcode !=''">#{drugsDic.barcode},</if>
+    	<if test="drugsDic.drugsname !=null and drugsDic.drugsname !=''">#{drugsDic.drugsname},</if>
+    	<if test="drugsDic.commonname !=null and drugsDic.commonname !=''">#{drugsDic.commonname},</if>
+    	<if test="drugsDic.type1 !=null and drugsDic.type1 !=''">#{drugsDic.type1},</if>
+    	<if test="drugsDic.type2 !=null and drugsDic.type2 !=''">#{drugsDic.type2},</if>
+    	<if test="drugsDic.type3 !=null and drugsDic.type3 !=''">#{drugsDic.type3},</if>
+    	<if test="drugsDic.dosageform !=null and drugsDic.dosageform !=''">#{drugsDic.dosageform},</if>
+    	<if test="drugsDic.specifications !=null and drugsDic.specifications !=''">#{drugsDic.specifications},</if>
+    	<if test="drugsDic.units !=null and drugsDic.units !=''">#{drugsDic.units},</if>
+    	<if test="drugsDic.manufactor !=null and drugsDic.manufactor !=''">#{drugsDic.manufactor},</if>
+    	<if test="drugsDic.approvalnum !=null and drugsDic.approvalnum !=''">#{drugsDic.approvalnum},</if>
+    	<if test="drugsDic.drugscode !=null and drugsDic.drugscode !=''">#{drugsDic.drugscode},</if>
+    	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">#{drugsDic.commonshotspell},</if>
+    	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">#{drugsDic.commonnamespell},</if>
+    	<if test="drugsDic.operator !=null and drugsDic.operator !=''">#{drugsDic.operator},</if>
+    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">#{drugsDic.operatedate},</if>
+    	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">#{drugsDic.bxdygx},</if>
+    	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">#{drugsDic.barcode2},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify" parameterType="com.wxsoft.business.pojo.DrugsDic">
+  	update m_drugs_dic
+  	<set>
+    	<if test="drugsDic.barcode !=null and drugsDic.barcode !=''">barcode=#{drugsDic.barcode},</if>
+    	<if test="drugsDic.drugsname !=null and drugsDic.drugsname !=''">drugsname=#{drugsDic.drugsname},</if>
+    	<if test="drugsDic.commonname !=null and drugsDic.commonname !=''">commonname=#{drugsDic.commonname},</if>
+    	<if test="drugsDic.type1 !=null and drugsDic.type1 !=''">type1=#{drugsDic.type1},</if>
+    	<if test="drugsDic.type2 !=null and drugsDic.type2 !=''">type2=#{drugsDic.type2},</if>
+    	<if test="drugsDic.type3 !=null and drugsDic.type3 !=''">type3=#{drugsDic.type3},</if>
+    	<if test="drugsDic.dosageform !=null and drugsDic.dosageform !=''">dosageform=#{drugsDic.dosageform},</if>
+    	<if test="drugsDic.specifications !=null and drugsDic.specifications !=''">specifications=#{drugsDic.specifications},</if>
+    	<if test="drugsDic.units !=null and drugsDic.units !=''">units=#{drugsDic.units},</if>
+    	<if test="drugsDic.manufactor !=null and drugsDic.manufactor !=''">manufactor=#{drugsDic.manufactor},</if>
+    	<if test="drugsDic.approvalnum !=null and drugsDic.approvalnum !=''">approvalnum=#{drugsDic.approvalnum},</if>
+    	<if test="drugsDic.drugscode !=null and drugsDic.drugscode !=''">drugscode=#{drugsDic.drugscode},</if>
+    	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">commonshotspell=#{drugsDic.commonshotspell},</if>
+    	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">commonnamespell=#{drugsDic.commonnamespell},</if>
+    	<if test="drugsDic.operator !=null and drugsDic.operator !=''">operator=#{drugsDic.operator},</if>
+    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">operatedate=#{drugsDic.operatedate},</if>
+    	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">bxdygx=#{drugsDic.bxdygx},</if>
+    	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">barcode2=#{drugsDic.barcode2},</if>
+
+  	</set>
+  	where id = #{drugsDic.id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from m_drugs_dic where id=#{drugsDic.id}
+  </delete>
+</mapper>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IGoodsForStoreDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Goods" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="type1" property="type1" jdbcType="VARCHAR" />
+    <result column="type2" property="type2" jdbcType="VARCHAR" />
+    <result column="type3" property="type3" jdbcType="VARCHAR" />
+    <result column="dosageform" property="dosageform" jdbcType="VARCHAR" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="costprice" property="costprice" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="generatenum" property="generatenum" jdbcType="VARCHAR" />
+    <result column="generatedate" property="generatedate" jdbcType="VARCHAR" />
+    <result column="validityperiod" property="validityperiod" jdbcType="VARCHAR" />
+    <result column="shelflife" property="shelflife" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="VARCHAR" />
+    <result column="position" property="position" jdbcType="VARCHAR" />
+    <result column="storage" property="storage" jdbcType="VARCHAR" />
+    <result column="pharmacyid" property="pharmacyid" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedatestr" jdbcType="VARCHAR" />
+	
+	<result column="drugsid" property="drugsid" jdbcType="VARCHAR"/>
+    <result column="commonshotspell" property="commonshotspell" jdbcType="VARCHAR"/>
+    <result column="commonnamespell" property="commonnamespell" jdbcType="VARCHAR"/>
+    <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR"/>
+	<association  property="dosageformname" column="dosageform" javaType="string" select="getKeyvalueNameByCode1" />
+	<association  property="specificationsname" column="specifications" javaType="string" select="getKeyvalueNameByCode2" />
+  
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    goodsname,
+    commonname,
+    type1,
+    type2,
+    type3,
+    dosageform,
+    specifications,
+    price,
+    costprice,
+    units,
+    generatenum,
+    generatedate,
+    validityperiod,
+    shelflife,
+    stock,
+    position,
+    storage,
+    pharmacyid,
+    operator,
+    operatedate,
+    drugsid,
+	commonshotspell,
+	commonnamespell,
+	bxdygx
+
+  </sql>
+   <!-- 这种写法执行数据库次数为两次，后期可更换写法 -->
+   <select id="getKeyvalueNameByCode1" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='dosageform' and code = #{code}
+  </select>
+   <select id="getKeyvalueNameByCode2" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='specifications' and code = #{code}
+  </select>
+  <select id="getLastId" resultType="java.lang.Integer" >
+  select id from ${goods.drugStoreShortName}_drugs order by id desc limit 1
+   </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from ${goods.drugStoreShortName}_goods
+    where 1=1 
+    <if test="goods.id != null and goods.id != ''">
+        and id like concat('%',#{goods.id},'%')
+    </if>
+    <if test="goods.barcode != null and goods.barcode != ''">
+        and (barcode like concat('%',#{goods.barcode},'%')
+        	or goodsname like concat('%',#{goods.barcode},'%')
+        	or commonname like concat('%',#{goods.barcode},'%')
+        	)
+    </if>
+    <if test="goods.barcode_search != null and goods.barcode_search != ''">
+        and barcode = #{goods.barcode_search} 
+    </if>
+    <if test="goods.name_search != null and goods.name_search != ''">
+        and (goodsname like concat('%',#{goods.name_search},'%') OR commonname like concat('%',#{goods.name_search},'%'))
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${goods.drugStoreShortName}_goods 
+    where 1=1 
+    <if test="goods.id != null and goods.id != ''">
+        and id like concat('%',#{goods.id},'%')
+    </if>
+    <if test="goods.barcode != null and goods.barcode != ''">
+        and (barcode like concat('%',#{goods.barcode},'%')
+        	or goodsname like concat('%',#{goods.barcode},'%')
+        	or commonname like concat('%',#{goods.barcode},'%')
+        	)
+    </if>
+    <if test="goods.barcode_search != null and goods.barcode_search != ''">
+        and barcode = #{goods.barcode_search} 
+    </if>
+    <if test="goods.name_search != null and goods.name_search != ''">
+        and (goodsname like concat('%',#{goods.name_search},'%') OR commonname like concat('%',#{goods.name_search},'%'))
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="findBy" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${goods.drugStoreShortName}_goods 
+    where 1=1 
+    <if test="goods.id != null and goods.id != ''">
+        and id like concat('%',#{goods.id},'%')
+    </if>
+    <if test="goods.barcode != null and goods.barcode != ''">
+        and barcode = #{goods.barcode}
+    </if>
+  </select>
+  <select id="findById" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from ${goods.drugStoreShortName}_goods
+     where id = #{goods.id,jdbcType=INTEGER}
+  </select>
+ <insert id="insert" parameterType="com.wxsoft.business.pojo.Goods">
+    insert into ${goods.drugStoreShortName}_goods(<trim suffixOverrides=",">
+    <if test="goods.id !=null and goods.id !=''">id,</if>
+    		<if test="goods.drugsid !=null and goods.drugsid !=''">drugsid,</if>
+			<if test="goods.commonshotspell !=null and goods.commonshotspell !=''">commonshotspell,</if>
+			<if test="goods.commonnamespell !=null and goods.commonnamespell !=''">commonnamespell,</if>
+			<if test="goods.bxdygx !=null and goods.bxdygx !=''">bxdygx,</if>
+    	
+    		
+    	<if test="goods.barcode !=null and goods.barcode !=''">barcode,</if>
+    	<if test="goods.goodsname !=null and goods.goodsname !=''">goodsname,</if>
+    	<if test="goods.commonname !=null and goods.commonname !=''">commonname,</if>
+    	<if test="goods.type1 !=null and goods.type1 !=''">type1,</if>
+    	<if test="goods.type2 !=null and goods.type2 !=''">type2,</if>
+    	<if test="goods.type3 !=null and goods.type3 !=''">type3,</if>
+    	<if test="goods.dosageform !=null and goods.dosageform !=''">dosageform,</if>
+    	<if test="goods.specifications !=null and goods.specifications !=''">specifications,</if>
+    	<if test="goods.price !=null and goods.price !=''">price,</if>
+    	<if test="goods.costprice !=null and goods.costprice !=''">costprice,</if>
+    	<if test="goods.units !=null and goods.units !=''">units,</if>
+    	<if test="goods.generatenum !=null and goods.generatenum !=''">generatenum,</if>
+    	<if test="goods.generatedate !=null and goods.generatedate !=''">generatedate,</if>
+    	<if test="goods.validityperiod !=null and goods.validityperiod !=''">validityperiod,</if>
+    	<if test="goods.shelflife !=null and goods.shelflife !=''">shelflife,</if>
+    	<if test="goods.stock !=null and goods.stock !=''">stock,</if>
+    	<if test="goods.position !=null and goods.position !=''">position,</if>
+    	<if test="goods.storage !=null and goods.storage !=''">storage,</if>
+    	<if test="goods.pharmacyid !=null and goods.pharmacyid !=''">pharmacyid,</if>
+    	<if test="goods.operator !=null and goods.operator !=''">operator,</if>
+    	<if test="goods.operatedate !=null and goods.operatedate !=''">operatedate</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+     <if test="goods.id !=null and goods.id !=''">#{goods.id},</if>
+     		<if test="goods.drugsid !=null and goods.drugsid !=''">#{goods.drugsid},</if>
+			<if test="goods.commonshotspell !=null and goods.commonshotspell !=''">#{goods.commonshotspell},</if>
+			<if test="goods.commonnamespell !=null and goods.commonnamespell !=''">#{goods.commonnamespell},</if>
+			<if test="goods.bxdygx !=null and goods.bxdygx !=''">#{goods.bxdygx},</if>
+    	
+    	<if test="goods.barcode !=null and goods.barcode !=''">#{goods.barcode},</if>
+    	<if test="goods.goodsname !=null and goods.goodsname !=''">#{goods.goodsname},</if>
+    	<if test="goods.commonname !=null and goods.commonname !=''">#{goods.commonname},</if>
+    	<if test="goods.type1 !=null and goods.type1 !=''">#{goods.type1},</if>
+    	<if test="goods.type2 !=null and goods.type2 !=''">#{goods.type2},</if>
+    	<if test="goods.type3 !=null and goods.type3 !=''">#{goods.type3},</if>
+    	<if test="goods.dosageform !=null and goods.dosageform !=''">#{goods.dosageform},</if>
+    	<if test="goods.specifications !=null and goods.specifications !=''">#{goods.specifications},</if>
+    	<if test="goods.price !=null and goods.price !=''">#{goods.price},</if>
+    	<if test="goods.costprice !=null and goods.costprice !=''">#{goods.costprice},</if>
+    	<if test="goods.units !=null and goods.units !=''">#{goods.units},</if>
+    	<if test="goods.generatenum !=null and goods.generatenum !=''">#{goods.generatenum},</if>
+    	<if test="goods.generatedate !=null and goods.generatedate !=''">#{goods.generatedate},</if>
+    	<if test="goods.validityperiod !=null and goods.validityperiod !=''">#{goods.validityperiod},</if>
+    	<if test="goods.shelflife !=null and goods.shelflife !=''">#{goods.shelflife},</if>
+    	<if test="goods.stock !=null and goods.stock !=''">#{goods.stock},</if>
+    	<if test="goods.position !=null and goods.position !=''">#{goods.position},</if>
+    	<if test="goods.storage !=null and goods.storage !=''">#{goods.storage},</if>
+    	<if test="goods.pharmacyid !=null and goods.pharmacyid !=''">#{goods.pharmacyid},</if>
+    	<if test="goods.operator !=null and goods.operator !=''">#{goods.operator},</if>
+    	<if test="goods.operatedate !=null and goods.operatedate !=''">#{goods.operatedate,jdbcType=TIMESTAMP}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ${goods.drugStoreShortName}_goods
+  	<set>
+  			<if test="goods.drugsid !=null and goods.drugsid !=''">drugsid=#{goods.drugsid},</if>
+			<if test="goods.commonshotspell !=null and goods.commonshotspell !=''">commonshotspell=#{goods.commonshotspell},</if>
+			<if test="goods.commonnamespell !=null and goods.commonnamespell !=''">commonnamespell=#{goods.commonnamespell},</if>
+			<if test="goods.bxdygx !=null and goods.bxdygx !=''">bxdygx=#{goods.bxdygx},</if>
+    	
+    	<if test="goods.barcode !=null and goods.barcode !=''">barcode=#{goods.barcode},</if>
+    	<if test="goods.goodsname !=null and goods.goodsname !=''">goodsname=#{goods.goodsname},</if>
+    	<if test="goods.commonname !=null and goods.commonname !=''">commonname=#{goods.commonname},</if>
+    	<if test="goods.type1 !=null and goods.type1 !=''">type1=#{goods.type1},</if>
+    	<if test="goods.type2 !=null and goods.type2 !=''">type2=#{goods.type2},</if>
+    	<if test="goods.type3 !=null and goods.type3 !=''">type3=#{goods.type3},</if>
+    	<if test="goods.dosageform !=null and goods.dosageform !=''">dosageform=#{goods.dosageform},</if>
+    	<if test="goods.specifications !=null and goods.specifications !=''">specifications=#{goods.specifications},</if>
+    	<if test="goods.price !=null and goods.price !=''">price=#{goods.price},</if>
+    	<if test="goods.costprice !=null and goods.costprice !=''">costprice=#{goods.costprice},</if>
+    	<if test="goods.units !=null and goods.units !=''">units=#{goods.units},</if>
+    	<if test="goods.generatenum !=null and goods.generatenum !=''">generatenum=#{goods.generatenum},</if>
+    	<if test="goods.generatedate !=null and goods.generatedate !=''">generatedate=#{goods.generatedate},</if>
+    	<if test="goods.validityperiod !=null and goods.validityperiod !=''">validityperiod=#{goods.validityperiod},</if>
+    	<if test="goods.shelflife !=null and goods.shelflife !=''">shelflife=#{goods.shelflife},</if>
+    	<if test="goods.stock !=null and goods.stock !=''">stock=#{goods.stock},</if>
+    	<if test="goods.position !=null and goods.position !=''">position=#{goods.position},</if>
+    	<if test="goods.storage !=null and goods.storage !=''">storage=#{goods.storage},</if>
+    	<if test="goods.pharmacyid !=null and goods.pharmacyid !=''">pharmacyid=#{goods.pharmacyid},</if>
+    	<if test="goods.operator !=null and goods.operator !=''">operator=#{goods.operator},</if>
+    	<if test="goods.operatedate !=null and goods.operatedate !=''">operatedate=#{goods.operatedate}</if>
+
+  	</set>
+  	where id = #{goods.id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${goods.drugStoreShortName}_goods where id=#{goods.id}
+  </delete>
+</mapper>

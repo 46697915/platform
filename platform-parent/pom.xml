@@ -36,6 +36,9 @@
         <module>platform-axis2</module>
         <module>platform-cxf</module>
         <module>platform-httpclient</module>
+        <module>shop-authority</module>
+        <module>shop-view</module>
+        <module>shop-main</module>
         <!--<module>platform-baiduAI</module>-->
         <!--<module>platform-drools</module>-->
         <!--<module>platform-testing</module>-->

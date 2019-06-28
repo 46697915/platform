@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IUserDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.User" >
+    <!-- <id column="id" property="id" jdbcType="INTEGER" /> -->
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="VARCHAR" />
+    <result column="updater" property="updater" jdbcType="VARCHAR" />
+    <result column="updatetime" property="updatetime" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="roleid" property="roleid" jdbcType="VARCHAR" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="pharmacy" property="pharmacy" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="idcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="openid" property="openid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    username,
+    password,
+    creator,
+    createtime,
+    updater,
+    updatetime,
+    status,
+    roleid,
+    nickname,
+    email,
+    remark,
+    pharmacy,
+    name,
+    idcard,
+    openid
+  </sql>
+  <sql id="query_paramet_list" >
+     where username=#{userName,jdbcType=VARCHAR}
+       and id=#{id,jdbcType=INTEGER}
+  </sql>
+  
+   <select id="getUserByOpenId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user 
+    where openid = #{openid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user 
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="findUserByName" resultMap="BaseResultMap" parameterType="com.wxsoft.business.pojo.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where username = #{username,jdbcType=VARCHAR}
+  </select>
+  <select id="loadShops" resultType="com.wxsoft.business.pojo.User">
+  	select <include refid="Base_Column_List" /> from user
+  </select>
+	<select id="getMenuByUserId" resultType="com.wxsoft.business.model.SysMenu">
+		SELECT m.id,m.name,m.pid,m.iconCls,m.menu,
+			(select count(1) from menu s where s.pid!=0 and s.pid=m.id) countChildrens 
+		FROM menu m
+		  LEFT JOIN power rm
+		  ON m.id = rm.menuid
+		  LEFT JOIN role r
+		  ON rm.roleid = r.id
+		  LEFT JOIN user_role ur
+		  ON  r.id = ur.roleId
+		  LEFT JOIN user u
+		  ON ur.userid = u.id
+		  WHERE m.enable='1' AND u.id = #{userId} 
+		  AND m.id NOT IN(
+			SELECT tt.id
+			FROM
+				(SELECT m.id,
+					(SELECT COUNT(pid) FROM menu sp WHERE sp.enable='1' AND sp.pid=m.id AND m.pid=0 ) countch
+				 FROM menu m WHERE m.pid=0
+		  		) tt 
+		  	where countch =0
+		  )
+		  ORDER BY m.ordernum
+	</select> 
+  <select id="getUserNameById" resultType="string" parameterType="java.lang.Integer">
+    select username from user  where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from user
+    where 1=1 
+    <if test="user.username != null and user.username != ''">
+        and username like concat('%',#{user.username},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user 
+    where 1=1 
+    <if test="user.username != null and user.username != ''">
+        and username like concat('%',#{user.username},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.User" >
+    insert into user (<trim suffixOverrides=",">
+    	<if test="username !=null and username !=''">username,</if>
+    	<if test="password !=null and password !=''">password,</if>
+    	<if test="creator !=null and creator !=''">creator,</if>
+    	<if test="createtime !=null and createtime !=''">createtime,</if>
+    	<if test="updater !=null and updater !=''">updater,</if>
+    	<if test="updatetime !=null and updatetime !=''">updatetime,</if>
+    	<if test="status !=null and status !=''">status,</if>
+    	<if test="roleid !=null and roleid !=''">roleid,</if>
+    	<if test="nickname !=null and nickname !=''">nickname,</if>
+    	<if test="email !=null and email !=''">email,</if>
+    	<if test="remark !=null and remark !=''">remark,</if>
+    	<if test="pharmacy !=null and pharmacy !=''">pharmacy,</if>
+    	<if test="name !=null and name !=''">name,</if>
+    	<if test="idcard !=null and idcard !=''">idcard</if>
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="username !=null and username !=''">#{username},</if>
+    	<if test="password !=null and password !=''">#{password},</if>
+    	<if test="creator !=null and creator !=''">#{creator},</if>
+    	<if test="createtime !=null and createtime !=''">#{createtime},</if>
+    	<if test="updater !=null and updater !=''">#{updater},</if>
+    	<if test="updatetime !=null and updatetime !=''">#{updatetime},</if>
+    	<if test="status !=null and status !=''">#{status},</if>
+    	<if test="roleid !=null and roleid !=''">#{roleid},</if>
+    	<if test="nickname !=null and nickname !=''">#{nickname},</if>
+    	<if test="email !=null and email !=''">#{email},</if>
+    	<if test="remark !=null and remark !=''">#{remark},</if>
+    	<if test="pharmacy !=null and pharmacy !=''">#{pharmacy},</if>
+    	<if test="name !=null and name !=''">#{name},</if>
+    	<if test="idcard !=null and idcard !=''">#{idcard}</if>
+  	</trim>)
+  </insert>
+  <insert id="insertSelective" parameterType="com.wxsoft.business.pojo.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userName != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wxsoft.business.pojo.User" >
+    update user
+    <set >
+      <if test="userName != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wxsoft.business.pojo.User" >
+    update user
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null" >
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="pharmacy != null" >
+        pharmacy = #{pharmacy,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <update id="updateById" parameterType="com.wxsoft.business.pojo.User" >
+    update user
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+     
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null" >
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="pharmacy != null" >
+        pharmacy = #{pharmacy,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+   <update id="updateOpenidById" parameterType="com.wxsoft.business.pojo.User" >
+    update user
+    <set >
+      openid = #{openid,jdbcType=VARCHAR}
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

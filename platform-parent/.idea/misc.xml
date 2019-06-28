@@ -11,7 +11,10 @@
     <file type="web" url="file://$PROJECT_DIR$/platform-httpclient" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/platform-testing" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-authority" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-main" />
     <file type="web" url="file://$PROJECT_DIR$/shop-statistics" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-view" />
   </component>
   <component name="MarkdownProjectSettings">
     <PreviewSettings splitEditorLayout="SPLIT" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="0" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizePreviewPosition="true" highlightPreviewType="NONE" highlightFadeOut="5" highlightOnTyping="true" synchronizeSourcePosition="true" verticallyAlignSourceAndPreviewSyncPosition="true" showSearchHighlightsInPreview="false" showSelectionInPreview="true" openRemoteLinks="true">
