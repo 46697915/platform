@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IYbjsmxxxJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.YbjsmxxxJz" >
+    <result column="ybjsh" property="ybjsh" jdbcType="VARCHAR" />
+    <result column="zyh" property="zyh" jdbcType="VARCHAR" />
+    <result column="cfh" property="cfh" jdbcType="VARCHAR" />
+    <result column="cfnxh" property="cfnxh" jdbcType="VARCHAR" />
+    <result column="yyxmbm" property="yyxmbm" jdbcType="VARCHAR" />
+    <result column="yyxmmc" property="yyxmmc" jdbcType="VARCHAR" />
+    <result column="ybxmbm" property="ybxmbm" jdbcType="VARCHAR" />
+    <result column="xmgg" property="xmgg" jdbcType="VARCHAR" />
+    <result column="xmdw" property="xmdw" jdbcType="VARCHAR" />
+    <result column="xmjx" property="xmjx" jdbcType="VARCHAR" />
+    <result column="xmdj" property="xmdj" jdbcType="VARCHAR" />
+    <result column="xmsl" property="xmsl" jdbcType="VARCHAR" />
+    <result column="xmje" property="xmje" jdbcType="VARCHAR" />
+    <result column="hjrq" property="hjrq" jdbcType="VARCHAR" />
+    <result column="kdysxm" property="kdysxm" jdbcType="VARCHAR" />
+    <result column="zxks" property="zxks" jdbcType="VARCHAR" />
+    <result column="sfybxm" property="sfybxm" jdbcType="VARCHAR" />
+    <result column="mcyl" property="mcyl" jdbcType="VARCHAR" />
+    <result column="sypc" property="sypc" jdbcType="VARCHAR" />
+    <result column="yf" property="yf" jdbcType="VARCHAR" />
+    <result column="zxts" property="zxts" jdbcType="VARCHAR" />
+    <result column="isupdate" property="isupdate" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ybjsh,
+    zyh,
+    cfh,
+    cfnxh,
+    yyxmbm,
+    yyxmmc,
+    ybxmbm,
+    xmgg,
+    xmdw,
+    xmjx,
+    xmdj,
+    xmsl,
+    xmje,
+    hjrq,
+    kdysxm,
+    zxks,
+    sfybxm,
+    mcyl,
+    sypc,
+    yf,
+    zxts,
+    isupdate,
+    barcode,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${ybjsmxxxJz.drugStoreShortName}m_ybjsmxxx_jz
+    where 1=1 
+    <if test="ybjsmxxxJz.id != null and ybjsmxxxJz.id != ''">
+        and id like concat('%',#{ybjsmxxxJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${ybjsmxxxJz.drugStoreShortName}m_ybjsmxxx_jz 
+    where 1=1 
+    <if test="ybjsmxxxJz.id != null and ybjsmxxxJz.id != ''">
+        and id like concat('%',#{ybjsmxxxJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.YbjsmxxxJz">
+    insert into ${ybjsmxxxJz.drugStoreShortName}m_ybjsmxxx_jz(<trim suffixOverrides=",">
+    	<if test="ybjsmxxxJz.ybjsh !=null and ybjsmxxxJz.ybjsh !=''">ybjsh,</if>
+    	<if test="ybjsmxxxJz.zyh !=null and ybjsmxxxJz.zyh !=''">zyh,</if>
+    	<if test="ybjsmxxxJz.cfh !=null and ybjsmxxxJz.cfh !=''">cfh,</if>
+    	<if test="ybjsmxxxJz.cfnxh !=null and ybjsmxxxJz.cfnxh !=''">cfnxh,</if>
+    	<if test="ybjsmxxxJz.yyxmbm !=null and ybjsmxxxJz.yyxmbm !=''">yyxmbm,</if>
+    	<if test="ybjsmxxxJz.yyxmmc !=null and ybjsmxxxJz.yyxmmc !=''">yyxmmc,</if>
+    	<if test="ybjsmxxxJz.ybxmbm !=null and ybjsmxxxJz.ybxmbm !=''">ybxmbm,</if>
+    	<if test="ybjsmxxxJz.xmgg !=null and ybjsmxxxJz.xmgg !=''">xmgg,</if>
+    	<if test="ybjsmxxxJz.xmdw !=null and ybjsmxxxJz.xmdw !=''">xmdw,</if>
+    	<if test="ybjsmxxxJz.xmjx !=null and ybjsmxxxJz.xmjx !=''">xmjx,</if>
+    	<if test="ybjsmxxxJz.xmdj !=null and ybjsmxxxJz.xmdj !=''">xmdj,</if>
+    	<if test="ybjsmxxxJz.xmsl !=null and ybjsmxxxJz.xmsl !=''">xmsl,</if>
+    	<if test="ybjsmxxxJz.xmje !=null and ybjsmxxxJz.xmje !=''">xmje,</if>
+    	<if test="ybjsmxxxJz.hjrq !=null and ybjsmxxxJz.hjrq !=''">hjrq,</if>
+    	<if test="ybjsmxxxJz.kdysxm !=null and ybjsmxxxJz.kdysxm !=''">kdysxm,</if>
+    	<if test="ybjsmxxxJz.zxks !=null and ybjsmxxxJz.zxks !=''">zxks,</if>
+    	<if test="ybjsmxxxJz.sfybxm !=null and ybjsmxxxJz.sfybxm !=''">sfybxm,</if>
+    	<if test="ybjsmxxxJz.mcyl !=null and ybjsmxxxJz.mcyl !=''">mcyl,</if>
+    	<if test="ybjsmxxxJz.sypc !=null and ybjsmxxxJz.sypc !=''">sypc,</if>
+    	<if test="ybjsmxxxJz.yf !=null and ybjsmxxxJz.yf !=''">yf,</if>
+    	<if test="ybjsmxxxJz.zxts !=null and ybjsmxxxJz.zxts !=''">zxts,</if>
+    	<if test="ybjsmxxxJz.isupdate !=null and ybjsmxxxJz.isupdate !=''">isupdate,</if>
+    	<if test="ybjsmxxxJz.barcode !=null and ybjsmxxxJz.barcode !=''">barcode,</if>
+    	<if test="ybjsmxxxJz.transfer_id !=null and ybjsmxxxJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ybjsmxxxJz.ybjsh !=null and ybjsmxxxJz.ybjsh !=''">#{ybjsmxxxJz.ybjsh},</if>
+    	<if test="ybjsmxxxJz.zyh !=null and ybjsmxxxJz.zyh !=''">#{ybjsmxxxJz.zyh},</if>
+    	<if test="ybjsmxxxJz.cfh !=null and ybjsmxxxJz.cfh !=''">#{ybjsmxxxJz.cfh},</if>
+    	<if test="ybjsmxxxJz.cfnxh !=null and ybjsmxxxJz.cfnxh !=''">#{ybjsmxxxJz.cfnxh},</if>
+    	<if test="ybjsmxxxJz.yyxmbm !=null and ybjsmxxxJz.yyxmbm !=''">#{ybjsmxxxJz.yyxmbm},</if>
+    	<if test="ybjsmxxxJz.yyxmmc !=null and ybjsmxxxJz.yyxmmc !=''">#{ybjsmxxxJz.yyxmmc},</if>
+    	<if test="ybjsmxxxJz.ybxmbm !=null and ybjsmxxxJz.ybxmbm !=''">#{ybjsmxxxJz.ybxmbm},</if>
+    	<if test="ybjsmxxxJz.xmgg !=null and ybjsmxxxJz.xmgg !=''">#{ybjsmxxxJz.xmgg},</if>
+    	<if test="ybjsmxxxJz.xmdw !=null and ybjsmxxxJz.xmdw !=''">#{ybjsmxxxJz.xmdw},</if>
+    	<if test="ybjsmxxxJz.xmjx !=null and ybjsmxxxJz.xmjx !=''">#{ybjsmxxxJz.xmjx},</if>
+    	<if test="ybjsmxxxJz.xmdj !=null and ybjsmxxxJz.xmdj !=''">#{ybjsmxxxJz.xmdj},</if>
+    	<if test="ybjsmxxxJz.xmsl !=null and ybjsmxxxJz.xmsl !=''">#{ybjsmxxxJz.xmsl},</if>
+    	<if test="ybjsmxxxJz.xmje !=null and ybjsmxxxJz.xmje !=''">#{ybjsmxxxJz.xmje},</if>
+    	<if test="ybjsmxxxJz.hjrq !=null and ybjsmxxxJz.hjrq !=''">#{ybjsmxxxJz.hjrq},</if>
+    	<if test="ybjsmxxxJz.kdysxm !=null and ybjsmxxxJz.kdysxm !=''">#{ybjsmxxxJz.kdysxm},</if>
+    	<if test="ybjsmxxxJz.zxks !=null and ybjsmxxxJz.zxks !=''">#{ybjsmxxxJz.zxks},</if>
+    	<if test="ybjsmxxxJz.sfybxm !=null and ybjsmxxxJz.sfybxm !=''">#{ybjsmxxxJz.sfybxm},</if>
+    	<if test="ybjsmxxxJz.mcyl !=null and ybjsmxxxJz.mcyl !=''">#{ybjsmxxxJz.mcyl},</if>
+    	<if test="ybjsmxxxJz.sypc !=null and ybjsmxxxJz.sypc !=''">#{ybjsmxxxJz.sypc},</if>
+    	<if test="ybjsmxxxJz.yf !=null and ybjsmxxxJz.yf !=''">#{ybjsmxxxJz.yf},</if>
+    	<if test="ybjsmxxxJz.zxts !=null and ybjsmxxxJz.zxts !=''">#{ybjsmxxxJz.zxts},</if>
+    	<if test="ybjsmxxxJz.isupdate !=null and ybjsmxxxJz.isupdate !=''">#{ybjsmxxxJz.isupdate},</if>
+    	<if test="ybjsmxxxJz.barcode !=null and ybjsmxxxJz.barcode !=''">#{ybjsmxxxJz.barcode},</if>
+    	<if test="ybjsmxxxJz.transfer_id !=null and ybjsmxxxJz.transfer_id !=''">#{ybjsmxxxJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ybjsmxxxJz
+  	<set>
+    	<if test="ybjsmxxxJz.ybjsh !=null and ybjsmxxxJz.ybjsh !=''">ybjsh=#{ybjsmxxxJz.ybjsh},</if>
+    	<if test="ybjsmxxxJz.zyh !=null and ybjsmxxxJz.zyh !=''">zyh=#{ybjsmxxxJz.zyh},</if>
+    	<if test="ybjsmxxxJz.cfh !=null and ybjsmxxxJz.cfh !=''">cfh=#{ybjsmxxxJz.cfh},</if>
+    	<if test="ybjsmxxxJz.cfnxh !=null and ybjsmxxxJz.cfnxh !=''">cfnxh=#{ybjsmxxxJz.cfnxh},</if>
+    	<if test="ybjsmxxxJz.yyxmbm !=null and ybjsmxxxJz.yyxmbm !=''">yyxmbm=#{ybjsmxxxJz.yyxmbm},</if>
+    	<if test="ybjsmxxxJz.yyxmmc !=null and ybjsmxxxJz.yyxmmc !=''">yyxmmc=#{ybjsmxxxJz.yyxmmc},</if>
+    	<if test="ybjsmxxxJz.ybxmbm !=null and ybjsmxxxJz.ybxmbm !=''">ybxmbm=#{ybjsmxxxJz.ybxmbm},</if>
+    	<if test="ybjsmxxxJz.xmgg !=null and ybjsmxxxJz.xmgg !=''">xmgg=#{ybjsmxxxJz.xmgg},</if>
+    	<if test="ybjsmxxxJz.xmdw !=null and ybjsmxxxJz.xmdw !=''">xmdw=#{ybjsmxxxJz.xmdw},</if>
+    	<if test="ybjsmxxxJz.xmjx !=null and ybjsmxxxJz.xmjx !=''">xmjx=#{ybjsmxxxJz.xmjx},</if>
+    	<if test="ybjsmxxxJz.xmdj !=null and ybjsmxxxJz.xmdj !=''">xmdj=#{ybjsmxxxJz.xmdj},</if>
+    	<if test="ybjsmxxxJz.xmsl !=null and ybjsmxxxJz.xmsl !=''">xmsl=#{ybjsmxxxJz.xmsl},</if>
+    	<if test="ybjsmxxxJz.xmje !=null and ybjsmxxxJz.xmje !=''">xmje=#{ybjsmxxxJz.xmje},</if>
+    	<if test="ybjsmxxxJz.hjrq !=null and ybjsmxxxJz.hjrq !=''">hjrq=#{ybjsmxxxJz.hjrq},</if>
+    	<if test="ybjsmxxxJz.kdysxm !=null and ybjsmxxxJz.kdysxm !=''">kdysxm=#{ybjsmxxxJz.kdysxm},</if>
+    	<if test="ybjsmxxxJz.zxks !=null and ybjsmxxxJz.zxks !=''">zxks=#{ybjsmxxxJz.zxks},</if>
+    	<if test="ybjsmxxxJz.sfybxm !=null and ybjsmxxxJz.sfybxm !=''">sfybxm=#{ybjsmxxxJz.sfybxm},</if>
+    	<if test="ybjsmxxxJz.mcyl !=null and ybjsmxxxJz.mcyl !=''">mcyl=#{ybjsmxxxJz.mcyl},</if>
+    	<if test="ybjsmxxxJz.sypc !=null and ybjsmxxxJz.sypc !=''">sypc=#{ybjsmxxxJz.sypc},</if>
+    	<if test="ybjsmxxxJz.yf !=null and ybjsmxxxJz.yf !=''">yf=#{ybjsmxxxJz.yf},</if>
+    	<if test="ybjsmxxxJz.zxts !=null and ybjsmxxxJz.zxts !=''">zxts=#{ybjsmxxxJz.zxts},</if>
+    	<if test="ybjsmxxxJz.isupdate !=null and ybjsmxxxJz.isupdate !=''">isupdate=#{ybjsmxxxJz.isupdate},</if>
+    	<if test="ybjsmxxxJz.barcode !=null and ybjsmxxxJz.barcode !=''">barcode=#{ybjsmxxxJz.barcode},</if>
+    	<if test="ybjsmxxxJz.transfer_id !=null and ybjsmxxxJz.transfer_id !=''">transfer_id=#{ybjsmxxxJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${ybjsmxxxJz.drugStoreShortName}m_ybjsmxxx_jz where id=#{ybjsmxxxJz.id}
+  </delete>
+</mapper>

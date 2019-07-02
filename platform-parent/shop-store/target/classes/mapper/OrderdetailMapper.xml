@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderdetailDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Orderdetail" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="detailcode" property="detailcode" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="giftcode" property="giftcode" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="VARCHAR" />
+    <result column="transportmoney" property="transportmoney" jdbcType="VARCHAR" />
+    <result column="iscomment" property="iscomment" jdbcType="VARCHAR" />
+    <result column="getmoney" property="getmoney" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="peybank" property="peybank" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="commentid" property="commentid" jdbcType="VARCHAR" />
+    <result column="isenough" property="isenough" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+	
+	<result column="goodsid" property="goodsid" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="VARCHAR" />
+	<association  property="isenoughname" column="isenough" javaType="string" select="getKeyvalueNameByCode" />
+	<association  property="iscommentname" column="iscomment" javaType="string" select="getKeyvalueNameByCode" />
+	<association  property="paytypename" column="paytype" javaType="string" select="getKeyvalueNameByCode2" />
+	
+  </resultMap>
+  <resultMap id="OrderdetailSummary" type="com.wxsoft.business.pojo.OrderdetailSummary" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="unitsname" property="unitsname" jdbcType="VARCHAR" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    detailcode,
+    barcode,
+    goodsname,
+    commonname,
+    giftcode,
+    price,
+    amount,
+    money,
+    transportmoney,
+    iscomment,
+    getmoney,
+    paytype,
+    peybank,
+    remark,
+    commentid,
+    isenough,
+    units,
+    createdate,
+	goodsid
+
+  </sql>
+  <!-- 这种写法执行数据库次数为两次，后期可更换写法 -->
+   <select id="getKeyvalueNameByCode" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='isnot' and code = #{code}
+  </select>
+  <select id="getKeyvalueNameByCode2" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='paytype' and code = #{code}
+  </select>
+  <select id="findMoneyCount" resultType="long" >
+  select sum(money) from `${orderdetail.drugStoreShortName}orderdetail` where to_days(`createdate`) = to_days(now()) 
+   </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from ${orderdetail.drugStoreShortName}orderdetail
+    where 1=1 
+     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+        and createdate &lt; date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+    </if> 
+    <if test="orderdetail.id != null and orderdetail.id != ''">
+        and id like concat('%',#{orderdetail.id},'%')
+    </if> 
+    <if test="orderdetail.barcode != null and orderdetail.barcode != ''">
+        and barcode = #{orderdetail.barcode } 
+    </if>
+    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+        and barcode = #{orderdetail.barcode_search} 
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${orderdetail.drugStoreShortName}orderdetail 
+    where 1=1 
+     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+        and createdate &lt; date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+    </if> 
+    <if test="orderdetail.id != null and orderdetail.id != ''">
+        and id like concat('%',#{orderdetail.id},'%')
+    </if> 
+    <if test="orderdetail.barcode != null and orderdetail.barcode != ''">
+        and barcode = #{orderdetail.barcode } 
+    </if>
+    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+        and barcode = #{orderdetail.barcode_search} 
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <select id="salesSummaryCount" resultType="long" >
+    select count(*) 
+    from (
+	    select barcode,commonname,sum(amount) total,sum(getmoney) amount
+		from ${orderdetail.drugStoreShortName}orderdetail 
+	    where 1=1 
+	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+	        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+	    </if> 
+	    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+	        and createdate &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+	    </if> 
+	     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+	        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+	    </if> 
+	    <if test="orderdetail.id != null and orderdetail.id != ''">
+	        and id like concat('%',#{orderdetail.id},'%')
+	    </if> 
+	    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+	        and barcode = #{orderdetail.barcode_search} 
+	    </if>
+	    group by barcode,commonname
+    ) a 
+  </select>
+  <select id="salesSummaryAll" resultMap="OrderdetailSummary">
+    select barcode,commonname,
+		(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
+		(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
+		(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+    	sum(amount) total,sum(getmoney) amount
+	from ${orderdetail.drugStoreShortName}orderdetail x 
+    where 1=1 
+     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+        and createdate &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+    </if> 
+    <if test="orderdetail.id != null and orderdetail.id != ''">
+        and id like concat('%',#{orderdetail.id},'%')
+    </if> 
+    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+        and barcode = #{orderdetail.barcode_search} 
+    </if>
+    group by barcode,commonname
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="salesAllSummaryCount" resultType="long" >
+    select count(*) 
+    from (
+	    select barcode,commonname,units,unitsname,specifications,
+	    	sum(total) total,sum(amount) amount
+		from (
+		    select barcode,commonname,
+				(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
+				(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
+				(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+		    	amount total,getmoney amount
+			from ${orderdetail.drugStoreShortName}orderdetail x 
+		    where 1=1 
+		     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+		        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+		    </if> 
+		    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+		        and createdate &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+		    </if> 
+		     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+		        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+		    </if> 
+		    <if test="orderdetail.id != null and orderdetail.id != ''">
+		        and id like concat('%',#{orderdetail.id},'%')
+		    </if> 
+		    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+		        and barcode = #{orderdetail.barcode_search} 
+		    </if>
+		    union 
+		    select (select a.barcode from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm) barcode,
+		    	yyxmmc commonname,
+				xmdj units,
+				(select name from keyvalue b where type='units' and code = x.xmdj ) unitsname,
+				xmgg specifications,
+				xmsl total,xmje amount
+		    from ${orderdetail.drugStoreShortName}m_ybjsmxxx x
+		    where 1=1 
+		     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+		        and hjrq &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+		    </if> 
+		    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+		        and hjrq &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+		    </if>
+		    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+		        and exists (select 1 from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
+		    </if>
+	    ) a 
+	    group by barcode,commonname,units,unitsname,specifications
+		
+    ) a 
+  </select>
+  <select id="salesAllSummaryAll" resultMap="OrderdetailSummary">
+    select barcode,commonname,units,unitsname,specifications,
+    	sum(total) total,sum(amount) amount
+	from (
+	    select barcode,commonname,
+			(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
+			(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
+			(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+	    	amount total,getmoney amount
+		from ${orderdetail.drugStoreShortName}orderdetail x 
+	    where 1=1 
+	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+	        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+	    </if> 
+	    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+	        and createdate &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+	    </if> 
+	     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+	        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+	    </if> 
+	    <if test="orderdetail.id != null and orderdetail.id != ''">
+	        and id like concat('%',#{orderdetail.id},'%')
+	    </if> 
+	    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+	        and barcode = #{orderdetail.barcode_search} 
+	    </if>
+	    union 
+	    select (select a.barcode from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm) barcode,
+	    	yyxmmc commonname,
+			xmdj units,
+			(select name from keyvalue b where type='units' and code = x.xmdj ) unitsname,
+			xmgg specifications,
+			xmsl total,xmje amount
+	    from ${orderdetail.drugStoreShortName}m_ybjsmxxx x
+	    where 1=1 
+	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+	        and hjrq &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+	    </if> 
+	    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+	        and hjrq &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+	    </if>
+	    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+	        and exists (select 1 from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
+	    </if>
+    ) a 
+    group by barcode,commonname,units,unitsname,specifications
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <select id="salesSummaryByBarcode" resultMap="OrderdetailSummary">
+    select barcode,sum(amount) total,sum(getmoney) amount
+	from ${orderdetail.drugStoreShortName}orderdetail x 
+    where 1=1 
+     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
+        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="orderdetail.createdate_end != null and orderdetail.createdate_end != ''">
+        and createdate &lt; date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+     <if test="orderdetail.ordercode != null and orderdetail.ordercode != ''">
+        and ordercode like concat('%',#{orderdetail.ordercode},'%')
+    </if>
+    <if test="orderdetail.barcode != null and orderdetail.barcode != ''">
+        and barcode = #{orderdetail.barcode} 
+    </if>
+    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
+        and barcode = #{orderdetail.barcode_search} 
+    </if>
+    group by barcode
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderdetail">
+    insert into sy_orderdetail(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
+    	<if test="detailcode !=null and detailcode !=''">detailcode,</if>
+    	<if test="barcode !=null and barcode !=''">barcode,</if>
+    	<if test="goodsname !=null and goodsname !=''">goodsname,</if>
+    	<if test="createdate !=null and createdate !=''">createdate,</if>
+    	<if test="commonname !=null and commonname !=''">commonname,</if>
+    	<if test="giftcode !=null and giftcode !=''">giftcode,</if>
+    	<if test="price !=null and price !=''">price,</if>
+    	<if test="amount !=null and amount !=''">amount,</if>
+    	<if test="money !=null and money !=''">money,</if>
+    	<if test="transportmoney !=null and transportmoney !=''">transportmoney,</if>
+    	<if test="iscomment !=null and iscomment !=''">iscomment,</if>
+    	<if test="getmoney !=null and getmoney !=''">getmoney,</if>
+    	<if test="paytype !=null and paytype !=''">paytype,</if>
+    	<if test="peybank !=null and peybank !=''">peybank,</if>
+    	<if test="remark !=null and remark !=''">remark,</if>
+    	<if test="commentid !=null and commentid !=''">commentid,</if>
+    	<if test="isenough !=null and isenough !=''">isenough,</if>
+		<if test="goodsid !=null and goodsid !=''">goodsid,</if>
+    	<if test="units !=null and units !=''">units</if>
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">#{ordercode},</if>
+    	<if test="detailcode !=null and detailcode !=''">#{detailcode},</if>
+    	<if test="barcode !=null and barcode !=''">#{barcode},</if>
+    	<if test="goodsname !=null and goodsname !=''">#{goodsname},</if>
+    	<if test="createdate !=null and createdate !=''">#{createdate},</if>
+    	<if test="commonname !=null and commonname !=''">#{commonname},</if>
+    	<if test="giftcode !=null and giftcode !=''">#{giftcode},</if>
+    	<if test="price !=null and price !=''">#{price},</if>
+    	<if test="amount !=null and amount !=''">#{amount},</if>
+    	<if test="money !=null and money !=''">#{money},</if>
+    	<if test="transportmoney !=null and transportmoney !=''">#{transportmoney},</if>
+    	<if test="iscomment !=null and iscomment !=''">#{iscomment},</if>
+    	<if test="getmoney !=null and getmoney !=''">#{getmoney},</if>
+    	<if test="paytype !=null and paytype !=''">#{paytype},</if>
+    	<if test="peybank !=null and peybank !=''">#{peybank},</if>
+    	<if test="remark !=null and remark !=''">#{remark},</if>
+    	<if test="commentid !=null and commentid !=''">#{commentid},</if>
+    	<if test="isenough !=null and isenough !=''">#{isenough},</if>
+		<if test="goodsid !=null and goodsid !=''">#{goodsid},</if>
+    	<if test="units !=null and units !=''">#{units}</if>
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update sy_orderdetail
+  	<set>
+    	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
+    	<if test="detailcode !=null and detailcode !=''">detailcode=#{detailcode},</if>
+    	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
+    	<if test="goodsname !=null and goodsname !=''">goodsname=#{goodsname},</if>
+    	<if test="commonname !=null and commonname !=''">commonname=#{commonname},</if>
+    	<if test="createdate !=null and createdate !=''">createdate=#{createdate},</if>
+    	<if test="giftcode !=null and giftcode !=''">giftcode=#{giftcode},</if>
+    	<if test="price !=null and price !=''">price=#{price},</if>
+    	<if test="amount !=null and amount !=''">amount=#{amount},</if>
+    	<if test="money !=null and money !=''">money=#{money},</if>
+    	<if test="transportmoney !=null and transportmoney !=''">transportmoney=#{transportmoney},</if>
+    	<if test="iscomment !=null and iscomment !=''">iscomment=#{iscomment},</if>
+    	<if test="getmoney !=null and getmoney !=''">getmoney=#{getmoney},</if>
+    	<if test="paytype !=null and paytype !=''">paytype=#{paytype},</if>
+    	<if test="peybank !=null and peybank !=''">peybank=#{peybank},</if>
+    	<if test="remark !=null and remark !=''">remark=#{remark},</if>
+    	<if test="commentid !=null and commentid !=''">commentid=#{commentid},</if>
+    	<if test="isenough !=null and isenough !=''">isenough=#{isenough},</if>
+			<if test="goodsid !=null and goodsid !=''">goodsid=#{goodsid},</if>
+    	<if test="units !=null and units !=''">units=#{units}</if>
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_orderdetail where id=#{id}
+  </delete>
+</mapper>

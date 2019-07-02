@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IGoodstypeDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Goodstype" >
+    <result column="ptcod" property="ptcod" jdbcType="VARCHAR" />
+    <result column="ptname" property="ptname" jdbcType="VARCHAR" />
+    <result column="fcode" property="fcode" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ptcod,
+    ptname,
+    fcode,
+    operator,
+    operatedate
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from sy_goodstype
+    where 1=1 
+    <if test="goodstype.id != null and goodstype.id != ''">
+        and id like concat('%',#{goodstype.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goodstype 
+    where 1=1 
+    <if test="goodstype.id != null and goodstype.id != ''">
+        and id like concat('%',#{goodstype.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Goodstype">
+    insert into sy_goodstype(<trim suffixOverrides=",">
+    	<if test="ptcod !=null and ptcod !=''">ptcod,</if>
+    	<if test="ptname !=null and ptname !=''">ptname,</if>
+    	<if test="fcode !=null and fcode !=''">fcode,</if>
+    	<if test="operator !=null and operator !=''">operator,</if>
+    	<if test="operatedate !=null and operatedate !=''">operatedate</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ptcod !=null and ptcod !=''">#{ptcod},</if>
+    	<if test="ptname !=null and ptname !=''">#{ptname},</if>
+    	<if test="fcode !=null and fcode !=''">#{fcode},</if>
+    	<if test="operator !=null and operator !=''">#{operator},</if>
+    	<if test="operatedate !=null and operatedate !=''">#{operatedate}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update sy_goodstype
+  	<set>
+    	<if test="ptcod !=null and ptcod !=''">ptcod=#{ptcod},</if>
+    	<if test="ptname !=null and ptname !=''">ptname=#{ptname},</if>
+    	<if test="fcode !=null and fcode !=''">fcode=#{fcode},</if>
+    	<if test="operator !=null and operator !=''">operator=#{operator},</if>
+    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_goodstype where id=#{id}
+  </delete>
+</mapper>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IInstorageJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.InstorageJz" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="generatenum" property="generatenum" jdbcType="VARCHAR" />
+    <result column="generatedate" property="generatedate" jdbcType="VARCHAR" />
+    <result column="validityperiod" property="validityperiod" jdbcType="VARCHAR" />
+    <result column="shelflife" property="shelflife" jdbcType="VARCHAR" />
+    <result column="inquantity" property="inquantity" jdbcType="VARCHAR" />
+    <result column="intype" property="intype" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="VARCHAR" />
+    <result column="indate" property="indate" jdbcType="VARCHAR" />
+    <result column="inperson" property="inperson" jdbcType="VARCHAR" />
+    <result column="loggingdate" property="loggingdate" jdbcType="VARCHAR" />
+    <result column="reviewer" property="reviewer" jdbcType="VARCHAR" />
+    <result column="reviewdate" property="reviewdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="signtype" property="signtype" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    drugsname,
+    commonname,
+    generatenum,
+    generatedate,
+    validityperiod,
+    shelflife,
+    inquantity,
+    intype,
+    money,
+    indate,
+    inperson,
+    loggingdate,
+    reviewer,
+    reviewdate,
+    remark,
+    signtype,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${instorageJz.drugStoreShortName}instorage_jz
+    where 1=1 
+    <if test="instorageJz.id != null and instorageJz.id != ''">
+        and id like concat('%',#{instorageJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${instorageJz.drugStoreShortNainstorage_jz 
+    where 1=1 
+    <if test="instorageJz.id != null and instorageJz.id != ''">
+        and id like concat('%',#{instorageJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.InstorageJz">
+    insert into ${instorageJz.drugStoreShortName}instorage_jz(<trim suffixOverrides=",">
+    	<if test="instorageJz.barcode !=null and instorageJz.barcode !=''">barcode,</if>
+    	<if test="instorageJz.drugsname !=null and instorageJz.drugsname !=''">drugsname,</if>
+    	<if test="instorageJz.commonname !=null and instorageJz.commonname !=''">commonname,</if>
+    	<if test="instorageJz.generatenum !=null and instorageJz.generatenum !=''">generatenum,</if>
+    	<if test="instorageJz.generatedate !=null and instorageJz.generatedate !=''">generatedate,</if>
+    	<if test="instorageJz.validityperiod !=null and instorageJz.validityperiod !=''">validityperiod,</if>
+    	<if test="instorageJz.shelflife !=null and instorageJz.shelflife !=''">shelflife,</if>
+    	<if test="instorageJz.inquantity !=null and instorageJz.inquantity !=''">inquantity,</if>
+    	<if test="instorageJz.intype !=null and instorageJz.intype !=''">intype,</if>
+    	<if test="instorageJz.money !=null and instorageJz.money !=''">money,</if>
+    	<if test="instorageJz.indate !=null and instorageJz.indate !=''">indate,</if>
+    	<if test="instorageJz.inperson !=null and instorageJz.inperson !=''">inperson,</if>
+    	<if test="instorageJz.loggingdate !=null and instorageJz.loggingdate !=''">loggingdate,</if>
+    	<if test="instorageJz.reviewer !=null and instorageJz.reviewer !=''">reviewer,</if>
+    	<if test="instorageJz.reviewdate !=null and instorageJz.reviewdate !=''">reviewdate,</if>
+    	<if test="instorageJz.remark !=null and instorageJz.remark !=''">remark,</if>
+    	<if test="instorageJz.signtype !=null and instorageJz.signtype !=''">signtype,</if>
+    	<if test="instorageJz.transfer_id !=null and instorageJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="instorageJz.barcode !=null and instorageJz.barcode !=''">#{instorageJz.barcode},</if>
+    	<if test="instorageJz.drugsname !=null and instorageJz.drugsname !=''">#{instorageJz.drugsname},</if>
+    	<if test="instorageJz.commonname !=null and instorageJz.commonname !=''">#{instorageJz.commonname},</if>
+    	<if test="instorageJz.generatenum !=null and instorageJz.generatenum !=''">#{instorageJz.generatenum},</if>
+    	<if test="instorageJz.generatedate !=null and instorageJz.generatedate !=''">#{instorageJz.generatedate},</if>
+    	<if test="instorageJz.validityperiod !=null and instorageJz.validityperiod !=''">#{instorageJz.validityperiod},</if>
+    	<if test="instorageJz.shelflife !=null and instorageJz.shelflife !=''">#{instorageJz.shelflife},</if>
+    	<if test="instorageJz.inquantity !=null and instorageJz.inquantity !=''">#{instorageJz.inquantity},</if>
+    	<if test="instorageJz.intype !=null and instorageJz.intype !=''">#{instorageJz.intype},</if>
+    	<if test="instorageJz.money !=null and instorageJz.money !=''">#{instorageJz.money},</if>
+    	<if test="instorageJz.indate !=null and instorageJz.indate !=''">#{instorageJz.indate},</if>
+    	<if test="instorageJz.inperson !=null and instorageJz.inperson !=''">#{instorageJz.inperson},</if>
+    	<if test="instorageJz.loggingdate !=null and instorageJz.loggingdate !=''">#{instorageJz.loggingdate},</if>
+    	<if test="instorageJz.reviewer !=null and instorageJz.reviewer !=''">#{instorageJz.reviewer},</if>
+    	<if test="instorageJz.reviewdate !=null and instorageJz.reviewdate !=''">#{instorageJz.reviewdate},</if>
+    	<if test="instorageJz.remark !=null and instorageJz.remark !=''">#{instorageJz.remark},</if>
+    	<if test="instorageJz.signtype !=null and instorageJz.signtype !=''">#{instorageJz.signtype},</if>
+    	<if test="instorageJz.transfer_id !=null and instorageJz.transfer_id !=''">#{instorageJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update instorageJz
+  	<set>
+    	<if test="instorageJz.barcode !=null and instorageJz.barcode !=''">barcode=#{instorageJz.barcode},</if>
+    	<if test="instorageJz.drugsname !=null and instorageJz.drugsname !=''">drugsname=#{instorageJz.drugsname},</if>
+    	<if test="instorageJz.commonname !=null and instorageJz.commonname !=''">commonname=#{instorageJz.commonname},</if>
+    	<if test="instorageJz.generatenum !=null and instorageJz.generatenum !=''">generatenum=#{instorageJz.generatenum},</if>
+    	<if test="instorageJz.generatedate !=null and instorageJz.generatedate !=''">generatedate=#{instorageJz.generatedate},</if>
+    	<if test="instorageJz.validityperiod !=null and instorageJz.validityperiod !=''">validityperiod=#{instorageJz.validityperiod},</if>
+    	<if test="instorageJz.shelflife !=null and instorageJz.shelflife !=''">shelflife=#{instorageJz.shelflife},</if>
+    	<if test="instorageJz.inquantity !=null and instorageJz.inquantity !=''">inquantity=#{instorageJz.inquantity},</if>
+    	<if test="instorageJz.intype !=null and instorageJz.intype !=''">intype=#{instorageJz.intype},</if>
+    	<if test="instorageJz.money !=null and instorageJz.money !=''">money=#{instorageJz.money},</if>
+    	<if test="instorageJz.indate !=null and instorageJz.indate !=''">indate=#{instorageJz.indate},</if>
+    	<if test="instorageJz.inperson !=null and instorageJz.inperson !=''">inperson=#{instorageJz.inperson},</if>
+    	<if test="instorageJz.loggingdate !=null and instorageJz.loggingdate !=''">loggingdate=#{instorageJz.loggingdate},</if>
+    	<if test="instorageJz.reviewer !=null and instorageJz.reviewer !=''">reviewer=#{instorageJz.reviewer},</if>
+    	<if test="instorageJz.reviewdate !=null and instorageJz.reviewdate !=''">reviewdate=#{instorageJz.reviewdate},</if>
+    	<if test="instorageJz.remark !=null and instorageJz.remark !=''">remark=#{instorageJz.remark},</if>
+    	<if test="instorageJz.signtype !=null and instorageJz.signtype !=''">signtype=#{instorageJz.signtype},</if>
+    	<if test="instorageJz.transfer_id !=null and instorageJz.transfer_id !=''">transfer_id=#{instorageJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${instorageJz.drugStoreShortName}instorage_jz where id=#{instorageJz.id}
+  </delete>
+</mapper>

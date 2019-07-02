@@ -19,6 +19,7 @@
         <module name="shop-authority" />
         <module name="shop-main" />
         <module name="shop-statistics" />
+        <module name="shop-store" />
         <module name="shop-view" />
       </profile>
     </annotationProcessing>
@@ -37,6 +38,7 @@
       <module name="shop-authority" target="1.8" />
       <module name="shop-main" target="1.8" />
       <module name="shop-statistics" target="1.8" />
+      <module name="shop-store" target="1.8" />
       <module name="shop-view" target="1.8" />
     </bytecodeTargetLevel>
   </component>

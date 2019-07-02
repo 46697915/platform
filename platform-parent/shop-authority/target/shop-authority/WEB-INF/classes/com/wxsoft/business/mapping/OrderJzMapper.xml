@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.OrderJz" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="associator" property="associator" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="transport" property="transport" jdbcType="VARCHAR" />
+    <result column="discount" property="discount" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="orderstate" property="orderstate" jdbcType="VARCHAR" />
+    <result column="paystate" property="paystate" jdbcType="VARCHAR" />
+    <result column="refundstae" property="refundstae" jdbcType="VARCHAR" />
+    <result column="receiptamount" property="receiptamount" jdbcType="VARCHAR" />
+    <result column="oderamount" property="oderamount" jdbcType="VARCHAR" />
+    <result column="spentscore" property="spentscore" jdbcType="VARCHAR" />
+    <result column="transportamount" property="transportamount" jdbcType="VARCHAR" />
+    <result column="goodsamount" property="goodsamount" jdbcType="VARCHAR" />
+    <result column="goodstotal" property="goodstotal" jdbcType="VARCHAR" />
+    <result column="ismodify" property="ismodify" jdbcType="VARCHAR" />
+    <result column="transporttype" property="transporttype" jdbcType="VARCHAR" />
+    <result column="transporttypename" property="transporttypename" jdbcType="VARCHAR" />
+    <result column="transportno" property="transportno" jdbcType="VARCHAR" />
+    <result column="transportcompany" property="transportcompany" jdbcType="VARCHAR" />
+    <result column="transportremark" property="transportremark" jdbcType="VARCHAR" />
+    <result column="customerremark" property="customerremark" jdbcType="VARCHAR" />
+    <result column="iscomment" property="iscomment" jdbcType="VARCHAR" />
+    <result column="getscore" property="getscore" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    associator,
+    paytype,
+    transport,
+    discount,
+    createdate,
+    remark,
+    orderstate,
+    paystate,
+    refundstae,
+    receiptamount,
+    oderamount,
+    spentscore,
+    transportamount,
+    goodsamount,
+    goodstotal,
+    ismodify,
+    transporttype,
+    transporttypename,
+    transportno,
+    transportcompany,
+    transportremark,
+    customerremark,
+    iscomment,
+    getscore,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${orderJz.drugStoreShortName}t_order_jz
+    where 1=1 
+    <if test="orderJz.id != null and orderJz.id != ''">
+        and id like concat('%',#{orderJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${orderJz.drugStoreShortName}t_order_jz 
+    where 1=1 
+    <if test="orderJz.id != null and orderJz.id != ''">
+        and id like concat('%',#{orderJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.OrderJz">
+    insert into ${orderJz.drugStoreShortName}t_order_jz(<trim suffixOverrides=",">
+    	<if test="orderJz.ordercode !=null and orderJz.ordercode !=''">ordercode,</if>
+    	<if test="orderJz.associator !=null and orderJz.associator !=''">associator,</if>
+    	<if test="orderJz.paytype !=null and orderJz.paytype !=''">paytype,</if>
+    	<if test="orderJz.transport !=null and orderJz.transport !=''">transport,</if>
+    	<if test="orderJz.discount !=null and orderJz.discount !=''">discount,</if>
+    	<if test="orderJz.createdate !=null and orderJz.createdate !=''">createdate,</if>
+    	<if test="orderJz.remark !=null and orderJz.remark !=''">remark,</if>
+    	<if test="orderJz.orderstate !=null and orderJz.orderstate !=''">orderstate,</if>
+    	<if test="orderJz.paystate !=null and orderJz.paystate !=''">paystate,</if>
+    	<if test="orderJz.refundstae !=null and orderJz.refundstae !=''">refundstae,</if>
+    	<if test="orderJz.receiptamount !=null and orderJz.receiptamount !=''">receiptamount,</if>
+    	<if test="orderJz.oderamount !=null and orderJz.oderamount !=''">oderamount,</if>
+    	<if test="orderJz.spentscore !=null and orderJz.spentscore !=''">spentscore,</if>
+    	<if test="orderJz.transportamount !=null and orderJz.transportamount !=''">transportamount,</if>
+    	<if test="orderJz.goodsamount !=null and orderJz.goodsamount !=''">goodsamount,</if>
+    	<if test="orderJz.goodstotal !=null and orderJz.goodstotal !=''">goodstotal,</if>
+    	<if test="orderJz.ismodify !=null and orderJz.ismodify !=''">ismodify,</if>
+    	<if test="orderJz.transporttype !=null and orderJz.transporttype !=''">transporttype,</if>
+    	<if test="orderJz.transporttypename !=null and orderJz.transporttypename !=''">transporttypename,</if>
+    	<if test="orderJz.transportno !=null and orderJz.transportno !=''">transportno,</if>
+    	<if test="orderJz.transportcompany !=null and orderJz.transportcompany !=''">transportcompany,</if>
+    	<if test="orderJz.transportremark !=null and orderJz.transportremark !=''">transportremark,</if>
+    	<if test="orderJz.customerremark !=null and orderJz.customerremark !=''">customerremark,</if>
+    	<if test="orderJz.iscomment !=null and orderJz.iscomment !=''">iscomment,</if>
+    	<if test="orderJz.getscore !=null and orderJz.getscore !=''">getscore,</if>
+    	<if test="orderJz.transfer_id !=null and orderJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="orderJz.ordercode !=null and orderJz.ordercode !=''">#{orderJz.ordercode},</if>
+    	<if test="orderJz.associator !=null and orderJz.associator !=''">#{orderJz.associator},</if>
+    	<if test="orderJz.paytype !=null and orderJz.paytype !=''">#{orderJz.paytype},</if>
+    	<if test="orderJz.transport !=null and orderJz.transport !=''">#{orderJz.transport},</if>
+    	<if test="orderJz.discount !=null and orderJz.discount !=''">#{orderJz.discount},</if>
+    	<if test="orderJz.createdate !=null and orderJz.createdate !=''">#{orderJz.createdate},</if>
+    	<if test="orderJz.remark !=null and orderJz.remark !=''">#{orderJz.remark},</if>
+    	<if test="orderJz.orderstate !=null and orderJz.orderstate !=''">#{orderJz.orderstate},</if>
+    	<if test="orderJz.paystate !=null and orderJz.paystate !=''">#{orderJz.paystate},</if>
+    	<if test="orderJz.refundstae !=null and orderJz.refundstae !=''">#{orderJz.refundstae},</if>
+    	<if test="orderJz.receiptamount !=null and orderJz.receiptamount !=''">#{orderJz.receiptamount},</if>
+    	<if test="orderJz.oderamount !=null and orderJz.oderamount !=''">#{orderJz.oderamount},</if>
+    	<if test="orderJz.spentscore !=null and orderJz.spentscore !=''">#{orderJz.spentscore},</if>
+    	<if test="orderJz.transportamount !=null and orderJz.transportamount !=''">#{orderJz.transportamount},</if>
+    	<if test="orderJz.goodsamount !=null and orderJz.goodsamount !=''">#{orderJz.goodsamount},</if>
+    	<if test="orderJz.goodstotal !=null and orderJz.goodstotal !=''">#{orderJz.goodstotal},</if>
+    	<if test="orderJz.ismodify !=null and orderJz.ismodify !=''">#{orderJz.ismodify},</if>
+    	<if test="orderJz.transporttype !=null and orderJz.transporttype !=''">#{orderJz.transporttype},</if>
+    	<if test="orderJz.transporttypename !=null and orderJz.transporttypename !=''">#{orderJz.transporttypename},</if>
+    	<if test="orderJz.transportno !=null and orderJz.transportno !=''">#{orderJz.transportno},</if>
+    	<if test="orderJz.transportcompany !=null and orderJz.transportcompany !=''">#{orderJz.transportcompany},</if>
+    	<if test="orderJz.transportremark !=null and orderJz.transportremark !=''">#{orderJz.transportremark},</if>
+    	<if test="orderJz.customerremark !=null and orderJz.customerremark !=''">#{orderJz.customerremark},</if>
+    	<if test="orderJz.iscomment !=null and orderJz.iscomment !=''">#{orderJz.iscomment},</if>
+    	<if test="orderJz.getscore !=null and orderJz.getscore !=''">#{orderJz.getscore},</if>
+    	<if test="orderJz.transfer_id !=null and orderJz.transfer_id !=''">#{orderJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update orderJz
+  	<set>
+    	<if test="orderJz.ordercode !=null and orderJz.ordercode !=''">ordercode=#{orderJz.ordercode},</if>
+    	<if test="orderJz.associator !=null and orderJz.associator !=''">associator=#{orderJz.associator},</if>
+    	<if test="orderJz.paytype !=null and orderJz.paytype !=''">paytype=#{orderJz.paytype},</if>
+    	<if test="orderJz.transport !=null and orderJz.transport !=''">transport=#{orderJz.transport},</if>
+    	<if test="orderJz.discount !=null and orderJz.discount !=''">discount=#{orderJz.discount},</if>
+    	<if test="orderJz.createdate !=null and orderJz.createdate !=''">createdate=#{orderJz.createdate},</if>
+    	<if test="orderJz.remark !=null and orderJz.remark !=''">remark=#{orderJz.remark},</if>
+    	<if test="orderJz.orderstate !=null and orderJz.orderstate !=''">orderstate=#{orderJz.orderstate},</if>
+    	<if test="orderJz.paystate !=null and orderJz.paystate !=''">paystate=#{orderJz.paystate},</if>
+    	<if test="orderJz.refundstae !=null and orderJz.refundstae !=''">refundstae=#{orderJz.refundstae},</if>
+    	<if test="orderJz.receiptamount !=null and orderJz.receiptamount !=''">receiptamount=#{orderJz.receiptamount},</if>
+    	<if test="orderJz.oderamount !=null and orderJz.oderamount !=''">oderamount=#{orderJz.oderamount},</if>
+    	<if test="orderJz.spentscore !=null and orderJz.spentscore !=''">spentscore=#{orderJz.spentscore},</if>
+    	<if test="orderJz.transportamount !=null and orderJz.transportamount !=''">transportamount=#{orderJz.transportamount},</if>
+    	<if test="orderJz.goodsamount !=null and orderJz.goodsamount !=''">goodsamount=#{orderJz.goodsamount},</if>
+    	<if test="orderJz.goodstotal !=null and orderJz.goodstotal !=''">goodstotal=#{orderJz.goodstotal},</if>
+    	<if test="orderJz.ismodify !=null and orderJz.ismodify !=''">ismodify=#{orderJz.ismodify},</if>
+    	<if test="orderJz.transporttype !=null and orderJz.transporttype !=''">transporttype=#{orderJz.transporttype},</if>
+    	<if test="orderJz.transporttypename !=null and orderJz.transporttypename !=''">transporttypename=#{orderJz.transporttypename},</if>
+    	<if test="orderJz.transportno !=null and orderJz.transportno !=''">transportno=#{orderJz.transportno},</if>
+    	<if test="orderJz.transportcompany !=null and orderJz.transportcompany !=''">transportcompany=#{orderJz.transportcompany},</if>
+    	<if test="orderJz.transportremark !=null and orderJz.transportremark !=''">transportremark=#{orderJz.transportremark},</if>
+    	<if test="orderJz.customerremark !=null and orderJz.customerremark !=''">customerremark=#{orderJz.customerremark},</if>
+    	<if test="orderJz.iscomment !=null and orderJz.iscomment !=''">iscomment=#{orderJz.iscomment},</if>
+    	<if test="orderJz.getscore !=null and orderJz.getscore !=''">getscore=#{orderJz.getscore},</if>
+    	<if test="orderJz.transfer_id !=null and orderJz.transfer_id !=''">transfer_id=#{orderJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${orderJz.drugStoreShortName}t_order_jz where id=#{orderJz.id}
+  </delete>
+</mapper>

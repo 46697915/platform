@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IYbjsmxxxDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Ybjsmxxx" >
+    <result column="ybjsh" property="ybjsh" jdbcType="VARCHAR" />
+    <result column="zyh" property="zyh" jdbcType="VARCHAR" />
+    <result column="cfh" property="cfh" jdbcType="VARCHAR" />
+    <result column="cfnxh" property="cfnxh" jdbcType="VARCHAR" />
+    <result column="yyxmbm" property="yyxmbm" jdbcType="VARCHAR" />
+    <result column="yyxmmc" property="yyxmmc" jdbcType="VARCHAR" />
+    <result column="ybxmbm" property="ybxmbm" jdbcType="VARCHAR" />
+    <result column="xmgg" property="xmgg" jdbcType="VARCHAR" />
+    <result column="xmdw" property="xmdw" jdbcType="VARCHAR" />
+    <result column="xmjx" property="xmjx" jdbcType="VARCHAR" />
+    <result column="xmdj" property="xmdj" jdbcType="VARCHAR" />
+    <result column="xmsl" property="xmsl" jdbcType="VARCHAR" />
+    <result column="xmje" property="xmje" jdbcType="VARCHAR" />
+    <result column="hjrq" property="hjrq" jdbcType="VARCHAR" />
+    <result column="kdysxm" property="kdysxm" jdbcType="VARCHAR" />
+    <result column="zxks" property="zxks" jdbcType="VARCHAR" />
+    <result column="sfybxm" property="sfybxm" jdbcType="VARCHAR" />
+    <result column="mcyl" property="mcyl" jdbcType="VARCHAR" />
+    <result column="sypc" property="sypc" jdbcType="VARCHAR" />
+    <result column="yf" property="yf" jdbcType="VARCHAR" />
+    <result column="isupdate" property="isupdate" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="zxts" property="zxts" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <resultMap id="YbjsmxxxSummary" type="com.wxsoft.business.pojo.YbjsmxxxSummary" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="unitsname" property="unitsname" jdbcType="VARCHAR" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ybjsh,
+    zyh,
+    cfh,
+    cfnxh,
+    yyxmbm,
+    yyxmmc,
+    ybxmbm,
+    xmgg,
+    xmdw,
+    xmjx,
+    xmdj,
+    xmsl,
+    xmje,
+    hjrq,
+    kdysxm,
+    zxks,
+    sfybxm,
+    mcyl,
+    sypc,
+    yf,
+    isupdate,
+    barcode,
+    zxts
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx
+    where 1=1 
+    <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
+        and id like concat('%',#{ybjsmxxx.id},'%')
+    </if> 
+    <if test="ybjsmxxx.yyxmmc != null and ybjsmxxx.yyxmmc != ''">
+        and yyxmmc like concat('%',#{ybjsmxxx.yyxmmc},'%')
+    </if>
+    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+        and ybjsh = #{ybjsmxxx.ybjsh} 
+    </if>
+    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+        and zyh = #{ybjsmxxx.zyh} 
+    </if>
+    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+        and cfh = #{ybjsmxxx.cfh} 
+    </if>
+    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+        and cfnxh = #{ybjsmxxx.cfnxh}
+    </if>
+     <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+        and isupdate = #{ybjsmxxx.isupdate} 
+    </if> 
+     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+        and barcode = #{ybjsmxxx.barcode} 
+    </if>
+    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx 
+    where 1=1 
+    <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
+        and id like concat('%',#{ybjsmxxx.id},'%')
+    </if>
+    <if test="ybjsmxxx.yyxmmc != null and ybjsmxxx.yyxmmc != ''">
+        and yyxmmc like concat('%',#{ybjsmxxx.yyxmmc},'%')
+    </if>
+    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+        and ybjsh = #{ybjsmxxx.ybjsh} 
+    </if>
+    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+        and zyh = #{ybjsmxxx.zyh},'%')
+    </if>
+    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+        and cfh = #{ybjsmxxx.cfh} 
+    </if>
+    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+        and cfnxh = #{ybjsmxxx.cfnxh},'%')
+    </if>
+     <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+        and isupdate = #{ybjsmxxx.isupdate} 
+    </if> 
+     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+        and barcode = #{ybjsmxxx.barcode} 
+    </if>
+    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <select id="ybSalesSummaryCount" resultType="long" >
+    select count(*) 
+    from (
+	    select barcode,yyxmbm,yyxmmc commonname 
+		from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx 
+	    where 1=1 
+	    <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
+	        and id like concat('%',#{ybjsmxxx.id},'%')
+	    </if>
+	    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+	        and ybjsh = #{ybjsmxxx.ybjsh} 
+	    </if>
+	    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+	        and zyh = #{ybjsmxxx.zyh},'%')
+	    </if>
+	    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+	        and cfh = #{ybjsmxxx.cfh} 
+	    </if>
+	    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+	        and cfnxh = #{ybjsmxxx.cfnxh},'%')
+	    </if>
+	    <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+	        and isupdate = #{ybjsmxxx.isupdate} 
+	    </if> 
+	     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+	        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+	    </if> 
+	    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+	        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+	    </if> 
+	    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+	        and barcode = #{ybjsmxxx.barcode} 
+	    </if>
+	    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+	        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+	    </if>
+	    group by yyxmbm,yyxmmc,xmdw,xmgg,barcode
+    ) a 
+  </select>
+  <select id="ybSalesSummaryAll" resultMap="YbjsmxxxSummary">
+    select barcode,yyxmbm ,yyxmmc commonname,
+		xmdw units,
+		(select name from keyvalue b where type='units' and code = x.xmdw ) unitsname,
+		xmgg specifications,
+		sum(xmsl) total,sum(xmje) amount
+    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    where 1=1 
+    <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
+        and id like concat('%',#{ybjsmxxx.id},'%')
+    </if>
+    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+        and ybjsh = #{ybjsmxxx.ybjsh} 
+    </if>
+    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+        and zyh = #{ybjsmxxx.zyh},'%')
+    </if>
+    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+        and cfh = #{ybjsmxxx.cfh} 
+    </if>
+    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+        and cfnxh = #{ybjsmxxx.cfnxh},'%')
+    </if>
+     <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+        and isupdate = #{ybjsmxxx.isupdate} 
+    </if> 
+     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+        and barcode = #{ybjsmxxx.barcode} 
+    </if>
+    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+    </if>
+    group by yyxmbm,yyxmmc,xmdw,xmgg,barcode
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="ybSalesSummaryByYyxmbm" resultMap="YbjsmxxxSummary">
+    select yyxmbm barcode,sum(xmsl) total,sum(xmje) amount
+    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    where 1=1 
+    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+        and ybjsh = #{ybjsmxxx.ybjsh} 
+    </if>
+    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+        and zyh = #{ybjsmxxx.zyh},'%')
+    </if>
+    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+        and cfh = #{ybjsmxxx.cfh} 
+    </if>
+    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+        and cfnxh = #{ybjsmxxx.cfnxh},'%')
+    </if>
+     <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+        and isupdate = #{ybjsmxxx.isupdate} 
+    </if> 
+     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+        and barcode = #{ybjsmxxx.barcode} 
+    </if>
+    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+    </if>
+    group by yyxmbm 
+  </select>
+  <select id="ybSalesSummaryByBarcode" resultMap="YbjsmxxxSummary">
+    select barcode,
+    	sum(xmsl) total,sum(xmje) amount
+    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    where 1=1 
+    <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
+        and ybjsh = #{ybjsmxxx.ybjsh} 
+    </if>
+    <if test="ybjsmxxx.zyh != null and ybjsmxxx.zyh != ''">
+        and zyh = #{ybjsmxxx.zyh},'%')
+    </if>
+    <if test="ybjsmxxx.cfh != null and ybjsmxxx.cfh != ''">
+        and cfh = #{ybjsmxxx.cfh} 
+    </if>
+    <if test="ybjsmxxx.cfnxh != null and ybjsmxxx.cfnxh != ''">
+        and cfnxh = #{ybjsmxxx.cfnxh},'%')
+    </if>
+     <if test="ybjsmxxx.isupdate != null and ybjsmxxx.isupdate != ''">
+        and isupdate = #{ybjsmxxx.isupdate} 
+    </if> 
+     <if test="ybjsmxxx.hjrq_begin != null and ybjsmxxx.hjrq_begin != ''">
+        and hjrq &gt;= str_to_date(#{ybjsmxxx.hjrq_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="ybjsmxxx.hjrq_end != null and ybjsmxxx.hjrq_end != ''">
+        and hjrq &lt; date_add(str_to_date(#{ybjsmxxx.hjrq_end}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="ybjsmxxx.yyxmbm != null and ybjsmxxx.yyxmbm != ''">
+        and yyxmbm = #{ybjsmxxx.yyxmbm} 
+    </if>
+    <if test="ybjsmxxx.barcode != null and ybjsmxxx.barcode != ''">
+        and barcode = #{ybjsmxxx.barcode} 
+    </if>
+    group by barcode 
+  </select>
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Ybjsmxxx">
+    insert into sy_m_ybjsmxxx(<trim suffixOverrides=",">
+    	<if test="ybjsh !=null and ybjsh !=''">ybjsh,</if>
+    	<if test="zyh !=null and zyh !=''">zyh,</if>
+    	<if test="cfh !=null and cfh !=''">cfh,</if>
+    	<if test="cfnxh !=null and cfnxh !=''">cfnxh,</if>
+    	<if test="yyxmbm !=null and yyxmbm !=''">yyxmbm,</if>
+    	<if test="yyxmmc !=null and yyxmmc !=''">yyxmmc,</if>
+    	<if test="ybxmbm !=null and ybxmbm !=''">ybxmbm,</if>
+    	<if test="xmgg !=null and xmgg !=''">xmgg,</if>
+    	<if test="xmdw !=null and xmdw !=''">xmdw,</if>
+    	<if test="xmjx !=null and xmjx !=''">xmjx,</if>
+    	<if test="xmdj !=null and xmdj !=''">xmdj,</if>
+    	<if test="xmsl !=null and xmsl !=''">xmsl,</if>
+    	<if test="xmje !=null and xmje !=''">xmje,</if>
+    	<if test="hjrq !=null and hjrq !=''">hjrq,</if>
+    	<if test="kdysxm !=null and kdysxm !=''">kdysxm,</if>
+    	<if test="zxks !=null and zxks !=''">zxks,</if>
+    	<if test="sfybxm !=null and sfybxm !=''">sfybxm,</if>
+    	<if test="mcyl !=null and mcyl !=''">mcyl,</if>
+    	<if test="sypc !=null and sypc !=''">sypc,</if>
+    	<if test="yf !=null and yf !=''">yf,</if>
+    	<if test="isupdate !=null and isupdate !=''">isupdate,</if>
+    	<if test="zxts !=null and zxts !=''">zxts</if>
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ybjsh !=null and ybjsh !=''">#{ybjsh},</if>
+    	<if test="zyh !=null and zyh !=''">#{zyh},</if>
+    	<if test="cfh !=null and cfh !=''">#{cfh},</if>
+    	<if test="cfnxh !=null and cfnxh !=''">#{cfnxh},</if>
+    	<if test="yyxmbm !=null and yyxmbm !=''">#{yyxmbm},</if>
+    	<if test="yyxmmc !=null and yyxmmc !=''">#{yyxmmc},</if>
+    	<if test="ybxmbm !=null and ybxmbm !=''">#{ybxmbm},</if>
+    	<if test="xmgg !=null and xmgg !=''">#{xmgg},</if>
+    	<if test="xmdw !=null and xmdw !=''">#{xmdw},</if>
+    	<if test="xmjx !=null and xmjx !=''">#{xmjx},</if>
+    	<if test="xmdj !=null and xmdj !=''">#{xmdj},</if>
+    	<if test="xmsl !=null and xmsl !=''">#{xmsl},</if>
+    	<if test="xmje !=null and xmje !=''">#{xmje},</if>
+    	<if test="hjrq !=null and hjrq !=''">#{hjrq},</if>
+    	<if test="kdysxm !=null and kdysxm !=''">#{kdysxm},</if>
+    	<if test="zxks !=null and zxks !=''">#{zxks},</if>
+    	<if test="sfybxm !=null and sfybxm !=''">#{sfybxm},</if>
+    	<if test="mcyl !=null and mcyl !=''">#{mcyl},</if>
+    	<if test="sypc !=null and sypc !=''">#{sypc},</if>
+    	<if test="yf !=null and yf !=''">#{yf},</if>
+    	<if test="isupdate !=null and isupdate !=''">#{isupdate},</if>
+    	<if test="zxts !=null and zxts !=''">#{zxts}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update sy_m_ybjsmxxx
+  	<set>
+    	<if test="ybjsh !=null and ybjsh !=''">ybjsh=#{ybjsh},</if>
+    	<if test="zyh !=null and zyh !=''">zyh=#{zyh},</if>
+    	<if test="cfh !=null and cfh !=''">cfh=#{cfh},</if>
+    	<if test="cfnxh !=null and cfnxh !=''">cfnxh=#{cfnxh},</if>
+    	<if test="yyxmbm !=null and yyxmbm !=''">yyxmbm=#{yyxmbm},</if>
+    	<if test="yyxmmc !=null and yyxmmc !=''">yyxmmc=#{yyxmmc},</if>
+    	<if test="ybxmbm !=null and ybxmbm !=''">ybxmbm=#{ybxmbm},</if>
+    	<if test="xmgg !=null and xmgg !=''">xmgg=#{xmgg},</if>
+    	<if test="xmdw !=null and xmdw !=''">xmdw=#{xmdw},</if>
+    	<if test="xmjx !=null and xmjx !=''">xmjx=#{xmjx},</if>
+    	<if test="xmdj !=null and xmdj !=''">xmdj=#{xmdj},</if>
+    	<if test="xmsl !=null and xmsl !=''">xmsl=#{xmsl},</if>
+    	<if test="xmje !=null and xmje !=''">xmje=#{xmje},</if>
+    	<if test="hjrq !=null and hjrq !=''">hjrq=#{hjrq},</if>
+    	<if test="kdysxm !=null and kdysxm !=''">kdysxm=#{kdysxm},</if>
+    	<if test="zxks !=null and zxks !=''">zxks=#{zxks},</if>
+    	<if test="sfybxm !=null and sfybxm !=''">sfybxm=#{sfybxm},</if>
+    	<if test="mcyl !=null and mcyl !=''">mcyl=#{mcyl},</if>
+    	<if test="sypc !=null and sypc !=''">sypc=#{sypc},</if>
+    	<if test="yf !=null and yf !=''">yf=#{yf},</if>
+    	<if test="isupdate !=null and isupdate !=''">isupdate=#{isupdate},</if>
+    	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
+    	<if test="zxts !=null and zxts !=''">zxts=#{zxts}</if>
+
+  	</set>
+  	where id = #{id}
+    <if test="oldIsupdate != null and oldIsupdate != ''">
+        and isupdate = #{oldIsupdate}
+    </if> 
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_m_ybjsmxxx where id=#{id}
+  </delete>
+</mapper>

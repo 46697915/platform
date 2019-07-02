@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IPaylogDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Paylog" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="paystate" property="paystate" jdbcType="VARCHAR" />
+    <result column="paymoney" property="paymoney" jdbcType="VARCHAR" />
+    <result column="paydate" property="paydate" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="payee" property="payee" jdbcType="VARCHAR" />
+    <result column="getdate" property="getdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="alipaynum" property="alipaynum" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    paystate,
+    paymoney,
+    paydate,
+    paytype,
+    payee,
+    getdate,
+    remark,
+    alipaynum
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${paylog.drugStoreShortName}paylog
+    where 1=1 
+    <if test="paylog.id != null and paylog.id != ''">
+        and id like concat('%',#{paylog.id},'%')
+    </if> 
+    <if test="paylog.ordercode != null and paylog.ordercode != ''">
+        and ordercode like concat('%',#{paylog.ordercode} ,'%')
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${paylog.drugStoreShortName}paylog 
+    where 1=1 
+    <if test="paylog.id != null and paylog.id != ''">
+        and id like concat('%',#{paylog.id},'%')
+    </if> 
+    <if test="paylog.ordercode != null and paylog.ordercode != ''">
+        and ordercode like concat('%',#{paylog.ordercode} ,'%')
+    </if>
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Paylog">
+    insert into sy_paylog(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
+    	<if test="paystate !=null and paystate !=''">paystate,</if>
+    	<if test="paymoney !=null and paymoney !=''">paymoney,</if>
+    	<if test="paydate !=null and paydate !=''">paydate,</if>
+    	<if test="paytype !=null and paytype !=''">paytype,</if>
+    	<if test="payee !=null and payee !=''">payee,</if>
+    	<if test="getdate !=null and getdate !=''">getdate,</if>
+    	<if test="remark !=null and remark !=''">remark,</if>
+    	<if test="alipaynum !=null and alipaynum !=''">alipaynum</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ordercode !=null and ordercode !=''">#{ordercode},</if>
+    	<if test="paystate !=null and paystate !=''">#{paystate},</if>
+    	<if test="paymoney !=null and paymoney !=''">#{paymoney},</if>
+    	<if test="paydate !=null and paydate !=''">#{paydate},</if>
+    	<if test="paytype !=null and paytype !=''">#{paytype},</if>
+    	<if test="payee !=null and payee !=''">#{payee},</if>
+    	<if test="getdate !=null and getdate !=''">#{getdate},</if>
+    	<if test="remark !=null and remark !=''">#{remark},</if>
+    	<if test="alipaynum !=null and alipaynum !=''">#{alipaynum}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update sy_paylog
+  	<set>
+    	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
+    	<if test="paystate !=null and paystate !=''">paystate=#{paystate},</if>
+    	<if test="paymoney !=null and paymoney !=''">paymoney=#{paymoney},</if>
+    	<if test="paydate !=null and paydate !=''">paydate=#{paydate},</if>
+    	<if test="paytype !=null and paytype !=''">paytype=#{paytype},</if>
+    	<if test="payee !=null and payee !=''">payee=#{payee},</if>
+    	<if test="getdate !=null and getdate !=''">getdate=#{getdate},</if>
+    	<if test="remark !=null and remark !=''">remark=#{remark},</if>
+    	<if test="alipaynum !=null and alipaynum !=''">alipaynum=#{alipaynum}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_paylog where id=#{id}
+  </delete>
+</mapper>

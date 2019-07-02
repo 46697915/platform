@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IInstorageDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Instorage" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="generatenum" property="generatenum" jdbcType="VARCHAR" />
+    <result column="generatedate" property="generatedate" jdbcType="VARCHAR" />
+    <result column="validityperiod" property="validityperiod" jdbcType="VARCHAR" />
+    <result column="shelflife" property="shelflife" jdbcType="VARCHAR" />
+    <result column="inquantity" property="inquantity" jdbcType="VARCHAR" />
+    <result column="intype" property="intype" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="VARCHAR" />
+    <result column="indate" property="indate" jdbcType="VARCHAR" />
+    <result column="inperson" property="inperson" jdbcType="VARCHAR" />
+    <result column="loggingdate" property="loggingdate" jdbcType="VARCHAR" />
+    <result column="reviewer" property="reviewer" jdbcType="VARCHAR" />
+    <result column="reviewdate" property="reviewdate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="signtype" property="signtype" jdbcType="VARCHAR" />
+	<association  property="intypename" column="intype" javaType="string" select="getKeyvalueNameByCode1" />
+	<association  property="signtypename" column="signtype" javaType="string" select="getKeyvalueNameByCode2" />
+ 
+  </resultMap>
+  <resultMap id="InstorageSummary" type="com.wxsoft.business.pojo.InstorageSummary" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="unitsname" property="unitsname" jdbcType="VARCHAR" />
+    <result column="specifications" property="specifications" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    drugsname,
+    commonname,
+    generatenum,
+    generatedate,
+    validityperiod,
+    shelflife,
+    inquantity,
+    intype,
+    money,
+    indate,
+    inperson,
+    loggingdate,
+    reviewer,
+    reviewdate,
+    signtype,
+    remark
+
+  </sql>
+  <!-- 这种写法执行数据库次数为两次，后期可更换写法 -->
+  <select id="getKeyvalueNameByCode1" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='instoretype' and code = #{code}
+  </select>
+  <select id="getKeyvalueNameByCode2" resultType="string" parameterType="java.lang.String">
+    select name from keyvalue  where type='signtype' and code = #{code}
+  </select>
+  <select id="findCount" resultType="long" >
+    select count(*) from ${instorage.drugStoreShortName}instorage
+    where 1=1 
+    <if test="instorage.id != null and instorage.id != ''">
+        and id like concat('%',#{instorage.id},'%')
+    </if> 
+    <if test="instorage.drugsname != null and instorage.drugsname != ''">
+        and (drugsname like concat('%',#{instorage.drugsname},'%') OR commonname like concat('%',#{instorage.drugsname},'%'))
+    </if>
+    <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+        and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="instorage.indate_end != null and instorage.indate_end != ''">
+        and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
+        and barcode = #{instorage.barcode_search}
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${instorage.drugStoreShortName}instorage 
+    where 1=1 
+    <if test="instorage.id != null and instorage.id != ''">
+        and id like concat('%',#{instorage.id},'%')
+    </if> 
+    <if test="instorage.drugsname != null and instorage.drugsname != ''">
+        and (drugsname like concat('%',#{instorage.drugsname},'%') OR commonname like concat('%',#{instorage.drugsname},'%'))
+    </if>
+    <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+        and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="instorage.indate_end != null and instorage.indate_end != ''">
+        and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
+        and barcode = #{instorage.barcode_search}
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <select id="instorageSummaryCount" resultType="long" >
+    select count(*) 
+    from (
+	    select barcode,commonname 
+		from ${instorage.drugStoreShortName}instorage 
+	    where 1=1 
+	    <if test="instorage.id != null and instorage.id != ''">
+	        and id like concat('%',#{instorage.id},'%')
+	    </if> 
+	    <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+	        and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
+	    </if> 
+	    <if test="instorage.indate_end != null and instorage.indate_end != ''">
+	        and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+	    </if> 
+	    <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
+	        and barcode = #{instorage.barcode_search}
+	    </if> 
+	    group by barcode,commonname
+    ) a 
+  </select>
+  <select id="instorageSummaryAll" resultMap="InstorageSummary">
+    select barcode,commonname,
+		(select min(units) from drugs a where a.barcode=x.barcode) units,
+		(select name from keyvalue b where type='units' and code = (select min(units) from drugs a where a.barcode=x.barcode) ) unitsname,
+		(select min(specifications) from drugs a where a.barcode=x.barcode) specifications,
+		sum(inquantity) total,sum(money) amount
+    from ${instorage.drugStoreShortName}instorage x 
+    where 1=1 
+    <if test="instorage.id != null and instorage.id != ''">
+        and id like concat('%',#{instorage.id},'%')
+    </if> 
+    <if test="instorage.signtype != null and instorage.signtype != ''">
+        and signtype = #{instorage.signtype}
+    </if> 
+    <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+        and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="instorage.indate_end != null and instorage.indate_end != ''">
+        and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
+        and barcode = #{instorage.barcode_search}
+    </if> 
+    group by barcode,commonname
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="instorageSummaryByBarcode" resultMap="InstorageSummary">
+    select barcode,sum(inquantity) total,sum(money) amount
+    from ${instorage.drugStoreShortName}instorage x 
+    where 1=1 
+    <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
+        and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
+    </if> 
+    <if test="instorage.indate_end != null and instorage.indate_end != ''">
+        and indate &lt; date_add(str_to_date(#{instorage.indate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="instorage.barcode != null and instorage.barcode != ''">
+        and barcode = #{instorage.barcode}
+    </if> 
+    group by barcode 
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Instorage">
+    insert into sy_instorage(<trim suffixOverrides=",">
+    	<if test="barcode !=null and barcode !=''">barcode,</if>
+    	<if test="drugsname !=null and drugsname !=''">drugsname,</if>
+    	<if test="commonname !=null and commonname !=''">commonname,</if>
+    	<if test="generatenum !=null and generatenum !=''">generatenum,</if>
+    	<if test="generatedate !=null and generatedate !=''">generatedate,</if>
+    	<if test="validityperiod !=null and validityperiod !=''">validityperiod,</if>
+    	<if test="shelflife !=null and shelflife !=''">shelflife,</if>
+    	<if test="inquantity !=null and inquantity !=''">inquantity,</if>
+    	<if test="intype !=null and intype !=''">intype,</if>
+    	<if test="money !=null and money !=''">money,</if>
+    	<if test="indate !=null and indate !=''">indate,</if>
+    	<if test="inperson !=null and inperson !=''">inperson,</if>
+    	<if test="loggingdate !=null and loggingdate !=''">loggingdate,</if>
+    	<if test="reviewer !=null and reviewer !=''">reviewer,</if>
+    	<if test="reviewdate !=null and reviewdate !=''">reviewdate,</if>
+    	<if test="signtype !=null and signtype !=''">signtype,</if>
+    	<if test="remark !=null and remark !=''">remark</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="barcode !=null and barcode !=''">#{barcode},</if>
+    	<if test="drugsname !=null and drugsname !=''">#{drugsname},</if>
+    	<if test="commonname !=null and commonname !=''">#{commonname},</if>
+    	<if test="generatenum !=null and generatenum !=''">#{generatenum},</if>
+    	<if test="generatedate !=null and generatedate !=''">#{generatedate},</if>
+    	<if test="validityperiod !=null and validityperiod !=''">#{validityperiod},</if>
+    	<if test="shelflife !=null and shelflife !=''">#{shelflife},</if>
+    	<if test="inquantity !=null and inquantity !=''">#{inquantity},</if>
+    	<if test="intype !=null and intype !=''">#{intype},</if>
+    	<if test="money !=null and money !=''">#{money},</if>
+    	<if test="indate !=null and indate !=''">#{indate},</if>
+    	<if test="inperson !=null and inperson !=''">#{inperson},</if>
+    	<if test="loggingdate !=null and loggingdate !=''">#{loggingdate},</if>
+    	<if test="reviewer !=null and reviewer !=''">#{reviewer},</if>
+    	<if test="reviewdate !=null and reviewdate !=''">#{reviewdate},</if>
+    	<if test="signtype !=null and signtype !=''">#{signtype},</if>
+    	<if test="remark !=null and remark !=''">#{remark}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update sy_instorage
+  	<set>
+    	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
+    	<if test="drugsname !=null and drugsname !=''">drugsname=#{drugsname},</if>
+    	<if test="commonname !=null and commonname !=''">commonname=#{commonname},</if>
+    	<if test="generatenum !=null and generatenum !=''">generatenum=#{generatenum},</if>
+    	<if test="generatedate !=null and generatedate !=''">generatedate=#{generatedate},</if>
+    	<if test="validityperiod !=null and validityperiod !=''">validityperiod=#{validityperiod},</if>
+    	<if test="shelflife !=null and shelflife !=''">shelflife=#{shelflife},</if>
+    	<if test="inquantity !=null and inquantity !=''">inquantity=#{inquantity},</if>
+    	<if test="intype !=null and intype !=''">intype=#{intype},</if>
+    	<if test="money !=null and money !=''">money=#{money},</if>
+    	<if test="indate !=null and indate !=''">indate=#{indate},</if>
+    	<if test="inperson !=null and inperson !=''">inperson=#{inperson},</if>
+    	<if test="loggingdate !=null and loggingdate !=''">loggingdate=#{loggingdate},</if>
+    	<if test="reviewer !=null and reviewer !=''">reviewer=#{reviewer},</if>
+    	<if test="reviewdate !=null and reviewdate !=''">reviewdate=#{reviewdate},</if>
+    	<if test="signtype !=null and signtype !=''">signtype=#{signtype},</if>
+    	<if test="remark !=null and remark !=''">remark=#{remark}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_instorage where id=#{id}
+  </delete>
+</mapper>

@@ -39,6 +39,7 @@
         <module>shop-authority</module>
         <module>shop-view</module>
         <module>shop-main</module>
+        <module>shop-store</module>
         <!--<module>platform-baiduAI</module>-->
         <!--<module>platform-drools</module>-->
         <!--<module>platform-testing</module>-->

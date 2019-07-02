@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IStorecheckJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.StorecheckJz" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR" />
+    <result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
+    <result column="initstore" property="initstore" jdbcType="VARCHAR" />
+    <result column="initamount" property="initamount" jdbcType="VARCHAR" />
+    <result column="instore" property="instore" jdbcType="VARCHAR" />
+    <result column="instoreamount" property="instoreamount" jdbcType="VARCHAR" />
+    <result column="salecount" property="salecount" jdbcType="VARCHAR" />
+    <result column="saleamount" property="saleamount" jdbcType="VARCHAR" />
+    <result column="newstore" property="newstore" jdbcType="VARCHAR" />
+    <result column="newamount" property="newamount" jdbcType="VARCHAR" />
+    <result column="currstore" property="currstore" jdbcType="VARCHAR" />
+    <result column="curramount" property="curramount" jdbcType="VARCHAR" />
+    <result column="crrcheckdate" property="crrcheckdate" jdbcType="VARCHAR" />
+    <result column="lastcheckdate" property="lastcheckdate" jdbcType="VARCHAR" />
+    <result column="checker" property="checker" jdbcType="VARCHAR" />
+    <result column="checkdate" property="checkdate" jdbcType="VARCHAR" />
+    <result column="islastcheck" property="islastcheck" jdbcType="VARCHAR" />
+    <result column="lastcheckid" property="lastcheckid" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    drugsname,
+    commonname,
+    bxdygx,
+    drugscode,
+    initstore,
+    initamount,
+    instore,
+    instoreamount,
+    salecount,
+    saleamount,
+    newstore,
+    newamount,
+    currstore,
+    curramount,
+    crrcheckdate,
+    lastcheckdate,
+    checker,
+    checkdate,
+    islastcheck,
+    lastcheckid,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${storecheckJz.drugStoreShortName}m_storecheck_jz
+    where 1=1 
+    <if test="storecheckJz.id != null and storecheckJz.id != ''">
+        and id like concat('%',#{storecheckJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${storecheckJz.drugStoreShortName}m_storecheck_jz 
+    where 1=1 
+    <if test="storecheckJz.id != null and storecheckJz.id != ''">
+        and id like concat('%',#{storecheckJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.StorecheckJz">
+    insert into ${storecheckJz.drugStoreShortName}m_storecheck_jz(<trim suffixOverrides=",">
+    	<if test="storecheckJz.barcode !=null and storecheckJz.barcode !=''">barcode,</if>
+    	<if test="storecheckJz.drugsname !=null and storecheckJz.drugsname !=''">drugsname,</if>
+    	<if test="storecheckJz.commonname !=null and storecheckJz.commonname !=''">commonname,</if>
+    	<if test="storecheckJz.bxdygx !=null and storecheckJz.bxdygx !=''">bxdygx,</if>
+    	<if test="storecheckJz.drugscode !=null and storecheckJz.drugscode !=''">drugscode,</if>
+    	<if test="storecheckJz.initstore !=null and storecheckJz.initstore !=''">initstore,</if>
+    	<if test="storecheckJz.initamount !=null and storecheckJz.initamount !=''">initamount,</if>
+    	<if test="storecheckJz.instore !=null and storecheckJz.instore !=''">instore,</if>
+    	<if test="storecheckJz.instoreamount !=null and storecheckJz.instoreamount !=''">instoreamount,</if>
+    	<if test="storecheckJz.salecount !=null and storecheckJz.salecount !=''">salecount,</if>
+    	<if test="storecheckJz.saleamount !=null and storecheckJz.saleamount !=''">saleamount,</if>
+    	<if test="storecheckJz.newstore !=null and storecheckJz.newstore !=''">newstore,</if>
+    	<if test="storecheckJz.newamount !=null and storecheckJz.newamount !=''">newamount,</if>
+    	<if test="storecheckJz.currstore !=null and storecheckJz.currstore !=''">currstore,</if>
+    	<if test="storecheckJz.curramount !=null and storecheckJz.curramount !=''">curramount,</if>
+    	<if test="storecheckJz.crrcheckdate !=null and storecheckJz.crrcheckdate !=''">crrcheckdate,</if>
+    	<if test="storecheckJz.lastcheckdate !=null and storecheckJz.lastcheckdate !=''">lastcheckdate,</if>
+    	<if test="storecheckJz.checker !=null and storecheckJz.checker !=''">checker,</if>
+    	<if test="storecheckJz.checkdate !=null and storecheckJz.checkdate !=''">checkdate,</if>
+    	<if test="storecheckJz.islastcheck !=null and storecheckJz.islastcheck !=''">islastcheck,</if>
+    	<if test="storecheckJz.lastcheckid !=null and storecheckJz.lastcheckid !=''">lastcheckid,</if>
+    	<if test="storecheckJz.transfer_id !=null and storecheckJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="storecheckJz.barcode !=null and storecheckJz.barcode !=''">#{storecheckJz.barcode},</if>
+    	<if test="storecheckJz.drugsname !=null and storecheckJz.drugsname !=''">#{storecheckJz.drugsname},</if>
+    	<if test="storecheckJz.commonname !=null and storecheckJz.commonname !=''">#{storecheckJz.commonname},</if>
+    	<if test="storecheckJz.bxdygx !=null and storecheckJz.bxdygx !=''">#{storecheckJz.bxdygx},</if>
+    	<if test="storecheckJz.drugscode !=null and storecheckJz.drugscode !=''">#{storecheckJz.drugscode},</if>
+    	<if test="storecheckJz.initstore !=null and storecheckJz.initstore !=''">#{storecheckJz.initstore},</if>
+    	<if test="storecheckJz.initamount !=null and storecheckJz.initamount !=''">#{storecheckJz.initamount},</if>
+    	<if test="storecheckJz.instore !=null and storecheckJz.instore !=''">#{storecheckJz.instore},</if>
+    	<if test="storecheckJz.instoreamount !=null and storecheckJz.instoreamount !=''">#{storecheckJz.instoreamount},</if>
+    	<if test="storecheckJz.salecount !=null and storecheckJz.salecount !=''">#{storecheckJz.salecount},</if>
+    	<if test="storecheckJz.saleamount !=null and storecheckJz.saleamount !=''">#{storecheckJz.saleamount},</if>
+    	<if test="storecheckJz.newstore !=null and storecheckJz.newstore !=''">#{storecheckJz.newstore},</if>
+    	<if test="storecheckJz.newamount !=null and storecheckJz.newamount !=''">#{storecheckJz.newamount},</if>
+    	<if test="storecheckJz.currstore !=null and storecheckJz.currstore !=''">#{storecheckJz.currstore},</if>
+    	<if test="storecheckJz.curramount !=null and storecheckJz.curramount !=''">#{storecheckJz.curramount},</if>
+    	<if test="storecheckJz.crrcheckdate !=null and storecheckJz.crrcheckdate !=''">#{storecheckJz.crrcheckdate},</if>
+    	<if test="storecheckJz.lastcheckdate !=null and storecheckJz.lastcheckdate !=''">#{storecheckJz.lastcheckdate},</if>
+    	<if test="storecheckJz.checker !=null and storecheckJz.checker !=''">#{storecheckJz.checker},</if>
+    	<if test="storecheckJz.checkdate !=null and storecheckJz.checkdate !=''">#{storecheckJz.checkdate},</if>
+    	<if test="storecheckJz.islastcheck !=null and storecheckJz.islastcheck !=''">#{storecheckJz.islastcheck},</if>
+    	<if test="storecheckJz.lastcheckid !=null and storecheckJz.lastcheckid !=''">#{storecheckJz.lastcheckid},</if>
+    	<if test="storecheckJz.transfer_id !=null and storecheckJz.transfer_id !=''">#{storecheckJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update storecheckJz
+  	<set>
+    	<if test="storecheckJz.barcode !=null and storecheckJz.barcode !=''">barcode=#{storecheckJz.barcode},</if>
+    	<if test="storecheckJz.drugsname !=null and storecheckJz.drugsname !=''">drugsname=#{storecheckJz.drugsname},</if>
+    	<if test="storecheckJz.commonname !=null and storecheckJz.commonname !=''">commonname=#{storecheckJz.commonname},</if>
+    	<if test="storecheckJz.bxdygx !=null and storecheckJz.bxdygx !=''">bxdygx=#{storecheckJz.bxdygx},</if>
+    	<if test="storecheckJz.drugscode !=null and storecheckJz.drugscode !=''">drugscode=#{storecheckJz.drugscode},</if>
+    	<if test="storecheckJz.initstore !=null and storecheckJz.initstore !=''">initstore=#{storecheckJz.initstore},</if>
+    	<if test="storecheckJz.initamount !=null and storecheckJz.initamount !=''">initamount=#{storecheckJz.initamount},</if>
+    	<if test="storecheckJz.instore !=null and storecheckJz.instore !=''">instore=#{storecheckJz.instore},</if>
+    	<if test="storecheckJz.instoreamount !=null and storecheckJz.instoreamount !=''">instoreamount=#{storecheckJz.instoreamount},</if>
+    	<if test="storecheckJz.salecount !=null and storecheckJz.salecount !=''">salecount=#{storecheckJz.salecount},</if>
+    	<if test="storecheckJz.saleamount !=null and storecheckJz.saleamount !=''">saleamount=#{storecheckJz.saleamount},</if>
+    	<if test="storecheckJz.newstore !=null and storecheckJz.newstore !=''">newstore=#{storecheckJz.newstore},</if>
+    	<if test="storecheckJz.newamount !=null and storecheckJz.newamount !=''">newamount=#{storecheckJz.newamount},</if>
+    	<if test="storecheckJz.currstore !=null and storecheckJz.currstore !=''">currstore=#{storecheckJz.currstore},</if>
+    	<if test="storecheckJz.curramount !=null and storecheckJz.curramount !=''">curramount=#{storecheckJz.curramount},</if>
+    	<if test="storecheckJz.crrcheckdate !=null and storecheckJz.crrcheckdate !=''">crrcheckdate=#{storecheckJz.crrcheckdate},</if>
+    	<if test="storecheckJz.lastcheckdate !=null and storecheckJz.lastcheckdate !=''">lastcheckdate=#{storecheckJz.lastcheckdate},</if>
+    	<if test="storecheckJz.checker !=null and storecheckJz.checker !=''">checker=#{storecheckJz.checker},</if>
+    	<if test="storecheckJz.checkdate !=null and storecheckJz.checkdate !=''">checkdate=#{storecheckJz.checkdate},</if>
+    	<if test="storecheckJz.islastcheck !=null and storecheckJz.islastcheck !=''">islastcheck=#{storecheckJz.islastcheck},</if>
+    	<if test="storecheckJz.lastcheckid !=null and storecheckJz.lastcheckid !=''">lastcheckid=#{storecheckJz.lastcheckid},</if>
+    	<if test="storecheckJz.transfer_id !=null and storecheckJz.transfer_id !=''">transfer_id=#{storecheckJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${storecheckJz.drugStoreShortName}m_storecheck_jz where id=#{storecheckJz.id}
+  </delete>
+</mapper>

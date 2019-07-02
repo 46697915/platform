@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.ITransferDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Transfer" >
+    <result column="jzrq" property="jzrq" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    jzrq,
+    operator,
+    operatedate,
+    barcode,
+    drugsname,
+    drugscode,
+	stock
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from sy_transfer
+    where 1=1 
+    <if test="transfer.id != null and transfer.id != ''">
+        and id like concat('%',#{transfer.id},'%')
+    </if> 
+    <if test="transfer.jzrq != null and transfer.jzrq != ''">
+        and jzrq  = str_to_date(#{transfer.jzrq}, '%Y-%m-%d')
+    </if> 
+    <if test="transfer.barcode != null and transfer.barcode != ''">
+        and barcode = #{transfer.barcode} 
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sy_transfer
+    where 1=1 
+    <if test="transfer.id != null and transfer.id != ''">
+        and id like concat('%',#{transfer.id},'%')
+    </if> 
+    <if test="transfer.jzrq != null and transfer.jzrq != ''">
+        and jzrq  = str_to_date(#{transfer.jzrq}, '%Y-%m-%d')
+    </if> 
+    <if test="transfer.barcode != null and transfer.barcode != ''">
+        and barcode = #{transfer.barcode} 
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Transfer">
+    insert into sy_transfer(<trim suffixOverrides=",">
+    	<if test="transfer.id !=null and transfer.id !=''">id,</if>
+    	<if test="transfer.jzrq !=null and transfer.jzrq !=''">jzrq,</if>
+    	<if test="transfer.operator !=null and transfer.operator !=''">operator,</if>
+    	<if test="transfer.operatedate !=null and transfer.operatedate !=''">operatedate,</if>
+    	<if test="transfer.barcode !=null and transfer.barcode !=''">barcode,</if>
+    	<if test="transfer.drugsname !=null and transfer.drugsname !=''">drugsname,</if>
+    	<if test="transfer.drugscode !=null and transfer.drugscode !=''">drugscode,</if>
+    	<if test="transfer.stock !=null and transfer.stock !=''">stock,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="transfer.id !=null and transfer.id !=''">#{transfer.id},</if>
+    	<if test="transfer.jzrq !=null and transfer.jzrq !=''">#{transfer.jzrq},</if>
+    	<if test="transfer.operator !=null and transfer.operator !=''">#{transfer.operator},</if>
+    	<if test="transfer.operatedate !=null and transfer.operatedate !=''">#{transfer.operatedate},</if>
+    	<if test="transfer.barcode !=null and transfer.barcode !=''">#{transfer.barcode},</if>
+    	<if test="transfer.drugsname !=null and transfer.drugsname !=''">#{transfer.drugsname},</if>
+    	<if test="transfer.drugscode !=null and transfer.drugscode !=''">#{transfer.drugscode},</if>
+    	<if test="transfer.stock !=null and transfer.stock !=''">#{transfer.stock},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update transfer
+  	<set>
+    	<if test="transfer.jzrq !=null and transfer.jzrq !=''">jzrq=#{transfer.jzrq},</if>
+    	<if test="transfer.operator !=null and transfer.operator !=''">operator=#{transfer.operator},</if>
+    	<if test="transfer.operatedate !=null and transfer.operatedate !=''">operatedate=#{transfer.operatedate},</if>
+    	<if test="transfer.barcode !=null and transfer.barcode !=''">barcode=#{transfer.barcode},</if>
+    	<if test="transfer.drugsname !=null and transfer.drugsname !=''">drugsname=#{transfer.drugsname},</if>
+    	<if test="transfer.drugscode !=null and transfer.drugscode !=''">drugscode=#{transfer.drugscode},</if>
+    	<if test="transfer.stock !=null and transfer.stock !=''">stock=#{transfer.stock},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from sy_transfer where id=#{transfer.id}
+  </delete>
+</mapper>

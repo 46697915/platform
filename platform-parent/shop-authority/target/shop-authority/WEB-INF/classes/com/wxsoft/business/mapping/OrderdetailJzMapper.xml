@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IOrderdetailJzDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.OrderdetailJz" >
+    <result column="ordercode" property="ordercode" jdbcType="VARCHAR" />
+    <result column="detailcode" property="detailcode" jdbcType="VARCHAR" />
+    <result column="goodsid" property="goodsid" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="giftcode" property="giftcode" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="VARCHAR" />
+    <result column="transportmoney" property="transportmoney" jdbcType="VARCHAR" />
+    <result column="iscomment" property="iscomment" jdbcType="VARCHAR" />
+    <result column="getmoney" property="getmoney" jdbcType="VARCHAR" />
+    <result column="paytype" property="paytype" jdbcType="VARCHAR" />
+    <result column="peybank" property="peybank" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="commentid" property="commentid" jdbcType="VARCHAR" />
+    <result column="isenough" property="isenough" jdbcType="VARCHAR" />
+    <result column="units" property="units" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="VARCHAR" />
+    <result column="transfer_id" property="transfer_id" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ordercode,
+    detailcode,
+    goodsid,
+    barcode,
+    goodsname,
+    commonname,
+    giftcode,
+    price,
+    amount,
+    money,
+    transportmoney,
+    iscomment,
+    getmoney,
+    paytype,
+    peybank,
+    remark,
+    commentid,
+    isenough,
+    units,
+    createdate,
+    transfer_id,
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${orderdetailJz.drugStoreShortName}orderdetail_jz
+    where 1=1 
+    <if test="orderdetailJz.id != null and orderdetailJz.id != ''">
+        and id like concat('%',#{orderdetailJz.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${orderdetailJz.drugStoreShortName}orderdetail_jz 
+    where 1=1 
+    <if test="orderdetailJz.id != null and orderdetailJz.id != ''">
+        and id like concat('%',#{orderdetailJz.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.OrderdetailJz">
+    insert into ${orderdetailJz.drugStoreShortName}orderdetail_jz(<trim suffixOverrides=",">
+    	<if test="orderdetailJz.ordercode !=null and orderdetailJz.ordercode !=''">ordercode,</if>
+    	<if test="orderdetailJz.detailcode !=null and orderdetailJz.detailcode !=''">detailcode,</if>
+    	<if test="orderdetailJz.goodsid !=null and orderdetailJz.goodsid !=''">goodsid,</if>
+    	<if test="orderdetailJz.barcode !=null and orderdetailJz.barcode !=''">barcode,</if>
+    	<if test="orderdetailJz.goodsname !=null and orderdetailJz.goodsname !=''">goodsname,</if>
+    	<if test="orderdetailJz.commonname !=null and orderdetailJz.commonname !=''">commonname,</if>
+    	<if test="orderdetailJz.giftcode !=null and orderdetailJz.giftcode !=''">giftcode,</if>
+    	<if test="orderdetailJz.price !=null and orderdetailJz.price !=''">price,</if>
+    	<if test="orderdetailJz.amount !=null and orderdetailJz.amount !=''">amount,</if>
+    	<if test="orderdetailJz.money !=null and orderdetailJz.money !=''">money,</if>
+    	<if test="orderdetailJz.transportmoney !=null and orderdetailJz.transportmoney !=''">transportmoney,</if>
+    	<if test="orderdetailJz.iscomment !=null and orderdetailJz.iscomment !=''">iscomment,</if>
+    	<if test="orderdetailJz.getmoney !=null and orderdetailJz.getmoney !=''">getmoney,</if>
+    	<if test="orderdetailJz.paytype !=null and orderdetailJz.paytype !=''">paytype,</if>
+    	<if test="orderdetailJz.peybank !=null and orderdetailJz.peybank !=''">peybank,</if>
+    	<if test="orderdetailJz.remark !=null and orderdetailJz.remark !=''">remark,</if>
+    	<if test="orderdetailJz.commentid !=null and orderdetailJz.commentid !=''">commentid,</if>
+    	<if test="orderdetailJz.isenough !=null and orderdetailJz.isenough !=''">isenough,</if>
+    	<if test="orderdetailJz.units !=null and orderdetailJz.units !=''">units,</if>
+    	<if test="orderdetailJz.createdate !=null and orderdetailJz.createdate !=''">createdate,</if>
+    	<if test="orderdetailJz.transfer_id !=null and orderdetailJz.transfer_id !=''">transfer_id,</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="orderdetailJz.ordercode !=null and orderdetailJz.ordercode !=''">#{orderdetailJz.ordercode},</if>
+    	<if test="orderdetailJz.detailcode !=null and orderdetailJz.detailcode !=''">#{orderdetailJz.detailcode},</if>
+    	<if test="orderdetailJz.goodsid !=null and orderdetailJz.goodsid !=''">#{orderdetailJz.goodsid},</if>
+    	<if test="orderdetailJz.barcode !=null and orderdetailJz.barcode !=''">#{orderdetailJz.barcode},</if>
+    	<if test="orderdetailJz.goodsname !=null and orderdetailJz.goodsname !=''">#{orderdetailJz.goodsname},</if>
+    	<if test="orderdetailJz.commonname !=null and orderdetailJz.commonname !=''">#{orderdetailJz.commonname},</if>
+    	<if test="orderdetailJz.giftcode !=null and orderdetailJz.giftcode !=''">#{orderdetailJz.giftcode},</if>
+    	<if test="orderdetailJz.price !=null and orderdetailJz.price !=''">#{orderdetailJz.price},</if>
+    	<if test="orderdetailJz.amount !=null and orderdetailJz.amount !=''">#{orderdetailJz.amount},</if>
+    	<if test="orderdetailJz.money !=null and orderdetailJz.money !=''">#{orderdetailJz.money},</if>
+    	<if test="orderdetailJz.transportmoney !=null and orderdetailJz.transportmoney !=''">#{orderdetailJz.transportmoney},</if>
+    	<if test="orderdetailJz.iscomment !=null and orderdetailJz.iscomment !=''">#{orderdetailJz.iscomment},</if>
+    	<if test="orderdetailJz.getmoney !=null and orderdetailJz.getmoney !=''">#{orderdetailJz.getmoney},</if>
+    	<if test="orderdetailJz.paytype !=null and orderdetailJz.paytype !=''">#{orderdetailJz.paytype},</if>
+    	<if test="orderdetailJz.peybank !=null and orderdetailJz.peybank !=''">#{orderdetailJz.peybank},</if>
+    	<if test="orderdetailJz.remark !=null and orderdetailJz.remark !=''">#{orderdetailJz.remark},</if>
+    	<if test="orderdetailJz.commentid !=null and orderdetailJz.commentid !=''">#{orderdetailJz.commentid},</if>
+    	<if test="orderdetailJz.isenough !=null and orderdetailJz.isenough !=''">#{orderdetailJz.isenough},</if>
+    	<if test="orderdetailJz.units !=null and orderdetailJz.units !=''">#{orderdetailJz.units},</if>
+    	<if test="orderdetailJz.createdate !=null and orderdetailJz.createdate !=''">#{orderdetailJz.createdate},</if>
+    	<if test="orderdetailJz.transfer_id !=null and orderdetailJz.transfer_id !=''">#{orderdetailJz.transfer_id},</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update orderdetailJz
+  	<set>
+    	<if test="orderdetailJz.ordercode !=null and orderdetailJz.ordercode !=''">ordercode=#{orderdetailJz.ordercode},</if>
+    	<if test="orderdetailJz.detailcode !=null and orderdetailJz.detailcode !=''">detailcode=#{orderdetailJz.detailcode},</if>
+    	<if test="orderdetailJz.goodsid !=null and orderdetailJz.goodsid !=''">goodsid=#{orderdetailJz.goodsid},</if>
+    	<if test="orderdetailJz.barcode !=null and orderdetailJz.barcode !=''">barcode=#{orderdetailJz.barcode},</if>
+    	<if test="orderdetailJz.goodsname !=null and orderdetailJz.goodsname !=''">goodsname=#{orderdetailJz.goodsname},</if>
+    	<if test="orderdetailJz.commonname !=null and orderdetailJz.commonname !=''">commonname=#{orderdetailJz.commonname},</if>
+    	<if test="orderdetailJz.giftcode !=null and orderdetailJz.giftcode !=''">giftcode=#{orderdetailJz.giftcode},</if>
+    	<if test="orderdetailJz.price !=null and orderdetailJz.price !=''">price=#{orderdetailJz.price},</if>
+    	<if test="orderdetailJz.amount !=null and orderdetailJz.amount !=''">amount=#{orderdetailJz.amount},</if>
+    	<if test="orderdetailJz.money !=null and orderdetailJz.money !=''">money=#{orderdetailJz.money},</if>
+    	<if test="orderdetailJz.transportmoney !=null and orderdetailJz.transportmoney !=''">transportmoney=#{orderdetailJz.transportmoney},</if>
+    	<if test="orderdetailJz.iscomment !=null and orderdetailJz.iscomment !=''">iscomment=#{orderdetailJz.iscomment},</if>
+    	<if test="orderdetailJz.getmoney !=null and orderdetailJz.getmoney !=''">getmoney=#{orderdetailJz.getmoney},</if>
+    	<if test="orderdetailJz.paytype !=null and orderdetailJz.paytype !=''">paytype=#{orderdetailJz.paytype},</if>
+    	<if test="orderdetailJz.peybank !=null and orderdetailJz.peybank !=''">peybank=#{orderdetailJz.peybank},</if>
+    	<if test="orderdetailJz.remark !=null and orderdetailJz.remark !=''">remark=#{orderdetailJz.remark},</if>
+    	<if test="orderdetailJz.commentid !=null and orderdetailJz.commentid !=''">commentid=#{orderdetailJz.commentid},</if>
+    	<if test="orderdetailJz.isenough !=null and orderdetailJz.isenough !=''">isenough=#{orderdetailJz.isenough},</if>
+    	<if test="orderdetailJz.units !=null and orderdetailJz.units !=''">units=#{orderdetailJz.units},</if>
+    	<if test="orderdetailJz.createdate !=null and orderdetailJz.createdate !=''">createdate=#{orderdetailJz.createdate},</if>
+    	<if test="orderdetailJz.transfer_id !=null and orderdetailJz.transfer_id !=''">transfer_id=#{orderdetailJz.transfer_id},</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${orderdetailJz.drugStoreShortName}orderdetail_jz where id=#{orderdetailJz.id}
+  </delete>
+</mapper>

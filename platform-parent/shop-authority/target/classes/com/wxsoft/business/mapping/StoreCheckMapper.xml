@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IStoreCheckDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.StoreCheck" >
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
+    <result column="commonname" property="commonname" jdbcType="VARCHAR" />
+    <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR" />
+    <result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
+    <result column="initstore" property="initstore" jdbcType="VARCHAR" />
+    <result column="initamount" property="initamount" jdbcType="VARCHAR" />
+    <result column="instore" property="instore" jdbcType="VARCHAR" />
+    <result column="instoreamount" property="instoreamount" jdbcType="VARCHAR" />
+    <result column="salecount" property="salecount" jdbcType="VARCHAR" />
+    <result column="saleamount" property="saleamount" jdbcType="VARCHAR" />
+    <result column="newstore" property="newstore" jdbcType="VARCHAR" />
+    <result column="newamount" property="newamount" jdbcType="VARCHAR" />
+    <result column="currstore" property="currstore" jdbcType="VARCHAR" />
+    <result column="curramount" property="curramount" jdbcType="VARCHAR" />
+    <result column="crrcheckdate" property="crrcheckdate" jdbcType="VARCHAR" />
+    <result column="lastcheckdate" property="lastcheckdate" jdbcType="VARCHAR" />
+    <result column="checker" property="checker" jdbcType="VARCHAR" />
+    <result column="checkdate" property="checkdate" jdbcType="VARCHAR" />
+    <result column="islastcheck" property="islastcheck" jdbcType="VARCHAR" />
+    <result column="lastcheckid" property="lastcheckid" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    barcode,
+    drugsname,
+    commonname,
+    bxdygx,
+    drugscode,
+    initstore,
+    initamount,
+    instore,
+    instoreamount,
+    salecount,
+    saleamount,
+    newstore,
+    newamount,
+    currstore,
+    curramount,
+    crrcheckdate,
+    lastcheckdate,
+    checker,
+    checkdate,
+    islastcheck,
+    lastcheckid
+
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from ${storeCheck.drugStoreShortName}m_storecheck
+    where 1=1 
+    <if test="storeCheck.id != null and storeCheck.id != ''">
+        and id = #{storeCheck.id}
+    </if>
+    <if test="storeCheck.crrcheckdate != null and storeCheck.crrcheckdate != ''">
+        and crrcheckdate &gt;= str_to_date(#{storeCheck.crrcheckdate}, '%Y-%m-%d') 
+        and crrcheckdate &lt; date_add(str_to_date(#{storeCheck.crrcheckdate}, '%Y-%m-%d'), interval 1 day)
+    </if>
+    <if test="storeCheck.iserrorstore != null and storeCheck.iserrorstore != ''">
+        and newstore &lt;&gt; currstore
+    </if>
+    <if test="storeCheck.newstore_search != null and storeCheck.newstore_search != ''">
+        and newstore &lt; #{storeCheck.newstore_search}
+    </if>
+    <if test="storeCheck.drugscode != null and storeCheck.drugscode != ''">
+        and drugscode = #{storeCheck.drugscode}
+    </if>
+    <if test="storeCheck.bxdygx != null and storeCheck.bxdygx != ''">
+        and bxdygx = #{storeCheck.bxdygx}
+    </if>
+    <if test="storeCheck.barcode != null and storeCheck.barcode != ''">
+        and barcode = #{storeCheck.barcode}
+    </if>
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${storeCheck.drugStoreShortName}m_storecheck 
+    where 1=1 
+    <if test="storeCheck.id != null and storeCheck.id != ''">
+        and id = #{storeCheck.id}
+    </if>
+    <if test="storeCheck.crrcheckdate != null and storeCheck.crrcheckdate != ''">
+        and crrcheckdate &gt;= str_to_date(#{storeCheck.crrcheckdate}, '%Y-%m-%d') 
+        and crrcheckdate &lt; date_add(str_to_date(#{storeCheck.crrcheckdate}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="storeCheck.iserrorstore != null and storeCheck.iserrorstore != ''">
+        and newstore &lt;&gt; currstore
+    </if>
+    <if test="storeCheck.newstore_search != null and storeCheck.newstore_search != ''">
+        and newstore &lt; #{storeCheck.newstore_search}
+    </if>
+    <if test="storeCheck.drugscode != null and storeCheck.drugscode != ''">
+        and drugscode = #{storeCheck.drugscode}
+    </if>
+    <if test="storeCheck.bxdygx != null and storeCheck.bxdygx != ''">
+        and bxdygx = #{storeCheck.bxdygx}
+    </if>
+    <if test="storeCheck.barcode != null and storeCheck.barcode != ''">
+        and barcode = #{storeCheck.barcode}
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="findBy" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${storeCheck.drugStoreShortName}m_storecheck 
+    where 1=1 
+    <if test="storeCheck.id != null and storeCheck.id != ''">
+        and id = #{storeCheck.id}
+    </if> 
+    <if test="storeCheck.islastcheck != null and storeCheck.islastcheck != ''">
+        and islastcheck = #{storeCheck.islastcheck}
+    </if> 
+    <if test="storeCheck.drugscode != null and storeCheck.drugscode != ''">
+        and drugscode = #{storeCheck.drugscode}
+    </if> 
+    <if test="storeCheck.bxdygx != null and storeCheck.bxdygx != ''">
+        and bxdygx = #{storeCheck.bxdygx}
+    </if> 
+    <if test="storeCheck.crrcheckdate_end != null and storeCheck.crrcheckdate_end != ''">
+        and crrcheckdate &lt; date_add(str_to_date(#{storeCheck.crrcheckdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="storeCheck.barcode != null and storeCheck.barcode != ''">
+        and barcode = #{storeCheck.barcode}
+    </if>
+  </select>
+  
+  <select id="findMaxCheckdateByJZ" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ${storeCheck.drugStoreShortName}m_storecheck 
+    where 1=1 
+    <if test="storeCheck.crrcheckdate_end != null and storeCheck.crrcheckdate_end != '' and storeCheck.barcode != null and storeCheck.barcode != ''">
+        and crrcheckdate=( 
+        	select maxdate from (
+				select max(b.crrcheckdate) maxdate 
+				from sy_m_storecheck b 
+				where b.crrcheckdate &lt; date_add(str_to_date(#{storeCheck.crrcheckdate_end}, '%Y-%m-%d'), interval 1 day)
+				  and b.barcode = #{storeCheck.barcode}
+				) c 
+			)
+    </if> 
+    <if test="storeCheck.crrcheckdate_end != null and storeCheck.crrcheckdate_end != ''">
+        and crrcheckdate &lt; date_add(str_to_date(#{storeCheck.crrcheckdate_end}, '%Y-%m-%d'), interval 1 day)
+    </if> 
+    <if test="storeCheck.barcode != null and storeCheck.barcode != ''">
+        and barcode = #{storeCheck.barcode}
+    </if>
+  </select>
+  <select id="findMaxCheckdate" resultType="string">
+    select max(crrcheckdate) 
+    from ${storeCheck.drugStoreShortName}m_storecheck 
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.StoreCheck">
+    insert into ${drugStoreShortName}m_storecheck(<trim suffixOverrides=",">
+    	<if test="barcode !=null and barcode !=''">barcode,</if>
+    	<if test="drugsname !=null and drugsname !=''">drugsname,</if>
+    	<if test="commonname !=null and commonname !=''">commonname,</if>
+    	<if test="bxdygx !=null and bxdygx !=''">bxdygx,</if>
+    	<if test="drugscode !=null and drugscode !=''">drugscode,</if>
+    	<if test="initstore !=null and initstore !=''">initstore,</if>
+    	<if test="initamount !=null and initamount !=''">initamount,</if>
+    	<if test="instore !=null and instore !=''">instore,</if>
+    	<if test="instoreamount !=null and instoreamount !=''">instoreamount,</if>
+    	<if test="salecount !=null and salecount !=''">salecount,</if>
+    	<if test="saleamount !=null and saleamount !=''">saleamount,</if>
+    	<if test="newstore !=null and newstore !=''">newstore,</if>
+    	<if test="newamount !=null and newamount !=''">newamount,</if>
+    	<if test="currstore !=null and currstore !=''">currstore,</if>
+    	<if test="curramount !=null and curramount !=''">curramount,</if>
+    	<if test="crrcheckdate !=null and crrcheckdate !=''">crrcheckdate,</if>
+    	<if test="lastcheckdate !=null and lastcheckdate !=''">lastcheckdate,</if>
+    	<if test="checker !=null and checker !=''">checker,</if>
+    	<if test="checkdate !=null and checkdate !=''">checkdate,</if>
+    	<if test="islastcheck !=null and islastcheck !=''">islastcheck,</if>
+    	<if test="lastcheckid !=null and lastcheckid !=''">lastcheckid</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="barcode !=null and barcode !=''">#{barcode},</if>
+    	<if test="drugsname !=null and drugsname !=''">#{drugsname},</if>
+    	<if test="commonname !=null and commonname !=''">#{commonname},</if>
+    	<if test="bxdygx !=null and bxdygx !=''">#{bxdygx},</if>
+    	<if test="drugscode !=null and drugscode !=''">#{drugscode},</if>
+    	<if test="initstore !=null and initstore !=''">#{initstore},</if>
+    	<if test="initamount !=null and initamount !=''">#{initamount},</if>
+    	<if test="instore !=null and instore !=''">#{instore},</if>
+    	<if test="instoreamount !=null and instoreamount !=''">#{instoreamount},</if>
+    	<if test="salecount !=null and salecount !=''">#{salecount},</if>
+    	<if test="saleamount !=null and saleamount !=''">#{saleamount},</if>
+    	<if test="newstore !=null and newstore !=''">#{newstore},</if>
+    	<if test="newamount !=null and newamount !=''">#{newamount},</if>
+    	<if test="currstore !=null and currstore !=''">#{currstore},</if>
+    	<if test="curramount !=null and curramount !=''">#{curramount},</if>
+    	<if test="crrcheckdate !=null and crrcheckdate !=''">#{crrcheckdate},</if>
+    	<if test="lastcheckdate !=null and lastcheckdate !=''">#{lastcheckdate},</if>
+    	<if test="checker !=null and checker !=''">#{checker},</if>
+    	<if test="checkdate !=null and checkdate !=''">#{checkdate},</if>
+    	<if test="islastcheck !=null and islastcheck !=''">#{islastcheck},</if>
+    	<if test="lastcheckid !=null and lastcheckid !=''">#{lastcheckid}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update ${drugStoreShortName}m_storecheck
+  	<set>
+    	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
+    	<if test="drugsname !=null and drugsname !=''">drugsname=#{drugsname},</if>
+    	<if test="commonname !=null and commonname !=''">commonname=#{commonname},</if>
+    	<if test="bxdygx !=null and bxdygx !=''">bxdygx=#{bxdygx},</if>
+    	<if test="drugscode !=null and drugscode !=''">drugscode=#{drugscode},</if>
+    	<if test="initstore !=null and initstore !=''">initstore=#{initstore},</if>
+    	<if test="initamount !=null and initamount !=''">initamount=#{initamount},</if>
+    	<if test="instore !=null and instore !=''">instore=#{instore},</if>
+    	<if test="instoreamount !=null and instoreamount !=''">instoreamount=#{instoreamount},</if>
+    	<if test="salecount !=null and salecount !=''">salecount=#{salecount},</if>
+    	<if test="saleamount !=null and saleamount !=''">saleamount=#{saleamount},</if>
+    	<if test="newstore !=null and newstore !=''">newstore=#{newstore},</if>
+    	<if test="newamount !=null and newamount !=''">newamount=#{newamount},</if>
+    	<if test="currstore !=null and currstore !=''">currstore=#{currstore},</if>
+    	<if test="curramount !=null and curramount !=''">curramount=#{curramount},</if>
+    	<if test="crrcheckdate !=null and crrcheckdate !=''">crrcheckdate=#{crrcheckdate},</if>
+    	<if test="lastcheckdate !=null and lastcheckdate !=''">lastcheckdate=#{lastcheckdate},</if>
+    	<if test="checker !=null and checker !=''">checker=#{checker},</if>
+    	<if test="checkdate !=null and checkdate !=''">checkdate=#{checkdate},</if>
+    	<if test="islastcheck !=null and islastcheck !=''">islastcheck=#{islastcheck},</if>
+    	<if test="lastcheckid !=null and lastcheckid !=''">lastcheckid=#{lastcheckid}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from ${drugStoreShortName}m_storecheck where id=#{id}
+  </delete>
+  <delete id="deleteSCByDate" parameterType="int">
+	delete from ${drugStoreShortName}m_storecheck 
+	where DATE_FORMAT(crrcheckdate, '%Y-%m-%d')=#{crrcheckdate}
+    <if test="barcode != null and barcode != ''">
+        and barcode = #{barcode}
+    </if>
+  </delete>
+  <delete id="updateLastCheck" parameterType="int">
+	update ${drugStoreShortName}m_storecheck a set a.islastcheck='1'  
+	where a.crrcheckdate=( select maxdate from (
+							select max(b.crrcheckdate) maxdate from ${drugStoreShortName}m_storecheck b 
+						) c 
+	)
+  </delete>
+</mapper>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxsoft.business.dao.IYdybxxDao" >
+  <resultMap id="BaseResultMap" type="com.wxsoft.business.pojo.Ydybxx" >
+    <result column="ydbm" property="ydbm" jdbcType="VARCHAR" />
+    <result column="ydmc" property="ydmc" jdbcType="VARCHAR" />
+    <result column="ybjkyhm" property="ybjkyhm" jdbcType="VARCHAR" />
+    <result column="ybjkmm" property="ybjkmm" jdbcType="VARCHAR" />
+    <result column="ybjkmy" property="ybjkmy" jdbcType="VARCHAR" />
+    <result column="ybjkdysj" property="ybjkdysj" jdbcType="VARCHAR" />
+    <result column="ybjkdyjg" property="ybjkdyjg" jdbcType="VARCHAR" />
+    <result column="ydid" property="ydid" jdbcType="VARCHAR" />
+    <result column="shortname" property="shortname" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, 
+    ydbm,
+    ydmc,
+    ybjkyhm,
+    ybjkmm,
+    ybjkmy,
+    ybjkdysj,
+    ybjkdyjg,
+    ydid,
+    shortname
+  </sql>
+  
+  <select id="findCount" resultType="long" >
+    select count(*) from m_ydybxx
+    where 1=1 
+    <if test="ydybxx.id != null and ydybxx.id != ''">
+        and id like concat('%',#{ydybxx.id},'%')
+    </if> 
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_ydybxx 
+    where 1=1 
+    <if test="ydybxx.id != null and ydybxx.id != ''">
+        and id like concat('%',#{ydybxx.id},'%')
+    </if> 
+	<if test="page.sort != null and page.sort != ''">
+		order by #{page.sort} #{page.order}
+	</if>
+	<if test="page.page > 0">
+		limit #{page.start},#{page.end}
+	</if>
+  </select>
+  <select id="findBy" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_ydybxx 
+    where 1=1 
+    <if test="ydybxx.id != null and ydybxx.id != ''">
+        and id like concat('%',#{ydybxx.id},'%')
+    </if>
+    <if test="ydybxx.shortname != null and ydybxx.shortname != ''">
+        and shortname = #{ydybxx.shortname}
+    </if>
+  </select>
+  
+  <insert id="insert" parameterType="com.wxsoft.business.pojo.Ydybxx">
+    insert into m_ydybxx(<trim suffixOverrides=",">
+    	<if test="ydbm !=null and ydbm !=''">ydbm,</if>
+    	<if test="ydmc !=null and ydmc !=''">ydmc,</if>
+    	<if test="ybjkyhm !=null and ybjkyhm !=''">ybjkyhm,</if>
+    	<if test="ybjkmm !=null and ybjkmm !=''">ybjkmm,</if>
+    	<if test="ybjkmy !=null and ybjkmy !=''">ybjkmy,</if>
+    	<if test="ybjkdysj !=null and ybjkdysj !=''">ybjkdysj,</if>
+    	<if test="ybjkdyjg !=null and ybjkdyjg !=''">ybjkdyjg,</if>
+    	<if test="ydid !=null and ydid !=''">ydid,</if>
+    	<if test="shortname !=null and shortname !=''">shortname</if>
+
+    </trim>)values(<trim suffixOverrides=",">
+    	<if test="ydbm !=null and ydbm !=''">#{ydbm},</if>
+    	<if test="ydmc !=null and ydmc !=''">#{ydmc},</if>
+    	<if test="ybjkyhm !=null and ybjkyhm !=''">#{ybjkyhm},</if>
+    	<if test="ybjkmm !=null and ybjkmm !=''">#{ybjkmm},</if>
+    	<if test="ybjkmy !=null and ybjkmy !=''">#{ybjkmy},</if>
+    	<if test="ybjkdysj !=null and ybjkdysj !=''">#{ybjkdysj},</if>
+    	<if test="ybjkdyjg !=null and ybjkdyjg !=''">#{ybjkdyjg},</if>
+    	<if test="ydid !=null and ydid !=''">#{ydid},</if>
+    	<if test="shortname !=null and shortname !=''">#{shortname}</if>
+
+  	</trim>)
+  </insert>
+  
+  <update id="modify">
+  	update m_ydybxx
+  	<set>
+    	<if test="ydbm !=null and ydbm !=''">ydbm=#{ydbm},</if>
+    	<if test="ydmc !=null and ydmc !=''">ydmc=#{ydmc},</if>
+    	<if test="ybjkyhm !=null and ybjkyhm !=''">ybjkyhm=#{ybjkyhm},</if>
+    	<if test="ybjkmm !=null and ybjkmm !=''">ybjkmm=#{ybjkmm},</if>
+    	<if test="ybjkmy !=null and ybjkmy !=''">ybjkmy=#{ybjkmy},</if>
+    	<if test="ybjkdysj !=null and ybjkdysj !=''">ybjkdysj=#{ybjkdysj},</if>
+    	<if test="ybjkdyjg !=null and ybjkdyjg !=''">ybjkdyjg=#{ybjkdyjg},</if>
+    	<if test="ydid !=null and ydid !=''">ydid=#{ydid},</if>
+    	<if test="shortname !=null and shortname !=''">shortname=#{shortname}</if>
+
+  	</set>
+  	where id = #{id}
+  </update>
+    
+  <delete id="delete" parameterType="int">
+	delete from m_ydybxx where id=#{id}
+  </delete>
+</mapper>
