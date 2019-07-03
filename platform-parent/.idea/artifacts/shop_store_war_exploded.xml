@@ -40,7 +40,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3" />
@@ -85,6 +84,10 @@
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.12" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.11" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.0.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.13" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

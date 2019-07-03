@@ -91,5 +91,7 @@
     <orderEntry type="library" name="Maven: net.sf.json-lib:json-lib:2.4" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:2.10.2" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.2" level="project" />
   </component>
 </module>

@@ -1,5 +1,6 @@
 package com.wxsoft.business.service.impl;
 
+import com.wxsoft.annotation.DataFilter;
 import com.wxsoft.business.dao.*;
 import com.wxsoft.business.model.easyui.PageHelper;
 import com.wxsoft.business.pojo.*;
@@ -51,6 +52,7 @@ public class DrugsServiceImpl implements IDrugsService  {
     /**
      * 根据条件查询药品
      */
+    @DataFilter(storeAlias ="storecode" )
     public List<Drugs> findBy(Drugs drugs) {
         List<Drugs> r = dao.findBy(drugs);
         return r;

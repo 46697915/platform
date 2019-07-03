@@ -62,7 +62,7 @@
 		select name from keyvalue where type='units' and code = #{code}
 	</select>
 	<select id="findCount" resultType="long">
-		select count(*) from ${drugs.drugStoreShortName}drugs
+		select count(*) from sy_drugs
 		where 1=1
 		<if test="drugs.id != null and drugs.id != ''">
 			and id like concat('%',#{drugs.id},'%')
@@ -78,7 +78,7 @@
 	<select id="findAll" resultMap="BaseResultMap">
 		select
 		<include refid="Base_Column_List" />
-		from ${drugs.drugStoreShortName}drugs
+		from sy_drugs
 		where 1=1
 		<if test="drugs.id != null and drugs.id != ''">
 			and id like concat('%',#{drugs.id},'%')
@@ -100,7 +100,7 @@
 	<select id="findBy" resultMap="BaseResultMap">
 		select
 		<include refid="Base_Column_List" />
-		from ${drugs.drugStoreShortName}drugs
+		from sy_drugs
 		where 1=1
 		<if test="drugs.id != null and drugs.id != ''">
 			and id = #{drugs.id}
@@ -121,7 +121,7 @@
 	</select>
 
 	<insert id="insert" parameterType="com.wxsoft.business.pojo.Drugs">
-		insert into ${drugs.drugStoreShortName}drugs(
+		insert into sy_drugs(
 		<trim suffixOverrides=",">
 			<if test="drugs.id !=null and drugs.id !=''">id,</if>
 			<if test="drugs.units !=null and drugs.units !=''">units,</if>
@@ -170,7 +170,7 @@
 	</insert>
 
 	<update id="modify">
-		update ${drugs.drugStoreShortName}drugs
+		update sy_drugs
 		<set>
 			<if test="drugs.units !=null and drugs.units !=''">units=#{drugs.units},</if>
 			<if test="drugs.drugscode !=null and drugs.drugscode !=''">drugscode=#{drugs.drugscode},</if>
@@ -196,6 +196,6 @@
 	</update>
 
 	<delete id="delete" parameterType="int">
-		delete from ${drugs.drugStoreShortName}drugs where id=#{drugs.id}
+		delete from sy_drugs where id=#{drugs.id}
 	</delete>
 </mapper>

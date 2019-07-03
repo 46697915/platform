@@ -145,6 +145,7 @@
 					<th field="createtime" width="100">创建时间</th>
 					<th field="updatername" width="100">最后修改人</th>
 					<th field="updatetime" width="100">最后修改时间</th>
+					<th field="storecode" width="100">药店编码</th>
 					<th field="remark" width="100">备注</th>
 				</tr>
 			</thead>
