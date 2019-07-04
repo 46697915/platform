@@ -25,6 +25,7 @@ public class Drugs {
 	private String drugscode;
 
 	private String barcode2;
+	private String storecode;
 	
 	private String commonshotspell;
 	private String commonnamespell;
@@ -191,5 +192,12 @@ public class Drugs {
 		this.barcode2 = barcode2;
 	}
 
-	
+
+	public String getStorecode() {
+		return storecode;
+	}
+
+	public void setStorecode(String storecode) {
+		this.storecode = storecode;
+	}
 }

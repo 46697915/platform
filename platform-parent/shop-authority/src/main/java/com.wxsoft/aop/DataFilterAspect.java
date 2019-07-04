@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 数据过滤，切面处理类
- *
+ * 注意-这个 数据处理方法 ，在sql语句中必须有‘filterSql’这个变量才可以，不可取
  * @author lipengjun
  * @email 939961241@qq.com
  * @date 2017年10月23日 下午13:33:35
@@ -35,10 +35,11 @@ public class DataFilterAspect {
 //        //获取参数
 //        Object params = point.getArgs()[0];
 //        if (params != null && params instanceof Map) {
-//            SysUserEntity user = ShiroUtils.getUserEntity();
+//            String storeShortName = StoreUtil.getStoreShortName();
+//            User user = UserUtil.getUser();
 //
 //            //如果不是超级管理员，则只能查询本部门及子部门数据
-//            if (user.getUserId() != Constant.SUPER_ADMIN) {
+//            if (user.getUsername() != Const.SUPER_ADMIN) {
 //                Map map = (Map) params;
 //                map.put("filterSql", getFilterSQL(user, point));
 //            }

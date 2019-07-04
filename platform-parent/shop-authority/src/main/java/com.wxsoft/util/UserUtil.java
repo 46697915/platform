@@ -1,12 +1,11 @@
 package com.wxsoft.util;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.wxsoft.business.pojo.User;
+import com.wxsoft.util.common.Const;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.wxsoft.business.pojo.User;
-import com.wxsoft.util.common.Const;
+import javax.servlet.http.HttpServletRequest;
 
 public class UserUtil {
 
@@ -25,5 +24,11 @@ public class UserUtil {
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
 		User user = (User) request.getSession().getAttribute(Const.SESSION_USER); 
 		return user;
+	}
+	public static String getUsername(){
+
+		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+		User user = (User) request.getSession().getAttribute(Const.SESSION_USER);
+		return user.getUsername();
 	}
 }
