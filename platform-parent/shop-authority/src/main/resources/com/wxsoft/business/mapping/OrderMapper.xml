@@ -82,7 +82,7 @@
     select name from keyvalue  where type='paystate' and code = #{code}
   </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${order.drugStoreShortName}t_order
+    select count(*) from sy_t_order
      where 1=1 
     <if test="order.id != null and order.id != ''">
         and id like concat('%',#{order.id},'%')
@@ -106,7 +106,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${order.drugStoreShortName}t_order 
+    from sy_t_order
     where 1=1 
     <if test="order.id != null and order.id != ''">
         and id like concat('%',#{order.id},'%')

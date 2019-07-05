@@ -28,7 +28,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${paylog.drugStoreShortName}paylog
+    select count(*) from sy_paylog
     where 1=1 
     <if test="paylog.id != null and paylog.id != ''">
         and id like concat('%',#{paylog.id},'%')
@@ -40,7 +40,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${paylog.drugStoreShortName}paylog 
+    from sy_paylog
     where 1=1 
     <if test="paylog.id != null and paylog.id != ''">
         and id like concat('%',#{paylog.id},'%')

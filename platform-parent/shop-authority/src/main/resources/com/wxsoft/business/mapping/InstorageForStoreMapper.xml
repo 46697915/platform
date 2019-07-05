@@ -37,10 +37,10 @@
 
   </sql>
    <select id="getLastId" resultType="java.lang.Integer" >
-  select id from ${order.drugStoreShortName}_drugs order by id desc limit 1
+  select id from sy__drugs order by id desc limit 1
    </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${instorage.drugStoreShortName}_instorage
+    select count(*) from sy__instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -58,7 +58,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${instorage.drugStoreShortName}_instorage 
+    from sy__instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -81,7 +81,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Instorage">
-    insert into ${instorage.drugStoreShortName}_instorage(<trim suffixOverrides=",">
+    insert into sy__instorage(<trim suffixOverrides=",">
      <if test="instorage.id !=null and instorage.id !=''">id,</if>
     	<if test="instorage.barcode !=null and instorage.barcode !=''">barcode,</if>
     	<if test="instorage.drugsname !=null and instorage.drugsname !=''">drugsname,</if>
@@ -119,7 +119,7 @@
   </insert>
   
   <update id="modify">
-  	update ${instorage.drugStoreShortName}_instorage
+  	update sy__instorage
   	<set>
     	<if test="instorage.barcode !=null and instorage.barcode !=''">barcode=#{instorage.barcode},</if>
     	<if test="instorage.drugsname !=null and instorage.drugsname !=''">drugsname=#{instorage.drugsname},</if>
@@ -141,6 +141,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${instorage.drugStoreShortName}_instorage where id=#{instorage.id}
+	delete from sy__instorage where id=#{instorage.id}
   </delete>
 </mapper>

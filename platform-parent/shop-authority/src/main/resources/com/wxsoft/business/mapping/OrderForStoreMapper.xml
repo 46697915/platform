@@ -75,10 +75,10 @@
     select name from keyvalue  where type='paystate' and code = #{code}
   </select>
    <select id="getLastId" resultType="java.lang.Integer" >
-  select id from ${order.drugStoreShortName}_drugs order by id desc limit 1
+  select id from sy__drugs order by id desc limit 1
    </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${order.drugStoreShortName}_t_order
+    select count(*) from sy__t_order
      where 1=1 
     <if test="order.id != null and order.id != ''">
         and id like =#{order.id}
@@ -93,7 +93,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${order.drugStoreShortName}_t_order 
+    from sy__t_order
     where 1=1 
     <if test="order.id != null and order.id != ''">
         and id like concat('%',#{order.id},'%')
@@ -113,7 +113,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Order">
-    insert into ${order.drugStoreShortName}_t_order(<trim suffixOverrides=",">
+    insert into sy__t_order(<trim suffixOverrides=",">
      <if test="order.id !=null and order.id !=''">id,</if>
     	<if test="order.ordercode !=null and order.ordercode !=''">ordercode,</if>
     	<if test="order.associator !=null and order.associator !=''">associator,</if>
@@ -173,7 +173,7 @@
   </insert>
   
   <update id="modify">
-  	update ${order.drugStoreShortName}_t_order
+  	update sy__t_order
   	<set>
     	<if test="order.ordercode !=null and order.ordercode !=''">ordercode=#{order.ordercode},</if>
     	<if test="order.associator !=null and order.associator !=''">associator=#{order.associator},</if>
@@ -206,6 +206,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${order.drugStoreShortName}_t_order where id=#{order.id}
+	delete from sy__t_order where id=#{order.id}
   </delete>
 </mapper>

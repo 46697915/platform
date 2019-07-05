@@ -73,7 +73,7 @@
     select name from keyvalue  where type='specifications' and code = #{code}
   </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${goods.drugStoreShortName}goods
+    select count(*) from sy_goods
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -126,9 +126,9 @@
 		commonshotspell,
 		commonnamespell,
 		bxdygx,
-		(select barcode2 from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) barcode2,
-		(select manufactor from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) manufactor
-    from ${goods.drugStoreShortName}goods b 
+		(select barcode2 from sy_drugs a where a.barcode=b.barcode ) barcode2,
+		(select manufactor from sy_drugs a where a.barcode=b.barcode ) manufactor
+    from sy_goods b
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -159,10 +159,10 @@
 	</if>
   </select>
   <select id="findCountForXS" resultType="long" >
-    select count(*) from ${goods.drugStoreShortName}goods
+    select count(*) from sy_goods
     where 1=1 
       and stock > 0
-      and exists (select 1 from ${goods.drugStoreShortName}drugs a where a.barcode = ${goods.drugStoreShortName}goods.barcode)
+      and exists (select 1 from sy_drugs a where a.barcode = sy_goods.barcode)
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
     </if>
@@ -215,12 +215,12 @@
 		commonshotspell,
 		commonnamespell,
 		bxdygx,
-		(select barcode2 from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) barcode2,
-		(select manufactor from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) manufactor
-    from ${goods.drugStoreShortName}goods b 
+		(select barcode2 from sy_drugs a where a.barcode=b.barcode ) barcode2,
+		(select manufactor from sy_drugs a where a.barcode=b.barcode ) manufactor
+    from sy_goods b
     where 1=1 
       and stock > 0
-      and exists (select 1 from ${goods.drugStoreShortName}drugs a where a.barcode = b.barcode)
+      and exists (select 1 from sy_drugs a where a.barcode = b.barcode)
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
     </if>
@@ -253,7 +253,7 @@
   <select id="findBy" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${goods.drugStoreShortName}goods 
+    from sy_goods
     where 1=1 
     <if test="goods.id != null and goods.id != ''">
         and id like concat('%',#{goods.id},'%')
@@ -267,7 +267,7 @@
      where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="getStockBy" resultType="String" >
-    select sum(stock) from ${goods.drugStoreShortName}goods
+    select sum(stock) from sy_goods
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -411,10 +411,10 @@
   	where barcode = #{barcode}
   </update>
   <delete id="delete" parameterType="int">
-	delete from ${goods.drugStoreShortName}goods where id=#{goods.id}
+	delete from sy_goods where id=#{goods.id}
   </delete>
   <delete id="deleteBy" >
-	delete from ${goods.drugStoreShortName}goods 
+	delete from sy_goods
 	where 1=1 
     <if test="goods.id != null and goods.id != ''">
         and id=#{goods.id}

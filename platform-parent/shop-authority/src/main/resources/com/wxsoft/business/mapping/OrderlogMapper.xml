@@ -20,7 +20,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${orderlog.drugStoreShortName}orderlog
+    select count(*) from sy_orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')
@@ -32,7 +32,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${orderlog.drugStoreShortName}orderlog 
+    from sy_orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')

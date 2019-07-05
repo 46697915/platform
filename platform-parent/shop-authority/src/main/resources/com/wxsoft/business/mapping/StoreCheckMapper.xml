@@ -52,7 +52,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${storeCheck.drugStoreShortName}m_storecheck
+    select count(*) from sy_m_storecheck
     where 1=1 
     <if test="storeCheck.id != null and storeCheck.id != ''">
         and id = #{storeCheck.id}
@@ -80,7 +80,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${storeCheck.drugStoreShortName}m_storecheck 
+    from sy_m_storecheck
     where 1=1 
     <if test="storeCheck.id != null and storeCheck.id != ''">
         and id = #{storeCheck.id}
@@ -114,7 +114,7 @@
   <select id="findBy" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${storeCheck.drugStoreShortName}m_storecheck 
+    from sy_m_storecheck
     where 1=1 
     <if test="storeCheck.id != null and storeCheck.id != ''">
         and id = #{storeCheck.id}
@@ -139,7 +139,7 @@
   <select id="findMaxCheckdateByJZ" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${storeCheck.drugStoreShortName}m_storecheck 
+    from sy_m_storecheck
     where 1=1 
     <if test="storeCheck.crrcheckdate_end != null and storeCheck.crrcheckdate_end != '' and storeCheck.barcode != null and storeCheck.barcode != ''">
         and crrcheckdate=( 
@@ -160,7 +160,7 @@
   </select>
   <select id="findMaxCheckdate" resultType="string">
     select max(crrcheckdate) 
-    from ${storeCheck.drugStoreShortName}m_storecheck 
+    from sy_m_storecheck
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.StoreCheck">

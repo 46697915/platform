@@ -62,7 +62,7 @@
     select name from keyvalue  where type='signtype' and code = #{code}
   </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${instorage.drugStoreShortName}instorage
+    select count(*) from sy_instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -83,7 +83,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${instorage.drugStoreShortName}instorage 
+    from sy_instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -112,7 +112,7 @@
     select count(*) 
     from (
 	    select barcode,commonname 
-		from ${instorage.drugStoreShortName}instorage 
+		from sy_instorage
 	    where 1=1 
 	    <if test="instorage.id != null and instorage.id != ''">
 	        and id like concat('%',#{instorage.id},'%')
@@ -135,7 +135,7 @@
 		(select name from keyvalue b where type='units' and code = (select min(units) from drugs a where a.barcode=x.barcode) ) unitsname,
 		(select min(specifications) from drugs a where a.barcode=x.barcode) specifications,
 		sum(inquantity) total,sum(money) amount
-    from ${instorage.drugStoreShortName}instorage x 
+    from sy_instorage x
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -162,7 +162,7 @@
   </select>
   <select id="instorageSummaryByBarcode" resultMap="InstorageSummary">
     select barcode,sum(inquantity) total,sum(money) amount
-    from ${instorage.drugStoreShortName}instorage x 
+    from sy_instorage x
     where 1=1 
     <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
         and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 

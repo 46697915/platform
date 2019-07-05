@@ -67,7 +67,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${ybjszxx.drugStoreShortName}m_ybjszxx
+    select count(*) from sy_m_ybjszxx
     where 1=1 
     <if test="ybjszxx.id != null and ybjszxx.id != ''">
         and id like concat('%',#{ybjszxx.id},'%')
@@ -88,7 +88,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${ybjszxx.drugStoreShortName}m_ybjszxx 
+    from sy_m_ybjszxx
     where 1=1 
     <if test="ybjszxx.id != null and ybjszxx.id != ''">
         and id like concat('%',#{ybjszxx.id},'%')

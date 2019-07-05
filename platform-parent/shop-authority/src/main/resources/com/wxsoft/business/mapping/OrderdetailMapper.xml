@@ -71,10 +71,10 @@
     select name from keyvalue  where type='paytype' and code = #{code}
   </select>
   <select id="findMoneyCount" resultType="long" >
-  select sum(money) from `${orderdetail.drugStoreShortName}orderdetail` where to_days(`createdate`) = to_days(now()) 
+  select sum(money) from `sy_orderdetail` where to_days(`createdate`) = to_days(now())
    </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${orderdetail.drugStoreShortName}orderdetail
+    select count(*) from sy_orderdetail
     where 1=1 
      <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
         and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -98,7 +98,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${orderdetail.drugStoreShortName}orderdetail 
+    from sy_orderdetail
     where 1=1 
      <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
         and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -130,7 +130,7 @@
     select count(*) 
     from (
 	    select barcode,commonname,sum(amount) total,sum(getmoney) amount
-		from ${orderdetail.drugStoreShortName}orderdetail 
+		from sy_orderdetail
 	    where 1=1 
 	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
 	        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -152,11 +152,11 @@
   </select>
   <select id="salesSummaryAll" resultMap="OrderdetailSummary">
     select barcode,commonname,
-		(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
-		(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
-		(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+		(select units from sy_drugs a where a.barcode=x.barcode) units,
+		(select name from keyvalue b where type='units' and code = (select units from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+		(select specifications from sy_drugs a where a.barcode=x.barcode) specifications,
     	sum(amount) total,sum(getmoney) amount
-	from ${orderdetail.drugStoreShortName}orderdetail x 
+	from sy_orderdetail x
     where 1=1 
      <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
         and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -188,11 +188,11 @@
 	    	sum(total) total,sum(amount) amount
 		from (
 		    select barcode,commonname,
-				(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
-				(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
-				(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+				(select units from sy_drugs a where a.barcode=x.barcode) units,
+				(select name from keyvalue b where type='units' and code = (select units from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+				(select specifications from sy_drugs a where a.barcode=x.barcode) specifications,
 		    	amount total,getmoney amount
-			from ${orderdetail.drugStoreShortName}orderdetail x 
+			from sy_orderdetail x
 		    where 1=1 
 		     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
 		        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -210,13 +210,13 @@
 		        and barcode = #{orderdetail.barcode_search} 
 		    </if>
 		    union 
-		    select (select a.barcode from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm) barcode,
+		    select (select a.barcode from sy_drugs a where a.drugscode=x.yyxmbm) barcode,
 		    	yyxmmc commonname,
 				xmdj units,
 				(select name from keyvalue b where type='units' and code = x.xmdj ) unitsname,
 				xmgg specifications,
 				xmsl total,xmje amount
-		    from ${orderdetail.drugStoreShortName}m_ybjsmxxx x
+		    from sy_m_ybjsmxxx x
 		    where 1=1 
 		     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
 		        and hjrq &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -225,7 +225,7 @@
 		        and hjrq &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
 		    </if>
 		    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
-		        and exists (select 1 from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
+		        and exists (select 1 from sy_drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
 		    </if>
 	    ) a 
 	    group by barcode,commonname,units,unitsname,specifications
@@ -237,11 +237,11 @@
     	sum(total) total,sum(amount) amount
 	from (
 	    select barcode,commonname,
-			(select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) units,
-			(select name from keyvalue b where type='units' and code = (select units from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) ) unitsname,
-			(select specifications from ${orderdetail.drugStoreShortName}drugs a where a.barcode=x.barcode) specifications,
+			(select units from sy_drugs a where a.barcode=x.barcode) units,
+			(select name from keyvalue b where type='units' and code = (select units from sy_drugs a where a.barcode=x.barcode) ) unitsname,
+			(select specifications from sy_drugs a where a.barcode=x.barcode) specifications,
 	    	amount total,getmoney amount
-		from ${orderdetail.drugStoreShortName}orderdetail x 
+		from sy_orderdetail x
 	    where 1=1 
 	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
 	        and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -259,13 +259,13 @@
 	        and barcode = #{orderdetail.barcode_search} 
 	    </if>
 	    union 
-	    select (select a.barcode from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm) barcode,
+	    select (select a.barcode from sy_drugs a where a.drugscode=x.yyxmbm) barcode,
 	    	yyxmmc commonname,
 			xmdj units,
 			(select name from keyvalue b where type='units' and code = x.xmdj ) unitsname,
 			xmgg specifications,
 			xmsl total,xmje amount
-	    from ${orderdetail.drugStoreShortName}m_ybjsmxxx x
+	    from sy_m_ybjsmxxx x
 	    where 1=1 
 	     <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
 	        and hjrq &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
@@ -274,7 +274,7 @@
 	        and hjrq &lt;= date_add(str_to_date(#{orderdetail.createdate_end}, '%Y-%m-%d'), interval 1 day)
 	    </if>
 	    <if test="orderdetail.barcode_search != null and orderdetail.barcode_search != ''">
-	        and exists (select 1 from ${orderdetail.drugStoreShortName}drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
+	        and exists (select 1 from sy_drugs a where a.drugscode=x.yyxmbm and a.barcode= #{orderdetail.barcode_search} )
 	    </if>
     ) a 
     group by barcode,commonname,units,unitsname,specifications
@@ -288,7 +288,7 @@
   
   <select id="salesSummaryByBarcode" resultMap="OrderdetailSummary">
     select barcode,sum(amount) total,sum(getmoney) amount
-	from ${orderdetail.drugStoreShortName}orderdetail x 
+	from sy_orderdetail x
     where 1=1 
      <if test="orderdetail.createdate_begin != null and orderdetail.createdate_begin != ''">
         and createdate &gt;= str_to_date(#{orderdetail.createdate_begin}, '%Y-%m-%d') 
