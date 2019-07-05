@@ -12,9 +12,9 @@
         <plugin interceptor="com.wxsoft.mybatisplugins.PrepareInterceptor">
             <property name="dialect" value="mysql" />
         </plugin>
-        <plugin interceptor="com.wxsoft.mybatisplugins.SQLStatsInterceptor">
-            <property name="dialect" value="mysql" />
-        </plugin>
+        <!--<plugin interceptor="com.wxsoft.mybatisplugins.SQLStatsInterceptor">-->
+            <!--<property name="dialect" value="mysql" />-->
+        <!--</plugin>-->
 
     </plugins>
 
