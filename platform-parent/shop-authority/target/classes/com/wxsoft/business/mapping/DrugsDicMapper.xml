@@ -17,7 +17,8 @@
     <result column="commonshotspell" property="commonshotspell" jdbcType="VARCHAR" />
     <result column="commonnamespell" property="commonnamespell" jdbcType="VARCHAR" />
     <result column="operator" property="operator" jdbcType="VARCHAR" />
-    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <!--<result column="operatedate" property="operatedate" jdbcType="VARCHAR" />-->
+      <result column="operatedate" jdbcType="TIMESTAMP" property="operatedate" javaType="java.util.Date" />
     <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR" />
     <result column="barcode2" property="barcode2" jdbcType="VARCHAR" />
 
@@ -103,7 +104,7 @@
     	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">commonshotspell,</if>
     	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">commonnamespell,</if>
     	<if test="drugsDic.operator !=null and drugsDic.operator !=''">operator,</if>
-    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">operatedate,</if>
+    	<if test="drugsDic.operatedate !=null ">operatedate,</if>
     	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">bxdygx,</if>
     	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">barcode2,</if>
 
@@ -123,7 +124,7 @@
     	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">#{drugsDic.commonshotspell},</if>
     	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">#{drugsDic.commonnamespell},</if>
     	<if test="drugsDic.operator !=null and drugsDic.operator !=''">#{drugsDic.operator},</if>
-    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">#{drugsDic.operatedate},</if>
+    	<if test="drugsDic.operatedate !=null ">#{drugsDic.operatedate,jdbcType=TIMESTAMP},</if>
     	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">#{drugsDic.bxdygx},</if>
     	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">#{drugsDic.barcode2},</if>
 
@@ -148,7 +149,7 @@
     	<if test="drugsDic.commonshotspell !=null and drugsDic.commonshotspell !=''">commonshotspell=#{drugsDic.commonshotspell},</if>
     	<if test="drugsDic.commonnamespell !=null and drugsDic.commonnamespell !=''">commonnamespell=#{drugsDic.commonnamespell},</if>
     	<if test="drugsDic.operator !=null and drugsDic.operator !=''">operator=#{drugsDic.operator},</if>
-    	<if test="drugsDic.operatedate !=null and drugsDic.operatedate !=''">operatedate=#{drugsDic.operatedate},</if>
+    	<if test="drugsDic.operatedate !=null ">operatedate=#{drugsDic.operatedate},</if>
     	<if test="drugsDic.bxdygx !=null and drugsDic.bxdygx !=''">bxdygx=#{drugsDic.bxdygx},</if>
     	<if test="drugsDic.barcode2 !=null and drugsDic.barcode2 !=''">barcode2=#{drugsDic.barcode2},</if>
 

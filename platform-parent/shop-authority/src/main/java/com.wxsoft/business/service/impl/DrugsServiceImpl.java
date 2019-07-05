@@ -83,8 +83,10 @@ public class DrugsServiceImpl implements IDrugsService  {
 
         //修改后保存到药品字典表
         DrugsDic drugsDic = new DrugsDic();
-        drugsDic.setOperatedate(new Date());
+//        drugsDic.setOperatedate(new Date());
         BeanUtils.copyProperties(drugsDic,drugs);
+//        drugsDic.setOperatedate(null);
+//        drugs.setOperatedate(null);
 //		drugsDic.setBarcode(drugs.getBarcode2());
         drugsDicService.addOrModify(drugsDic);
 

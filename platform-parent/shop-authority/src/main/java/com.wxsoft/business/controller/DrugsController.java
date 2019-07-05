@@ -47,17 +47,7 @@ public class DrugsController extends BaseController{
 		DataGrid dg = new DataGrid();
 		//dg.setTotal(service.findCount(drugs));
 		List<Drugs> userList;// = service.findAll(page, drugs);
-		
-//		DrugStore drugStore = (DrugStore)request.getSession().getAttribute(Const.SESSION_DRUGSTORE);
-//		if(drugStore!=null&&drugStore.getShortname()!=null&&!"".equals(drugStore.getShortname())){
-//			drugs.setDrugStoreShortName(drugStore.getShortname());
-//			dg.setTotal(serviceForStore.findCount(drugs));
-//			userList = serviceForStore.findAll(page, drugs);
-//		}else{
-//			dg.setTotal(service.findCount(drugs));
-//			userList = service.findAll(page, drugs);
-//		}
-		drugs.setDrugStoreShortName(StoreUtil.getSSNForTable(request));
+
 		dg.setTotal(service.findCount(drugs));
 		userList = service.findAll(page, drugs);
 		
@@ -120,7 +110,7 @@ public class DrugsController extends BaseController{
 			drugs.setOperatedate(new Date());
 			String r = "";
 
-			drugs.setDrugStoreShortName(StoreUtil.getSSNForTable(request));
+			drugs.setStorecode(StoreUtil.getStoreShortName());
 			r = service.add(drugs);
 			
 			//将缓存清空

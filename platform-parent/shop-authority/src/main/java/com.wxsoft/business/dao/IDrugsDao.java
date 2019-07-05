@@ -11,6 +11,7 @@ import java.util.List;
 public interface IDrugsDao {
 
 
+	@PermissionAop(storeAlias ="storecode" )
 	long findCount(@Param("drugs") Drugs drugs);
 
 	@PermissionAop(storeAlias ="storecode" )

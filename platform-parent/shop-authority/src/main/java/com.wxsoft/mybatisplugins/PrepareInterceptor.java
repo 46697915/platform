@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * mybatis数据权限拦截器 - prepare
@@ -46,10 +48,14 @@ public class PrepareInterceptor implements Interceptor {
             log.info("进入 PrepareInterceptor 拦截器...");
         }
         if (invocation.getTarget() instanceof StatementHandler) {
-//            RoutingStatementHandler handler = (RoutingStatementHandler) invocation.getTarget();
+//            RoutingStatementHandler handlerer2 = (RoutingStatementHandler) invocation.getTarget();
 //            StatementHandler delegate = (StatementHandler) ReflectUtil.getFieldValue(handler, "delegate");
             StatementHandler handler = (StatementHandler) invocation.getTarget();
+            Plugin p = (Plugin) ReflectUtil.getFieldValue(handler, "h");
+
+//            handler = (StatementHandler) ReflectUtil.getFieldValue(handler, "target");
             StatementHandler delegate = (StatementHandler) ReflectUtil.getFieldValue(handler, "delegate");
+
             //通过反射获取delegate父类BaseStatementHandler的mappedStatement属性
             MappedStatement mappedStatement = (MappedStatement) ReflectUtil.getFieldValue(delegate, "mappedStatement");
             //千万不能用下面注释的这个方法，会造成对象丢失，以致转换失败
@@ -103,12 +109,41 @@ public class PrepareInterceptor implements Interceptor {
                 .append(" ")
                 .append(permissionAop.storeAlias())
                 .append(" like concat('" + storecode + "','%') ");
-        if(endSql.contains("=")){
+        //出现过 = < > like
+//        if(endSql.matches(".*(=|<|>|like).*")){
+        //Pattern.CASE_INSENSITIVE 启用不区分大小写的匹配。
+        // Pattern.DOTALL 启用Dotall模式。在dotall模式下，表达式<tt>匹配任何字符，包括一个行终止符。默认情况下，此表达式不匹配 线路端接器。
+        // 因为 endSql 中 有\n\t\t等字符
+        Pattern pattern = Pattern.compile(".*(=|<|>|like).*",Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher matcher = pattern.matcher(endSql);
+        if(matcher.matches()){
             sbSql.append(" and ");
         }
         sbSql.append(endSql);
 //        sbSql = new StringBuilder("select * from (").append(sbSql).append(" ) s where s.storecode like concat(" + regionCd + ",'%')  ");
 
         return sbSql.toString();
+    }
+
+    public static void main(String[] args) {
+        String endSql = " 1=1\n" +
+                "\t\t \n" +
+                "\t\t \n" +
+                "\t\t \n" +
+                "\t\t \n" +
+                "\t\t \n" +
+                "\t\t\tlimit ?,?";
+        Pattern pattern = Pattern.compile(".*(=|<|>|like).*",Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher matcher = pattern.matcher(endSql);
+        if(matcher.matches()){
+            System.out.println("成功");
+        }else{
+            System.out.println("失败");
+        }
+        if(endSql.matches(".*(=|<|>|like).*")){
+            System.out.println("成功");
+        }else{
+            System.out.println("失败");
+        }
     }
 }
