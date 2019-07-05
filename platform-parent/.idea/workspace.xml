@@ -6,34 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="完整数据权限">
+    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="药品增加修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugStoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IDrugsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IDrugsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/controller/DrugStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/controller/DrugStoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/controller/DrugsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/controller/DrugsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/dao/IDrugsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/dao/IDrugsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/mapping/DrugsDicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/mapping/DrugsDicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/mapping/DrugsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/mapping/DrugsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/util/UserUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/controller/DrugStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/controller/DrugStoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/controller/DrugsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/controller/DrugsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/dao/IDrugsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/dao/IDrugsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/mapping/DrugsDicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/mapping/DrugsDicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/mapping/DrugsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/mapping/DrugsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/util/UserUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/service/impl/DrugsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/classes/com/wxsoft/business/service/impl/DrugsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/service/impl/DrugsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-authority/target/shop-authority/WEB-INF/classes/com/wxsoft/business/service/impl/DrugsServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,86 +60,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/DrugsDic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
+            <state relative-caret-position="100">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
               <folding>
-                <element signature="e#1305#1306#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/StatementHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425">
-              <caret line="145" column="47" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
+            <state relative-caret-position="41">
+              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/Drugs.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/BaseStatementHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="132">
+              <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsDicServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/ResultInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="-428">
+              <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/DrugsDic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.2.RELEASE/spring-aop-4.0.2.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="316" selection-start-line="316" selection-end-line="316" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/IDrugsService.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/SQLStatsInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/RoutingStatementHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -179,10 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CacheManager</find>
-      <find>ehcache</find>
-      <find>errInfo</find>
-      <find>charge</find>
       <find>getYBJSXX</find>
       <find>findCount</find>
       <find>findAll</find>
@@ -199,7 +175,6 @@
       <find>mybatis-spring</find>
       <find>Plugin</find>
       <find>StatementHandler</find>
-      <find>RoutingStatementHandler</find>
       <find>Statement</find>
       <find>permission.client.params</find>
       <find>findUserByName</find>
@@ -209,6 +184,11 @@
       <find>getMenuByUserId</find>
       <find>messageConverters</find>
       <find>drugscon</find>
+      <find>sy_drugs</find>
+      <find>进入 ResultInterceptor 拦截器</find>
+      <find>RoutingStatementHandler</find>
+      <find>prepare</find>
+      <find>进入 PrepareInterceptor 拦截器</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -259,7 +239,6 @@
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/pojo/Drugs.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/resources/spring-mybatis.xml" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/aop/WebLogAcpect.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/SQLStatsInterceptor.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/ReflectUtil.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/aop/DataFilterAspect.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/PermissionUtils.java" />
@@ -275,11 +254,12 @@
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java" />
         <option value="$PROJECT_DIR$/shop-authority/pom.xml" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/SQLStatsInterceptor.java" />
+        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java" />
       </list>
     </option>
   </component>
@@ -342,8 +322,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -414,50 +392,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com.wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-authority" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-authority" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-authority" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-authority" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.wxsoft" type="462c0819:PsiDirectoryNode" />
               <item name="mybatisplugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -477,15 +411,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-authority" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapping" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -634,6 +559,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -645,7 +572,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562291472574" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562296802189" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/service" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project3/platform" />
@@ -1125,7 +1052,8 @@
       <workItem from="1561682539807" duration="2433000" />
       <workItem from="1561685053492" duration="12307000" />
       <workItem from="1561778526386" duration="16549000" />
-      <workItem from="1562141984899" duration="51205000" />
+      <workItem from="1562141984899" duration="51391000" />
+      <workItem from="1562294218492" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="新增aop功能，修改drugs功能">
       <created>1562159494730</created>
@@ -1141,7 +1069,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562223258971</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="药品增加修改">
+      <created>1562291662101</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562291662101</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1165,7 +1100,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296314000" />
+    <option name="totallyTimeSpent" value="299048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1178,8 +1113,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1370" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.3129771" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.31755725" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1190,7 +1126,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36605656" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" visible="true" weight="0.45424291" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" visible="true" weight="0.48918468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294509" />
@@ -1199,7 +1135,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50076336" side_tool="true" weight="0.484193" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.4342762" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.42096505" />
@@ -1281,7 +1217,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增aop功能，修改drugs功能" />
     <MESSAGE value="完整数据权限" />
-    <option name="LAST_COMMIT_MESSAGE" value="完整数据权限" />
+    <MESSAGE value="药品增加修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="药品增加修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1347,10 +1284,10 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java</url>
-          <line>112</line>
+          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java</url>
+          <line>67</line>
           <properties />
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1367,83 +1304,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/IDrugStoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugStoreServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-712">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/StoreUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/pojo/Drugs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-          <folding>
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
-            <element signature="e#2026#2027#0" expanded="true" />
-            <element signature="e#2077#2078#0" expanded="true" />
-            <element signature="e#4519#4520#0" expanded="true" />
-            <element signature="e#4542#4543#0" expanded="true" />
-            <element signature="e#4589#4590#0" expanded="true" />
-            <element signature="e#4622#4623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="862" column="7" lean-forward="true" selection-start-line="853" selection-start-column="4" selection-end-line="862" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IDrugsDicDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/ReflectUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/StatementHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1465,20 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/RoutingStatementHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/plugin/Invocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1513,16 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-416">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/SQLStatsInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1606,13 +1446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.2.RELEASE/spring-tx-4.0.2.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1641,41 +1474,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/DrugsDic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.2.RELEASE/spring-aop-4.0.2.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="316" selection-start-line="316" selection-end-line="316" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.2.RELEASE/spring-aop-4.0.2.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="189" selection-start-line="189" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/IDrugsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1686,38 +1488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/Drugs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="145" column="47" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsDicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
+        <state relative-caret-position="1725">
+          <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
           <folding>
             <element signature="e#1305#1306#0" expanded="true" />
             <element signature="e#1348#1349#0" expanded="true" />
@@ -1725,10 +1499,163 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3625">
+          <caret line="145" column="47" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/Drugs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/DrugsDicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3875">
+          <caret line="155" column="10" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.2.RELEASE/spring-aop-4.0.2.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6700">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/IDrugsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="125">
+          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/pojo/DrugsDic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/plugin/Invocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/plugin/Interceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/CallableStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/SimpleStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/PreparedStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/RoutingStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/resultset/ResultSetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/StatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/ResultInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-428">
+          <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/statement/BaseStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/SQLStatsInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

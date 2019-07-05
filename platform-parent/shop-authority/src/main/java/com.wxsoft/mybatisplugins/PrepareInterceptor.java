@@ -4,7 +4,7 @@ import com.wxsoft.annotation.PermissionAop;
 import com.wxsoft.util.PermissionConfig;
 import com.wxsoft.util.PermissionUtils;
 import com.wxsoft.util.ReflectUtil;
-import org.apache.ibatis.executor.statement.StatementHandler;
+import org.apache.ibatis.executor.statement.*;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;
@@ -47,11 +47,23 @@ public class PrepareInterceptor implements Interceptor {
         if (log.isInfoEnabled()) {
             log.info("进入 PrepareInterceptor 拦截器...");
         }
+        if (invocation.getTarget() instanceof BaseStatementHandler) {
+            log.info("invocation.getTarget()是BaseStatementHandler");
+        }else if(invocation.getTarget() instanceof CallableStatementHandler) {
+            log.info("invocation.getTarget()是CallableStatementHandler");
+        }else if(invocation.getTarget() instanceof PreparedStatementHandler) {
+            log.info("invocation.getTarget()是PreparedStatementHandler");
+        }else if(invocation.getTarget() instanceof RoutingStatementHandler) {
+            log.info("invocation.getTarget()是RoutingStatementHandler");
+        }else if(invocation.getTarget() instanceof SimpleStatementHandler) {
+            log.info("invocation.getTarget()是SimpleStatementHandler");
+        }else if(invocation.getTarget() instanceof StatementHandler) {
+            log.info("invocation.getTarget()是StatementHandler");
+        }
         if (invocation.getTarget() instanceof StatementHandler) {
 //            RoutingStatementHandler handlerer2 = (RoutingStatementHandler) invocation.getTarget();
 //            StatementHandler delegate = (StatementHandler) ReflectUtil.getFieldValue(handler, "delegate");
             StatementHandler handler = (StatementHandler) invocation.getTarget();
-            Plugin p = (Plugin) ReflectUtil.getFieldValue(handler, "h");
 
 //            handler = (StatementHandler) ReflectUtil.getFieldValue(handler, "target");
             StatementHandler delegate = (StatementHandler) ReflectUtil.getFieldValue(handler, "delegate");
@@ -96,15 +108,15 @@ public class PrepareInterceptor implements Interceptor {
         //select * from (select id,name,region_cd from sys_exam ) where region_cd like '${}%'
         String methodPath = PermissionConfig.getConfig("permission.client.params." + premission_param);
         String storecode = (String) ReflectUtil.reflectByPath(methodPath);
-        if(storecode==null || "".equals(storecode)){
+        if (storecode == null || "".equals(storecode)) {
             storecode = " ";
         }
         int i = sbSql.lastIndexOf("where");
-        if(i<=0){
+        if (i <= 0) {
             i = sbSql.lastIndexOf("WHERE");
         }
-        String endSql = sbSql.substring(i+5);
-        String startSql = sbSql.substring(0,i+5);
+        String endSql = sbSql.substring(i + 5);
+        String startSql = sbSql.substring(0, i + 5);
         sbSql = new StringBuilder(startSql)
                 .append(" ")
                 .append(permissionAop.storeAlias())
@@ -114,9 +126,9 @@ public class PrepareInterceptor implements Interceptor {
         //Pattern.CASE_INSENSITIVE 启用不区分大小写的匹配。
         // Pattern.DOTALL 启用Dotall模式。在dotall模式下，表达式<tt>匹配任何字符，包括一个行终止符。默认情况下，此表达式不匹配 线路端接器。
         // 因为 endSql 中 有\n\t\t等字符
-        Pattern pattern = Pattern.compile(".*(=|<|>|like).*",Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Pattern pattern = Pattern.compile(".*(=|<|>|like).*", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher matcher = pattern.matcher(endSql);
-        if(matcher.matches()){
+        if (matcher.matches()) {
             sbSql.append(" and ");
         }
         sbSql.append(endSql);
@@ -133,16 +145,16 @@ public class PrepareInterceptor implements Interceptor {
                 "\t\t \n" +
                 "\t\t \n" +
                 "\t\t\tlimit ?,?";
-        Pattern pattern = Pattern.compile(".*(=|<|>|like).*",Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Pattern pattern = Pattern.compile(".*(=|<|>|like).*", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
         Matcher matcher = pattern.matcher(endSql);
-        if(matcher.matches()){
+        if (matcher.matches()) {
             System.out.println("成功");
-        }else{
+        } else {
             System.out.println("失败");
         }
-        if(endSql.matches(".*(=|<|>|like).*")){
+        if (endSql.matches(".*(=|<|>|like).*")) {
             System.out.println("成功");
-        }else{
+        } else {
             System.out.println("失败");
         }
     }
