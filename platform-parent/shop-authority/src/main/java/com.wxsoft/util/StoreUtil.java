@@ -31,14 +31,14 @@ public class StoreUtil {
 		return "";
 	}
 	/**
-	 * 返回当前用户药店信息简称 添加‘_’后缀
+	 * 返回当前用户药店信息简称
 	 * @param request
 	 * @return
 	 */
 	public static String getSSNForTable(HttpServletRequest request){
 		DrugStore drugStore = (DrugStore)request.getSession().getAttribute(Const.SESSION_DRUGSTORE);
 		if(drugStore!=null&&drugStore.getShortname()!=null&&!"".equals(drugStore.getShortname())){
-			return drugStore.getShortname()+"_";
+			return drugStore.getShortname();
 		}
 		return "";
 	}

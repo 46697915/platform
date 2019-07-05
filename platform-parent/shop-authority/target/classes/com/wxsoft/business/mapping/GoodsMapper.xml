@@ -31,6 +31,7 @@
     <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR"/>
     <result column="barcode2" property="barcode2" jdbcType="VARCHAR" />
     <result column="manufactor" property="manufactor" jdbcType="VARCHAR"/>
+	  <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 	<association  property="dosageformname" column="dosageform" javaType="string" select="getKeyvalueNameByCode1" />
 	<association  property="specificationsname" column="specifications" javaType="string" select="getKeyvalueNameByCode2" />
   
@@ -62,6 +63,7 @@
     drugscode,
 	commonshotspell,
 	commonnamespell,
+	drugstoreshortname,
 	bxdygx
 
   </sql>
@@ -73,7 +75,7 @@
     select name from keyvalue  where type='specifications' and code = #{code}
   </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${goods.drugStoreShortName}goods
+    select count(*) from sy_goods
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -126,9 +128,9 @@
 		commonshotspell,
 		commonnamespell,
 		bxdygx,
-		(select barcode2 from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) barcode2,
-		(select manufactor from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) manufactor
-    from ${goods.drugStoreShortName}goods b 
+		(select barcode2 from sy_drugs a where a.barcode=b.barcode ) barcode2,
+		(select manufactor from sy_drugs a where a.barcode=b.barcode ) manufactor
+    from sy_goods b
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -159,10 +161,10 @@
 	</if>
   </select>
   <select id="findCountForXS" resultType="long" >
-    select count(*) from ${goods.drugStoreShortName}goods
+    select count(*) from sy_goods
     where 1=1 
       and stock > 0
-      and exists (select 1 from ${goods.drugStoreShortName}drugs a where a.barcode = ${goods.drugStoreShortName}goods.barcode)
+      and exists (select 1 from sy_drugs a where a.barcode = sy_goods.barcode)
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
     </if>
@@ -215,12 +217,12 @@
 		commonshotspell,
 		commonnamespell,
 		bxdygx,
-		(select barcode2 from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) barcode2,
-		(select manufactor from ${goods.drugStoreShortName}drugs a where a.barcode=b.barcode ) manufactor
-    from ${goods.drugStoreShortName}goods b 
+		(select barcode2 from sy_drugs a where a.barcode=b.barcode ) barcode2,
+		(select manufactor from sy_drugs a where a.barcode=b.barcode ) manufactor
+    from sy_goods b
     where 1=1 
       and stock > 0
-      and exists (select 1 from ${goods.drugStoreShortName}drugs a where a.barcode = b.barcode)
+      and exists (select 1 from sy_drugs a where a.barcode = b.barcode)
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
     </if>
@@ -253,7 +255,7 @@
   <select id="findBy" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${goods.drugStoreShortName}goods 
+    from sy_goods
     where 1=1 
     <if test="goods.id != null and goods.id != ''">
         and id like concat('%',#{goods.id},'%')
@@ -263,11 +265,11 @@
     </if>
   </select>
   <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select <include refid="Base_Column_List" /> from ${drugStoreShortName}goods
+    select <include refid="Base_Column_List" /> from sy_goods
      where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="getStockBy" resultType="String" >
-    select sum(stock) from ${goods.drugStoreShortName}goods
+    select sum(stock) from sy_goods
     where 1=1 
     <if test="goods.type1 != null and goods.type1 != ''">
         and type1 = #{goods.type1} 
@@ -281,7 +283,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Goods">
-    insert into ${drugStoreShortName}goods(<trim suffixOverrides=",">
+    insert into sy_goods(<trim suffixOverrides=",">
     
    		<if test="drugsid !=null and drugsid !=''">drugsid,</if>
    		<if test="drugscode !=null and drugscode !=''">drugscode,</if>
@@ -308,8 +310,9 @@
     	<if test="position !=null and position !=''">position,</if>
     	<if test="storage !=null and storage !=''">storage,</if>
     	<if test="pharmacyid !=null and pharmacyid !=''">pharmacyid,</if>
+	  <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="operator !=null and operator !=''">operator,</if>
-    	<if test="operatedate !=null and operatedate !=''">operatedate</if>
+    	<if test="operatedate !=null">operatedate</if>
 
     </trim>)values(<trim suffixOverrides=",">
    		<if test="drugsid !=null and drugsid !=''">#{drugsid},</if>
@@ -337,14 +340,15 @@
     	<if test="position !=null and position !=''">#{position},</if>
     	<if test="storage !=null and storage !=''">#{storage},</if>
     	<if test="pharmacyid !=null and pharmacyid !=''">#{pharmacyid},</if>
+	  <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="operator !=null and operator !=''">#{operator},</if>
-    	<if test="operatedate !=null and operatedate !=''">#{operatedate,jdbcType=TIMESTAMP}</if>
+    	<if test="operatedate !=null ">#{operatedate,jdbcType=TIMESTAMP}</if>
 
   	</trim>)
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}goods
+  	update sy_goods
   	<set>
 		<if test="drugsid !=null and drugsid !=''">drugsid=#{drugsid},</if>
 		<if test="drugscode !=null and drugscode !=''">drugscode=#{drugscode},</if>
@@ -372,13 +376,13 @@
     	<if test="storage !=null and storage !=''">storage=#{storage},</if>
     	<if test="pharmacyid !=null and pharmacyid !=''">pharmacyid=#{pharmacyid},</if>
     	<if test="operator !=null and operator !=''">operator=#{operator},</if>
-    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate}</if>
+    	<if test="operatedate !=null ">operatedate=#{operatedate,jdbcType=TIMESTAMP}</if>
 
   	</set>
   	where id = #{id}
   </update>
   <update id="modifyByBarcode">
-  	update ${drugStoreShortName}goods
+  	update sy_goods
   	<set>
 		<if test="drugsid !=null and drugsid !=''">drugsid=#{drugsid},</if>
 		<if test="commonshotspell !=null and commonshotspell !=''">commonshotspell=#{commonshotspell},</if>
@@ -405,16 +409,16 @@
     	<if test="storage !=null and storage !=''">storage=#{storage},</if>
     	<if test="pharmacyid !=null and pharmacyid !=''">pharmacyid=#{pharmacyid},</if>
     	<if test="operator !=null and operator !=''">operator=#{operator},</if>
-    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate}</if>
+    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate,jdbcType=TIMESTAMP}</if>
 
   	</set>
   	where barcode = #{barcode}
   </update>
   <delete id="delete" parameterType="int">
-	delete from ${goods.drugStoreShortName}goods where id=#{goods.id}
+	delete from sy_goods where id=#{goods.id}
   </delete>
   <delete id="deleteBy" >
-	delete from ${goods.drugStoreShortName}goods 
+	delete from sy_goods
 	where 1=1 
     <if test="goods.id != null and goods.id != ''">
         and id=#{goods.id}

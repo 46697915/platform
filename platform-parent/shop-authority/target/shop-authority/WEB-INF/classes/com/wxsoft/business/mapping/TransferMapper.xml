@@ -23,7 +23,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${transfer.drugStoreShortName}transfer
+    select count(*) from sy_transfer
     where 1=1 
     <if test="transfer.id != null and transfer.id != ''">
         and id like concat('%',#{transfer.id},'%')
@@ -38,7 +38,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${transfer.drugStoreShortName}transfer 
+    from sy_transfer
     where 1=1 
     <if test="transfer.id != null and transfer.id != ''">
         and id like concat('%',#{transfer.id},'%')
@@ -57,7 +57,7 @@
 	</if>
   </select>
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Transfer">
-    insert into ${transfer.drugStoreShortName}transfer(<trim suffixOverrides=",">
+    insert into sy_transfer(<trim suffixOverrides=",">
     	<if test="transfer.id !=null and transfer.id !=''">id,</if>
     	<if test="transfer.jzrq !=null and transfer.jzrq !=''">jzrq,</if>
     	<if test="transfer.operator !=null and transfer.operator !=''">operator,</if>
@@ -96,6 +96,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${transfer.drugStoreShortName}transfer where id=#{transfer.id}
+	delete from sy_transfer where id=#{transfer.id}
   </delete>
 </mapper>

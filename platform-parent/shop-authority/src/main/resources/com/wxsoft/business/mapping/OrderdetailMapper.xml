@@ -309,7 +309,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderdetail">
-    insert into ${drugStoreShortName}orderdetail(<trim suffixOverrides=",">
+    insert into sy_orderdetail(<trim suffixOverrides=",">
     	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
     	<if test="detailcode !=null and detailcode !=''">detailcode,</if>
     	<if test="barcode !=null and barcode !=''">barcode,</if>
@@ -355,7 +355,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}orderdetail
+  	update sy_orderdetail
   	<set>
     	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
     	<if test="detailcode !=null and detailcode !=''">detailcode=#{detailcode},</if>
@@ -382,6 +382,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}orderdetail where id=#{id}
+	delete from sy_orderdetail where id=#{id}
   </delete>
 </mapper>

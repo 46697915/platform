@@ -164,7 +164,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.StoreCheck">
-    insert into ${drugStoreShortName}m_storecheck(<trim suffixOverrides=",">
+    insert into sy_m_storecheck(<trim suffixOverrides=",">
     	<if test="barcode !=null and barcode !=''">barcode,</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname,</if>
     	<if test="commonname !=null and commonname !=''">commonname,</if>
@@ -214,7 +214,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}m_storecheck
+  	update sy_m_storecheck
   	<set>
     	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname=#{drugsname},</if>
@@ -243,19 +243,19 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}m_storecheck where id=#{id}
+	delete from sy_m_storecheck where id=#{id}
   </delete>
   <delete id="deleteSCByDate" parameterType="int">
-	delete from ${drugStoreShortName}m_storecheck 
+	delete from sy_m_storecheck
 	where DATE_FORMAT(crrcheckdate, '%Y-%m-%d')=#{crrcheckdate}
     <if test="barcode != null and barcode != ''">
         and barcode = #{barcode}
     </if>
   </delete>
   <delete id="updateLastCheck" parameterType="int">
-	update ${drugStoreShortName}m_storecheck a set a.islastcheck='1'  
+	update sy_m_storecheck a set a.islastcheck='1'
 	where a.crrcheckdate=( select maxdate from (
-							select max(b.crrcheckdate) maxdate from ${drugStoreShortName}m_storecheck b 
+							select max(b.crrcheckdate) maxdate from sy_m_storecheck b
 						) c 
 	)
   </delete>

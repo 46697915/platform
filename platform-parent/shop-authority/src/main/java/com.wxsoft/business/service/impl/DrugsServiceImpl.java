@@ -211,6 +211,7 @@ public class DrugsServiceImpl implements IDrugsService  {
         //修改商品表的名称
         Goods goods = new Goods();
         goods.setDrugStoreShortName(drugs.getDrugStoreShortName());
+        goods.setDrugStoreShortName(drugs.getDrugStoreShortName());
         goods.setBarcode(drugs.getBarcode2());
         goods.setGoodsname(drugs.getDrugsname());
         goods.setCommonname(drugs.getCommonname());

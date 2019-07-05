@@ -24,6 +24,16 @@ public class DrugsDel {
 	private String deleter;
 	private Date deletedate;
 
+	public String getStorecode() {
+		return storecode;
+	}
+
+	public void setStorecode(String storecode) {
+		this.storecode = storecode;
+	}
+
+	private String storecode;
+
 	private String name_search;
 	private String drugStoreShortName;
 

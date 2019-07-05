@@ -300,7 +300,7 @@
     group by barcode 
   </select>
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Ybjsmxxx">
-    insert into ${drugStoreShortName}m_ybjsmxxx(<trim suffixOverrides=",">
+    insert into sy_m_ybjsmxxx(<trim suffixOverrides=",">
     	<if test="ybjsh !=null and ybjsh !=''">ybjsh,</if>
     	<if test="zyh !=null and zyh !=''">zyh,</if>
     	<if test="cfh !=null and cfh !=''">cfh,</if>
@@ -351,7 +351,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}m_ybjsmxxx
+  	update sy_m_ybjsmxxx
   	<set>
     	<if test="ybjsh !=null and ybjsh !=''">ybjsh=#{ybjsh},</if>
     	<if test="zyh !=null and zyh !=''">zyh=#{zyh},</if>
@@ -385,6 +385,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}m_ybjsmxxx where id=#{id}
+	delete from sy_m_ybjsmxxx where id=#{id}
   </delete>
 </mapper>

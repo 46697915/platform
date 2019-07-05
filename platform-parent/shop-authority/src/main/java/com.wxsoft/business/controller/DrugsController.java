@@ -4,7 +4,6 @@ import com.wxsoft.business.model.easyui.DataGrid;
 import com.wxsoft.business.model.easyui.PageHelper;
 import com.wxsoft.business.pojo.Drugs;
 import com.wxsoft.business.pojo.User;
-import com.wxsoft.business.service.IDrugsForStoreService;
 import com.wxsoft.business.service.IDrugsService;
 import com.wxsoft.util.JsonUtil;
 import com.wxsoft.util.StoreUtil;
@@ -32,9 +31,6 @@ public class DrugsController extends BaseController{
 	
 	@Resource
 	private IDrugsService service;
-	
-	@Resource
-	private IDrugsForStoreService serviceForStore;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
@@ -110,7 +106,7 @@ public class DrugsController extends BaseController{
 			drugs.setOperatedate(new Date());
 			String r = "";
 
-			drugs.setStorecode(StoreUtil.getStoreShortName());
+			drugs.setDrugStoreShortName(StoreUtil.getStoreShortName());
 			r = service.add(drugs);
 			
 			//将缓存清空

@@ -20,7 +20,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${orderlog.drugStoreShortName}orderlog
+    select count(*) from sy_orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')
@@ -32,7 +32,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${orderlog.drugStoreShortName}orderlog 
+    from sy_orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')
@@ -49,7 +49,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderlog">
-    insert into ${drugStoreShortName}orderlog(<trim suffixOverrides=",">
+    insert into sy_orderlog(<trim suffixOverrides=",">
     	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
     	<if test="operator !=null and operator !=''">operator,</if>
     	<if test="operatedate !=null and operatedate !=''">operatedate,</if>
@@ -67,7 +67,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}orderlog
+  	update sy_orderlog
   	<set>
     	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
     	<if test="operator !=null and operator !=''">operator=#{operator},</if>
@@ -80,6 +80,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}orderlog where id=#{id}
+	delete from sy_orderlog where id=#{id}
   </delete>
 </mapper>

@@ -135,7 +135,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Order">
-    insert into ${drugStoreShortName}t_order(<trim suffixOverrides=",">
+    insert into sy_t_order(<trim suffixOverrides=",">
     	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
     	<if test="associator !=null and associator !=''">associator,</if>
     	<if test="paytype !=null and paytype !=''">paytype,</if>
@@ -193,7 +193,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}t_order
+  	update sy_t_order
   	<set>
     	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
     	<if test="associator !=null and associator !=''">associator=#{associator},</if>
@@ -226,6 +226,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}t_order where id=#{id}
+	delete from sy_t_order where id=#{id}
   </delete>
 </mapper>

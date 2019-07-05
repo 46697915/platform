@@ -19,10 +19,10 @@
 
   </sql>
    <select id="getLastId" resultType="java.lang.Integer" >
-  select id from ${orderlog.drugStoreShortName}_drugs order by id desc limit 1
+  select id from sy__drugs order by id desc limit 1
    </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${orderlog.drugStoreShortName}_orderlog
+    select count(*) from sy__orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')
@@ -31,7 +31,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${orderlog.drugStoreShortName}_orderlog 
+    from sy__orderlog
     where 1=1 
     <if test="orderlog.id != null and orderlog.id != ''">
         and id like concat('%',#{orderlog.id},'%')
@@ -45,7 +45,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderlog">
-    insert into ${orderlog.drugStoreShortName}_orderlog(<trim suffixOverrides=",">
+    insert into sy__orderlog(<trim suffixOverrides=",">
     <if test="orderlog.id !=null and orderlog.id !=''">id,</if>
     	<if test="orderlog.ordercode !=null and orderlog.ordercode !=''">ordercode,</if>
     	<if test="orderlog.operator !=null and orderlog.operator !=''">operator,</if>
@@ -65,7 +65,7 @@
   </insert>
   
   <update id="modify">
-  	update ${orderlog.drugStoreShortName}_orderlog
+  	update sy__orderlog
   	<set>
     	<if test="orderlog.ordercode !=null and orderlog.ordercode !=''">ordercode=#{orderlog.ordercode},</if>
     	<if test="orderlog.operator !=null and orderlog.operator !=''">operator=#{orderlog.operator},</if>
@@ -78,6 +78,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${orderlog.drugStoreShortName}_orderlog where id=#{orderlog.id}
+	delete from sy__orderlog where id=#{orderlog.id}
   </delete>
 </mapper>

@@ -104,13 +104,15 @@ public class PrepareInterceptor implements Interceptor {
         String username = (String) ReflectUtil.reflectByPath(userMethodPath);
 
         //设置 权限 条件
-        String premission_param = "storecode";
         //select * from (select id,name,region_cd from sys_exam ) where region_cd like '${}%'
-        String methodPath = PermissionConfig.getConfig("permission.client.params." + premission_param);
-        String storecode = (String) ReflectUtil.reflectByPath(methodPath);
-        if (storecode == null || "".equals(storecode)) {
-            storecode = " ";
+        String methodPath = PermissionConfig.getConfig("permission.client.params." + permissionAop.storeAlias());
+        String permissionCode = " ";
+        //如果 methodPath 则权限条件 设空
+        if(methodPath!=null && !"".equals(methodPath)){
+            //后续可根据 前登录人所在部门 和 当前登录人 传入此方法获取对应条件
+            permissionCode = (String) ReflectUtil.reflectByPath(methodPath);
         }
+
         int i = sbSql.lastIndexOf("where");
         if (i <= 0) {
             i = sbSql.lastIndexOf("WHERE");
@@ -120,7 +122,7 @@ public class PrepareInterceptor implements Interceptor {
         sbSql = new StringBuilder(startSql)
                 .append(" ")
                 .append(permissionAop.storeAlias())
-                .append(" like concat('" + storecode + "','%') ");
+                .append(" like concat('" + permissionCode + "','%') ");
         //出现过 = < > like
 //        if(endSql.matches(".*(=|<|>|like).*")){
         //Pattern.CASE_INSENSITIVE 启用不区分大小写的匹配。

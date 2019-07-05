@@ -17,7 +17,7 @@
 		<result column="operatedate" property="operatedatestr"
 			jdbcType="VARCHAR" />
 		<result column="units" property="units" jdbcType="VARCHAR" />
-		<result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
+		<result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 		<result column="barcode2" property="barcode2" jdbcType="VARCHAR" />
 
 		<result column="commonshotspell" property="commonshotspell"
@@ -49,7 +49,7 @@
 		commonshotspell,
 		commonnamespell,
 		bxdygx,
-		storecode,
+		drugstoreshortname,
 		barcode2
 	</sql>
 	<!-- 这种写法执行数据库次数为两次，后期可更换写法 -->
@@ -141,7 +141,7 @@
 			<if test="drugs.specifications !=null and drugs.specifications !=''">specifications,</if>
 			<if test="drugs.manufactor !=null and drugs.manufactor !=''">manufactor,</if>
 			<if test="drugs.approvalnum !=null and drugs.approvalnum !=''">approvalnum,</if>
-			<if test="drugs.storecode !=null and drugs.storecode !=''">storecode,</if>
+			<if test="drugs.drugStoreShortName !=null and drugs.drugStoreShortName !=''">drugstoreshortname,</if>
 			<if test="drugs.operator !=null and drugs.operator !=''">operator,</if>
 			<if test="drugs.operatedate !=null ">operatedate</if>
 		</trim>
@@ -164,7 +164,7 @@
 			<if test="drugs.specifications !=null and drugs.specifications !=''">#{drugs.specifications},</if>
 			<if test="drugs.manufactor !=null and drugs.manufactor !=''">#{drugs.manufactor},</if>
 			<if test="drugs.approvalnum !=null and drugs.approvalnum !=''">#{drugs.approvalnum},</if>
-			<if test="drugs.storecode !=null and drugs.storecode !=''">#{drugs.storecode},</if>
+			<if test="drugs.drugStoreShortName !=null and drugs.drugStoreShortName !=''">#{drugs.drugStoreShortName},</if>
 			<if test="drugs.operator !=null and drugs.operator !=''">#{drugs.operator},</if>
 			<if test="drugs.operatedate !=null ">#{drugs.operatedate,jdbcType=TIMESTAMP}</if>
 		</trim>
@@ -190,7 +190,7 @@
 			<if test="drugs.specifications !=null and drugs.specifications !=''">specifications=#{drugs.specifications},</if>
 			<if test="drugs.manufactor !=null and drugs.manufactor !=''">manufactor=#{drugs.manufactor},</if>
 			<if test="drugs.approvalnum !=null and drugs.approvalnum !=''">approvalnum=#{drugs.approvalnum},</if>
-			<if test="drugs.storecode !=null and drugs.storecode !=''">operator=#{drugs.storecode},</if>
+			<if test="drugs.drugStoreShortName !=null and drugs.drugStoreShortName !=''">drugstoreshortname=#{drugs.drugStoreShortName},</if>
 			<if test="drugs.operator !=null and drugs.operator !=''">operator=#{drugs.operator},</if>
 			<if test="drugs.operatedate !=null ">operatedate=#{drugs.operatedate,jdbcType=TIMESTAMP}</if>
 

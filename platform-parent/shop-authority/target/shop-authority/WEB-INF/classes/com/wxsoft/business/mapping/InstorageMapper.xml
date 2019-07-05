@@ -19,6 +19,7 @@
     <result column="reviewdate" property="reviewdate" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="signtype" property="signtype" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 	<association  property="intypename" column="intype" javaType="string" select="getKeyvalueNameByCode1" />
 	<association  property="signtypename" column="signtype" javaType="string" select="getKeyvalueNameByCode2" />
  
@@ -51,6 +52,7 @@
     reviewer,
     reviewdate,
     signtype,
+    drugstoreshortname,
     remark
 
   </sql>
@@ -62,7 +64,7 @@
     select name from keyvalue  where type='signtype' and code = #{code}
   </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${instorage.drugStoreShortName}instorage
+    select count(*) from sy_instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -83,7 +85,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${instorage.drugStoreShortName}instorage 
+    from sy_instorage
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -112,7 +114,7 @@
     select count(*) 
     from (
 	    select barcode,commonname 
-		from ${instorage.drugStoreShortName}instorage 
+		from sy_instorage
 	    where 1=1 
 	    <if test="instorage.id != null and instorage.id != ''">
 	        and id like concat('%',#{instorage.id},'%')
@@ -135,7 +137,7 @@
 		(select name from keyvalue b where type='units' and code = (select min(units) from drugs a where a.barcode=x.barcode) ) unitsname,
 		(select min(specifications) from drugs a where a.barcode=x.barcode) specifications,
 		sum(inquantity) total,sum(money) amount
-    from ${instorage.drugStoreShortName}instorage x 
+    from sy_instorage x
     where 1=1 
     <if test="instorage.id != null and instorage.id != ''">
         and id like concat('%',#{instorage.id},'%')
@@ -162,7 +164,7 @@
   </select>
   <select id="instorageSummaryByBarcode" resultMap="InstorageSummary">
     select barcode,sum(inquantity) total,sum(money) amount
-    from ${instorage.drugStoreShortName}instorage x 
+    from sy_instorage x
     where 1=1 
     <if test="instorage.indate_begin != null and instorage.indate_begin != ''">
         and indate &gt;= str_to_date(#{instorage.indate_begin}, '%Y-%m-%d') 
@@ -177,7 +179,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Instorage">
-    insert into ${drugStoreShortName}instorage(<trim suffixOverrides=",">
+    insert into sy_instorage(<trim suffixOverrides=",">
     	<if test="barcode !=null and barcode !=''">barcode,</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname,</if>
     	<if test="commonname !=null and commonname !=''">commonname,</if>
@@ -194,6 +196,7 @@
     	<if test="reviewer !=null and reviewer !=''">reviewer,</if>
     	<if test="reviewdate !=null and reviewdate !=''">reviewdate,</if>
     	<if test="signtype !=null and signtype !=''">signtype,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="remark !=null and remark !=''">remark</if>
 
     </trim>)values(<trim suffixOverrides=",">
@@ -213,18 +216,19 @@
     	<if test="reviewer !=null and reviewer !=''">#{reviewer},</if>
     	<if test="reviewdate !=null and reviewdate !=''">#{reviewdate},</if>
     	<if test="signtype !=null and signtype !=''">#{signtype},</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="remark !=null and remark !=''">#{remark}</if>
 
   	</trim>)
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}instorage
+  	update sy_instorage
   	<set>
     	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname=#{drugsname},</if>
     	<if test="commonname !=null and commonname !=''">commonname=#{commonname},</if>
-    	<if test="generatenum !=null and generatenum !=''">generatenum=#{generatenum},</if>
+    	<if test="generatenum !=null  ">generatenum=#{generatenum},</if>
     	<if test="generatedate !=null and generatedate !=''">generatedate=#{generatedate},</if>
     	<if test="validityperiod !=null and validityperiod !=''">validityperiod=#{validityperiod},</if>
     	<if test="shelflife !=null and shelflife !=''">shelflife=#{shelflife},</if>
@@ -244,6 +248,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}instorage where id=#{id}
+	delete from sy_instorage where id=#{id}
   </delete>
 </mapper>

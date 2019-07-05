@@ -17,11 +17,11 @@
     <result column="commonshotspell" property="commonshotspell" jdbcType="VARCHAR" />
     <result column="commonnamespell" property="commonnamespell" jdbcType="VARCHAR" />
     <result column="operator" property="operator" jdbcType="VARCHAR" />
-    <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
+    <result column="operatedate" jdbcType="TIMESTAMP" property="operatedate" javaType="java.util.Date" />
     <result column="bxdygx" property="bxdygx" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
     <result column="deleter" property="deleter" jdbcType="VARCHAR" />
-    <result column="deletedate" property="deletedate" jdbcType="VARCHAR" />
-
+    <result column="deletedate" jdbcType="TIMESTAMP" property="deletedate" javaType="java.util.Date" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, 
@@ -42,12 +42,13 @@
     operator,
     operatedate,
     bxdygx,
+    drugstoreshortname,
     deleter,
     deletedate
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${drugsDel.drugStoreShortName}drugs_del
+    select count(*) from sy_drugs_del
     where 1=1 
     <if test="drugsDel.id != null and drugsDel.id != ''">
         and id like concat('%',#{drugsDel.id},'%')
@@ -56,7 +57,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${drugsDel.drugStoreShortName}drugs_del 
+    from sy_drugs_del
     where 1=1 
     <if test="drugsDel.id != null and drugsDel.id != ''">
         and id like concat('%',#{drugsDel.id},'%')
@@ -74,7 +75,7 @@
   <select id="findBy" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${drugsDel.drugStoreShortName}drugs_del 
+    from sy_drugs_del
     where 1=1 
     <if test="drugsDel.id != null and drugsDel.id != ''">
         and id = #{drugsDel.id} 
@@ -88,7 +89,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.DrugsDel">
-    insert into ${drugsDel.drugStoreShortName}drugs_del(<trim suffixOverrides=",">
+    insert into sy_drugs_del(<trim suffixOverrides=",">
     	<if test="barcode !=null and barcode !=''">barcode,</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname,</if>
     	<if test="commonname !=null and commonname !=''">commonname,</if>
@@ -104,10 +105,11 @@
     	<if test="commonshotspell !=null and commonshotspell !=''">commonshotspell,</if>
     	<if test="commonnamespell !=null and commonnamespell !=''">commonnamespell,</if>
     	<if test="operator !=null and operator !=''">operator,</if>
-    	<if test="operatedate !=null and operatedate !=''">operatedate,</if>
+    	<if test="operatedate !=null ">operatedate,</if>
     	<if test="bxdygx !=null and bxdygx !=''">bxdygx,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="deleter !=null and deleter !=''">deleter,</if>
-    	<if test="deletedate !=null and deletedate !=''">deletedate,</if>
+    	<if test="deletedate !=null ">deletedate,</if>
 
     </trim>)values(<trim suffixOverrides=",">
     	<if test="barcode !=null and barcode !=''">#{barcode},</if>
@@ -125,16 +127,17 @@
     	<if test="commonshotspell !=null and commonshotspell !=''">#{commonshotspell},</if>
     	<if test="commonnamespell !=null and commonnamespell !=''">#{commonnamespell},</if>
     	<if test="operator !=null and operator !=''">#{operator},</if>
-    	<if test="operatedate !=null and operatedate !=''">#{operatedate},</if>
-    	<if test="bxdygx !=null and bxdygx !=''">#{bxdygx},</if>
+    	<if test="operatedate !=null ">#{operatedate,jdbcType=TIMESTAMP},</if>
+    	<if test="bxdygx !=null and bxdygx !=''">#{bxdygx},</if>>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugstoreshortname},</if>
     	<if test="deleter !=null and deleter !=''">#{deleter},</if>
-    	<if test="deletedate !=null and deletedate !=''">#{deletedate},</if>
+    	<if test="deletedate !=null ">#{deletedate,jdbcType=TIMESTAMP},</if>
 
   	</trim>)
   </insert>
   
   <update id="modify">
-  	update ${drugsDel.drugStoreShortName}drugsDel
+  	update sy_drugsDel
   	<set>
     	<if test="barcode !=null and barcode !=''">barcode=#{barcode},</if>
     	<if test="drugsname !=null and drugsname !=''">drugsname=#{drugsname},</if>
@@ -151,36 +154,40 @@
     	<if test="commonshotspell !=null and commonshotspell !=''">commonshotspell=#{commonshotspell},</if>
     	<if test="commonnamespell !=null and commonnamespell !=''">commonnamespell=#{commonnamespell},</if>
     	<if test="operator !=null and operator !=''">operator=#{operator},</if>
-    	<if test="operatedate !=null and operatedate !=''">operatedate=#{operatedate},</if>
+    	<if test="operatedate !=null ">operatedate=#{operatedate,jdbcType=TIMESTAMP},</if>
     	<if test="bxdygx !=null and bxdygx !=''">bxdygx=#{bxdygx},</if>
     	<if test="deleter !=null and deleter !=''">deleter=#{deleter},</if>
-    	<if test="deletedate !=null and deletedate !=''">deletedate=#{deletedate},</if>
+    	<if test="deletedate !=null ">deletedate=#{deletedate,jdbcType=TIMESTAMP},</if>
 
   	</set>
   	where id = #{id}
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugsDel.drugStoreShortName}drugs_del where barcode=#{drugsDel.barcode}
+	delete from sy_drugs_del where barcode=#{drugsDel.barcode}
   </delete>
   
   <!-- 根据药品插入药品删除表 -->
   <insert id="insertDrugsDel" parameterType="com.wxsoft.business.pojo.DrugsDel">
-    insert into ${drugsDel.drugStoreShortName}drugs_del(
+    insert into sy_drugs_del(
     	barcode,drugsname,commonname,type1,type2,
     	type3,dosageform,specifications,units,manufactor,
     	approvalnum,drugscode,commonshotspell,commonnamespell,operator,
-    	operatedate,bxdygx,deleter,deletedate
+    	operatedate,bxdygx,drugstoreshortname,
+      <trim suffixOverrides=",">
+          <if test="drugsDel.deleter !=null and drugsDel.deleter !=''">deleter,</if>
+          <if test="drugsDel.deletedate !=null ">deletedate,</if>
+      </trim>
     )
     select barcode,drugsname,commonname,type1,type2,
     	type3,dosageform,specifications,units,manufactor,
     	approvalnum,drugscode,commonshotspell,commonnamespell,operator,
-    	operatedate,bxdygx,
+    	operatedate,bxdygx,drugstoreshortname,
     	<trim suffixOverrides=",">
     	<if test="drugsDel.deleter !=null and drugsDel.deleter !=''">#{drugsDel.deleter},</if>
-    	<if test="drugsDel.deletedate !=null and drugsDel.deletedate !=''">#{drugsDel.deletedate},</if>
+    	<if test="drugsDel.deletedate !=null ">#{drugsDel.deletedate,jdbcType=TIMESTAMP},</if>
     	</trim>
-	from ${drugsDel.drugStoreShortName}drugs 
+	from sy_drugs
 	where 1=1 
     <if test="drugsDel.id != null and drugsDel.id != ''">
         and id like concat('%',#{drugsDel.id},'%')
@@ -191,7 +198,7 @@
   </insert>
   <!-- 根据药品删除插入药品表 -->
   <insert id="insertDrugs" parameterType="com.wxsoft.business.pojo.DrugsDel">
-    insert into ${drugsDel.drugStoreShortName}drugs(
+    insert into sy_drugs(
     	barcode,drugsname,commonname,type1,type2,
     	type3,dosageform,specifications,units,manufactor,
     	approvalnum,drugscode,commonshotspell,commonnamespell,operator,
@@ -201,7 +208,7 @@
     	type3,dosageform,specifications,units,manufactor,
     	approvalnum,drugscode,commonshotspell,commonnamespell,operator,
     	operatedate,bxdygx
-	from ${drugsDel.drugStoreShortName}drugs_del 
+	from sy_drugs_del
 	where 1=1 
     <if test="drugsDel.id != null and drugsDel.id != ''">
         and id  = #{drugsDel.id} 

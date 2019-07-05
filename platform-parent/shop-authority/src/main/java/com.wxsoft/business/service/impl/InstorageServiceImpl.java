@@ -126,6 +126,7 @@ public class InstorageServiceImpl implements IInstorageService  {
         nGs.setDrugscode(oldD.getDrugscode());
         nGs.setCommonnamespell(oldD.getCommonnamespell());
         nGs.setCommonshotspell(oldD.getCommonshotspell());
+        nGs.setPrice("0");  //初始化售价 0
 
         //插入商品
         nGs.setDrugStoreShortName(instorage.getDrugStoreShortName());

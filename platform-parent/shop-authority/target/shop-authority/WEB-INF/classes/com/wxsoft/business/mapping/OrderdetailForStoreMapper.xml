@@ -46,13 +46,13 @@
 	goodsid
   </sql>
    <select id="getLastId" resultType="java.lang.Integer" >
-  select id from ${orderdetail.drugStoreShortName}_drugs order by id desc limit 1
+  select id from sy__drugs order by id desc limit 1
    </select>
     <select id="findMoneyCount" resultType="long" >
-  	select sum(money) from `${orderdetail.drugStoreShortName}_orderdetail` where to_days(`createdate`) = to_days(now()) 
+  	select sum(money) from `sy__orderdetail` where to_days(`createdate`) = to_days(now())
    </select>
   <select id="findCount" resultType="long" >
-    select count(*) from ${orderdetail.drugStoreShortName}_orderdetail
+    select count(*) from sy__orderdetail
     where 1=1 
     <if test="orderdetail.id != null and orderdetail.id != ''">
         and id like concat('%',#{orderdetail.id},'%')
@@ -73,7 +73,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${orderdetail.drugStoreShortName}_orderdetail 
+    from sy__orderdetail
     where 1=1 
     <if test="orderdetail.id != null and orderdetail.id != ''">
         and id like concat('%',#{orderdetail.id},'%')
@@ -99,7 +99,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Orderdetail">
-    insert into ${orderdetail.drugStoreShortName}_orderdetail(<trim suffixOverrides=",">
+    insert into sy__orderdetail(<trim suffixOverrides=",">
      <if test="orderdetail.id !=null and orderdetail.id !=''">id,</if>
     	<if test="orderdetail.ordercode !=null and orderdetail.ordercode !=''">ordercode,</if>
     	<if test="orderdetail.detailcode !=null and orderdetail.detailcode !=''">detailcode,</if>
@@ -147,7 +147,7 @@
   </insert>
   
   <update id="modify">
-  	update ${orderdetail.drugStoreShortName}_orderdetail
+  	update sy__orderdetail
   	<set>
     	<if test="orderdetail.ordercode !=null and orderdetail.ordercode !=''">ordercode=#{orderdetail.ordercode},</if>
     	<if test="orderdetail.detailcode !=null and orderdetail.detailcode !=''">detailcode=#{orderdetail.detailcode},</if>
@@ -174,6 +174,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${orderdetail.drugStoreShortName}_orderdetail where id=#{orderdetail.id}
+	delete from sy__orderdetail where id=#{orderdetail.id}
   </delete>
 </mapper>

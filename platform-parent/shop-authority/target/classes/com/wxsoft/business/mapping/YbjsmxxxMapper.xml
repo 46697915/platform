@@ -65,7 +65,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx
+    select count(*) from sy_m_ybjsmxxx
     where 1=1 
     <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
         and id like concat('%',#{ybjsmxxx.id},'%')
@@ -104,7 +104,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx 
+    from sy_m_ybjsmxxx
     where 1=1 
     <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
         and id like concat('%',#{ybjsmxxx.id},'%')
@@ -151,7 +151,7 @@
     select count(*) 
     from (
 	    select barcode,yyxmbm,yyxmmc commonname 
-		from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx 
+		from sy_m_ybjsmxxx
 	    where 1=1 
 	    <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
 	        and id like concat('%',#{ybjsmxxx.id},'%')
@@ -192,7 +192,7 @@
 		(select name from keyvalue b where type='units' and code = x.xmdw ) unitsname,
 		xmgg specifications,
 		sum(xmsl) total,sum(xmje) amount
-    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    from sy_m_ybjsmxxx x
     where 1=1 
     <if test="ybjsmxxx.id != null and ybjsmxxx.id != ''">
         and id like concat('%',#{ybjsmxxx.id},'%')
@@ -234,7 +234,7 @@
   </select>
   <select id="ybSalesSummaryByYyxmbm" resultMap="YbjsmxxxSummary">
     select yyxmbm barcode,sum(xmsl) total,sum(xmje) amount
-    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    from sy_m_ybjsmxxx x
     where 1=1 
     <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
         and ybjsh = #{ybjsmxxx.ybjsh} 
@@ -268,7 +268,7 @@
   <select id="ybSalesSummaryByBarcode" resultMap="YbjsmxxxSummary">
     select barcode,
     	sum(xmsl) total,sum(xmje) amount
-    from ${ybjsmxxx.drugStoreShortName}m_ybjsmxxx x
+    from sy_m_ybjsmxxx x
     where 1=1 
     <if test="ybjsmxxx.ybjsh != null and ybjsmxxx.ybjsh != ''">
         and ybjsh = #{ybjsmxxx.ybjsh} 
@@ -300,7 +300,7 @@
     group by barcode 
   </select>
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Ybjsmxxx">
-    insert into ${drugStoreShortName}m_ybjsmxxx(<trim suffixOverrides=",">
+    insert into sy_m_ybjsmxxx(<trim suffixOverrides=",">
     	<if test="ybjsh !=null and ybjsh !=''">ybjsh,</if>
     	<if test="zyh !=null and zyh !=''">zyh,</if>
     	<if test="cfh !=null and cfh !=''">cfh,</if>
@@ -351,7 +351,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}m_ybjsmxxx
+  	update sy_m_ybjsmxxx
   	<set>
     	<if test="ybjsh !=null and ybjsh !=''">ybjsh=#{ybjsh},</if>
     	<if test="zyh !=null and zyh !=''">zyh=#{zyh},</if>
@@ -385,6 +385,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}m_ybjsmxxx where id=#{id}
+	delete from sy_m_ybjsmxxx where id=#{id}
   </delete>
 </mapper>

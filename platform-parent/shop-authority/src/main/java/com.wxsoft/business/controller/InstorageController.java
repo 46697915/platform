@@ -1,14 +1,16 @@
 package com.wxsoft.business.controller;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.wxsoft.business.model.easyui.DataGrid;
+import com.wxsoft.business.model.easyui.PageHelper;
+import com.wxsoft.business.pojo.Instorage;
+import com.wxsoft.business.pojo.InstorageSummary;
+import com.wxsoft.business.pojo.User;
+import com.wxsoft.business.service.IInstorageService;
+import com.wxsoft.util.ExcelUtil;
+import com.wxsoft.util.JsonUtil;
+import com.wxsoft.util.StoreUtil;
+import com.wxsoft.util.UserUtil;
+import com.wxsoft.util.common.DateUtil;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,18 +18,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wxsoft.business.model.easyui.DataGrid;
-import com.wxsoft.business.model.easyui.PageHelper;
-import com.wxsoft.business.pojo.Instorage;
-import com.wxsoft.business.pojo.InstorageSummary;
-import com.wxsoft.business.pojo.User;
-import com.wxsoft.business.service.IInstorageForStoreService;
-import com.wxsoft.business.service.IInstorageService;
-import com.wxsoft.util.ExcelUtil;
-import com.wxsoft.util.JsonUtil;
-import com.wxsoft.util.StoreUtil;
-import com.wxsoft.util.UserUtil;
-import com.wxsoft.util.common.DateUtil;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 @Controller
 @RequestMapping("/instorage")
@@ -37,8 +34,6 @@ public class InstorageController extends BaseController{
 	
 	@Resource
 	private IInstorageService service;
-	@Resource
-	private IInstorageForStoreService serviceForStore;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {

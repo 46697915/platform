@@ -57,7 +57,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Paylog">
-    insert into ${drugStoreShortName}paylog(<trim suffixOverrides=",">
+    insert into sy_paylog(<trim suffixOverrides=",">
     	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
     	<if test="paystate !=null and paystate !=''">paystate,</if>
     	<if test="paymoney !=null and paymoney !=''">paymoney,</if>
@@ -83,7 +83,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}paylog
+  	update sy_paylog
   	<set>
     	<if test="ordercode !=null and ordercode !=''">ordercode=#{ordercode},</if>
     	<if test="paystate !=null and paystate !=''">paystate=#{paystate},</if>
@@ -100,6 +100,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}paylog where id=#{id}
+	delete from sy_paylog where id=#{id}
   </delete>
 </mapper>

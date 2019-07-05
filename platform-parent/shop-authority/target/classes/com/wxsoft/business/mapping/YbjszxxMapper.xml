@@ -67,7 +67,7 @@
   </sql>
   
   <select id="findCount" resultType="long" >
-    select count(*) from ${ybjszxx.drugStoreShortName}m_ybjszxx
+    select count(*) from sy_m_ybjszxx
     where 1=1 
     <if test="ybjszxx.id != null and ybjszxx.id != ''">
         and id like concat('%',#{ybjszxx.id},'%')
@@ -88,7 +88,7 @@
   <select id="findAll" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from ${ybjszxx.drugStoreShortName}m_ybjszxx 
+    from sy_m_ybjszxx
     where 1=1 
     <if test="ybjszxx.id != null and ybjszxx.id != ''">
         and id like concat('%',#{ybjszxx.id},'%')
@@ -114,7 +114,7 @@
   </select>
   
   <insert id="insert" parameterType="com.wxsoft.business.pojo.Ybjszxx">
-    insert into ${drugStoreShortName}m_ybjszxx(<trim suffixOverrides=",">
+    insert into sy_m_ybjszxx(<trim suffixOverrides=",">
     	<if test="tcqh !=null and tcqh !=''">tcqh,</if>
     	<if test="yyjgdm !=null and yyjgdm !=''">yyjgdm,</if>
     	<if test="klxbh !=null and klxbh !=''">klxbh,</if>
@@ -180,7 +180,7 @@
   </insert>
   
   <update id="modify">
-  	update ${drugStoreShortName}m_ybjszxx
+  	update sy_m_ybjszxx
   	<set>
     	<if test="tcqh !=null and tcqh !=''">tcqh=#{tcqh},</if>
     	<if test="yyjgdm !=null and yyjgdm !=''">yyjgdm=#{yyjgdm},</if>
@@ -217,6 +217,6 @@
   </update>
     
   <delete id="delete" parameterType="int">
-	delete from ${drugStoreShortName}m_ybjszxx where id=#{id}
+	delete from sy_m_ybjszxx where id=#{id}
   </delete>
 </mapper>

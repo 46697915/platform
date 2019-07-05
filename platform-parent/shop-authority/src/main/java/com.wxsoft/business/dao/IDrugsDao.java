@@ -11,11 +11,12 @@ import java.util.List;
 public interface IDrugsDao {
 
 
-	@PermissionAop(storeAlias ="storecode" )
+	@PermissionAop(storeAlias ="drugstoreshortname" )
 	long findCount(@Param("drugs") Drugs drugs);
 
-	@PermissionAop(storeAlias ="storecode" )
+	@PermissionAop(storeAlias ="drugstoreshortname" )
 	List<Drugs> findAll(@Param("page") PageHelper page, @Param("drugs") Drugs drugs);
+	@PermissionAop(storeAlias ="drugstoreshortname" )
 	List<Drugs> findBy(@Param("drugs") Drugs drugs);
 	
 	public int insert(@Param("drugs") Drugs drugs);
