@@ -23,6 +23,7 @@
     <result column="checkdate" property="checkdate" jdbcType="VARCHAR" />
     <result column="islastcheck" property="islastcheck" jdbcType="VARCHAR" />
     <result column="lastcheckid" property="lastcheckid" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 
   </resultMap>
   <sql id="Base_Column_List" >
@@ -47,6 +48,7 @@
     checker,
     checkdate,
     islastcheck,
+    drugstoreshortname,
     lastcheckid
 
   </sql>
@@ -185,7 +187,8 @@
     	<if test="checker !=null and checker !=''">checker,</if>
     	<if test="checkdate !=null and checkdate !=''">checkdate,</if>
     	<if test="islastcheck !=null and islastcheck !=''">islastcheck,</if>
-    	<if test="lastcheckid !=null and lastcheckid !=''">lastcheckid</if>
+    	<if test="lastcheckid !=null and lastcheckid !=''">lastcheckid,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
 
     </trim>)values(<trim suffixOverrides=",">
     	<if test="barcode !=null and barcode !=''">#{barcode},</if>
@@ -208,7 +211,8 @@
     	<if test="checker !=null and checker !=''">#{checker},</if>
     	<if test="checkdate !=null and checkdate !=''">#{checkdate},</if>
     	<if test="islastcheck !=null and islastcheck !=''">#{islastcheck},</if>
-    	<if test="lastcheckid !=null and lastcheckid !=''">#{lastcheckid}</if>
+    	<if test="lastcheckid !=null and lastcheckid !=''">#{lastcheckid},</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
 
   	</trim>)
   </insert>

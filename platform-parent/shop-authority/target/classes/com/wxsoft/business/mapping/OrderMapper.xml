@@ -27,6 +27,7 @@
     <result column="customerremark" property="customerremark" jdbcType="VARCHAR" />
     <result column="iscomment" property="iscomment" jdbcType="VARCHAR" />
     <result column="getscore" property="getscore" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 	<association  property="paytypename" column="paytype" javaType="string" select="getKeyvalueNameByCode1" />
 	<association  property="transportname" column="transport" javaType="string" select="getKeyvalueNameByCode2" />
 	<association  property="orderstatename" column="orderstate" javaType="string" select="getOrderstateNameByCode" />
@@ -62,6 +63,7 @@
     transportremark,
     customerremark,
     iscomment,
+    drugstoreshortname,
     getscore
 
   </sql>
@@ -160,6 +162,7 @@
     	<if test="transportremark !=null and transportremark !=''">transportremark,</if>
     	<if test="customerremark !=null and customerremark !=''">customerremark,</if>
     	<if test="iscomment !=null and iscomment !=''">iscomment,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="getscore !=null and getscore !=''">getscore</if>
 
     </trim>)values(<trim suffixOverrides=",">
@@ -187,6 +190,7 @@
     	<if test="transportremark !=null and transportremark !=''">#{transportremark},</if>
     	<if test="customerremark !=null and customerremark !=''">#{customerremark},</if>
     	<if test="iscomment !=null and iscomment !=''">#{iscomment},</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="getscore !=null and getscore !=''">#{getscore}</if>
 
   	</trim>)

@@ -7,6 +7,7 @@
     <result column="operatedate" property="operatedate" jdbcType="VARCHAR" />
     <result column="operate" property="operate" jdbcType="VARCHAR" />
     <result column="operatetype" property="operatetype" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 
   </resultMap>
   <sql id="Base_Column_List" >
@@ -15,7 +16,8 @@
     operator,
     operatedate,
     operate,
-    operatetype
+    operatetype,
+    drugstoreshortname
 
   </sql>
   
@@ -53,6 +55,7 @@
     	<if test="ordercode !=null and ordercode !=''">ordercode,</if>
     	<if test="operator !=null and operator !=''">operator,</if>
     	<if test="operatedate !=null and operatedate !=''">operatedate,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="operate !=null and operate !=''">operate,</if>
     	<if test="operatetype !=null and operatetype !=''">operatetype</if>
 
@@ -60,6 +63,7 @@
     	<if test="ordercode !=null and ordercode !=''">#{ordercode},</if>
     	<if test="operator !=null and operator !=''">#{operator},</if>
     	<if test="operatedate !=null and operatedate !=''">#{operatedate},</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="operate !=null and operate !=''">#{operate},</if>
     	<if test="operatetype !=null and operatetype !=''">#{operatetype}</if>
 

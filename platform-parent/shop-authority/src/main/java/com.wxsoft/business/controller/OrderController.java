@@ -1,13 +1,14 @@
 package com.wxsoft.business.controller;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.wxsoft.business.model.easyui.DataGrid;
+import com.wxsoft.business.model.easyui.PageHelper;
+import com.wxsoft.business.pojo.Order;
+import com.wxsoft.business.pojo.User;
+import com.wxsoft.business.service.IOrderService;
+import com.wxsoft.util.JsonUtil;
+import com.wxsoft.util.StoreUtil;
+import com.wxsoft.util.UserUtil;
+import com.wxsoft.util.common.JsonTools;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,16 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wxsoft.business.model.easyui.DataGrid;
-import com.wxsoft.business.model.easyui.PageHelper;
-import com.wxsoft.business.pojo.Order;
-import com.wxsoft.business.pojo.User;
-import com.wxsoft.business.service.IOrderForStoreService;
-import com.wxsoft.business.service.IOrderService;
-import com.wxsoft.util.JsonUtil;
-import com.wxsoft.util.StoreUtil;
-import com.wxsoft.util.UserUtil;
-import com.wxsoft.util.common.JsonTools;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/order")
@@ -34,8 +31,6 @@ public class OrderController extends BaseController {
 
 	@Resource
 	private IOrderService service;
-	@Resource
-	private IOrderForStoreService serviceForStore;
 	@RequestMapping(value = "/quick", method = RequestMethod.GET)
 	public String quick(Model model) {
 		return "order/quick2";

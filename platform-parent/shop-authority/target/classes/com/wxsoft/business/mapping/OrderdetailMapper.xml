@@ -21,7 +21,8 @@
     <result column="commentid" property="commentid" jdbcType="VARCHAR" />
     <result column="isenough" property="isenough" jdbcType="VARCHAR" />
     <result column="units" property="units" jdbcType="VARCHAR" />
-	
+
+	  <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 	<result column="goodsid" property="goodsid" jdbcType="VARCHAR" />
     <result column="createdate" property="createdate" jdbcType="VARCHAR" />
 	<association  property="isenoughname" column="isenough" javaType="string" select="getKeyvalueNameByCode" />
@@ -59,6 +60,7 @@
     commentid,
     isenough,
     units,
+    drugstoreshortname,
     createdate,
 	goodsid
 
@@ -329,6 +331,7 @@
     	<if test="commentid !=null and commentid !=''">commentid,</if>
     	<if test="isenough !=null and isenough !=''">isenough,</if>
 		<if test="goodsid !=null and goodsid !=''">goodsid,</if>
+	  <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="units !=null and units !=''">units</if>
     </trim>)values(<trim suffixOverrides=",">
     	<if test="ordercode !=null and ordercode !=''">#{ordercode},</if>
@@ -350,6 +353,7 @@
     	<if test="commentid !=null and commentid !=''">#{commentid},</if>
     	<if test="isenough !=null and isenough !=''">#{isenough},</if>
 		<if test="goodsid !=null and goodsid !=''">#{goodsid},</if>
+	  <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="units !=null and units !=''">#{units}</if>
   	</trim>)
   </insert>

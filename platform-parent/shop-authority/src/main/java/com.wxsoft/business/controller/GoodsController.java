@@ -1,15 +1,13 @@
 package com.wxsoft.business.controller;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.List;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.wxsoft.business.model.easyui.DataGrid;
+import com.wxsoft.business.model.easyui.PageHelper;
+import com.wxsoft.business.pojo.Goods;
+import com.wxsoft.business.service.IGoodsService;
+import com.wxsoft.util.ExcelUtil;
+import com.wxsoft.util.JsonUtil;
+import com.wxsoft.util.StoreUtil;
+import com.wxsoft.util.wx.CacheUtil;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,15 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wxsoft.business.model.easyui.DataGrid;
-import com.wxsoft.business.model.easyui.PageHelper;
-import com.wxsoft.business.pojo.Goods;
-import com.wxsoft.business.service.IGoodsForStoreService;
-import com.wxsoft.business.service.IGoodsService;
-import com.wxsoft.util.ExcelUtil;
-import com.wxsoft.util.JsonUtil;
-import com.wxsoft.util.StoreUtil;
-import com.wxsoft.util.wx.CacheUtil;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 @Controller
 @RequestMapping("/goods")
@@ -35,8 +32,6 @@ public class GoodsController extends BaseController{
 	
 	@Resource
 	private IGoodsService service;
-	@Resource
-	private IGoodsForStoreService serviceForStore;
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
 		return "goods/list";

@@ -9,6 +9,7 @@
     <result column="drugsname" property="drugsname" jdbcType="VARCHAR" />
     <result column="drugscode" property="drugscode" jdbcType="VARCHAR" />
     <result column="stock" property="stock" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 
   </resultMap>
   <sql id="Base_Column_List" >
@@ -19,7 +20,8 @@
     barcode,
     drugsname,
     drugscode,
-	stock
+	stock,
+	drugstoreshortname
   </sql>
   
   <select id="findCount" resultType="long" >
@@ -66,6 +68,7 @@
     	<if test="transfer.drugsname !=null and transfer.drugsname !=''">drugsname,</if>
     	<if test="transfer.drugscode !=null and transfer.drugscode !=''">drugscode,</if>
     	<if test="transfer.stock !=null and transfer.stock !=''">stock,</if>
+      <if test="transfer.drugStoreShortName !=null and transfer.drugStoreShortName !=''">drugstoreshortname,</if>
 
     </trim>)values(<trim suffixOverrides=",">
     	<if test="transfer.id !=null and transfer.id !=''">#{transfer.id},</if>
@@ -76,6 +79,7 @@
     	<if test="transfer.drugsname !=null and transfer.drugsname !=''">#{transfer.drugsname},</if>
     	<if test="transfer.drugscode !=null and transfer.drugscode !=''">#{transfer.drugscode},</if>
     	<if test="transfer.stock !=null and transfer.stock !=''">#{transfer.stock},</if>
+      <if test="transfer.drugStoreShortName !=null and transfer.drugStoreShortName !=''">#{transfer.drugstoreshortname},</if>
 
   	</trim>)
   </insert>

@@ -3,7 +3,6 @@ package com.wxsoft.business.controller;
 import com.wxsoft.business.model.easyui.DataGrid;
 import com.wxsoft.business.model.easyui.PageHelper;
 import com.wxsoft.business.pojo.Orderlog;
-import com.wxsoft.business.service.IOrderlogForStoreService;
 import com.wxsoft.business.service.IOrderlogService;
 import com.wxsoft.util.JsonUtil;
 import com.wxsoft.util.StoreUtil;
@@ -29,8 +28,6 @@ public class OrderlogController extends BaseController{
 	
 	@Resource
 	private IOrderlogService service;
-	@Resource
-	private IOrderlogForStoreService serviceForStore;
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
 		return "orderlog/list";

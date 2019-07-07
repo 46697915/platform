@@ -11,6 +11,7 @@
     <result column="getdate" property="getdate" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="alipaynum" property="alipaynum" jdbcType="VARCHAR" />
+      <result column="drugstoreshortname" property="drugStoreShortName" jdbcType="VARCHAR" />
 
   </resultMap>
   <sql id="Base_Column_List" >
@@ -23,7 +24,8 @@
     payee,
     getdate,
     remark,
-    alipaynum
+    alipaynum,
+    drugstoreshortname
 
   </sql>
   
@@ -65,6 +67,7 @@
     	<if test="paytype !=null and paytype !=''">paytype,</if>
     	<if test="payee !=null and payee !=''">payee,</if>
     	<if test="getdate !=null and getdate !=''">getdate,</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">drugstoreshortname,</if>
     	<if test="remark !=null and remark !=''">remark,</if>
     	<if test="alipaynum !=null and alipaynum !=''">alipaynum</if>
 
@@ -76,6 +79,7 @@
     	<if test="paytype !=null and paytype !=''">#{paytype},</if>
     	<if test="payee !=null and payee !=''">#{payee},</if>
     	<if test="getdate !=null and getdate !=''">#{getdate},</if>
+      <if test="drugStoreShortName !=null and drugStoreShortName !=''">#{drugStoreShortName},</if>
     	<if test="remark !=null and remark !=''">#{remark},</if>
     	<if test="alipaynum !=null and alipaynum !=''">#{alipaynum}</if>
 
