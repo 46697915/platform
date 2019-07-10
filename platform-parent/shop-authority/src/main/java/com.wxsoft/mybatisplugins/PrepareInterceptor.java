@@ -95,7 +95,6 @@ public class PrepareInterceptor implements Interceptor {
      * @date 2018/4/17 上午9:51
      */
     protected String permissionSql(String sql, PermissionAop permissionAop) {
-        StringBuilder sbSql = new StringBuilder(sql);
         String depMethodPath = PermissionConfig.getConfig("permission.client.user.depatment.method");
         //当前登录人所在部门
         String depCode = (String) ReflectUtil.reflectByPath(depMethodPath);
@@ -107,18 +106,47 @@ public class PrepareInterceptor implements Interceptor {
         //select * from (select id,name,region_cd from sys_exam ) where region_cd like '${}%'
         String methodPath = PermissionConfig.getConfig("permission.client.params." + permissionAop.storeAlias());
         String permissionCode = " ";
-        //如果 methodPath 则权限条件 设空
+        //如果 methodPath为空 则权限条件值 设空格
         if(methodPath!=null && !"".equals(methodPath)){
             //后续可根据 前登录人所在部门 和 当前登录人 传入此方法获取对应条件
             permissionCode = (String) ReflectUtil.reflectByPath(methodPath);
         }
 
+        //解析sql中是否有union
+        String [] subSbSql = sql.split("(?i)UNION"); //有(?i)这个，代表正则表达式不区分大小写
+        StringBuilder sbSql = new StringBuilder();
+        for (int i=0; i<subSbSql.length; i++) {
+            String parserSql = parserSqlForWhere(subSbSql[i],permissionAop,permissionCode );
+            sbSql.append(parserSql);
+            if(i<subSbSql.length-1){
+                sbSql.append(" UNION ");
+            }
+        }
+        return sbSql.toString();
+    }
+
+    /**
+     * 解析每个sql中的最后一个where条件增加上 权限字段
+     * @param sql
+     * @param permissionAop
+     * @return
+     */
+    public static String parserSqlForWhere(String sql, PermissionAop permissionAop,String permissionCode ){
+        StringBuilder sbSql = new StringBuilder(sql);
+
         int i = sbSql.lastIndexOf("where");
         if (i <= 0) {
             i = sbSql.lastIndexOf("WHERE");
         }
-        String endSql = sbSql.substring(i + 5);
-        String startSql = sbSql.substring(0, i + 5);
+
+        String endSql = "";
+        String startSql = "" ;
+        if(i<0){    //如果没有找到 where 子句
+            startSql = sbSql + " where ";
+        }else{      //如果找到 where 子句
+            endSql = sbSql.substring(i + 5);
+            startSql = sbSql.substring(0, i + 5);
+        }
         sbSql = new StringBuilder(startSql)
                 .append(" ")
                 .append(permissionAop.storeAlias())
@@ -137,7 +165,9 @@ public class PrepareInterceptor implements Interceptor {
 //        sbSql = new StringBuilder("select * from (").append(sbSql).append(" ) s where s.storecode like concat(" + regionCd + ",'%')  ");
 
         return sbSql.toString();
+
     }
+
 
     public static void main(String[] args) {
         String endSql = " 1=1\n" +

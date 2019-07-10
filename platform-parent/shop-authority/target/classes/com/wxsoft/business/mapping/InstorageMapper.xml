@@ -133,9 +133,13 @@
   </select>
   <select id="instorageSummaryAll" resultMap="InstorageSummary">
     select barcode,commonname,
-		(select min(units) from drugs a where a.barcode=x.barcode) units,
-		(select name from keyvalue b where type='units' and code = (select min(units) from drugs a where a.barcode=x.barcode) ) unitsname,
-		(select min(specifications) from drugs a where a.barcode=x.barcode) specifications,
+		(select min(units) from sy_drugs a where a.drugstoreshortname=x.drugstoreshortname and a.barcode=x.barcode) units,
+		(select name from keyvalue b
+		  where type='units'
+		    and code = (select min(units)
+		                from sy_drugs a
+		                where a.drugstoreshortname=x.drugstoreshortname and a.barcode=x.barcode) ) unitsname,
+		(select min(specifications) from sy_drugs a where a.drugstoreshortname=x.drugstoreshortname and a.barcode=x.barcode) specifications,
 		sum(inquantity) total,sum(money) amount
     from sy_instorage x
     where 1=1 
@@ -154,7 +158,7 @@
     <if test="instorage.barcode_search != null and instorage.barcode_search != ''">
         and barcode = #{instorage.barcode_search}
     </if> 
-    group by barcode,commonname
+    group by barcode,commonname,drugstoreshortname
 	<if test="page.sort != null and page.sort != ''">
 		order by #{page.sort} #{page.order}
 	</if>

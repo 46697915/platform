@@ -83,7 +83,7 @@
     select 
     <include refid="Base_Column_List" />
     from sy_m_storecheck
-    where 1=1 
+    where 1=1
     <if test="storeCheck.id != null and storeCheck.id != ''">
         and id = #{storeCheck.id}
     </if>
@@ -107,7 +107,7 @@
         and barcode = #{storeCheck.barcode}
     </if> 
 	<if test="page.sort != null and page.sort != ''">
-		order by #{page.sort} #{page.order}
+		order by #{page.sort} ${page.order}
 	</if>
 	<if test="page.page > 0">
 		limit #{page.start},#{page.end}

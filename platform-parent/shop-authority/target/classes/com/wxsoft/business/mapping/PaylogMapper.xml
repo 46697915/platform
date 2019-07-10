@@ -26,7 +26,6 @@
     remark,
     alipaynum,
     drugstoreshortname
-
   </sql>
   
   <select id="findCount" resultType="long" >
