@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="新增shiro、netty">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_34_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
@@ -330,6 +329,19 @@
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
               <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -347,7 +359,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563435091031" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563435403041" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-shrio" />
@@ -850,7 +862,7 @@
       <workItem from="1562898710846" duration="5800000" />
       <workItem from="1563105095397" duration="4817000" />
       <workItem from="1563239565033" duration="2982000" />
-      <workItem from="1563434187853" duration="861000" />
+      <workItem from="1563434187853" duration="1174000" />
     </task>
     <task id="LOCAL-00001" summary="新增aop功能，修改drugs功能">
       <created>1562159494730</created>
@@ -915,7 +927,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563435052494</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="新增shiro、netty">
+      <created>1563435088281</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563435088281</updated>
+    </task>
+    <task id="LOCAL-00011" summary="新增shiro、netty">
+      <created>1563435154604</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563435154604</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -939,7 +965,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344114000" />
+    <option name="totallyTimeSpent" value="344427000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -971,7 +997,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50076336" side_tool="true" weight="0.484193" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.37271214" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
@@ -1470,7 +1496,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform-shrio-spring</last-edited>
+          <last-edited>platform-netty</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
