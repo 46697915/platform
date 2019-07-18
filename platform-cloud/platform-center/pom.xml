@@ -10,11 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>platform-certer</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <name>platform-certer Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+    <modules>
+        <module>platform-center-typeofinsurance</module>
+        <module>platform-center-typeofinsurance2</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,10 +32,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- 添加Web应用程序的典型依赖项 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

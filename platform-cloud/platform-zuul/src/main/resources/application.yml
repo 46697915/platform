@@ -1,0 +1,27 @@
+
+#SpringBoot启动端口和项目路径
+server:
+  port: 9527
+  servlet:
+    context-path: /
+
+#SpringMVC中JSP视图配置
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  client:   #客户端注册进eureka服务列表内
+    service-url:
+      #单机注册如下
+      defaultZone: http://localhost:7001/eureka
+      #集群注册如下
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:  #会在eureka界面应用状态中显示如下名称，不配置就是ip地址
+    instance-id: ${spring.application.name}${server.port}hysstrix	#不同的生产者，这个应该不同，所以用变量
+    preferIpAddress: true #当应用程序向eureka注册时，它使用其IP地址而不是其主机名。
+info:
+  applcaitonName: 部门服务
+  company: 蓝方
+  artifactId: $project.artifactId$
+  version: $project.version$

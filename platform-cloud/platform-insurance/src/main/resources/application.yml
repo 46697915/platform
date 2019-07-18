@@ -1,0 +1,14 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: insurance
+
+eureka:
+  client:   #客户端注册进eureka服务列表内
+    service-url:
+      #单机注册如下
+      defaultZone: http://localhost:7001/eureka
+      #集群注册如下
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka

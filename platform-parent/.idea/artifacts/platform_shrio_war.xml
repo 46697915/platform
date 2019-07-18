@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-shrio:war">
+    <output-path>$PROJECT_DIR$/platform-shrio/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-shrio</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-shrio.war">
+      <element id="artifact" artifact-name="platform-shrio:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="platformhadoop" />
+          <element id="module-output" name="platform-hadoop" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.apache.hadoop:hadoop-common:2.6.0" />
@@ -81,7 +81,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/platform-hadoop/target/platform-hadoop/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="platformhadoop/web/Web" />
+      <element id="javaee-facet-resources" facet="platform-hadoop/web/Web" />
     </root>
   </artifact>
 </component>

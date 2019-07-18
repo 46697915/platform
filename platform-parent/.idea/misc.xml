@@ -9,6 +9,8 @@
     <file type="web" url="file://$PROJECT_DIR$/platform-drools" />
     <file type="web" url="file://$PROJECT_DIR$/platform-hadoop" />
     <file type="web" url="file://$PROJECT_DIR$/platform-httpclient" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-netty" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-shrio" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/platform-testing" />
     <file type="web" url="file://$PROJECT_DIR$/shop-authority" />
@@ -94,6 +96,7 @@
         <option value="$PROJECT_DIR$/platform-test/pom.xml" />
         <option value="$PROJECT_DIR$/platform-drools/pom.xml" />
         <option value="$PROJECT_DIR$/platform-baiduAI/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio/pom.xml" />
       </list>
     </option>
   </component>
