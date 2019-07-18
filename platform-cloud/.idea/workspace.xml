@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0baaf8f8-e574-4376-97ae-1b16c36678b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/TofiCenterApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/sys/controller/CenterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/TofiCenterApplication2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/sys/controller/CenterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-eureka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-eureka/src/main/java/com/mytest/EurekaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-eureka/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-hystrix/platform-hystrix.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-hystrix/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-hystrix/src/main/java/com/mytest/HystrixDashboardApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-hystrix/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/InsuranceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/config/BeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/insurance/controller/InsuranceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-insurance/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-zuul/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-zuul/src/main/java/com/mytest/ZuulApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-zuul/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_hadoop_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_hadoop_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_shrio_spring_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_shrio_spring_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_shrio_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platform_shrio_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__com_alibaba_fastjson_1_2_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_web_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/.idea/libraries/Maven__tk_mybatis_mapper_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/db/shiro.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/db/table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/configuration/EncryptPropertyPlaceholderConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/vo/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/PermissionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/realm/CustomRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/authority-control.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/SqlMapConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/spring/applicationContext-mybatis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/spring/applicationContext-shiro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/resources/springmvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/403.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/common.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/manageUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/permission/listUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/permission/saveUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/role/listUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/role/saveUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/user/listUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/user/saveUI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace-rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace-skins.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/font/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/ace-extra.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/ace.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table-locale-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table-locale-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/angular/bootstrap-table-angular.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/angular/bootstrap-table-angular.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/cookie/bootstrap-table-cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/cookie/bootstrap-table-cookie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/editable/bootstrap-table-editable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/editable/bootstrap-table-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/export/bootstrap-table-export.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/export/bootstrap-table-export.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter/bootstrap-table-filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter/bootstrap-table-filter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/key-events/bootstrap-table-key-events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/key-events/bootstrap-table-key-events.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/mobile/bootstrap-table-mobile.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/print/bootstrap-table-print.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/print/bootstrap-table-print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/resizable/bootstrap-table-resizable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-af-ZA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-af-ZA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ar-SA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ar-SA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ca-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-cs-CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-da-DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-de-DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-el-GR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-en-US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-en-US.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-MX.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-MX.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-NI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-NI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-SP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-SP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-et-EE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-et-EE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fa-IR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-BE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-BE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-FR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-he-IL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hr-HR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hu-HU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-id-ID.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-it-IT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ja-JP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ka-GE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ka-GE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ko-KR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ms-MY.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ms-MY.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nb-NO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nl-NL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pl-PL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ro-RO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ru-RU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sk-SK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sv-SE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-th-TH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-tr-TR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uk-UA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ur-PK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ur-PK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uz-Latn-UZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uz-Latn-UZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-vi-VN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/jquery-1.11.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/mobile/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/mobile/need/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/manageUI/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/permission/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/permission/saveUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/role/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/role/saveUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/typeahead-bs2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/user/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/user/saveUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/1_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/1_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/line_conn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/line_conn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/metro.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/metro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/metro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/js/jquery-1.4.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/js/jquery.ztree.all-3.5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/platform-shrio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test1/ShrioTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/resources/shiro-realm-jdbc.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/resources/shiro-realm-multi.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/resources/shiro-realm-single.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../platform-parent/platform-shrio/src/main/resources/users.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-center/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-center/src/main/java/com/mytest/sys/controller/CenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-center/src/main/java/com/mytest/sys/controller/CenterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-insurance/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-insurance/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platformhadoop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/artifacts/platformhadoop_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/platform-hadoop/platformhadoop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/platform-hadoop/platform-hadoop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../platform-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../platform-parent/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/platform-certer/target/" />
+    <ignored path="$PROJECT_DIR$/platform-center/target/" />
+    <ignored path="$PROJECT_DIR$/platform-insurance/target/" />
+    <ignored path="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/target/" />
+    <ignored path="$PROJECT_DIR$/platform-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/platform-hystrix/target/" />
+    <ignored path="$PROJECT_DIR$/platform-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/InsuranceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="42" column="52" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2000">
+              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-hystrix/src/main/java/com/mytest/HystrixDashboardApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-hystrix/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/config/BeanConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-eureka/src/main/java/com/mytest/EurekaApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/TofiCenterApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/sys/controller/CenterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/TofiCenterApplication2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="37" column="39" selection-start-line="37" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>8080</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/platform-certer/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-certer/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-certer/src/main/java/com/mytest/SysApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/src/main/java/com/mytest/CenterApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/WebApplication.java" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/insurance/controller/WebController.java" />
+        <option value="$PROJECT_DIR$/platform-center/src/main/java/com/mytest/sys/controller/CenterController.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/mytest/CenterApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/mytest/sys/controller/CenterController.java" />
+        <option value="$PROJECT_DIR$/platform-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-eureka/src/main/java/com/mytest/ServerApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-hystrix/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-insurance/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-hystrix/src/main/java/com/mytest/HystrixDashboardApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/mytest/TofiCenterApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/sys/controller/CenterController.java" />
+        <option value="$PROJECT_DIR$/platform-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/InsuranceApplication.java" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/insurance/controller/InsuranceController.java" />
+        <option value="$PROJECT_DIR$/platform-zuul/src/main/java/com/mytest/ZuulApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/TofiCenterApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/sys/TofiCenterApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/TofiCenterApplication.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/sys/controller/CenterController.java" />
+        <option value="$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/config/BeanConfig.java" />
+        <option value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/resources/application.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/tools/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="E:\tools\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1370" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562838687214" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jeecg-boot-master/jeecg-boot-master" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mytest.sys" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-cloud\platform-center\platform-center-typeofinsurance2\src\main\java\com\mytest" />
+      <recent name="E:\IdeaProjects\platform\platform-cloud\platform-center\platform-center-typeofinsurance2\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-cloud\platform-center\platform-center-typeofinsurance\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-cloud\platform-center\platform-center-typeofinsurance\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HystrixDashboardApplication">
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mytest.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HystrixDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-hystrix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mytest.HystrixDashboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsuranceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-insurance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mytest.InsuranceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TofiCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-center-typeofinsurance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mytest.TofiCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TofiCenterApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-center-typeofinsurance2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mytest.TofiCenterApplication2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.TofiCenterApplication2" />
+        <item itemvalue="Spring Boot.HystrixDashboardApplication" />
+        <item itemvalue="Spring Boot.InsuranceApplication" />
+        <item itemvalue="Spring Boot.TofiCenterApplication" />
+        <item itemvalue="Spring Boot.EurekaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0baaf8f8-e574-4376-97ae-1b16c36678b1" name="Default Changelist" comment="" />
+      <created>1562722882117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562722882117</updated>
+      <workItem from="1562722890706" duration="19374000" />
+      <workItem from="1562807117685" duration="8179000" />
+      <workItem from="1562838753176" duration="597000" />
+      <workItem from="1563188429052" duration="308000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始添加">
+      <created>1562725440930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562725440930</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="28458000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2610687" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49923664" visible="true" weight="0.36885247" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50076336" side_tool="true" weight="0.36885247" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始添加" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/platform-center/src/main/java/com/mytest/CenterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-eureka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/sys/controller/CenterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/src/main/java/com/mytest/sys/controller/CenterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-hystrix/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-zuul/src/main/java/com/mytest/ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-insurance/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="140" selection-start-line="17" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/insurance/controller/InsuranceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1632">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/InsuranceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="42" column="52" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-hystrix/src/main/java/com/mytest/HystrixDashboardApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-hystrix/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-eureka/src/main/java/com/mytest/EurekaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance/src/main/java/com/mytest/TofiCenterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/sys/controller/CenterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-center/platform-center-typeofinsurance2/src/main/java/com/mytest/TofiCenterApplication2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="37" column="39" selection-start-line="37" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-insurance/src/main/java/com/mytest/config/BeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>platform-certer:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>platform-center-typeofinsurance2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
