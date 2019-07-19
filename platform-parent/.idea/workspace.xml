@@ -6,7 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="新增shiro、netty">
+    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="修改netty">
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/server/TimeServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/server/TimeServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ChanneList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
@@ -59,83 +76,102 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-shrio/pom.xml">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="525">
+              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#841#1462#0" expanded="true" />
+                <element signature="e#1461#1462#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform-netty/pom.xml">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="109">
+              <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="118" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-plus-generator/src/main/resources/templates/controller.java.ftl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-generator/src/main/java/com/wxsoft/GenMain.java">
+        <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-generator/src/main/resources/mbgConfiguration.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/PermissionConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/PermissionUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/RequestUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/db/table.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            <state relative-caret-position="164">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +189,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>${paylog.drugStoreShortName}</find>
       <find>${storeCheck.drugStoreShortName}</find>
       <find>${transfer.drugStoreShortName}</find>
       <find>${ybjsmxxx.drugStoreShortName}</find>
@@ -183,6 +218,7 @@
       <find>union</find>
       <find>max(crrcheckdate)</find>
       <find>AuthenticationException</find>
+      <find>read</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -204,28 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/DrugsDelMapper.xml" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IDrugsDelDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IInstorageDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/InstorageController.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IDrugsDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IGoodsDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/GoodsMapper.xml" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/util/common/JsonTools.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/InstorageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IOrderdetailDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IOrderDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IOrderlogDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/OrderlogMapper.xml" />
-        <option value="$PROJECT_DIR$/shop-store/src/main/java/com/wxsoft/business/dao/IPaylogDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IPaylogDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IStoreCheckDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/ITransferDao.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/TransferMapper.xml" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/GoodsController.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/OrderdetailController.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/OrderlogController.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/pojo/Orderdetail.java" />
         <option value="$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/pojo/Orderlog.java" />
@@ -255,6 +269,28 @@
         <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/platform-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/TimeServer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/TimeServerHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/client/TimeClient.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/client/TimeClientHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/client/TimeClient.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyInitial.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyServerHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyRemoteService.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClient.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ChanneList.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java" />
       </list>
     </option>
   </component>
@@ -342,6 +378,55 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -359,10 +444,10 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563435415373" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563516135684" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-shrio" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workspace/迁安智慧医保" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -371,26 +456,26 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.wxsoft.shrio.test2realm" />
-      <recent name="com.wxsoft.aop" />
-      <recent name="com.wxsoft.business.dao" />
-      <recent name="com.wxsoft.business.pojo" />
-      <recent name="com.wxsoft.business.service.impl" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp\WEB-INF" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\java" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\resources" />
       <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\db" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wxsoft.netty.test.push.client" />
+      <recent name="com.wxsoft.shrio.test2realm" />
+      <recent name="com.wxsoft.aop" />
+      <recent name="com.wxsoft.business.dao" />
+      <recent name="com.wxsoft.business.pojo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -411,7 +496,7 @@
     </option>
     <option name="contentProportion" value="0.18018721" />
   </component>
-  <component name="RunManager" selected="Application.ShrioTest2Realm3">
+  <component name="RunManager" selected="Application.PushClient3">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -530,13 +615,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonTools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.util.common.JsonTools" />
-      <module name="shop-authority" />
+    <configuration name="PushClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient" />
+      <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.util.common.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -544,13 +629,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrioTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.shrio.test1.ShrioTest1" />
-      <module name="platform-shrio" />
+    <configuration name="PushClient2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient2" />
+      <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.shrio.test1.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -558,13 +643,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrioTest2Realm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.shrio.test2realm.ShrioTest2Realm" />
-      <module name="platform-shrio" />
+    <configuration name="PushClient3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient3" />
+      <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.shrio.test2realm.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -572,13 +657,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrioTest2Realm2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.shrio.test2realm.ShrioTest2Realm2" />
-      <module name="platform-shrio" />
+    <configuration name="PushServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.server.PushServer" />
+      <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.shrio.test2realm.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.push.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -586,13 +671,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrioTest2Realm3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.shrio.test2realm.ShrioTest2Realm3" />
-      <module name="platform-shrio" />
+    <configuration name="TimeClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.client.TimeClient" />
+      <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.shrio.test2realm.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -799,20 +884,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.JsonTools" />
-      <item itemvalue="Application.ShrioTest1" />
-      <item itemvalue="Application.ShrioTest2Realm" />
-      <item itemvalue="Application.ShrioTest2Realm2" />
-      <item itemvalue="Application.ShrioTest2Realm3" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.23" />
+      <item itemvalue="Application.TimeClient" />
+      <item itemvalue="Application.PushServer" />
+      <item itemvalue="Application.PushClient" />
+      <item itemvalue="Application.PushClient2" />
+      <item itemvalue="Application.PushClient3" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ShrioTest2Realm3" />
-        <item itemvalue="Application.ShrioTest2Realm2" />
-        <item itemvalue="Application.ShrioTest2Realm" />
-        <item itemvalue="Application.ShrioTest1" />
-        <item itemvalue="Application.JsonTools" />
+        <item itemvalue="Application.PushClient3" />
+        <item itemvalue="Application.PushClient2" />
+        <item itemvalue="Application.PushClient" />
+        <item itemvalue="Application.PushServer" />
+        <item itemvalue="Application.TimeClient" />
       </list>
     </recent_temporary>
   </component>
@@ -862,7 +947,7 @@
       <workItem from="1562898710846" duration="5800000" />
       <workItem from="1563105095397" duration="4817000" />
       <workItem from="1563239565033" duration="2982000" />
-      <workItem from="1563434187853" duration="1174000" />
+      <workItem from="1563434187853" duration="15164000" />
     </task>
     <task id="LOCAL-00001" summary="新增aop功能，修改drugs功能">
       <created>1562159494730</created>
@@ -941,7 +1026,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563435154604</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改netty">
+      <created>1563435430599</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563435430599</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -965,7 +1057,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344427000" />
+    <option name="totallyTimeSpent" value="358417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,7 +1081,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36605656" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36605656" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1018,7 +1110,7 @@
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.31755725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.33816794" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1028,8 +1120,8 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36605656" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" visible="true" weight="0.45424291" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36605656" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294509" />
@@ -1089,7 +1181,8 @@
     <MESSAGE value="修改业务" />
     <MESSAGE value="新增httpclient、shiro、netty" />
     <MESSAGE value="新增shiro、netty" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增shiro、netty" />
+    <MESSAGE value="修改netty" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改netty" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1115,173 +1208,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/InstorageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="166" column="9" lean-forward="true" selection-start-line="166" selection-start-column="9" selection-end-line="166" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/PaylogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/dao/IStoreCheckDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/webapp/WEB-INF/jsp/storeCheck/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="232" column="35" selection-start-line="232" selection-start-column="25" selection-end-line="232" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/StoreCheckMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="136" column="35" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/resources/com/wxsoft/business/mapping/OrderdetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5325">
-          <caret line="213" column="12" selection-start-line="213" selection-start-column="12" selection-end-line="213" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/mybatisplugins/PrepareInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/StoreCheckController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3025">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/IStoreCheckService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/service/impl/StoreCheckServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/plugin/Plugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-baiduAI/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.1/shiro-core-1.3.1.jar!/org/apache/shiro/authc/CredentialsException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.1/shiro-core-1.3.1.jar!/org/apache/shiro/authc/IncorrectCredentialsException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.1/shiro-core-1.3.1.jar!/org/apache/shiro/subject/Subject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.1/shiro-core-1.3.1.jar!/org/apache/shiro/SecurityUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.1/shiro-core-1.3.1.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test1/ShrioTest1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1437,8 +1363,216 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform-netty/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="96">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final.jar!/io/netty/channel/ChannelInboundHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyInitial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/server/TimeServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ChanneList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/server/TimeServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyRemoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="232" column="28" lean-forward="true" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="22" column="17" selection-end-line="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#923#1687#0" expanded="true" />
+            <element signature="e#1686#1687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#841#1462#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final.jar!/io/netty/channel/SimpleChannelInboundHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="118" selection-end-column="73" />
         </state>
       </provider>
     </entry>
