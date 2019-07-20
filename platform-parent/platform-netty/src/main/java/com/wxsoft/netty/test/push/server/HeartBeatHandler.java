@@ -23,6 +23,11 @@ public class HeartBeatHandler extends SimpleChannelInboundHandler<Message> {
             ctx.fireChannelRead(message);
         }
     }
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        //此处对断网进行了处理
+        ChanneList.channels.remove(ctx.channel());
+    }
 
     private Message buildMessage(byte result){
         Message msg = new Message();
