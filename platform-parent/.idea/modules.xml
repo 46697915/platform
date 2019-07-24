@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/platform-shrio/platform-shrio.iml" filepath="$PROJECT_DIR$/platform-shrio/platform-shrio.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" filepath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-test/platform-test.iml" filepath="$PROJECT_DIR$/platform-test/platform-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-websocket/platform-websocket.iml" filepath="$PROJECT_DIR$/platform-websocket/platform-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-authority/shop-authority.iml" filepath="$PROJECT_DIR$/shop-authority/shop-authority.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-main/shop-main.iml" filepath="$PROJECT_DIR$/shop-main/shop-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-statistics/shop-statistics.iml" filepath="$PROJECT_DIR$/shop-statistics/shop-statistics.iml" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.project.business.stud.mapper.StudWorkMapper">
+<mapper namespace="com.project.com.wxsoft.business.stud.mapper.StudWorkMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.project.business.stud.entity.StudWork">
+    <resultMap id="BaseResultMap" type="com.project.com.wxsoft.business.stud.entity.StudWork">
         <id column="id" property="id" />
         <result column="com_name" property="comName" />
         <result column="com_address" property="comAddress" />

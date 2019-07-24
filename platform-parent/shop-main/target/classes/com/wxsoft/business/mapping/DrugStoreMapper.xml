@@ -16,7 +16,7 @@
     <result column="postcode" property="postcode" jdbcType="VARCHAR" />
     <result column="linkmanqq" property="linkmanqq" jdbcType="VARCHAR" />
      <result column="storecode" property="storecode" jdbcType="VARCHAR" />
-    <association  property="creatorUser" column="creator" javaType="com.wxsoft.business.pojo.User" select="getUserById" />
+    <association property="creatorUser" column="creator" javaType="com.wxsoft.business.pojo.User" select="getUserById" />
     <association  property="creatorname" column="creator" javaType="string" select="getUserNameById" />
  	<association  property="updatername" column="updater" javaType="string" select="getUserNameById" />
    

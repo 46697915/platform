@@ -18,6 +18,7 @@
         <module name="platform-netty" />
         <module name="platform-shrio-spring" />
         <module name="platform-test" />
+        <module name="platform-websocket" />
         <module name="shop-authority" />
         <module name="shop-main" />
         <module name="shop-statistics" />
@@ -40,6 +41,7 @@
       <module name="platform-shrio" target="1.8" />
       <module name="platform-shrio-spring" target="1.8" />
       <module name="platform-test" target="1.8" />
+      <module name="platform-websocket" target="1.8" />
       <module name="shop-authority" target="1.8" />
       <module name="shop-main" target="1.8" />
       <module name="shop-statistics" target="1.8" />

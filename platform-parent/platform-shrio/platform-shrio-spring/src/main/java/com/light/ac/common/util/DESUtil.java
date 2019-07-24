@@ -1,11 +1,12 @@
 package com.light.ac.common.util;
 
-import java.security.Key;
-import java.security.SecureRandom;
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import java.security.Key;
+import java.security.SecureRandom;
 
 public class DESUtil {
 
@@ -66,7 +67,7 @@ public class DESUtil {
 	
 	public static void main(String[] args) {
 		System.out.println(getEncryptString("root"));
-		System.out.println(getEncryptString("tiger"));
+		System.out.println(getEncryptString("root"));
 		System.out.println(getDecryptString("WnplV/ietfQ="));
 		System.out.println(getDecryptString("xyHEykQVHqA="));
 	}
