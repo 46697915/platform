@@ -16,6 +16,7 @@
         <module name="platform-hadoop" />
         <module name="platform-httpclient" />
         <module name="platform-netty" />
+        <module name="platform-netty-websocket" />
         <module name="platform-shrio-spring" />
         <module name="platform-test" />
         <module name="platform-websocket" />
@@ -37,6 +38,7 @@
       <module name="platform-hadoop" target="1.8" />
       <module name="platform-httpclient" target="1.8" />
       <module name="platform-netty" target="1.8" />
+      <module name="platform-netty-websocket" target="1.8" />
       <module name="platform-parent" target="1.8" />
       <module name="platform-shrio" target="1.8" />
       <module name="platform-shrio-spring" target="1.8" />

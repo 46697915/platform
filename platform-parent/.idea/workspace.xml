@@ -6,90 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="修改netty，增加客户端退出。">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_websocket_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_websocket_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/platform-websocket.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp" afterDir="false" />
+    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="增加websocket实例">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_netty_websocket_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_netty_websocket_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/platform-netty-websocket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/util/RandomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/webapp/socket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-plus-generator/target/classes/mapper/StudWork.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-plus-generator/target/classes/mapper/StudWork.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-axis2/target/classes/META-INF/platform-axis2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/utils/RSAUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-common/target/classes/com/wxsoft/utils/RSAUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-httpclient/target/classes/META-INF/platform-httpclient.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-netty/platform-netty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-netty/platform-netty.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/target/classes/META-INF/platform-shrio.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/target/classes/shiro-realm-jdbc.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/target/classes/shiro-realm-multi.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/target/classes/shiro-realm-single.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-shrio/target/classes/users.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-test/target/classes/test/JacksonTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/target/classes/test/JacksonTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-test/target/classes/test/JwtHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/target/classes/test/JwtHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-test/target/classes/test/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/target/classes/test/JwtUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-test/target/classes/test/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/target/classes/test/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-httpclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-authority/target/classes/META-INF/shop-authority.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-main/target/classes/com/wxsoft/business/mapping/DrugStoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-main/target/classes/com/wxsoft/business/mapping/DrugStoreMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-main/target/classes/com/wxsoft/business/mapping/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-main/target/classes/com/wxsoft/business/mapping/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/config/CrosConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/test/JacksonTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/test/JacksonTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/test/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/shop-statistics/target/classes/com/wxsoft/test/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-store/target/classes/META-INF/shop-store.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,6 +57,7 @@
     <ignored path="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/target/" />
     <ignored path="$PROJECT_DIR$/platform-netty/target/" />
     <ignored path="$PROJECT_DIR$/platform-websocket/target/" />
+    <ignored path="$PROJECT_DIR$/platform-netty-websocket/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,86 +83,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/utils/DateUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-100">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-80">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="58" column="31" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java">
+        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="18" selection-end-line="22" />
+            <state relative-caret-position="224">
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2776#2791#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="62" column="18" selection-end-line="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="21" column="9" lean-forward="true" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-385">
-              <caret line="45" column="21" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="8" column="6" lean-forward="true" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="44" column="15" lean-forward="true" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -238,10 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>${drugsDel.drugStoreShortName}</find>
-      <find>${drugStoreShortName}</find>
-      <find>drugStoreShortName</find>
-      <find>insertDrugsDel</find>
       <find>IDrugsForStoreDao</find>
       <find>drugController</find>
       <find>generatedate</find>
@@ -268,6 +219,10 @@
       <find>show_box</find>
       <find>websocket.jsp</find>
       <find>tomcat-embed-jasper</find>
+      <find>messageReceived</find>
+      <find>randomNumbers</find>
+      <find>dateutil</find>
+      <find>decodeUnicode</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -289,30 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test1/test2realm/MyRealm1.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm1.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/resources/shiro-realm-single.ini" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test1/ShrioTest1.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/MyRealm2.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/resources/shiro-realm-multi.ini" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm2.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/resources/shiro-realm-jdbc.ini" />
-        <option value="$PROJECT_DIR$/platform-shrio/src/main/java/com/wxsoft/shrio/test2realm/ShrioTest2Realm3.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/spring-shiro.xml" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/spring-beans.xml" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/platform-netty/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/TimeServer.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/TimeServerHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/server/client/TimeClient.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/client/TimeClientHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/client/TimeClient.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyInitial.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyServerHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyRemoteService.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClient.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java" />
@@ -323,7 +254,6 @@
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java" />
         <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/springmvc.xml" />
@@ -334,12 +264,37 @@
         <option value="$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java" />
         <option value="$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/platform-websocket/pom.xml" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java" />
         <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyChannelInitializer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyWSChannelInitializer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyMatchingHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/InformationOperateMapMatching.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/Mage.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyMatchingHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/NettySocketInitializer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/ChatHandler.java" />
+        <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/MyWebSocket.java" />
+        <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java" />
+        <option value="$PROJECT_DIR$/platform-websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" />
+        <option value="$PROJECT_DIR$/platform-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/SpringCloudStudyDemoApplication.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/NettyServer.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/webapp/socket.html" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/util/RandomUtil.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/SpringCloudStudyDemoApplication.java" />
+        <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Login.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java" />
       </list>
     </option>
   </component>
@@ -375,6 +330,11 @@
           <item name="platform-websocket Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="platform-websocket Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -398,7 +358,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -409,25 +368,25 @@
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -435,7 +394,85 @@
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="ignore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="trust" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -444,74 +481,22 @@
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-websocket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -524,10 +509,10 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563967986568" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564379281917" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-websocket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-netty-websocket" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -536,12 +521,12 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp\WEB-INF" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\java" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\db" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wxsoft.netty.test.push.client" />
@@ -550,12 +535,12 @@
       <recent name="com.wxsoft.business.dao" />
       <recent name="com.wxsoft.business.pojo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\java\com\platform\httpclient\https\login" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp\WEB-INF" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\java" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -574,9 +559,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.13416536" />
+    <option name="contentProportion" value="0.21216848" />
   </component>
-  <component name="RunManager" selected="Spring Boot.WebsocketApp">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -709,13 +694,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PushClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient" />
-      <module name="platform-netty" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.platform.httpclient.https.login.Main" />
+      <module name="platform-httpclient" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
+          <option name="PATTERN" value="com.platform.httpclient.https.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -723,27 +708,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PushClient2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient2" />
+    <configuration name="PushServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.server.PushServer" />
       <module name="platform-netty" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PushClient3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.client.PushClient3" />
-      <module name="platform-netty" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wxsoft.netty.test.push.client.*" />
+          <option name="PATTERN" value="com.wxsoft.netty.test.push.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -845,6 +816,21 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" />
       <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyWebSocketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-netty-websocket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wxsoft.netty.websocket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxsoft.netty.websocket.NettyWebSocketApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/platform-netty-websocket" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -966,20 +952,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.PushClient" />
-      <item itemvalue="Application.PushClient2" />
-      <item itemvalue="Application.PushClient3" />
       <item itemvalue="Application.DESUtil" />
+      <item itemvalue="Application.PushServer" />
       <item itemvalue="Spring Boot.WebsocketApp" />
+      <item itemvalue="Spring Boot.NettyWebSocketApplication" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.23" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Spring Boot.NettyWebSocketApplication" />
         <item itemvalue="Spring Boot.WebsocketApp" />
+        <item itemvalue="Application.PushServer" />
         <item itemvalue="Application.DESUtil" />
-        <item itemvalue="Application.PushClient3" />
-        <item itemvalue="Application.PushClient2" />
-        <item itemvalue="Application.PushClient" />
       </list>
     </recent_temporary>
   </component>
@@ -1030,7 +1016,9 @@
       <workItem from="1563105095397" duration="4817000" />
       <workItem from="1563239565033" duration="2982000" />
       <workItem from="1563434187853" duration="27027000" />
-      <workItem from="1563678091959" duration="14880000" />
+      <workItem from="1563678091959" duration="15521000" />
+      <workItem from="1564014947684" duration="19636000" />
+      <workItem from="1564369186719" duration="4778000" />
     </task>
     <task id="LOCAL-00001" summary="新增aop功能，修改drugs功能">
       <created>1562159494730</created>
@@ -1130,7 +1118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563603050541</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="增加websocket实例">
+      <created>1563968121602</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563968121603</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1154,7 +1149,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385160000" />
+    <option name="totallyTimeSpent" value="410215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1169,7 +1164,7 @@
     <frame x="3" y="0" width="1370" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.34351146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" weight="0.3541985" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1179,7 +1174,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.53078204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26622295" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1192,9 +1187,8 @@
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5091514" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3344426" />
       <window_info anchor="bottom" id="Application Servers" order="16" weight="0.3294509" />
-      <window_info anchor="right" id="JSF" weight="0.32977098" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
@@ -1207,9 +1201,10 @@
       <window_info anchor="right" id="Database" order="9" weight="0.32977098" />
       <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="JSF" order="12" weight="0.32977098" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.34351146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" weight="0.3541985" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1219,7 +1214,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.53078204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26622295" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1232,21 +1227,21 @@
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5091514" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3344426" />
       <window_info anchor="bottom" id="Application Servers" order="16" weight="0.3294509" />
-      <window_info anchor="right" id="JSF" order="0" weight="0.32977098" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.2351145" />
-      <window_info anchor="right" id="Designer" order="4" />
-      <window_info anchor="right" id="CDI" order="5" weight="0.32977098" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.24732825" />
-      <window_info anchor="right" id="Bean Validation" order="7" weight="0.32977098" />
-      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.24961832" />
-      <window_info anchor="right" id="Database" order="10" weight="0.32977098" />
-      <window_info anchor="right" id="Ant Build" order="11" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="12" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
+      <window_info anchor="right" id="Designer" order="3" />
+      <window_info anchor="right" id="CDI" order="4" weight="0.32977098" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.24732825" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32977098" />
+      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.24961832" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32977098" />
+      <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="JSF" order="12" weight="0.32977098" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1344,7 +1339,8 @@
     <MESSAGE value="修改netty" />
     <MESSAGE value="修改netty，增加消息推送例子。" />
     <MESSAGE value="修改netty，增加客户端退出。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改netty，增加客户端退出。" />
+    <MESSAGE value="增加websocket实例" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加websocket实例" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1354,12 +1350,6 @@
           <line>116</line>
           <properties />
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1376,294 +1366,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/server/TimeServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/app/NettyRemoteService.java" />
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="22" column="17" selection-end-line="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#923#1687#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final.jar!/io/netty/channel/SimpleChannelInboundHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="98" column="27" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/handler/timeout/ReadTimeoutHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#2388#2389#0" expanded="true" />
-            <element signature="e#2442#2443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-223">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="51" column="44" lean-forward="true" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#841#1462#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-authority/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="150" column="32" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/role/listUI.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/PermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="186" column="25" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/service/TestServiceSkeleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" />
-    <entry file="file://$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/receive/ReceiveRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/db/table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/configuration/EncryptPropertyPlaceholderConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/spring/applicationContext-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar!/org/apache/commons/codec/digest/DigestUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="320" column="34" selection-start-line="320" selection-start-column="19" selection-end-line="320" selection-end-column="34" />
-          <folding>
-            <element signature="e#10441#10442#0" expanded="true" />
-            <element signature="e#10494#10495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/authority-control.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/util/ImgUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1671,24 +1374,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-sources.jar!/com/alibaba/fastjson/JSONObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1709,73 +1398,345 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5200">
+          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1790#1791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyWSChannelInitializer.java" />
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/InformationOperateMapMatching.java" />
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/Mage.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="177" column="17" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="25" selection-start-line="25" selection-end-line="30" />
+        <state relative-caret-position="-156">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyMatchingHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="31" column="87" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/NettySocketInitializer.java" />
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/ChatHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.21/tomcat-embed-websocket-9.0.21.jar!/javax/websocket/server/PathParam.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/MyWebSocket.java" />
     <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="82">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="44" column="15" lean-forward="true" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="62" column="18" selection-end-line="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="45" column="21" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="6" lean-forward="true" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="21" column="9" lean-forward="true" selection-end-line="24" />
+        <state relative-caret-position="375">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java">
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="18" selection-end-line="22" />
+        <state relative-caret-position="-200">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1207#1828#0" expanded="true" />
+            <element signature="e#1827#1828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="89" selection-start-line="89" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/util/RandomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/http/HttpObjectAggregator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding>
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/NettyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/web/SyInstorageJzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final-sources.jar!/io/netty/handler/codec/http/HttpObjectAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="108" selection-start-line="108" selection-end-line="113" selection-end-column="7" />
+          <folding>
+            <element signature="e#5260#5261#0" expanded="true" />
+            <element signature="e#5305#5306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final-sources.jar!/io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2350">
+          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/webapp/socket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/utils/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2776#2791#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1834,7 +1795,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform-websocket</last-edited>
+          <last-edited>platform-netty-websocket</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

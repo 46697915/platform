@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/platform-hadoop/platform-hadoop.iml" filepath="$PROJECT_DIR$/platform-hadoop/platform-hadoop.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" filepath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-netty/platform-netty.iml" filepath="$PROJECT_DIR$/platform-netty/platform-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-netty-websocket/platform-netty-websocket.iml" filepath="$PROJECT_DIR$/platform-netty-websocket/platform-netty-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-parent.iml" filepath="$PROJECT_DIR$/platform-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-shrio/platform-shrio.iml" filepath="$PROJECT_DIR$/platform-shrio/platform-shrio.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" filepath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" />

@@ -10,6 +10,7 @@
     <file type="web" url="file://$PROJECT_DIR$/platform-hadoop" />
     <file type="web" url="file://$PROJECT_DIR$/platform-httpclient" />
     <file type="web" url="file://$PROJECT_DIR$/platform-netty" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-netty-websocket" />
     <file type="web" url="file://$PROJECT_DIR$/platform-shrio" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/platform-testing" />

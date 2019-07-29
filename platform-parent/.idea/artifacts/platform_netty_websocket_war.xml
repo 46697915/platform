@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-netty-websocket:war">
+    <output-path>$PROJECT_DIR$/platform-netty-websocket/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-netty-websocket</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-netty-websocket.war">
+      <element id="artifact" artifact-name="platform-netty-websocket:war exploded" />
+    </root>
+  </artifact>
+</component>
