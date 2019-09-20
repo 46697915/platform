@@ -11,7 +11,6 @@ import java.security.Key;
 import java.util.Date;
 
 public class JwtHelper {
- 
     private final static String base64Secret = "MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=";
     private final static int expiresSecond = 172800000;
  

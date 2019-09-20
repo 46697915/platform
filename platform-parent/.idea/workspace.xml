@@ -6,30 +6,400 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="增加websocket实例">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_netty_websocket_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_netty_websocket_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_36_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/platform-netty-websocket.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/NettyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/util/RandomUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platform-netty-websocket/src/main/webapp/socket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/platform_httpclient_war_exploded.xml" afterDir="false" />
+    <list default="true" id="e4622443-bcec-4a21-9820-d527dbe19875" name="Default" comment="httpclient登录，未测试成功，先保存代码。">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_springboot_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_springboot_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_0_2_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/platform-shrio-spring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/credentials/RetryLimitHashedCredentialsMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/OrganizationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/OrganizationDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/ResourceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/ResourceDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/RoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/RoleDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/entity/Organization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/entity/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/realm/UserRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/OrganizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/OrganizationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/PasswordHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/ResourceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/ResourceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/bind/annotation/CurrentUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/bind/method/CurrentUserMethodArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/OrganizationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/ResourceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/exception/DefaultExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/shiro/filter/SysUserFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/taglib/Functions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/spring/SpringCacheManagerWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/spring/SpringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/ehcache/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/resources.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-config-cache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-config-shiro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-mvc-shiro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/sql/shiro-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-spring/src/sql/shiro-schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/platform-shrio-springboot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/ShrioApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/CrosConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/MyConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-shrio-springboot/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/platform-ui.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/components/element1.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/components/tag.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/https.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/login/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/error-log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/get-page-title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/open-window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/scroll-to.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platform-ui/src/utils/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_spring_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_spring_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/platform_shrio_spring_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_quartz_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_0_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_3_4_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/platform-httpclient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform-httpclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-httpclient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-baiduAI/target/classes/com/wxsoft/baiduai/Sample.class" beforeDir="false" afterPath="$PROJECT_DIR$/platform-baiduAI/target/classes/com/wxsoft/baiduai/Sample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/db/table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/platform-shrio-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/configuration/EncryptPropertyPlaceholderConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/JsonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/Permission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/PermissionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/RoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/BaseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/PermissionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/BaseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/PermissionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/vo/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/PermissionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/RoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/interceptor/LoginInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/realm/CustomRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/authority-control.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/SqlMapConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/PermissionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/RoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/mybatis/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/spring/applicationContext-mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/spring/applicationContext-shiro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/500.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/common.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/manageUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/permission/listUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/permission/saveUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/role/listUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/role/saveUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/user/listUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/user/saveUI.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace-rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace-skins.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/ace.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/font/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/ace-extra.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/ace.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table-locale-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table-locale-all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/bootstrap-table.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/angular/bootstrap-table-angular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/angular/bootstrap-table-angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/click-edit-row/bootstrap-table-click-edit-row.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/cookie/bootstrap-table-cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/cookie/bootstrap-table-cookie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/editable/bootstrap-table-editable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/editable/bootstrap-table-editable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/export/bootstrap-table-export.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/export/bootstrap-table-export.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter/bootstrap-table-filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/filter/bootstrap-table-filter.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/group-by/bootstrap-table-group-by.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/key-events/bootstrap-table-key-events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/key-events/bootstrap-table-key-events.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/mobile/bootstrap-table-mobile.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/print/bootstrap-table-print.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/print/bootstrap-table-print.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/resizable/bootstrap-table-resizable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-af-ZA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-af-ZA.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ar-SA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ar-SA.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ca-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ca-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-cs-CZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-cs-CZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-da-DK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-da-DK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-de-DE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-de-DE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-el-GR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-el-GR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-en-US.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-en-US.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-AR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-AR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-CR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-MX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-MX.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-NI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-NI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-SP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-es-SP.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-et-EE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-et-EE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fa-IR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fa-IR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-BE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-BE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-FR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-fr-FR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-he-IL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-he-IL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hr-HR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hr-HR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hu-HU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-hu-HU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-id-ID.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-id-ID.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-it-IT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-it-IT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ja-JP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ja-JP.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ka-GE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ka-GE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ko-KR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ko-KR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ms-MY.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ms-MY.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nb-NO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nb-NO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nl-NL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-nl-NL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pl-PL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pl-PL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-BR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-pt-PT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ro-RO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ro-RO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ru-RU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ru-RU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sk-SK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sk-SK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sv-SE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-sv-SE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-th-TH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-th-TH.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-tr-TR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-tr-TR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uk-UA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uk-UA.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ur-PK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-ur-PK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uz-Latn-UZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-uz-Latn-UZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-vi-VN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-vi-VN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/locale/bootstrap-table-zh-TW.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap-table/tree-column/bootstrap-table-tree-column.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/jquery-1.11.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/mobile/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/mobile/need/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/layer/skin/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/manageUI/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/permission/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/permission/saveUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/role/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/role/saveUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/typeahead-bs2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/user/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/user/saveUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/1_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/1_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/diy/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/line_conn.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/line_conn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/metro.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/img/metro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/css/zTreeStyle/metro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/js/jquery-1.4.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/webapp/resources/js/zTree/js/jquery.ztree.all-3.5.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-shrio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platform-shrio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="shop-parent.iws" />
@@ -58,6 +428,8 @@
     <ignored path="$PROJECT_DIR$/platform-netty/target/" />
     <ignored path="$PROJECT_DIR$/platform-websocket/target/" />
     <ignored path="$PROJECT_DIR$/platform-netty-websocket/target/" />
+    <ignored path="$PROJECT_DIR$/platform-shrio-spring/target/" />
+    <ignored path="$PROJECT_DIR$/platform-shrio-springboot/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,97 +456,106 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/utils/DateUtil.java">
+        <entry file="file://$PROJECT_DIR$/platform-ui/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="200">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="100">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/src/permission.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2410">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/jest.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="-185" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-871">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#251#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-element-admin/src/settings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-671" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-ui/src/login/login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#el-col#0;n#el-row#5;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-button#0;n#el-form-item#3;n#el-form#0;n#el-col#0;n#el-row#5;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2776#2791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform-ui/src/https.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,28 +574,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>IDrugsForStoreDao</find>
-      <find>drugController</find>
-      <find>generatedate</find>
-      <find>IDrugsForStoreService</find>
-      <find>validityperiod</find>
-      <find>reviewdate</find>
-      <find>operatedate</find>
-      <find>JsonTools</find>
-      <find>sellprice</find>
-      <find>#{drugstoreshortname}</find>
-      <find>InstorageMapper.xml</find>
-      <find>Instorage</find>
-      <find>(select min(units) from drugs a where a.barcode=x.barcode)</find>
-      <find>storeCheck</find>
-      <find>page.setSort</find>
-      <find>setOrder(&quot;</find>
-      <find>setSort(&quot;</find>
-      <find>order by</find>
-      <find>union</find>
-      <find>max(crrcheckdate)</find>
-      <find>AuthenticationException</find>
-      <find>read</find>
       <find>channelRead</find>
       <find>show_box</find>
       <find>websocket.jsp</find>
@@ -223,6 +582,28 @@
       <find>randomNumbers</find>
       <find>dateutil</find>
       <find>decodeUnicode</find>
+      <find>detect</find>
+      <find>Threshold</find>
+      <find>submit-btn</find>
+      <find>SecurityUtils</find>
+      <find>springCacheManager</find>
+      <find>formAuthenticationFilter</find>
+      <find>element-ui</find>
+      <find>element</find>
+      <find>login</find>
+      <find>index</find>
+      <find>main</find>
+      <find>Login</find>
+      <find>$store</find>
+      <find>SocialSignin</find>
+      <find>social-sign</find>
+      <find>SocialSign</find>
+      <find>showDialog</find>
+      <find>formLabelAlign</find>
+      <find>login-container</find>
+      <find>loginForm</find>
+      <find>$axios</find>
+      <find>username</find>
     </findStrings>
     <replaceStrings>
       <replace>storecheckJz</replace>
@@ -244,33 +625,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/first/client/TimeClient.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/PushMsg.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/Message.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ConnectHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/ConnectHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/HeartBeatHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/ChanneList.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/MessageType.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient3.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/platform-axis2/src/main/java/com/wxsoft/axis/business/dao/impl/BaseDao.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/common/util/DESUtil.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/java/com/light/ac/web/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java" />
-        <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyChannelInitializer.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyWSChannelInitializer.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/MyMatchingHandler.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/InformationOperateMapMatching.java" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/Mage.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyMatchingHandler.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/NettySocketInitializer.java" />
         <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/ChatHandler.java" />
@@ -279,7 +633,6 @@
         <option value="$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java" />
         <option value="$PROJECT_DIR$/platform-websocket/pom.xml" />
         <option value="$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp" />
-        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" />
         <option value="$PROJECT_DIR$/platform-netty/pom.xml" />
         <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/SpringCloudStudyDemoApplication.java" />
         <option value="$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java" />
@@ -295,6 +648,34 @@
         <option value="$PROJECT_DIR$/platform-httpclient/pom.xml" />
         <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java" />
         <option value="$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java" />
+        <option value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java" />
+        <option value="$PROJECT_DIR$/platform-baiduAI/src/main/java/com/wxsoft/baiduai/Sample.java" />
+        <option value="$PROJECT_DIR$/platform-shrio/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/src/main/java/shiro/chapter16/web/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-config-shiro.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/platform-ui/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/platform-ui/src/components/element1.vue" />
+        <option value="$PROJECT_DIR$/platform-ui/src/components/tag.vue" />
+        <option value="$PROJECT_DIR$/vue-element-admin/src/router/index.js" />
+        <option value="$PROJECT_DIR$/platform-test/src/main/java/test/JwtHelper.java" />
+        <option value="$PROJECT_DIR$/vue-element-admin/src/views/login/index.vue" />
+        <option value="$PROJECT_DIR$/platform-ui/src/router/index.js" />
+        <option value="$PROJECT_DIR$/platform-ui/src/App.vue" />
+        <option value="$PROJECT_DIR$/platform-ui/package.json" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/ShrioApplication.java" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/pojo/User.java" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/CrosConfig.java" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/MyConfiguration.java" />
+        <option value="$PROJECT_DIR$/platform-ui/src/main.js" />
+        <option value="$PROJECT_DIR$/platform-ui/src/login/login.vue" />
+        <option value="$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/platform-ui/src/https.js" />
       </list>
     </option>
   </component>
@@ -368,129 +749,103 @@
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
-              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="shrio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
-              <item name="https" type="462c0819:PsiDirectoryNode" />
-              <item name="ignore" type="462c0819:PsiDirectoryNode" />
+              <item name="shrio" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
-              <item name="https" type="462c0819:PsiDirectoryNode" />
+              <item name="shrio" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-shrio-springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shrio" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="platform-httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="platform-ui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
-              <item name="https" type="462c0819:PsiDirectoryNode" />
-              <item name="trust" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-element-admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-element-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="platform-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wxsoft" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -509,24 +864,25 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564379281917" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568945463912" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/platform-netty-websocket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mcms/MCMS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.28045976" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio-springboot\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-ui\src\router" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-ui\src" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio-spring\src" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio-spring\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wxsoft.netty.test.push.client" />
@@ -535,12 +891,12 @@
       <recent name="com.wxsoft.business.dao" />
       <recent name="com.wxsoft.business.pojo" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\java\com\platform\httpclient\https\login" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\webapp\WEB-INF" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\java" />
-      <recent name="E:\IdeaProjects\platform\platform-parent\platform-shrio\platform-shrio-spring\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-authority\src\main\resources\com\wxsoft\business" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\shop-main\src\main\resources\com\wxsoft\business\mapping" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-httpclient\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources" />
+      <recent name="E:\IdeaProjects\platform\platform-parent\platform-axis2\src\main\resources\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -561,7 +917,7 @@
     </option>
     <option name="contentProportion" value="0.21216848" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Spring Boot.ShrioApplication">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -708,13 +1064,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PushServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wxsoft.netty.test.push.server.PushServer" />
-      <module name="platform-netty" />
+    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wxsoft.baiduai.Sample" />
+      <module name="platform-baiduAI" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.netty.test.push.server.*" />
+          <option name="PATTERN" value="com.wxsoft.baiduai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -835,17 +1191,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebsocketApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="platform-websocket" />
+    <configuration name="ShrioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-shrio-springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxsoft.*" />
+          <option name="PATTERN" value="com.wxsoft.shrio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxsoft.WebsocketApp" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/platform-websocket" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wxsoft.shrio.ShrioApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -860,13 +1214,13 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/shrio/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="platform-shrio-spring:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/shrio" />
           </settings>
         </artifact>
       </deployment>
@@ -951,21 +1305,54 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="element_admin_dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/vue-element-admin/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="platformbuild" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/platform-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="platformserve" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/platform-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Application.DESUtil" />
-      <item itemvalue="Application.PushServer" />
-      <item itemvalue="Spring Boot.WebsocketApp" />
-      <item itemvalue="Spring Boot.NettyWebSocketApplication" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.23" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Sample" />
+      <item itemvalue="Application.DESUtil" />
+      <item itemvalue="npm.element_admin_dev" />
+      <item itemvalue="npm.platformserve" />
+      <item itemvalue="npm.platformbuild" />
+      <item itemvalue="Spring Boot.NettyWebSocketApplication" />
+      <item itemvalue="Spring Boot.ShrioApplication" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.23" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ShrioApplication" />
+        <item itemvalue="Application.DESUtil" />
+        <item itemvalue="Application.Sample" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Spring Boot.NettyWebSocketApplication" />
-        <item itemvalue="Spring Boot.WebsocketApp" />
-        <item itemvalue="Application.PushServer" />
-        <item itemvalue="Application.DESUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -1018,7 +1405,22 @@
       <workItem from="1563434187853" duration="27027000" />
       <workItem from="1563678091959" duration="15521000" />
       <workItem from="1564014947684" duration="19636000" />
-      <workItem from="1564369186719" duration="4778000" />
+      <workItem from="1564369186719" duration="5555000" />
+      <workItem from="1564385734734" duration="4088000" />
+      <workItem from="1564451471075" duration="3519000" />
+      <workItem from="1564528564197" duration="18000" />
+      <workItem from="1565666424831" duration="1321000" />
+      <workItem from="1565680217401" duration="3403000" />
+      <workItem from="1565690538293" duration="5925000" />
+      <workItem from="1565763690907" duration="6602000" />
+      <workItem from="1566194037196" duration="1830000" />
+      <workItem from="1567476518749" duration="1416000" />
+      <workItem from="1567604325726" duration="3313000" />
+      <workItem from="1567666018037" duration="10518000" />
+      <workItem from="1568257403540" duration="1200000" />
+      <workItem from="1568707487248" duration="36256000" />
+      <workItem from="1568897681564" duration="4925000" />
+      <workItem from="1568942924280" duration="2529000" />
     </task>
     <task id="LOCAL-00001" summary="新增aop功能，修改drugs功能">
       <created>1562159494730</created>
@@ -1125,7 +1527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563968121603</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="httpclient登录，未测试成功，先保存代码。">
+      <created>1564379342130</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1564379342130</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1149,7 +1558,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410215000" />
+    <option name="totallyTimeSpent" value="497855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1164,7 +1573,7 @@
     <frame x="3" y="0" width="1370" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" weight="0.3541985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.23969465" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1174,21 +1583,21 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26622295" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49923664" weight="0.2828619" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.52412647" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3294509" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50076336" side_tool="true" weight="0.484193" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3344426" />
-      <window_info anchor="bottom" id="Application Servers" order="16" weight="0.3294509" />
+      <window_info anchor="bottom" id="Run Dashboard" order="6" visible="true" weight="0.32279533" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3294509" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.3294509" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.3294509" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49923664" weight="0.28785357" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50076336" side_tool="true" weight="0.28785357" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.37271214" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.327787" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.4326123" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.2351145" />
@@ -1204,7 +1613,7 @@
       <window_info anchor="right" id="JSF" order="12" weight="0.32977098" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49134198" weight="0.3541985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49134198" visible="true" weight="0.23587786" />
       <window_info id="Structure" order="1" weight="0.24961832" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1214,20 +1623,20 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47088185" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26622295" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.39267886" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49923664" weight="0.39434275" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49923664" weight="0.52412647" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294509" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50076336" side_tool="true" weight="0.484193" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3294509" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49923664" weight="0.28785357" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50076336" side_tool="true" weight="0.28785357" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.37271214" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.327787" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.4326123" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3344426" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5407654" />
       <window_info anchor="bottom" id="Application Servers" order="16" weight="0.3294509" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -1340,7 +1749,8 @@
     <MESSAGE value="修改netty，增加消息推送例子。" />
     <MESSAGE value="修改netty，增加客户端退出。" />
     <MESSAGE value="增加websocket实例" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加websocket实例" />
+    <MESSAGE value="httpclient登录，未测试成功，先保存代码。" />
+    <option name="LAST_COMMIT_MESSAGE" value="httpclient登录，未测试成功，先保存代码。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1350,6 +1760,18 @@
           <line>116</line>
           <properties />
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/IndexController.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/LoginController.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1366,379 +1788,393 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class">
+    <entry file="file://$PROJECT_DIR$/platform-ui-vue-element-admin/src/App.vue" />
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-sources.jar!/com/alibaba/fastjson/JSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushMsgHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="200">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/client/PushClient2.java">
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/utils/validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="46" column="56" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="56" />
+        <state relative-caret-position="-975">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/logback-spring.xml">
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/views/login/components/SocialSignin.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5200">
-          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
+        <state relative-caret-position="-400">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyWSChannelInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/InformationOperateMapMatching.java" />
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/Mage.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="177" column="17" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/HeartBeatHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/MyMatchingHandler.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="31" column="87" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/NettySocketInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/websocket/ChatHandler.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.21/tomcat-embed-websocket-9.0.21.jar!/javax/websocket/server/PathParam.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/MyWebSocket.java" />
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/config/WebSocketConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/WebsocketApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/util/WebSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/utils/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/webapp/WEB-INF/jsp/websocket.jsp">
+    <entry file="file://$PROJECT_DIR$/platform-ui/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/views/login/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2225">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/src/main/java/com/wxsoft/netty/test/push/server/PushServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1207#1828#0" expanded="true" />
-            <element signature="e#1827#1828#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#72#120#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty/pom.xml">
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="77" column="20" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-mvc-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/resources/spring-config-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="95" column="94" selection-start-line="95" selection-start-column="94" selection-end-line="95" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1258">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/web/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/resources/resources.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/spring/SpringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/spring/SpringCacheManagerWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2097">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/credentials/RetryLimitHashedCredentialsMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-ui/babel.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-spring/src/main/java/com/github/zhangkaitao/shiro/chapter16/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/pom.xml">
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="89" selection-start-line="89" selection-end-line="95" />
+        <state relative-caret-position="325">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/pom.xml">
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-websocket/src/main/java/com/wxsoft/websocket/controller/WebsocketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/util/RandomUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/http/HttpObjectAggregator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/NettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/business/web/SyInstorageJzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final-sources.jar!/io/netty/handler/codec/http/HttpObjectAggregator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="108" selection-start-line="108" selection-end-line="113" selection-end-column="7" />
-          <folding>
-            <element signature="e#5260#5261#0" expanded="true" />
-            <element signature="e#5305#5306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final-sources.jar!/io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2350">
-          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/webapp/socket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/NettyWebSocketApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="17" column="5" selection-start-line="7" selection-start-column="40" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyWebSocketHandler.java">
+    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="900">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/MyConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-netty-websocket/src/main/java/com/wxsoft/netty/websocket/server/MyChannelHandlerPool.java">
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/ShrioApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/config/CrosConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-ui/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/pojo/DrugsDic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-authority/src/main/java/com.wxsoft/business/controller/DrugsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform-shrio-springboot/src/main/java/com/wxsoft/shrio/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-statistics/src/main/java/com/wxsoft/utils/DateUtil.java">
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/login/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/trust/HttpClent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        <state relative-caret-position="1350">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-col#0;n#el-row#5;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#3;n#el-form#0;n#el-col#0;n#el-row#5;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/ignore/HttpClientUtil.java">
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/https.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="38" />
+        <state relative-caret-position="129">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#808#837#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/pom.xml">
+    <entry file="file://$PROJECT_DIR$/platform-ui/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/HttpClientUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform-httpclient/src/main/java/com/platform/httpclient/https/login/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2776#2791#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-871">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#251#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/src/permission.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2410">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-element-admin/jest.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-185" />
       </provider>
     </entry>
   </component>
@@ -1747,11 +2183,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>shop-main:war</last-edited>
+          <last-edited>platform-shrio-spring:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.28045976" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1795,11 +2231,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform-netty-websocket</last-edited>
+          <last-edited>platform-shrio-springboot</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.28045976" />
                 <option value="0.6" />
               </list>
             </option>

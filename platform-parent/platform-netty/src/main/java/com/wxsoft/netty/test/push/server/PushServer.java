@@ -23,7 +23,9 @@ public class PushServer {
         ServerBootstrap bs = new ServerBootstrap();
         bs.group(bossGroup, workGroup)
                 .channel(NioServerSocketChannel.class)
+                //当前以及连接和正在连接的总数
                 .option(ChannelOption.SO_BACKLOG, 1000)
+                //当设置为true的时候，TCP会实现监控连接是否有效，当连接处于空闲状态的时候，超过了2个小时，本地的TCP实现会发送一个数据包给远程的 socket，如果远程没有发回响应，TCP会持续尝试11分钟，知道响应为止，如果在12分钟的时候还没响应，TCP尝试关闭socket连接。
                 .option(ChannelOption.SO_KEEPALIVE, true)
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override

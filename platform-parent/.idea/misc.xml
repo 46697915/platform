@@ -12,6 +12,8 @@
     <file type="web" url="file://$PROJECT_DIR$/platform-netty" />
     <file type="web" url="file://$PROJECT_DIR$/platform-netty-websocket" />
     <file type="web" url="file://$PROJECT_DIR$/platform-shrio" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-shrio-spring" />
+    <file type="web" url="file://$PROJECT_DIR$/platform-shrio-springboot" />
     <file type="web" url="file://$PROJECT_DIR$/platform-test" />
     <file type="web" url="file://$PROJECT_DIR$/platform-testing" />
     <file type="web" url="file://$PROJECT_DIR$/platform-websocket" />
@@ -20,6 +22,9 @@
     <file type="web" url="file://$PROJECT_DIR$/shop-statistics" />
     <file type="web" url="file://$PROJECT_DIR$/shop-store" />
     <file type="web" url="file://$PROJECT_DIR$/shop-view" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
   </component>
   <component name="MarkdownProjectSettings">
     <PreviewSettings splitEditorLayout="SPLIT" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="0" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizePreviewPosition="true" highlightPreviewType="NONE" highlightFadeOut="5" highlightOnTyping="true" synchronizeSourcePosition="true" verticallyAlignSourceAndPreviewSyncPosition="true" showSearchHighlightsInPreview="false" showSelectionInPreview="true" openRemoteLinks="true">
@@ -100,6 +105,11 @@
         <option value="$PROJECT_DIR$/platform-baiduAI/pom.xml" />
         <option value="$PROJECT_DIR$/platform-shrio/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/platform-shrio/platform-shrio-spring/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

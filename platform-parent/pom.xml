@@ -43,6 +43,8 @@
         <module>platform-netty</module>
         <module>platform-websocket</module>
         <module>platform-netty-websocket</module>
+        <module>platform-shrio-spring</module>
+        <module>platform-shrio-springboot</module>
         <!--<module>platform-shrio</module>-->
         <!--<module>platform-baiduAI</module>-->
         <!--<module>platform-drools</module>-->
