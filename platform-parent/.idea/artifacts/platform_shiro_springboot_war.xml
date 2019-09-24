@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-shiro-springboot:war">
+    <output-path>$PROJECT_DIR$/platform-shiro-springboot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-shiro-springboot</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-shrio-springboot.war">
+      <element id="artifact" artifact-name="platform-shiro-springboot:war exploded" />
+    </root>
+  </artifact>
+</component>

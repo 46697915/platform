@@ -23,7 +23,6 @@
                 <!--<el-radio-button label="top">顶部对齐</el-radio-button>-->
                 <!--</el-radio-group>-->
                 <div style="margin: 20px;">
-                    <a href="http://127.0.0.1:8083/login?username=test">test</a>
                     <h3 class="title">登录</h3>
                 </div>
                 <el-form :label-position="labelPosition" label-width="80px" :model="loginForm" ref="loginForm">
@@ -45,7 +44,7 @@
     </div>
 </template>
 <script>
-    // import axios from 'axios'
+    //import https from '/src/https.js'
 
     export default {
         name: 'Login',
@@ -53,7 +52,7 @@
             return {
                 labelPosition: 'right',
                 logining: true,
-                url: 'http://127.0.0.1:8083/login',
+                url: 'http://127.0.0.1:8083/user/login',
                 loginForm: {
                     username: '',
                     password: '',
@@ -63,15 +62,22 @@
         },
         methods: {
             onSubmit() {
-                this.$axios.post(this.url, this.loginForm)
+                let that = this ;
+                this.httpOperate.fetchGet(this.url, this.loginForm)
                     .then((response) => {
-                        console.log(response.data);
-                        this.$router.push({path: '/HelloWorld'});
+                        //console.log(response.data);
+                        if(response.data.success){
+                            that.$router.push({path: '/home'});
+                        }else{
+                            that.$alert(response.data.msg, 'info', {
+                                confirmButtonText: 'ok'
+                            });
+                        }
                     })
                     .cache((error) => {
-                        console.log(error);
-                        this.logining = false;
-                        this.$alert('username or password wrong!', 'info', {
+                        //console.log(error);
+                        that.logining = false;
+                        that.$alert('username or password wrong!'+error.data.msg, 'info', {
                             confirmButtonText: 'ok'
                         });
                     });

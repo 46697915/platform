@@ -5,11 +5,16 @@ Vue.use(Router)
 
 import HelloWorld from '@/components/HelloWorld'
 import login from '@/login/login'
+import home from '@/components/home'
 
 export const constantRoutes = [
   {
     path: '/',
     component: login
+  },
+  {
+    path: '/home',
+    component: home
   },
   {
     path: '/HelloWorld',
