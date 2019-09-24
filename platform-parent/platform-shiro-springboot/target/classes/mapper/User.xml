@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxsoft.shiro.business.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wxsoft.shiro.business.entity.User">
+        <id column="id" property="id" />
+        <result column="organization_id" property="organizationId" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="role_ids" property="roleIds" />
+        <result column="locked" property="locked" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id,
+		organization_id AS organizationId,
+		username, password, salt,
+		role_ids AS roleIds,
+		locked
+	</sql>
+
+    <select id="findByUsername" parameterType="java.lang.String" resultType="User">
+        select
+        <include refid="Base_Column_List" />
+        from sys_user
+        <where>
+            <if test="username != null and username != ''">
+                and username =  #{username}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectBy" parameterType="UserVo" resultType="User">
+        select
+        <include refid="Base_Column_List" />
+        from sys_user
+        <where>
+        <if test="id != null and id != ''">
+            and id =  #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="organizationId != null and organizationId != ''">
+            and organization_id =  #{organizationId,jdbcType=VARCHAR}
+        </if>
+        <if test="username != null and username != ''">
+            and username =  #{username,jdbcType=VARCHAR}
+        </if>
+        <if test="password != null and password != ''">
+            and password =  #{password,jdbcType=VARCHAR}
+        </if>
+        <if test="salt != null and salt != ''">
+            and salt =  #{salt,jdbcType=VARCHAR}
+        </if>
+        <if test="roleIds != null and roleIds != ''">
+            and role_ids =  #{roleIds,jdbcType=VARCHAR}
+        </if>
+        <if test="locked != null and locked != ''">
+            and locked =  #{locked,jdbcType=VARCHAR}
+        </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+        insert into sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="organizationId != null">organization_id,</if>
+            <if test="username != null">username,</if>
+            <if test="password != null">password,</if>
+            <if test="salt != null">salt,</if>
+            <if test="roleIds != null">role_ids,</if>
+            <if test="locked != null">locked,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="organizationId != null">#{organizationId},</if>
+            <if test="username != null">#{username},</if>
+            <if test="password != null">#{password},</if>
+            <if test="salt != null">#{salt},</if>
+            <if test="roleIds != null">#{roleIds},</if>
+            <if test="locked != null">#{locked},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" >
+        update sys_user
+        <set>
+            <if test="id != null">id=#{id},</if>
+            <if test="organizationId != null">organization_id=#{organizationId},</if>
+            <if test="username != null">username=#{username},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="salt != null">salt=#{salt},</if>
+            <if test="roleIds != null">role_ids=#{roleIds},</if>
+            <if test="locked != null">locked=#{locked},</if>
+        </set>
+        <where>
+            and id = #{id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete from sys_user
+        <where>
+                and id = #{id}
+        </where>
+    </delete>
+
+</mapper>

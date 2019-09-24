@@ -1,0 +1,12 @@
+#SpringBoot启动端口和项目路径
+server:
+  port: 8081
+  servlet:
+    context-path: /
+
+#SpringMVC中JSP视图配置
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
