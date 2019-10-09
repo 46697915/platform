@@ -22,7 +22,7 @@
     <select id="findByUsername" parameterType="java.lang.String" resultType="User">
         select
         <include refid="Base_Column_List" />
-        from sys_user
+        from sys_users
         <where>
             <if test="username != null and username != ''">
                 and username =  #{username}
@@ -34,7 +34,7 @@
     <select id="selectBy" parameterType="UserVo" resultType="User">
         select
         <include refid="Base_Column_List" />
-        from sys_user
+        from sys_users
         <where>
         <if test="id != null and id != ''">
             and id =  #{id,jdbcType=VARCHAR}

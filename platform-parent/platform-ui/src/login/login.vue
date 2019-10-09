@@ -44,7 +44,6 @@
     </div>
 </template>
 <script>
-    //import https from '/src/https.js'
 
     export default {
         name: 'Login',
@@ -52,7 +51,7 @@
             return {
                 labelPosition: 'right',
                 logining: true,
-                url: 'http://127.0.0.1:8083/user/login',
+                url: '/user/login',
                 loginForm: {
                     username: '',
                     password: '',
@@ -66,18 +65,21 @@
                 this.httpOperate.fetchGet(this.url, this.loginForm)
                     .then((response) => {
                         //console.log(response.data);
+                        //window.console.log(response)
                         if(response.data.success){
-                            that.$router.push({path: '/home'});
+                            that.$router.push({path: '/home/sysUser'});
+                            //that.$store.commit('login', data.obj);
                         }else{
                             that.$alert(response.data.msg, 'info', {
                                 confirmButtonText: 'ok'
                             });
                         }
                     })
-                    .cache((error) => {
+                    .catch((error) => {
                         //console.log(error);
+                        //window.console.log(error)
                         that.logining = false;
-                        that.$alert('username or password wrong!'+error.data.msg, 'info', {
+                        that.$alert('username or password wrong!'+error.msg, 'info', {
                             confirmButtonText: 'ok'
                         });
                     });

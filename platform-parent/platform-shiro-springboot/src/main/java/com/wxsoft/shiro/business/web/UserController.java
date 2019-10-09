@@ -6,6 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.wxsoft.shiro.business.entity.User;
 import com.wxsoft.shiro.business.entity.UserVo;
 import com.wxsoft.shiro.business.service.IUserService;
+import com.wxsoft.shiro.shiro.PasswordHelper;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -84,17 +85,8 @@ public class UserController {
             aj.setSuccess(false);
             aj.setMsg("身份认证失败!");
         }
+        String userId = (String)SecurityUtils.getSubject().getSession().getAttribute("currentUserId");
         return aj;
-    }
-
-    @RequestMapping("/register")
-    public String add(User user) {
-        ModelAndView view = new ModelAndView();
-        service.insert(user);
-        view.setViewName("redirect:/login.html");
-        AjaxJson aj = new AjaxJson();
-        aj.setSuccess(true);
-        return aj.getJsonStr();
     }
 
     @RequestMapping("/logout")
@@ -138,7 +130,9 @@ public class UserController {
     }
 
     @RequestMapping("/add")
-    public ResponseElementUI add(UserVo vo) {
+    public ResponseElementUI add(User vo) {
+        //给密码加密，获取盐
+        PasswordHelper.encryptPassword(vo);
         boolean r = service.insert(vo);
         ResponseElementUI rr = ResponseElementUI.getResponseResult();
         rr.setResult(r);
@@ -146,13 +140,21 @@ public class UserController {
     }
 
     @RequestMapping("/edit")
-    public ResponseElementUI edit(UserVo vo) {
+    public ResponseElementUI edit(User vo) {
+        //给密码加密，获取盐
+        PasswordHelper.encryptPassword(vo);
         boolean r = service.updateById(vo);
         ResponseElementUI rr = ResponseElementUI.getResponseResult();
         rr.setResult(r);
         return rr;
     }
 
+    /**
+     * 存在类型转换问题，使用批量删除
+     * @param request
+     * @param id
+     * @return
+     */
     @RequestMapping("delete")
     public ResponseElementUI delete(HttpServletRequest request, String id) {
         boolean r = service.deleteById(id);

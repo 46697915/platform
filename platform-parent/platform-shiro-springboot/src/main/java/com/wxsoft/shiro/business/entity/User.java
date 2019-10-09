@@ -15,13 +15,13 @@ import java.io.Serializable;
  * @author cl
  * @since 2019-09-20
  */
-@TableName("sys_user")
+@TableName("sys_users")
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     private String username;
 
@@ -31,11 +31,11 @@ public class User extends Model<User> {
 
     private Integer locked;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getUsername() {

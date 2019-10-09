@@ -2,6 +2,7 @@ package com.wxsoft.shiro.controller;
 
 import com.wxsoft.shiro.business.entity.User;
 import com.wxsoft.shiro.business.service.IUserService;
+import com.wxsoft.shiro.shiro.PasswordHelper;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -78,9 +79,9 @@ public class IndexController {
 
     @RequestMapping("/register")
     public String add(User user){
-        ModelAndView view = new ModelAndView();
+        //给密码加密，获取盐
+        PasswordHelper.encryptPassword(user);
         userService.insert(user);
-        view.setViewName("redirect:/login.html");
         AjaxJson aj = new AjaxJson();
         aj.setSuccess(true);
         return aj.getJsonStr();

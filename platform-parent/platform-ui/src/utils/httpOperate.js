@@ -3,7 +3,7 @@ import qs from 'qs'
 
 axios.defaults.timeout = 5000;                        //响应时间
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';        //配置请求头
-axios.defaults.baseURL = '';   //配置接口地址
+axios.defaults.baseURL = 'http://127.0.0.1:8083';   //配置接口地址
 //默认当axios进行跨域请求的时候是不会携带Cookies的
 //设置vueAxios.defaults.withCredentials的值为true则跨域的时候会带上cookie
 axios.defaults.withCredentials = true;
@@ -37,12 +37,13 @@ axios.interceptors.response.use((res) =>{
 //返回一个Promise(发送post请求)
 export function fetchPost(url, params) {
     return new Promise((resolve, reject) => {
-        axios.post(url, params)
+        axios.post(url, params, {timeout: 1000 * 60 * 2})
             .then(response => {
-                resolve(response);
-            }, err => {
-                reject(err);
-            })
+                    resolve(response);
+                }, err => {
+                    reject(err);
+                }
+            )
             .catch((error) => {
                 reject(error)
             })
@@ -51,12 +52,13 @@ export function fetchPost(url, params) {
 ////返回一个Promise(发送get请求)
 export function fetchGet(url, param) {
     return new Promise((resolve, reject) => {
-        axios.get(url, {params: param})
+        axios.get(url, {params: param,timeout: 1000 * 60 * 2})
             .then(response => {
-                resolve(response)
-            }, err => {
-                reject(err)
-            })
+                    resolve(response)
+                }, err => {
+                    reject(err)
+                }
+            )
             .catch((error) => {
                 reject(error)
             })
@@ -68,7 +70,7 @@ export default {
 }
 /**
  * 实例如下：
- import https from '../https.js' 　　// 注意用自己的路径
+ import https from './utils/httpOperate.js' 　　// 注意用自己的路径
 
  // 请求后台数据==================
  loginPost: function () {
