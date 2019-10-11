@@ -18,6 +18,6 @@ interface ${table.serviceName} : ${superServiceClass}<${entity}>
 <#else>
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
-    public List selectBy(${entity}Vo vo);
+    List selectBy(${entity}Vo vo);
 }
 </#if>

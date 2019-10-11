@@ -1,66 +1,82 @@
 <template>
     <!--<div class="home-div">-->
-        <el-container class="home-container" direction="vertical">
-            <el-header class="home-header" height="50px">
-                <span class="home_title">XXX系统</span>
-                <div style="display: flex;align-items: center;margin-right: 7px">
-                    <el-badge style="margin-right: 30px">
-                        <i class="fa fa-bell-o" style="cursor: pointer">i</i>
-                    </el-badge>
-                    <el-dropdown>
+    <el-container class="home-container" direction="vertical">
+        <el-header class="home-header" height="50px">
+            <span class="home_title">XXX系统</span>
+            <div style="display: flex;align-items: center;margin-right: 7px">
+                <el-badge style="margin-right: 30px">
+                    <i class="fa fa-bell-o" style="cursor: pointer">i</i>
+                </el-badge>
+                <el-dropdown>
                           <span class="el-dropdown-link home_userinfo" style="display: flex;align-items: center">
                             <!--{{user.name}}-->
                             <i><img
                                     style="width: 40px;height: 40px;margin-right: 5px;margin-left: 5px;border-radius: 40px"/></i>
                           </span>
-                        <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>个人中心</el-dropdown-item>
-                            <el-dropdown-item>设置</el-dropdown-item>
-                            <el-dropdown-item command="logout" divided>注销</el-dropdown-item>
-                        </el-dropdown-menu>
-                    </el-dropdown>
-                </div>
-            </el-header>
-            <el-container :style="main_container_style">
-                <el-aside class="home-aside"  width="200px">
-                    <myMenu :menuList="menuList"></myMenu>
-                    <!--<div style="display: flex;justify-content: flex-start;width: 180px;text-align: left;">-->
-                    <!--<el-menu style="background: #ececec;width: 180px;" unique-opened router>-->
-                    <!--<el-submenu index="1">-->
-                    <!--<template slot="title">-->
-                    <!--<i class="el-icon-location"></i>-->
-                    <!--<span>系统管理</span>-->
-                    <!--</template>-->
-                    <!--<el-menu-item index="sysUser">用户管理</el-menu-item>-->
-                    <!--<el-menu-item index="sysUser1">资源管理</el-menu-item>-->
-                    <!--<el-submenu index="2">-->
-                    <!--<template slot="title">-->
-                    <!--<i class="el-icon-location"></i>-->
-                    <!--<span>系统管理</span>-->
-                    <!--</template>-->
-                    <!--<el-menu-item index="sysUser">用户管理</el-menu-item>-->
-                    <!--</el-submenu>-->
-                    <!--</el-submenu>-->
-                    <!--<el-menu-item index="/home/HelloWorld">-->
-                    <!--<i class="el-icon-menu"></i>-->
-                    <!--<span slot="title">导航二</span>-->
-                    <!--</el-menu-item>-->
-                    <!--</el-menu>-->
-                    <!--</div>-->
-                </el-aside>
-                <el-main class="home-main">
-                    <el-breadcrumb separator-class="el-icon-arrow-right">
-                        <el-breadcrumb-item>首页</el-breadcrumb-item>
-                        <el-breadcrumb-item></el-breadcrumb-item>
-                    </el-breadcrumb>
-                    <keep-alive>
-                        <router-view></router-view>
-                    </keep-alive>
-                    <!--<router-view ></router-view>-->
-                </el-main>
-            </el-container>
-            <el-footer class="el-footer" height="60px">Footer</el-footer>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item>个人中心</el-dropdown-item>
+                        <el-dropdown-item>设置</el-dropdown-item>
+                        <el-dropdown-item command="logout" divided>注销</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
+        </el-header>
+        <el-container :style="main_container_style">
+            <el-aside class="home-aside" width="200px">
+                <myMenu :menuList="menuList"></myMenu>
+                <!--<div style="display: flex;justify-content: flex-start;width: 180px;text-align: left;">-->
+                <!--<el-menu style="background: #ececec;width: 180px;" unique-opened router>-->
+                <!--<el-submenu index="1">-->
+                <!--<template slot="title">-->
+                <!--<i class="el-icon-location"></i>-->
+                <!--<span>系统管理</span>-->
+                <!--</template>-->
+                <!--<el-menu-item index="sysUser">用户管理</el-menu-item>-->
+                <!--<el-menu-item index="sysUser1">资源管理</el-menu-item>-->
+                <!--<el-submenu index="2">-->
+                <!--<template slot="title">-->
+                <!--<i class="el-icon-location"></i>-->
+                <!--<span>系统管理</span>-->
+                <!--</template>-->
+                <!--<el-menu-item index="sysUser">用户管理</el-menu-item>-->
+                <!--</el-submenu>-->
+                <!--</el-submenu>-->
+                <!--<el-menu-item index="/home/HelloWorld">-->
+                <!--<i class="el-icon-menu"></i>-->
+                <!--<span slot="title">导航二</span>-->
+                <!--</el-menu-item>-->
+                <!--</el-menu>-->
+                <!--</div>-->
+            </el-aside>
+            <el-main class="home-main">
+                <!--<el-breadcrumb separator-class="el-icon-arrow-right">-->
+                <!--<el-breadcrumb-item>首页</el-breadcrumb-item>-->
+                <!--<el-breadcrumb-item></el-breadcrumb-item>-->
+                <!--</el-breadcrumb>-->
+
+                <!--v-if="openTab.length"-->
+                <el-tabs
+                        v-model="activeIndex"
+                        type="border-card"
+                        closable
+                        @tab-click='tabClick'
+                        @tab-remove='tabRemove'
+                >
+                    <el-tab-pane
+                            v-for="(item, index) in menuList"
+                            :key="item.title"
+                            :label="item.title"
+                            :name="item.route"
+                    >
+                    </el-tab-pane>
+                </el-tabs>
+                <keep-alive>
+                    <router-view></router-view>
+                </keep-alive>
+            </el-main>
         </el-container>
+        <el-footer class="el-footer" height="60px">Footer</el-footer>
+    </el-container>
     <!--</div>-->
 </template>
 <script>
@@ -72,9 +88,10 @@
         },
         data() {
             return {
-                main_container_style:{
+                main_container_style: {
                     height: window.innerHeight - 110 + 'px'
                 },
+                activeIndex: '1',   //选中选项卡的 name
                 menuList: [
                     {
                         "path": "/home",
@@ -86,7 +103,7 @@
                                 "children": []
                             },
                             {
-                                "path": "/func32",
+                                "path": "func32",
                                 "title": "功能3-2",
                                 "children": []
                             },
@@ -112,16 +129,25 @@
         },
         mounted: function () {
             // this.$router.push({path: '/home/sysUser'});
+        },
+        methods:{
+            tabClick(){
+
+            },
+            tabRemove(){
+
+            }
         }
     }
 </script>
-<style  lang="scss">
+<style lang="scss">
 
     .home-div {
-        padding: 0px;   //内部填充为0
-        margin: 0px;    //外部间距为0
+        padding: 0px; //内部填充为0
+        margin: 0px; //外部间距为0
         //height: 100%;   //统一设置高度为100%
     }
+
     .home-container {
         top: 0px;
         left: 0px;
