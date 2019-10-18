@@ -16,7 +16,6 @@ import java.util.Date;
  * AES对称加密和解密
  */
 public class AESUtil {
-    private String encodeStr;
 
     /*
      * 加密
