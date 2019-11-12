@@ -30,7 +30,7 @@ axios.interceptors.response.use((res) =>{
     }
     return res;
 }, (error) => {
-    console.log('网络异常')
+    console.log('网络异常'+error)
     return Promise.reject(error);
 });
 

@@ -8,23 +8,23 @@
         <el-dialog :title="dialogTitle" :visible.sync="dialogIsShow" width="60%" @close="dialogClose">
             <el-row>
                 <el-col :span="12">
-                    <el-form-item label="用户名" prop="username">
-                        <el-input v-model="formData.username"></el-input>
+                    <el-form-item label="角色代码" prop="role">
+                        <el-input v-model="formData.role"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="12">
-                    <el-form-item label="密码" prop="password">
-                        <el-input v-model="formData.password"></el-input>
+                    <el-form-item label="角色描述" prop="description">
+                        <el-input v-model="formData.description"></el-input>
                     </el-form-item>
                 </el-col>
             </el-row>
             <el-row>
                 <el-col :span="12">
-                    <el-form-item label="是否锁定" prop="locked">
+                    <el-form-item label="是否有效" prop="available">
                         <!--<el-input v-model="formData.sex"></el-input>-->
-                        <el-select v-model="formData.locked" placeholder="请选择">
+                        <el-select v-model="formData.available" placeholder="请选择">
                             <el-option
-                                    v-for="item in lockedoptions"
+                                    v-for="item in availables"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value"
@@ -54,22 +54,21 @@
                 dialogIsShow: false,
                 formData: {
                     id: '',
-                    username: '',
-                    password: '',
-                    salt: '',
-                    locked: '0'
+                    role: '',
+                    description: '',
+                    available: '1'
                 },
-                lockedoptions:[
+                availables:[
                     {
                         value: '1',
-                        label: '已锁定'
+                        label: '有效'
                     },{
                         value: '0',
-                        label: '未锁定'
+                        label: '无效'
                     }
                 ],
 
-                saveUrl: "/user/add"
+                saveUrl: ""
             }
         },
         methods: {
@@ -92,7 +91,7 @@
                         _this.$parent.loading = false;
                     })
                     .catch((error) => {
-                        window.console.log(error);
+                        window.console.log("error: "+error);
                         if(error.data){
                             _this.$alert('错误消息 : ' + error.data.msg, 'info', {
                                 confirmButtonText: 'ok'

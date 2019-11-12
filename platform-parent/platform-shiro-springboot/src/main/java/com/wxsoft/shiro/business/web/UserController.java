@@ -85,15 +85,19 @@ public class UserController {
             aj.setSuccess(false);
             aj.setMsg("身份认证失败!");
         }
-        String userId = (String)SecurityUtils.getSubject().getSession().getAttribute("currentUserId");
+//        String userId = (String)SecurityUtils.getSubject().getSession().getAttribute("currentUserId");
+//        loginUser.setId(Integer.valueOf(userId));
+        aj.setObj(loginUser);
         return aj;
     }
 
     @RequestMapping("/logout")
-    public String logout(User loginUser) {
+    public AjaxJson logout(User loginUser) {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "已注销";
+        AjaxJson aj = new AjaxJson();
+        aj.setSuccess(true);
+        return aj;
     }
 
     /**

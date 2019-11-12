@@ -54,7 +54,7 @@
         props: {
             table_height: {
                 type: Number,
-                default: 385
+                default: 413
             },
             loading: {
                 type: Boolean,

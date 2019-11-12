@@ -7,6 +7,7 @@ import HelloWorld from '@/components/HelloWorld'
 import login from '@/login/login'
 import home from '@/components/home'
 import SysUser from '@/components/system/user/SysUser'
+import SysRole from '@/components/system/role/SysRole'
 
 export const constantRoutes = [
     {
@@ -19,11 +20,21 @@ export const constantRoutes = [
         children: [
             {
                 path: 'sysUser',
-                component: SysUser
+                component: SysUser,
+                name: 'sysUser',
+                meta: { title: '用户管理', icon: 'dashboard', affix: false }
+            },
+            {
+                path: 'sysRole',
+                component: SysRole,
+                name: 'sysRole',
+                meta: { title: '角色管理', icon: 'dashboard', affix: false }
             },
             {
                 path: 'HelloWorld',
-                component: HelloWorld
+                component: HelloWorld,
+                name: 'HelloWorld',
+                meta: { title: '主页', icon: 'dashboard', affix: true }
             }
         ]
     },

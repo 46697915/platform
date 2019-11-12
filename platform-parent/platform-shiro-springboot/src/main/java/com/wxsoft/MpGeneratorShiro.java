@@ -35,9 +35,9 @@ public class MpGeneratorShiro {
     //数据库密码
     private static String password = "root";
     //需要生成的表
-    private static String[] tables = new String[]{"sys_roles"};
+    private static String[] tables = new String[]{"sys_permissions"};
     //自定义模版路径
-    private static String templetPath = "/templates/shop";
+    private static String templetPath = "/templates/shiro";
 
     public static void main(String[] args) {
 //        assert (false) : "代码生成属于危险操作，请确定配置后取消断言执行代码生成！";
@@ -159,19 +159,20 @@ public class MpGeneratorShiro {
         });
         cfg.setFileOutConfigList(focList);
         mpg.setCfg(cfg);
-        focList.add(new FileOutConfig(templetPath + "/list.jsp.ftl") {
-            @Override
-            public String outputFile(TableInfo tableInfo) {
-                String path = gc.getOutputDir();
-                System.out.println(tableInfo.getName());
-                System.out.println(tableInfo.getEntityName());
-                System.out.println(tableInfo.getEntityPath());
-                // 自定义输入文件名称
-                return path + "/../webapp/jsp/" + tableInfo.getEntityPath() + "/list.jsp";
-            }
-        });
-        cfg.setFileOutConfigList(focList);
-        mpg.setCfg(cfg);
+        //增加list.jsp
+//        focList.add(new FileOutConfig(templetPath + "/list.jsp.ftl") {
+//            @Override
+//            public String outputFile(TableInfo tableInfo) {
+//                String path = gc.getOutputDir();
+//                System.out.println(tableInfo.getName());
+//                System.out.println(tableInfo.getEntityName());
+//                System.out.println(tableInfo.getEntityPath());
+//                // 自定义输入文件名称
+//                return path + "/../webapp/jsp/" + tableInfo.getEntityPath() + "/list.jsp";
+//            }
+//        });
+//        cfg.setFileOutConfigList(focList);
+//        mpg.setCfg(cfg);
 
         // // 调整 xml 生成目录演示
         focList.add(new FileOutConfig(templetPath + "/mapper.xml.ftl") {

@@ -3,7 +3,7 @@
         <el-dialog :title="dialogTitle" :visible.sync="dialogIsShow" width="60%" @close="dialogClose">
             <el-row v-for="(dd, index) in tableHeader" v-if="index%2==0">
                 <el-col :span="4">
-                    {{dd.oper}}
+                    <!--{{dd.oper}}-->
                     <div v-if="!dd.oper" style="text-align: right">
                         {{tableHeader[index].label}}：
                     </div>

@@ -12,4 +12,16 @@ exports.install = (Vue, options) => {
             return val ;
         }
     }
+    Vue.prototype.available = {
+        available(val) {
+            //window.console.log("begin locked .")
+            if(val == '1'){
+                return '有效';
+            }
+            if(val == '0'){
+                return '无效';
+            }
+            return val ;
+        }
+    }
 }

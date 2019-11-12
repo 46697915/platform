@@ -5,7 +5,7 @@
             <el-header style="padding: 0px;display:flex;justify-content:space-between;align-items: center">
                 <div style="display: inline">
                     <el-input
-                            placeholder="通过登录名搜索,记得回车哦..."
+                            placeholder="通过名称搜索,记得回车哦..."
                             clearable
                             @change="keywordsChange"
                             style="width: 300px;margin: 0px;padding: 0px;"
@@ -13,7 +13,7 @@
                             :disabled="advanceSearchViewVisible"
                             @keyup.enter.native="initData"
                             prefix-icon="el-icon-search"
-                            v-model="queryparm.username">
+                            v-model="queryparm.role">
                     </el-input>
                     <el-button type="primary" size="mini" style="margin-left: 5px" icon="el-icon-search"
                                @click="initData">搜索
@@ -87,7 +87,7 @@
                 advanceSearchViewVisible: false,
                 // 条件
                 queryparm: {
-                    username: ''
+                    role: ''
                 },
                 faangledoubleup: 'fa-angle-double-up',
                 faangledoubledown: 'fa-angle-double-down',
@@ -96,20 +96,19 @@
                 pageSize: 10,
                 pageNO: 1,
                 //列表数据
-                listurl: '/user/listForPage',
-                addurl: '/user/add',
-                editurl: '/user/edit',
-                deleteurl: '/user/deleteBatch',
+                listurl: '/roles/listForPage',
+                addurl: '/roles/add',
+                editurl: '/roles/edit',
+                deleteurl: '/roles/deleteBatch',
                 loading: true,
                 listData: [],
                 multipleSelection: [],
                 tableHeader: [
                     {prop: 'id', label: '主键', minWidth: '100px',isHidden: true},
-                    {prop: 'username', label: '登录名', fixed: true, minWidth: '100px'},
-                    {prop: 'password', label: '密码', minWidth: '140px'},
-                    {prop: 'salt', label: '盐', minWidth: '100px'},
-                    {prop: 'locked', label: '是否锁定'
-                        , formatData: this.codeTransf.lockedTransf
+                    {prop: 'role', label: '角色代码', fixed: true, minWidth: '100px'},
+                    {prop: 'description', label: '角色描述', minWidth: '140px'},
+                    {prop: 'available', label: '是否有效'
+                        , formatData: this.available.available
                     },
                     {prop: 'oper', label: '操作', fixed: 'right', minWidth: '100px'
                         ,oper: [
@@ -185,11 +184,11 @@
                 this.$refs.addEditDialog.saveUrl = this.addurl;
                 this.$refs.addEditDialog.dialogIsShow = true ;
                 this.$refs.addEditDialog.resetForm();
-                this.$refs.addEditDialog.formData.locked = '0';
+                //this.$refs.addEditDialog.formData.locked = '0';
             },
             //详情按钮
             showDetailView(row){
-                this.$refs.addEditDialog.dialogTitle = '详情';
+                //this.$refs.addEditDialog.dialogTitle = '详情';
                 this.$refs.detailDialog.dialogIsShow = true ;
                 this.$refs.detailDialog.tableHeader = this.tableHeader;
                 this.$refs.detailDialog.detailData = row ;
@@ -206,15 +205,15 @@
                 this.$nextTick(function(){
                     for (var a in formData) {
                         formData[a] = row[a];
+                        window.console.log(a+":"+row[a])
                     }
-                    window.console.log(row['locked'])
                     //因为是 下拉菜单需要转换 类型
-                    this.$refs.addEditDialog.formData.locked = String(row['locked']);
+                    //this.$refs.addEditDialog.formData.available = String(row['available']);
                 });
             },
             //删除按钮
             deleteHandle(row){
-                this.$confirm('此操作将永久删除[' + row.username + '], 是否继续?', '提示', {
+                this.$confirm('此操作将永久删除[' + row.role + '], 是否继续?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
                     type: 'warning'
@@ -233,7 +232,7 @@
                     }
                 }
                 this.$confirm(
-                    '此操作将永久删除[' + this.multipleSelection[0].username + '等'+this.multipleSelection.length+'个用户], 是否继续?', '提示', {
+                    '此操作将永久删除[' + this.multipleSelection[0].role + '等'+this.multipleSelection.length+'条记录], 是否继续?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
                     type: 'warning'

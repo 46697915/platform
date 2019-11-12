@@ -64,11 +64,14 @@
                 let that = this ;
                 this.httpOperate.fetchGet(this.url, this.loginForm)
                     .then((response) => {
-                        //console.log(response.data);
-                        //window.console.log(response)
+                        console.log(response.data);
+                        window.console.log(response)
                         if(response.data.success){
-                            that.$router.push({path: '/home/sysUser'});
-                            //that.$store.commit('login', data.obj);
+                            // that.$router.push({path: '/home/sysUser'});
+                            that.$router.push({path: '/home/HelloWorld'});
+                            console.log(response.data.obj.username);
+                            // that.$store.state.user.
+                            that.$store.commit('user/set_username', response.data.obj.username);
                         }else{
                             that.$alert(response.data.msg, 'info', {
                                 confirmButtonText: 'ok'
@@ -79,9 +82,16 @@
                         //console.log(error);
                         //window.console.log(error)
                         that.logining = false;
-                        that.$alert('username or password wrong!'+error.msg, 'info', {
-                            confirmButtonText: 'ok'
-                        });
+                        if(error.data){
+                            that.$alert('错误消息 : ' + error.data.msg, 'info', {
+                                confirmButtonText: 'ok'
+                            });
+                        }
+                        if(error){
+                            that.$alert('错误消息 : ' + error, 'info', {
+                                confirmButtonText: 'ok'
+                            });
+                        }
                     });
             }
         }

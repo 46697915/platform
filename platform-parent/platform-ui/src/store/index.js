@@ -19,8 +19,16 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
 }, {})
 
 const store = new Vuex.Store({
+  state: {
+    routes: []
+  },
   modules,
-  getters
+  getters,
+  mutations: {
+    initMenu(state, menus){
+      state.routes = menus;
+    }
+  }
 })
 
-export default store
+export default store;
