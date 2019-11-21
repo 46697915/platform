@@ -67,6 +67,11 @@
                                 "children": []
                             },
                             {
+                                "path": "sysPermission",
+                                "title": "权限管理",
+                                "children": []
+                            },
+                            {
                                 "path": "HelloWorld",
                                 "title": "功能3-2",
                                 "children": []
@@ -93,6 +98,8 @@
         },
         mounted: function () {
             // this.$router.push({path: '/home/sysUser'});
+            //console.log('登录完成：'+this.$store.state.user.username);
+            this.initMenu();
         },
         computed: {
             username() {
@@ -105,15 +112,33 @@
                     this.logout();
                 }
             },
+            initMenu(){
+                var that = this ;
+                this.httpOperate.fetchGet('/permissions/initMenu')
+                    .then((response) => {
+                        window.console.log(response);
+                        if(response.data.success){
+                            window.console.log(response.data.result);
+                            that.menuList = response.data.result;
+                        }else{
+                            that.$alert(response.data.msg, 'info', {
+                                confirmButtonText: 'ok'
+                            });
+                        }
+                    })
+                    .catch(error=>{
+                        this.$message.error(error);
+                    })
+            },
             logout(){
                 var that = this ;
                 this.httpOperate.fetchGet('/user/logout')
                     .then((response) => {
-                        console.log(response.data);
-                        window.console.log(response)
+                        //console.log(response.data);
+                        //window.console.log(response)
                         if(response.data.success){
                             that.$router.push({path: '/'});
-                            that.$store.commit('user/set_username', '');
+                            that.$store.dispatch('user/setUsername', '');
                         }else{
                             that.$alert(response.data.msg, 'info', {
                                 confirmButtonText: 'ok'

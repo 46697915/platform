@@ -27,12 +27,12 @@ import java.util.List;
 @Controller
 @RequestMapping("/drugs")
 public class DrugsController extends BaseController{
-	
+
 	private Logger logger = Logger.getLogger(this.getClass());
-	
+
 	@Resource
 	private IDrugsService service;
-	
+
 	@Resource
 	private IDrugsForStoreService serviceForStore;
 
@@ -40,14 +40,14 @@ public class DrugsController extends BaseController{
 	public String list(Model model) {
 		return "drugs/list";
 	}
-	
+
 	@RequestMapping("/datagrid")
 	public void list(HttpServletRequest request,PageHelper page, Drugs drugs,HttpServletResponse response) throws IOException{
-		
+
 		DataGrid dg = new DataGrid();
 		//dg.setTotal(service.findCount(drugs));
 		List<Drugs> userList;// = service.findAll(page, drugs);
-		
+
 //		DrugStore drugStore = (DrugStore)request.getSession().getAttribute(Const.SESSION_DRUGSTORE);
 //		if(drugStore!=null&&drugStore.getShortname()!=null&&!"".equals(drugStore.getShortname())){
 //			drugs.setDrugStoreShortName(drugStore.getShortname());
@@ -60,7 +60,7 @@ public class DrugsController extends BaseController{
 		drugs.setDrugStoreShortName(StoreUtil.getSSNForTable(request));
 		dg.setTotal(service.findCount(drugs));
 		userList = service.findAll(page, drugs);
-		
+
 		dg.setRows(userList);
 		JsonUtil.toResponse(response, dg);
 
@@ -84,7 +84,7 @@ public class DrugsController extends BaseController{
 			this.drugsToCathe(request, drugs);
 		}
 		keyvalueList = (List<Drugs>) cacheDrugs;
-		
+
 		JsonUtil.toResponseNOPage(response, keyvalueList);
 	}
 	/**
@@ -95,7 +95,7 @@ public class DrugsController extends BaseController{
 	 * @参数： @param goods
 	 * @参数： @param response
 	 * @参数： @throws IOException
-	 * @return void  
+	 * @return void
 	 * @throws
 	 * @author: chenliang
 	 * @time:2018-10-1 上午11:02:26
@@ -107,10 +107,10 @@ public class DrugsController extends BaseController{
 
 		drugs.setDrugStoreShortName(StoreUtil.getSSNForTable(request));
 		keyvalueList = service.findBy(drugs);
-		
+
 		CacheUtil.putCache("drugs_list", keyvalueList);
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public void add(HttpServletRequest request,HttpServletResponse response, Drugs drugs) {
@@ -122,17 +122,17 @@ public class DrugsController extends BaseController{
 
 			drugs.setDrugStoreShortName(StoreUtil.getSSNForTable(request));
 			r = service.add(drugs);
-			
+
 			//将缓存清空
 			CacheUtil.putCache("drugs_list", null);
-			
+
 			this.writeReturn(request,response, r);
 		} catch (Exception e) {
 			e.printStackTrace();
 			this.writeReturn(request,response, e.getMessage());
 		}
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
 	public void modify(HttpServletRequest request,HttpServletResponse response, Drugs drugs) {
@@ -143,14 +143,14 @@ public class DrugsController extends BaseController{
 
 			//将缓存清空
 			CacheUtil.putCache("drugs_list", null);
-			
+
 			this.writeReturn(request,response, r);
 		} catch (Exception e) {
 			e.printStackTrace();
 			this.writeReturn(request,response, e.getMessage());
 		}
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void delete(HttpServletRequest request,HttpServletResponse response, Drugs drugs) {
@@ -161,7 +161,7 @@ public class DrugsController extends BaseController{
 
 			//将缓存清空
 			CacheUtil.putCache("drugs_list", null);
-			
+
 			this.writeReturn(request,response, r);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -194,8 +194,8 @@ public class DrugsController extends BaseController{
 			this.writeReturn(request,response, e.getMessage());
 		}
 	}
-	
-	
+
+
 
 	/**
 	 * 更新某个药品 的 库存  后台使用
@@ -203,7 +203,7 @@ public class DrugsController extends BaseController{
 	 * @参数： @param request
 	 * @参数： @param response
 	 * @参数： @param drugs
-	 * @return void  
+	 * @return void
 	 * @throws
 	 * @author: chenliang
 	 * @time:2018-7-1 下午1:14:01

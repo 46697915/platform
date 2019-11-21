@@ -16,7 +16,7 @@ const mutations = {
   SET_NAME: (state, name) => {
     state.name = name
   },
-  set_username: (state, username) => {
+  SET_USERNAME: (state, username) => {
     state.username = username ;
   },
   SET_INTRODUCTION: (state, introduction) => {
@@ -46,6 +46,9 @@ const actions = {
     })
   },
 
+  setUsername({ commit },username){
+    commit('SET_USERNAME', username)
+  },
   // get user info
   getInfo({ commit, state }) {
     return new Promise((resolve, reject) => {

@@ -25,9 +25,12 @@
 			valueField:'code',
 			textField:'name'
 		});
+		//下拉选择框内容一行显示
 		$('#barcode_form').combobox({
 			url: path+'/drugs/findBy?type=specifications',
 			panelHeight: '120',
+			panelWidth: 170,
+			formatter: formatItem,
 			valueField:'barcode',
 			textField:'commonname',
 			filter: function(q, row){
@@ -46,7 +49,11 @@
 				$('#barcode_show').textbox('setValue',rec.barcode) ;
 			}
 		});
-		
+		//格式化下拉列表显示样式
+		function formatItem(row){
+			var s = '<span style="white-space:nowrap;">'+row.commonname + '/' + row.manufactor + '/'+row.specifications+'</span>';
+			return s;
+		}
 		//barcode_show 组件的回车事件
 		function keyDownEventFun(){
 		    $('#barcode_show').textbox('textbox').keydown(function (event) {
@@ -85,6 +92,7 @@
 			panelHeight: '120',
 			valueField:'barcode',
 			textField:'commonname',
+			formatter: formatItem,
 			multiple: false,
         	//onHidePanel: onComboboxHidePanel,
 			filter: function(q, row){
@@ -346,7 +354,8 @@
 					<label>药品条码:</label> <input id="barcode_show" name="barcode_show"  class="easyui-textbox" required="true"></font>
 				</div>
 				<div class="fitem">
-					<label>药品条码:</label> <input id="barcode_form" name="barcode" class="easyui-combobox" required="true">
+					<label>药品条码:</label>
+					<input id="barcode_form" name="barcode" class="easyui-combobox" required="true">
 				</div>
 				<div class="fitem">
 					<label>药品名称:</label> <input id="drugsname_form" name="drugsname" class="easyui-textbox" required="true">

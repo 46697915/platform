@@ -1,10 +1,12 @@
 package com.wxsoft.shiro.business.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -26,8 +28,6 @@ public class Permissions extends Model<Permissions> {
 
     private String description;
 
-    private String available;
-
     private String url;
 
     private String type;
@@ -39,6 +39,16 @@ public class Permissions extends Model<Permissions> {
     private String icon;
 
     private String enabled;
+
+    private List subList ;
+
+    public List getSubList() {
+        return subList;
+    }
+
+    public void setSubList(List subList) {
+        this.subList = subList;
+    }
 
     public String getPermission() {
         return permission;
@@ -61,13 +71,7 @@ public class Permissions extends Model<Permissions> {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getAvailable() {
-        return available;
-    }
 
-    public void setAvailable(String available) {
-        this.available = available;
-    }
     public String getUrl() {
         return url;
     }
@@ -122,7 +126,6 @@ public class Permissions extends Model<Permissions> {
         "permission=" + permission +
         ", id=" + id +
         ", description=" + description +
-        ", available=" + available +
         ", url=" + url +
         ", type=" + type +
         ", path=" + path +

@@ -26,7 +26,7 @@
     </resultMap>
 
 </#if>
-<#if baseColumnList>
+<#--<#if baseColumnList>-->
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
 <#list table.commonFields as field>
@@ -35,12 +35,12 @@
         ${table.fieldNames}
     </sql>
 
-</#if>
+<#--</#if>-->
 
 
     <select id="selectBy" parameterType="${entity}Vo" resultType="${entity}">
         select
-            ${table.fieldNames}
+            <include refid="Base_Column_List" />
         from ${table.name}
         <where>
 <#list table.fields as field>

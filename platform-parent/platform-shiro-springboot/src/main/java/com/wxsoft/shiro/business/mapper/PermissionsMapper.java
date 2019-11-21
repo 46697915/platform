@@ -16,4 +16,6 @@ import java.util.List;
 public interface PermissionsMapper extends BaseMapper<Permissions> {
 
     public List selectBy(PermissionsVo vo);
+
+    List selectByParentId(long parentId);
 }

@@ -165,10 +165,15 @@
 				$("#bxdygx_form").textbox('setValue',rec.bxdygx);
 			}
 		});
-		
+		//格式化下拉列表显示样式
+		function formatItem(row){
+			var s = '<span style="white-space:nowrap;">'+row.commonname + '/' + row.manufactor + '/'+row.specifications+'</span>';
+			return s;
+		}
 		$('#barcode_search').combobox({
 			url: path+'/drugs/findBy?type=specifications',
 			panelHeight: '120',
+			formatter: formatItem,
 			valueField:'barcode',
 			textField:'commonname',
 			filter: function(q, row){

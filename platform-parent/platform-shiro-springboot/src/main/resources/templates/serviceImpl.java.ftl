@@ -25,8 +25,8 @@ open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperNam
 <#else>
 public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
 
-    @Autowired
-    private ${table.mapperName} mapper;
+    //@Autowired
+    //private ${table.mapperName} mapper;
 
     /**
     *
@@ -34,7 +34,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     * @return
     */
     public List selectBy(${entity}Vo vo){
-        List r = mapper.selectBy(vo);
+        List r = baseMapper.selectBy(vo);
 
         return r ;
     }

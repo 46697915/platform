@@ -10,6 +10,16 @@ exports.install = (Vue, options) => {
                 return '已锁定';
             }
             return val ;
+        },
+        isNo(val) {
+            //window.console.log("begin locked .")
+            if(val == '1'){
+                return '是';
+            }
+            if(val == '0'){
+                return '否';
+            }
+            return val ;
         }
     }
     Vue.prototype.available = {

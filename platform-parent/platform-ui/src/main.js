@@ -25,6 +25,9 @@ import constant from './utils/constant.js'
 //将访问后台的地址放在全局的Vue中
 Vue.prototype.constant=constant
 
+//包含全局配置的
+import loadingViewSelf from './utils/loading.js'
+Vue.prototype.loadingViewSelf=loadingViewSelf
 
 new Vue({
   el: '#app',

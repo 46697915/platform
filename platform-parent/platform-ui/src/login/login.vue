@@ -71,7 +71,7 @@
                             that.$router.push({path: '/home/HelloWorld'});
                             console.log(response.data.obj.username);
                             // that.$store.state.user.
-                            that.$store.commit('user/set_username', response.data.obj.username);
+                            that.$store.dispatch('user/setUsername', response.data.obj.username);
                         }else{
                             that.$alert(response.data.msg, 'info', {
                                 confirmButtonText: 'ok'

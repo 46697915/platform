@@ -19,4 +19,5 @@ public interface UserMapper extends BaseMapper<User> {
     List selectBy(UserVo vo);
 
     User findByUsername(@Param("username") String username);
+    List queryAllMenuIdByUserId(long userId);
 }

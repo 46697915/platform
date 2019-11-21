@@ -53,5 +53,12 @@
         </if>
         </where>
     </select>
+    <!-- 查询用户的所有菜单ID -->
+    <select id="queryAllMenuIdByUserId" resultType="long">
+		select distinct rp.permission_id
+		from sys_users_roles ur
+			LEFT JOIN sys_roles_permissions rp on ur.role_id = rp.role_id
+		where ur.user_id = #{userId}
+	</select>
 
 </mapper>

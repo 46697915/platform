@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
  * @since ${date}
  */
 <#if table.convert>
-@TableName("${table.name}")
+//@TableName("${table.name}")
 </#if>
 public class ${entity}Vo extends ${entity} {
 

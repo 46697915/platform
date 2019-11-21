@@ -135,17 +135,28 @@ public class MpGeneratorShiro {
         List<FileOutConfig> focList = new ArrayList<>();
 
         //自定义 cope文件
-//        focList.add(new FileOutConfig( templetPath + "/vue.html.ftl") {
-//            @Override
-//            public String outputFile(TableInfo tableInfo) {
-//                // 自定义输入文件名称
-//                String path = gc.getOutputDir();
-//
-//                return path + "/copy/" + tableInfo.getEntityName() + ".vue";
-//            }
-//        });
-//        cfg.setFileOutConfigList(focList);
-//        mpg.setCfg(cfg);
+        focList.add(new FileOutConfig( templetPath + "/vue.html.ftl") {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输入文件名称
+                String path = gc.getOutputDir();
+
+                return path + "/copy/" + tableInfo.getEntityName() + ".vue";
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+        focList.add(new FileOutConfig( templetPath + "/vue.html.add.ftl") {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输入文件名称
+                String path = gc.getOutputDir();
+
+                return path + "/copy/" + "AddEditDialog.vue";
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
         //自定义 Vo java 类
         focList.add(new FileOutConfig(templetPath + "/entityVo.java.ftl") {
             @Override

@@ -7,6 +7,7 @@
                     background-color="#304156"
                     text-color="#bfcbd9"
                     active-text-color="#409EFF">
+                {{menuList.length}}
                 <sidebar-item v-for="menu in menuList" :key="menu.path" :item="menu" />
             </el-menu>
         </el-scrollbar>

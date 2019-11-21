@@ -8,6 +8,7 @@ import login from '@/login/login'
 import home from '@/components/home'
 import SysUser from '@/components/system/user/SysUser'
 import SysRole from '@/components/system/role/SysRole'
+import SysPermission from '@/components/system/permission/SysPermission'
 
 export const constantRoutes = [
     {
@@ -29,6 +30,12 @@ export const constantRoutes = [
                 component: SysRole,
                 name: 'sysRole',
                 meta: { title: '角色管理', icon: 'dashboard', affix: false }
+            },
+            {
+                path: 'sysPermission',
+                component: SysPermission,
+                name: 'SysPermission',
+                meta: { title: '权限管理', icon: 'dashboard', affix: false }
             },
             {
                 path: 'HelloWorld',

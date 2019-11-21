@@ -16,4 +16,6 @@ import java.util.List;
 public interface IPermissionsService extends IService<Permissions> {
 
     List selectBy(PermissionsVo vo);
+
+    List selectUserMenu();
 }

@@ -17,4 +17,8 @@ public interface IUserService extends IService<User> {
 
     List selectBy(UserVo vo);
     User findByUsername(String username);
+
+    List getMenuListByUser();
+
+    boolean isSuperAdmin();
 }

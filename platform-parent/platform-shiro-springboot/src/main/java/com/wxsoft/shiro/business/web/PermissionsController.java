@@ -1,22 +1,19 @@
 package com.wxsoft.shiro.business.web;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.wxsoft.shiro.business.service.IPermissionsService;
-import com.wxsoft.shiro.business.entity.PermissionsVo;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.wxsoft.shiro.business.entity.PermissionsVo;
+import com.wxsoft.shiro.business.service.IPermissionsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.wxsoftframwork.ui.core.vue.element.PageElementUI;
 import org.wxsoftframwork.ui.core.vue.element.ResponseElementUI;
 
-import org.springframework.web.bind.annotation.RestController;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * <p>
@@ -41,6 +38,20 @@ public class PermissionsController {
     @RequestMapping("/list")
     public ResponseElementUI list(PermissionsVo vo){
         List r = service.selectBy(vo);
+        ResponseElementUI rr = ResponseElementUI.getResponseResult();
+        rr.setResult(r);
+        return rr ;
+    }
+
+    /**
+     * 获取菜单
+     * @return
+     */
+    @RequestMapping("/initMenu")
+    public ResponseElementUI initMenu(){
+
+        List r = service.selectUserMenu();
+
         ResponseElementUI rr = ResponseElementUI.getResponseResult();
         rr.setResult(r);
         return rr ;

@@ -66,7 +66,7 @@ export function fetchGet(url, param) {
 }
 export default {
     fetchPost,
-    fetchGet,
+    fetchGet
 }
 /**
  * 实例如下：

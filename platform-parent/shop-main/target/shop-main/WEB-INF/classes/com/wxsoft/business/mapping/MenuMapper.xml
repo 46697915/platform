@@ -53,7 +53,7 @@
 		select * from menu where pid >=1
 	</select>
 	
-	<insert id="insertMenu" parameterType="com.wxsoft.business.model.SysMenu"  useGeneratedKeys="true" keyProperty="id">
+	<insert id="insertMenu" parameterType="com.wxsoft.business.model.SysMenu" useGeneratedKeys="true" keyProperty="id">
 		insert into menu (name,menu,pid) values (#{name},#{menu},#{pid})
 	</insert>
 	

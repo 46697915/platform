@@ -47,6 +47,8 @@ public class UserRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(
             AuthenticationToken token) throws AuthenticationException {
 
+        UsernamePasswordToken token1 = (UsernamePasswordToken)token;
+
         String username = (String) token.getPrincipal();
         User user = userService.findByUsername(username);
         if(user == null){
@@ -58,7 +60,8 @@ public class UserRealm extends AuthorizingRealm {
         }
         //验证
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
-                user.getUsername(),
+                user,
+//                user.getUsername(),
                 user.getPassword(),
                 ByteSource.Util.bytes(user.getSalt()), //salt = username+salt
                 getName());
